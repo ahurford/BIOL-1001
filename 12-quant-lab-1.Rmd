@@ -1,0 +1,19 @@
+# First Quantitative Lab in BIOL 1001 (before potato lab)
+
+## Purpose
+-	To familiarize students with R Studio
+-	To get students working with data input and simple data visualizations
+-	To have students think about how different data visualizations convey different information
+
+## Activities
+
+1.	Intro/tour of RStudio (30 minutes)
+2.	Data entry and reproducing a graph
+3.	Create a different kind of graph of the same data
+
+## Questions
+
+1.	In the bar graph, what can you tell about the stomatal openings of the treatment plant vs. the control plants? Is it consistent across all the individual plants?
+2.	Label the following on the box plot (mean, 25% and 75% quantiles, 95% confidence limits, outliers).
+3.	What does the box plot tell you about the differences between the treatment plants (plants 6-11) vs. the control plants that the treatment plant does not?
+4.	Why do you think a scientist might choose to represent these data one way over another?
