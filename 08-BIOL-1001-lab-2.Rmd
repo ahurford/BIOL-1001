@@ -1,17 +1,90 @@
-# First Quantitative Lab in BIOL 1001 (before potato lab)
+# BIOL 1001: LABORATORY 2
 
-## Purpose
--	To familiarize students with R Studio
--	To get students working with data input and simple data visualizations
--	To have students think about how different data visualizations convey different information
+## BIOLOGICAL DATA WITH COMPUTERS {-}
 
-## Activities
+---
 
-1.	Intro/tour of RStudio (30 minutes)
-2.	Data entry and reproducing a graph
-3.	Create a different kind of graph of the same data
+PURPOSE
 
-## Questions
+1. To become familiarize with R Studio
+1. To learn how to record data in electronic format
+1. To learn how to write hypotheses as equations
+1. To learn how to choose the appropriate visualizations
+1. To learn how to make graphs using R Studio
+
+---
+
+
+
+Before coming to the laboratory:
+
+1. if you wish to use your own labtop, then install `R` and `RStudio`. For instructions see here. insert link
+ 
+1. Before coming to the laboratory read:
+ 
+In the quant guide: 
+
+- Sections
+
+In the printed lab manual:
+
+- Appendix II: Something or other
+
+1. Intro to R
+1. Entering data exercise. Identify relevant data. Data should be discrete with at least 3 groups. Export from R as .csv, write metadata. Submit to dropbox. 
+1. Plot data to replicate a bar chart. Replot as box plot. Save in .pdf or related format.
+1. Practice writing hypothesis, prediction, and equation (i.e., equation is means of groups not equal in notation).
+1. Repeat plotting for data with continuous independent variable.
+1. Practice writing equation for data with continuous independent variable.
+
+
+
+ 
+1. Repeat plotting for data with continuous independent variable.
+1. Practice writing equation for data with continuous independent variable.
+
+Note to instructors/developers. Design these activities to take 20-30 mins.
+ 
+## EXERCISE 1.	Intro of RStudio {-}
+Maybe borrow a little exercise from software carpentary. Nothing to hand in assess?
+
+## EXERCISE 2.	Entering data {-}
+Joany will type data table here.
+
+Ask students to follow the enter data instructions in the sections of this manual.
+
+### Question {-}
+1. When they are finished submit the .csv and metadata to the `Biology Data Repository` on `BrightSpace`
+
+## EXERCISE 3.	Discrete independent variable {-}
+### Make a graph {-}
+Plot data to replicate a bar chart from Campbell book. Replot as box plot. Save in .pdf or related format. Provide links to relevant section of this manual.
+
+### Write the hypothesis as an equation {-}
+Link to relevant section of this manual.
+
+### Question {-}
+1. Print the graph and hand it in. Following the 1001 lab manual instructions for figures.
+1. Hand in your equations.
+
+## EXERCISE 4. Continuous independent variable {-}
+
+### Make a graph {-}
+Line graph
+
+### Write the hypothesis as an equation {-}
+
+### Question {-}
+1. Print the graph and hand it in.
+1. Hand in your equations.
+
+### Question {-}
+1. Print the graph and hand it in.
+
+
+## Questions {-}
+
+AH: in the 1001 lab manual, generally it seems that questions are interspersed with EXERCISES. What Yolanda wrote below should be interspersed above.
 
 1.	In the bar graph, what can you tell about the stomatal openings of the treatment plant vs. the control plants? Is it consistent across all the individual plants?
 2.	Label the following on the box plot (mean, 25% and 75% quantiles, 95% confidence limits, outliers).

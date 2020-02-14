@@ -1,5 +1,5 @@
 # How to install R and R Studio
 
-`R` can be installed from https://www.r-project.org/. If you have problems with installing `R` this same website provides advice on how to seek support.
+`R` can be installed from https://www.r-project.org/. If you have problems with installing `R` this same website provides advice on how to seek support. Give link out to Pirates Guide to R.
 
-`R` is a scripting language. `R Studio` is a graphical user interface (GUI) that facilitates `R` coding by providing buttons and menus to provide options for some commonly used commands. Download the free version `RStudio Desktop` from https://rstudio.com/products/rstudio/
+`R` is a scripting language. `R Studio` is a graphical user interface (GUI) that facilitates `R` coding by providing buttons and menus to provide options for some commonly used commands. Download the free version `RStudio Desktop` from https://rstudio.com/products/rstudio/ Link out to Pirates Guide to R.

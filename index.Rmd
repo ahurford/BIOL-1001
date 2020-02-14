@@ -1,7 +1,7 @@
 --- 
 title: "Quantitative skills for biology"
-author: "Yolanda Wiersma, Amy Hurford, Joany Mariño"
-date: "`r Sys.Date()`"
+# author: "Yolanda Wiersma, Amy Hurford, Joany Mariño"
+# date: "`r Sys.Date()`"
 site: bookdown::bookdown_site
 output: bookdown::gitbook #bookdown::html_document2
 documentclass: book
@@ -12,7 +12,12 @@ github-repo: ahurford/quantitative-training-resources/tree/master/Quantitative t
 description: "Quantitative skills for biology"
 ---
 
+
+
 # Introduction
+
+Amy will write this section
+
 Quantitative skills are important in biology. Quantitative skills include performing statistical analyses, using computer software to manage and reformat data, design experiments, understand graphs, vizualizing data, identify genes from DNA sequences, construct 3D models of protiens, and make phylogenies. Many of these tasks are now performed using computers, and elements of computer programming, statistics, and applied mathematics can be useful for professional biologists. Quantitative skills are being incorporated throughout the biology major.
 
 - Why is this important

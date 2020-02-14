@@ -1,5 +1,7 @@
 # Data and metadata
 
+Joany will write this section. Maybe we could do a lab meeting or eco-evo to figure out what to do for metadata, i.e., look for good examples.
+
 I think look at the Ethan White course. The paper by Kara Woo is quite good and worth a cite.
 
 Here we need to provide the rationale for saving data as we recommend we also need to provide the metadata guidelines. Maybe find a paper by someone who is up on this kind of stuff and see how they did the metadata. Also talk about why highlight cells in excel or making borders isn't a good idea, i.e. tidy data exercise.
