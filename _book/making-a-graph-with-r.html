@@ -4,21 +4,21 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Quantitative skills for biology</title>
-  <meta name="description" content="Quantitative skills for biology" />
+  <title>Chapter 7 Making a graph with R | Quantitative skills for biology</title>
+  <meta name="description" content="Chapter 7 Making a graph with R | Quantitative skills for biology" />
   <meta name="generator" content="bookdown 0.16 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Quantitative skills for biology" />
+  <meta property="og:title" content="Chapter 7 Making a graph with R | Quantitative skills for biology" />
   <meta property="og:type" content="book" />
   
   
-  <meta property="og:description" content="Quantitative skills for biology" />
+  <meta property="og:description" content="Chapter 7 Making a graph with R | Quantitative skills for biology" />
   <meta name="github-repo" content="ahurford/quantitative-training-resources/tree/master/Quantitative training guides/quant-guide" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Quantitative skills for biology" />
+  <meta name="twitter:title" content="Chapter 7 Making a graph with R | Quantitative skills for biology" />
   
-  <meta name="twitter:description" content="Quantitative skills for biology" />
+  <meta name="twitter:description" content="Chapter 7 Making a graph with R | Quantitative skills for biology" />
   
 
 <meta name="author" content="Yolanda Wiersma, Amy Hurford, Joany Mariño" />
@@ -31,8 +31,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-
-<link rel="next" href="how-to-install-r-and-r-studio.html"/>
+<link rel="prev" href="entering-data.html"/>
+<link rel="next" href="how-to-write-hypotheses-and-predictions-as-equations.html"/>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -130,7 +130,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 </ul></li>
 <li class="chapter" data-level="5" data-path="data-and-metadata.html"><a href="data-and-metadata.html"><i class="fa fa-check"></i><b>5</b> Data and metadata</a></li>
 <li class="chapter" data-level="6" data-path="entering-data.html"><a href="entering-data.html"><i class="fa fa-check"></i><b>6</b> Entering data</a></li>
-<li class="chapter" data-level="7" data-path="making-graphs-with-r.html"><a href="making-graphs-with-r.html"><i class="fa fa-check"></i><b>7</b> Making graphs with R</a></li>
+<li class="chapter" data-level="7" data-path="making-a-graph-with-r.html"><a href="making-a-graph-with-r.html"><i class="fa fa-check"></i><b>7</b> Making a graph with R</a></li>
 <li class="chapter" data-level="8" data-path="how-to-write-hypotheses-and-predictions-as-equations.html"><a href="how-to-write-hypotheses-and-predictions-as-equations.html"><i class="fa fa-check"></i><b>8</b> How to write hypotheses and predictions as equations</a></li>
 <li class="chapter" data-level="9" data-path="first-quantitative-lab-in-biol-1001-before-potato-lab.html"><a href="first-quantitative-lab-in-biol-1001-before-potato-lab.html"><i class="fa fa-check"></i><b>9</b> First Quantitative Lab in BIOL 1001 (before potato lab)</a><ul>
 <li class="chapter" data-level="9.1" data-path="first-quantitative-lab-in-biol-1001-before-potato-lab.html"><a href="first-quantitative-lab-in-biol-1001-before-potato-lab.html#purpose"><i class="fa fa-check"></i><b>9.1</b> Purpose</a></li>
@@ -158,24 +158,8 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="header">
-<h1 class="title">Quantitative skills for biology</h1>
-<p class="author"><em>Yolanda Wiersma, Amy Hurford, Joany Mariño</em></p>
-<p class="date"><em>2020-02-14</em></p>
-</div>
-<div id="introduction" class="section level1">
-<h1><span class="header-section-number">Chapter 1</span> Introduction</h1>
-<p>Quantitative skills are important in biology. Quantitative skills include performing statistical analyses, using computer software to manage and reformat data, design experiments, understand graphs, vizualizing data, identify genes from DNA sequences, construct 3D models of protiens, and make phylogenies. Many of these tasks are now performed using computers, and elements of computer programming, statistics, and applied mathematics can be useful for professional biologists. Quantitative skills are being incorporated throughout the biology major.</p>
-<ul>
-<li>Why is this important</li>
-<li>Why have we made the choices we did (R, pedagogy citations) Biologists use a variety of tools and in recent years, the use of computers has become widespread. Many different softwares are used by biologists including Microsoft Office, R, Python, and ArcGIS. First year biology, will introduce you to using R to visualize data, although we note that many of the same end results could be generated using different software. Our choice of R is for the following reasons:</li>
-</ul>
-<ol style="list-style-type: decimal">
-<li><p>R programming is a valued skill: citation.</p></li>
-<li><p>Reproducibility:</p></li>
-<li><p>Accessibility: <code>R</code> is free.</p></li>
-<li><p>No limits: while it is possible to need data visualization options or statistical analysis that are unavailable in <code>Microsoft Excel</code> this is rarely a problem in <code>R</code>: there is an <code>R</code> package for anything, from <a href="https://rviews.rstudio.com/2017/10/09/population-modeling-in-r/">serious</a> to <a href="https://www.r-bloggers.com/useless-but-fun-r-packages/">fun</a>).</p></li>
-</ol>
+<div id="making-a-graph-with-r" class="section level1">
+<h1><span class="header-section-number">Chapter 7</span> Making a graph with R</h1>
 
 </div>
             </section>
@@ -183,8 +167,8 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
           </div>
         </div>
       </div>
-
-<a href="how-to-install-r-and-r-studio.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="entering-data.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="how-to-write-hypotheses-and-predictions-as-equations.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -215,7 +199,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/rstudio/bookdown-demo/edit/master/index.Rmd",
+"link": "https://github.com/rstudio/bookdown-demo/edit/master/09-ggplot.Rmd",
 "text": "Edit"
 },
 "history": {

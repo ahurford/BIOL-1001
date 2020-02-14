@@ -17,3 +17,12 @@ Quantitative skills are important in biology. Quantitative skills include perfor
 
 - Why is this important
 - Why have we made the choices we did (R, pedagogy citations)
+Biologists use a variety of tools and in recent years, the use of computers has become widespread. Many different softwares are used by biologists including Microsoft Office, R, Python, and ArcGIS. First year biology, will introduce you to using R to visualize data, although we note that many of the same end results could be generated using different software. Our choice of R is for the following reasons:
+
+1. R programming is a valued skill: citation.
+
+1. Reproducibility:
+
+1. Accessibility: `R` is free.
+
+1. No limits: while it is possible to need data visualization options or statistical analysis that are unavailable in `Microsoft Excel` this is rarely a problem in `R`: there is an `R` package for anything, from [serious](https://rviews.rstudio.com/2017/10/09/population-modeling-in-r/) to [fun](https://www.r-bloggers.com/useless-but-fun-r-packages/)).

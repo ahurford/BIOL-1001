@@ -1,4 +1,0 @@
-# Introduction to R 
-
-
-## Installing a package
