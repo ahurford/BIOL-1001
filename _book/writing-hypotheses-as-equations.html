@@ -4,21 +4,21 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 6 Entering data | Quantitative skills for biology</title>
-  <meta name="description" content="Chapter 6 Entering data | Quantitative skills for biology" />
+  <title>Chapter 8 Writing hypotheses as equations | Quantitative skills for biology</title>
+  <meta name="description" content="Chapter 8 Writing hypotheses as equations | Quantitative skills for biology" />
   <meta name="generator" content="bookdown 0.16 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 6 Entering data | Quantitative skills for biology" />
+  <meta property="og:title" content="Chapter 8 Writing hypotheses as equations | Quantitative skills for biology" />
   <meta property="og:type" content="book" />
   
   
-  <meta property="og:description" content="Chapter 6 Entering data | Quantitative skills for biology" />
+  <meta property="og:description" content="Chapter 8 Writing hypotheses as equations | Quantitative skills for biology" />
   <meta name="github-repo" content="ahurford/quantitative-training-resources/tree/master/Quantitative training guides/quant-guide" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 6 Entering data | Quantitative skills for biology" />
+  <meta name="twitter:title" content="Chapter 8 Writing hypotheses as equations | Quantitative skills for biology" />
   
-  <meta name="twitter:description" content="Chapter 6 Entering data | Quantitative skills for biology" />
+  <meta name="twitter:description" content="Chapter 8 Writing hypotheses as equations | Quantitative skills for biology" />
   
 
 <meta name="author" content="Yolanda Wiersma, Amy Hurford, Joany Mariño" />
@@ -31,8 +31,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="data-and-metadata.html"/>
-<link rel="next" href="making-graphs-with-r.html"/>
+<link rel="prev" href="making-graphs-with-r.html"/>
+<link rel="next" href="first-quantitative-lab-in-biol-1001-before-potato-lab.html"/>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -158,54 +158,8 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="entering-data" class="section level1">
-<h1><span class="header-section-number">Chapter 6</span> Entering data</h1>
-<p>Good data organization is the foundation of any research project, and this begins with entering and archiving data. There are several reasonable options for data entry, for example:</p>
-<ol style="list-style-type: decimal">
-<li>Spreadsheet</li>
-<li>Text file</li>
-<li>Database</li>
-<li>Form (web or GUI databases).</li>
-</ol>
-<p>In R, you can also input data directly, which can be the right choice if you are working with a small dataset. Here, you will learn how to enter the data from your experiments and save them using R.</p>
-<p>Let’s start by making table 1 for your report, which we will call <code>solution-concentration-effect-on-potato.csv</code>:</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">table1 &lt;-<span class="st"> </span><span class="kw">data.frame</span>(<span class="dt">weight =</span> <span class="kw">c</span>(<span class="st">&quot;initial&quot;</span>, <span class="st">&quot;final&quot;</span>, 
-                                <span class="st">&quot;difference&quot;</span>, <span class="st">&quot;percent-change&quot;</span>), 
-                     <span class="st">&quot;NaCl-0-percent&quot;</span> =<span class="st"> </span><span class="kw">c</span>(<span class="ot">NA</span>, <span class="ot">NA</span>, <span class="ot">NA</span>, <span class="ot">NA</span>), 
-                     <span class="st">&quot;NaCl-0.9-percent&quot;</span> =<span class="st"> </span><span class="kw">c</span>(<span class="ot">NA</span>, <span class="ot">NA</span>, <span class="ot">NA</span>, <span class="ot">NA</span>), 
-                     <span class="st">&quot;NaCl-2-percent&quot;</span> =<span class="st"> </span><span class="kw">c</span>(<span class="ot">NA</span>, <span class="ot">NA</span>, <span class="ot">NA</span>, <span class="ot">NA</span>), 
-                     <span class="st">&quot;NaCl-5-percent&quot;</span> =<span class="st"> </span><span class="kw">c</span>(<span class="ot">NA</span>, <span class="ot">NA</span>, <span class="ot">NA</span>, <span class="ot">NA</span>))
-<span class="kw">write.csv</span>(<span class="dt">x =</span> table1, <span class="dt">file =</span> <span class="st">&quot;solution-concentration-effect-on-potato.csv&quot;</span>, 
-          <span class="dt">row.names =</span> <span class="ot">FALSE</span>)</code></pre></div>
-<p>In the above code, make sure to replace the <code>NA</code>’s with the values from your experiment. Keep in mind that the values entered into the tables should be decimals greater than or equal to zero, and likely less than 100 since you measured mass in grams and the potato cubes for the experiments were 8 cm<sup>3</sup> in size.</p>
-<p>Notice that we used the file extension “.csv”.<br />
-CSV stands for comma-separated values, which is a format for tabular data stored in a text file where a comma separates the columns of the data. That is why a comma separates each of the values in the rows for the different solutions.</p>
-<p>Now, we will make table 2, which includes the class averages and we will call <code>solution-concentration-effect-on-potato-averages.csv</code>:</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">table2 &lt;-<span class="st"> </span><span class="kw">data.frame</span>(<span class="dt">weight =</span> <span class="kw">c</span>(<span class="st">&quot;percent-change&quot;</span>, <span class="st">&quot;minimum-value&quot;</span>, 
-                                <span class="st">&quot;maximum-value&quot;</span>, <span class="st">&quot;difference&quot;</span>), 
-                     <span class="st">&quot;NaCl-0-percent&quot;</span> =<span class="st"> </span><span class="kw">c</span>(<span class="ot">NA</span>, <span class="ot">NA</span>, <span class="ot">NA</span>, <span class="ot">NA</span>), 
-                     <span class="st">&quot;NaCl-0.9-percent&quot;</span> =<span class="st"> </span><span class="kw">c</span>(<span class="ot">NA</span>, <span class="ot">NA</span>, <span class="ot">NA</span>, <span class="ot">NA</span>), 
-                     <span class="st">&quot;NaCl-2-percent&quot;</span> =<span class="st"> </span><span class="kw">c</span>(<span class="ot">NA</span>, <span class="ot">NA</span>, <span class="ot">NA</span>, <span class="ot">NA</span>), 
-                     <span class="st">&quot;NaCl-5-percent&quot;</span> =<span class="st"> </span><span class="kw">c</span>(<span class="ot">NA</span>, <span class="ot">NA</span>, <span class="ot">NA</span>, <span class="ot">NA</span>))
-<span class="kw">write.csv</span>(<span class="dt">x =</span> table1, <span class="dt">file =</span> <span class="st">&quot;solution-concentration-effect-on-potato-averages.csv&quot;</span>, 
-          <span class="dt">row.names =</span> <span class="ot">FALSE</span>)</code></pre></div>
-<p>We can load our our data files in CSV format into R using the function <code>read.csv</code> in the following way:</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">data1 &lt;-<span class="st"> </span><span class="kw">read.csv</span>(<span class="dt">file =</span> <span class="st">&quot;solution-concentration-effect-on-potato.csv&quot;</span>)
-data2 &lt;-<span class="st"> </span><span class="kw">read.csv</span>(<span class="dt">file =</span> <span class="st">&quot;solution-concentration-effect-on-potato-averages.csv&quot;</span>)</code></pre></div>
-<p>Here, the argument <code>file =</code> of <code>read.csv</code> is the name of the file we want to read. Notice that the filename needs to be a character string, so we put it in quotes.</p>
-<p>To take a look at our data, we can print then by typing the name and hitting Enter (or Return).</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">data1</code></pre></div>
-<pre><code>##           weight NaCl.0.percent NaCl.0.9.percent NaCl.2.percent NaCl.5.percent
-## 1        initial             NA               NA             NA             NA
-## 2          final             NA               NA             NA             NA
-## 3     difference             NA               NA             NA             NA
-## 4 percent-change             NA               NA             NA             NA</code></pre>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">data2</code></pre></div>
-<pre><code>##           weight NaCl.0.percent NaCl.0.9.percent NaCl.2.percent NaCl.5.percent
-## 1        initial             NA               NA             NA             NA
-## 2          final             NA               NA             NA             NA
-## 3     difference             NA               NA             NA             NA
-## 4 percent-change             NA               NA             NA             NA</code></pre>
+<div id="writing-hypotheses-as-equations" class="section level1">
+<h1><span class="header-section-number">Chapter 8</span> Writing hypotheses as equations</h1>
 
 </div>
             </section>
@@ -213,8 +167,8 @@ data2 &lt;-<span class="st"> </span><span class="kw">read.csv</span>(<span class
           </div>
         </div>
       </div>
-<a href="data-and-metadata.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="making-graphs-with-r.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="making-graphs-with-r.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="first-quantitative-lab-in-biol-1001-before-potato-lab.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -245,7 +199,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/rstudio/bookdown-demo/edit/master/05-entering-data.Rmd",
+"link": "https://github.com/rstudio/bookdown-demo/edit/master/07-writing-equations.Rmd",
 "text": "Edit"
 },
 "history": {

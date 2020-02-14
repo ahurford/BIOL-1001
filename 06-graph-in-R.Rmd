@@ -1,0 +1,5 @@
+# Making graphs with R
+
+Okay, it probably is easy to just do it in base R!
+
+In think it's good to provide link outs to software carpentary or pirates guide to R for these sections. We can make our own text since then we won't lose it, but at the end give the links.
