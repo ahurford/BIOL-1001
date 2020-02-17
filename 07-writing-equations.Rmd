@@ -1,1 +1,3 @@
-# Writing hypotheses as equations {#hypothesis}
+# Writing preditions as equations {#hypothesis}
+
+This text will be copied from what is written in the Appendix of the lab manual.

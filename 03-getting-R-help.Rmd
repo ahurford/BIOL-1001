@@ -54,4 +54,8 @@ knitr::include_graphics("./figures/HelpDoc_partA.jpg")
 knitr::include_graphics("./figures/HelpDoc_partB.jpg")
 ```
 
+## Common errors
+
+-Spelling mistakes
+-Input to a function is the wrong data type
 

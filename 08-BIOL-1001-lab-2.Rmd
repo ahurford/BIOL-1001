@@ -29,22 +29,9 @@ In the quant guide:
 In the printed lab manual:
 
 - Appendix II: Something or other
-
-1. Intro to R
-1. Entering data exercise. Identify relevant data. Data should be discrete with at least 3 groups. Export from R as .csv, write metadata. Submit to Dropbox. 
-1. Plot data to replicate a bar chart. Replot as box plot. Save in .pdf or related format.
-1. Practice writing hypothesis, prediction, and equation (i.e., equation is means of groups not equal in notation).
-1. Repeat plotting for data with continuous independent variable.
-1. Practice writing equation for data with continuous independent variable.
-
-
-1. Repeat plotting for data with continuous independent variable.
-1. Practice writing equation for data with continuous independent variable.
-
-Note to instructors/developers. Design these activities to take 20-30 mins.
  
 ## EXERCISE 1.	Intro to RStudio {-}
-Maybe borrow a little exercise from software carpentary. Nothing to hand in assess?
+Maybe borrow a little exercise from software carpentary. Nothing to hand in/assess?
 
 ## EXERCISE 2.	Entering data {-}
 
@@ -59,41 +46,47 @@ On the other side, the stressed plant shared its roots with its nearest unstress
 Stress was quantified fifteen minutes after the induction of drought by measuring the width of the stomatal openings on the leaves of the plants. 
 (**Insert citation and update references**)
 
-The dataset with the results of this experiment is given in the file: 
-`Malik_et-al_2011_dataset.csv`. We will use this data in the next exercise, 
-but first, we need to load it into R. 
-(**Should this be given as a table instead?**)
+The results of this experiment are as follows:
+(**Joany make table here**)
 
 ### Questions {-}
-1. Follow the instructions in Chapter \@ref(data-entry) and load the dataset.
+1. Follow the instructions in Chapter \@ref(data-entry) and enter the data into `R` and then save the data as a .csv. Submit your .csv file to the `Biology Data Repository` Brightspace.
+
+1. Follow the instructions in Chapter X and write metadata for the data that you saved in .csv formate. Submit your metadata to the `Biology Data Repository` Brightspace.
+
 1. Looking at the dataset, can you tell how many treatments were applied in the experiment? How many plants were used for each treatment?
+
 1. What is the smallest stomatal width measured? What is the largest?
-1. After you have loaded the dataset into your R session, submit the .csv and metadata to the `Biology Data Repository` on `BrightSpace`
 
 ## EXERCISE 3.	Discrete independent variable {-}
-### Make a graph {-}
-Plot data to replicate a bar chart from Campbell book. Replot as box plot. Save in .pdf or related format. Provide links to relevant section of this manual.
+### Questions {-}
+
+1. Follow the instructions in Chapter X. Replicate the figure from the Campbell textbook (bar plot). Export your bar graph as a .pdf and insert it into Microsoft Word (or similar software). Add a caption to your bar plot. Print your graph to hand in with your lab report.
+
+1. In the bar graph, what can you tell about the stomatal openings of the treatment plant vs. the control plants? Is it consistent across all the individual plants?
+
+1. Follow the instructions in Chapter X, re-plot the data from EXERCISE 1 as a boxplot. Export your boxplot as a .pdf and insert it into Microsoft Word (or similar software). Add a caption to your boxplot.
+
+1.	Label the following on the boxplot: mean, 25% and 75% quantiles, 95% confidence limits, outliers. It is acceptible to write these labels in with pen or pencil.
+
+1.	What does the boxplot tell you about the differences between the treatment plants (plants 6-11) vs. the control plants that the treatment plant does not?
+
+1.	Why do you think a scientist might choose to represent these data one way over another?
+
 
 ### Write the hypothesis as an equation {-}
-Link to relevant section of this manual.
-
 ### Questions {-}
-1. In the bar graph, what can you tell about the stomatal openings of the treatment plant vs. the control plants? Is it consistent across all the individual plants?
-2.	Label the following on the box plot (mean, 25% and 75% quantiles, 95% confidence limits, outliers).
-3.	What does the box plot tell you about the differences between the treatment plants (plants 6-11) vs. the control plants that the treatment plant does not?
-4.	Why do you think a scientist might choose to represent these data one way over another?
-5. Hand in your equations and the answers to questions 1 to 4.
-6. Print the graph and hand it in. Follow the instructions for figures in the BIOL 1001 lab manual.
+1. Follow the instructions in Chapter X. Write a hypothesis, prediction, and equation for these data.
+
 
 ## EXERCISE 4. Continuous independent variable {-}
 
 ### Make a graph {-}
-Line graph
 
-### Write the hypothesis as an equation {-}
+1. For some continous data that we will provide as a .csv. Use the ``Import DataSet'' button and import the data.
 
-### Questions {-}
-1. Hand in your equations.
-1. Print the graph and hand it in. Follow the instructions for figures in the BIOL 1001 lab manual.
+1. Follow the instructions in Chapter X, to make a scatterplot for these data.
 
+1. Follow the instructions in Chapter X, to make a line graphs for these data. Export your line graph as a .pdf and insert it into Microsoft Word (or similar software). Write a figure caption. Print your graph and hand it in with your lab report for this week.
 
+1. Follow the instructions in Chapter X. Write a hypothesis, prediction, and equation for these data.

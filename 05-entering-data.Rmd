@@ -69,3 +69,11 @@ To take a look at our data, we can print then by typing the name and hitting Ent
 data1
 data2
 ```
+
+Open your data in Excel.
+
+You might have just done this in Excel. We did not teach this method because...
+
+## Loading data
+
+Click the Import Data button.
