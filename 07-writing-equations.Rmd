@@ -1,1 +1,1 @@
-# Writing hypotheses as equations
+# Writing hypotheses as equations {#hypothesis}

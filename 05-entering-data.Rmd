@@ -1,4 +1,4 @@
-# Entering data
+# Entering data {#data-entry}
 
 Good data organization is the foundation of any research project, 
 and this begins with entering and archiving data. 

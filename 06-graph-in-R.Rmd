@@ -1,4 +1,4 @@
-# Making graphs with R
+# Making graphs with R {#graph}
 
 Okay, it probably is easy to just do it in base R!
 

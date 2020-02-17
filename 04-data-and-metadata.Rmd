@@ -1,4 +1,4 @@
-# Data and metadata
+# Data and metadata {#data}
 
 Joany will write this section. Maybe we could do a lab meeting or eco-evo to figure out what to do for metadata, i.e., look for good examples.
 
