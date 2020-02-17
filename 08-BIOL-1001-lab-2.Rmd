@@ -1,4 +1,4 @@
-# BIOL 1001: LABORATORY 2
+# BIOL 1001: LABORATORY 2 {#lab2}
 
 ## BIOLOGICAL DATA WITH COMPUTERS {-}
 
@@ -6,7 +6,7 @@
 
 PURPOSE
 
-1. To become familiarize with R Studio
+1. To familiarize with R Studio
 1. To learn how to record data in electronic format
 1. To learn how to write hypotheses as equations
 1. To learn how to choose the appropriate visualizations
@@ -18,7 +18,7 @@ PURPOSE
 
 Before coming to the laboratory:
 
-1. if you wish to use your own labtop, then install `R` and `RStudio`. For instructions see here. insert link
+1. If you wish to use your own laptop, then install `R` and `RStudio`. For instructions see Chapter \@ref(install).
  
 1. Before coming to the laboratory read:
  
@@ -31,30 +31,44 @@ In the printed lab manual:
 - Appendix II: Something or other
 
 1. Intro to R
-1. Entering data exercise. Identify relevant data. Data should be discrete with at least 3 groups. Export from R as .csv, write metadata. Submit to dropbox. 
+1. Entering data exercise. Identify relevant data. Data should be discrete with at least 3 groups. Export from R as .csv, write metadata. Submit to Dropbox. 
 1. Plot data to replicate a bar chart. Replot as box plot. Save in .pdf or related format.
 1. Practice writing hypothesis, prediction, and equation (i.e., equation is means of groups not equal in notation).
 1. Repeat plotting for data with continuous independent variable.
 1. Practice writing equation for data with continuous independent variable.
 
 
-
- 
 1. Repeat plotting for data with continuous independent variable.
 1. Practice writing equation for data with continuous independent variable.
 
 Note to instructors/developers. Design these activities to take 20-30 mins.
  
-## EXERCISE 1.	Intro of RStudio {-}
+## EXERCISE 1.	Intro to RStudio {-}
 Maybe borrow a little exercise from software carpentary. Nothing to hand in assess?
 
 ## EXERCISE 2.	Entering data {-}
-Joany will type data table here.
 
-Ask students to follow the enter data instructions in the sections of this manual.
+We will use data from a research paper that investigated 
+whether plants were able to respond to stress cues emitted from their drought-stressed neighbours.
+The research team used _Pisum sativum_ plants in an experimental setup that allowed them to connect the plants' root systems. One plant in the central position of a row was subjected to osmotic stress, while neighbouring plants remained unstressed on both sides. 
+Plants on one side of the stressed plant shared roots with others in the group but
+did not share roots with the stressed plant; 
+these were the control group. 
+On the other side, the stressed plant shared its roots with its nearest unstressed neighbour, and all the other plants shared their roots with their nearest neighbour.
+(**Insert a figure of the layout?**)
+Stress was quantified fifteen minutes after the induction of drought by measuring the width of the stomatal openings on the leaves of the plants. 
+(**Insert citation and update references**)
 
-### Question {-}
-1. When they are finished submit the .csv and metadata to the `Biology Data Repository` on `BrightSpace`
+The dataset with the results of this experiment is given in the file: 
+`Malik_et-al_2011_dataset.csv`. We will use this data in the next exercise, 
+but first, we need to load it into R. 
+(**Should this be given as a table instead?**)
+
+### Questions {-}
+1. Follow the instructions in Chapter \@ref(data-entry) and load the dataset.
+1. Looking at the dataset, can you tell how many treatments were applied in the experiment? How many plants were used for each treatment?
+1. What is the smallest stomatal width measured? What is the largest?
+1. After you have loaded the dataset into your R session, submit the .csv and metadata to the `Biology Data Repository` on `BrightSpace`
 
 ## EXERCISE 3.	Discrete independent variable {-}
 ### Make a graph {-}
@@ -63,9 +77,13 @@ Plot data to replicate a bar chart from Campbell book. Replot as box plot. Save 
 ### Write the hypothesis as an equation {-}
 Link to relevant section of this manual.
 
-### Question {-}
-1. Print the graph and hand it in. Following the 1001 lab manual instructions for figures.
-1. Hand in your equations.
+### Questions {-}
+1. In the bar graph, what can you tell about the stomatal openings of the treatment plant vs. the control plants? Is it consistent across all the individual plants?
+2.	Label the following on the box plot (mean, 25% and 75% quantiles, 95% confidence limits, outliers).
+3.	What does the box plot tell you about the differences between the treatment plants (plants 6-11) vs. the control plants that the treatment plant does not?
+4.	Why do you think a scientist might choose to represent these data one way over another?
+5. Hand in your equations and the answers to questions 1 to 4.
+6. Print the graph and hand it in. Follow the instructions for figures in the BIOL 1001 lab manual.
 
 ## EXERCISE 4. Continuous independent variable {-}
 
@@ -74,19 +92,8 @@ Line graph
 
 ### Write the hypothesis as an equation {-}
 
-### Question {-}
-1. Print the graph and hand it in.
+### Questions {-}
 1. Hand in your equations.
-
-### Question {-}
-1. Print the graph and hand it in.
+1. Print the graph and hand it in. Follow the instructions for figures in the BIOL 1001 lab manual.
 
 
-## Questions {-}
-
-AH: in the 1001 lab manual, generally it seems that questions are interspersed with EXERCISES. What Yolanda wrote below should be interspersed above.
-
-1.	In the bar graph, what can you tell about the stomatal openings of the treatment plant vs. the control plants? Is it consistent across all the individual plants?
-2.	Label the following on the box plot (mean, 25% and 75% quantiles, 95% confidence limits, outliers).
-3.	What does the box plot tell you about the differences between the treatment plants (plants 6-11) vs. the control plants that the treatment plant does not?
-4.	Why do you think a scientist might choose to represent these data one way over another?

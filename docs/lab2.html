@@ -4,21 +4,21 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>References | Quantitative skills for biology</title>
-  <meta name="description" content="References | Quantitative skills for biology" />
+  <title>Chapter 9 BIOL 1001: LABORATORY 2 | Quantitative skills for biology</title>
+  <meta name="description" content="Chapter 9 BIOL 1001: LABORATORY 2 | Quantitative skills for biology" />
   <meta name="generator" content="bookdown 0.17 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="References | Quantitative skills for biology" />
+  <meta property="og:title" content="Chapter 9 BIOL 1001: LABORATORY 2 | Quantitative skills for biology" />
   <meta property="og:type" content="book" />
   
   
-  <meta property="og:description" content="References | Quantitative skills for biology" />
+  <meta property="og:description" content="Chapter 9 BIOL 1001: LABORATORY 2 | Quantitative skills for biology" />
   <meta name="github-repo" content="ahurford/quantitative-training-resources/tree/master/Quantitative training guides/quant-guide" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="References | Quantitative skills for biology" />
+  <meta name="twitter:title" content="Chapter 9 BIOL 1001: LABORATORY 2 | Quantitative skills for biology" />
   
-  <meta name="twitter:description" content="References | Quantitative skills for biology" />
+  <meta name="twitter:description" content="Chapter 9 BIOL 1001: LABORATORY 2 | Quantitative skills for biology" />
   
 
 
@@ -29,8 +29,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="lab2.html"/>
-
+<link rel="prev" href="hypothesis.html"/>
+<link rel="next" href="references.html"/>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -193,17 +193,123 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="references" class="section level1 unnumbered">
-<h1>References</h1>
+<div id="lab2" class="section level1">
+<h1><span class="header-section-number">Chapter 9</span> BIOL 1001: LABORATORY 2</h1>
+<div id="biological-data-with-computers" class="section level2 unnumbered">
+<h2>BIOLOGICAL DATA WITH COMPUTERS</h2>
+<hr />
+<p>PURPOSE</p>
+<ol style="list-style-type: decimal">
+<li>To familiarize with R Studio</li>
+<li>To learn how to record data in electronic format</li>
+<li>To learn how to write hypotheses as equations</li>
+<li>To learn how to choose the appropriate visualizations</li>
+<li>To learn how to make graphs using R Studio</li>
+</ol>
+<hr />
+<p>Before coming to the laboratory:</p>
+<ol style="list-style-type: decimal">
+<li><p>If you wish to use your own laptop, then install <code>R</code> and <code>RStudio</code>. For instructions see Chapter <a href="install.html#install">2</a>.</p></li>
+<li><p>Before coming to the laboratory read:</p></li>
+</ol>
+<p>In the quant guide:</p>
+<ul>
+<li>Sections</li>
+</ul>
+<p>In the printed lab manual:</p>
+<ul>
+<li>Appendix II: Something or other</li>
+</ul>
+<ol style="list-style-type: decimal">
+<li>Intro to R</li>
+<li>Entering data exercise. Identify relevant data. Data should be discrete with at least 3 groups. Export from R as .csv, write metadata. Submit to Dropbox.</li>
+<li>Plot data to replicate a bar chart. Replot as box plot. Save in .pdf or related format.</li>
+<li>Practice writing hypothesis, prediction, and equation (i.e., equation is means of groups not equal in notation).</li>
+<li>Repeat plotting for data with continuous independent variable.</li>
+<li><p>Practice writing equation for data with continuous independent variable.</p></li>
+<li>Repeat plotting for data with continuous independent variable.</li>
+<li><p>Practice writing equation for data with continuous independent variable.</p></li>
+</ol>
+<p>Note to instructors/developers. Design these activities to take 20-30 mins.</p>
+</div>
+<div id="exercise-1.-intro-to-rstudio" class="section level2 unnumbered">
+<h2>EXERCISE 1. Intro to RStudio</h2>
+<p>Maybe borrow a little exercise from software carpentary. Nothing to hand in assess?</p>
+</div>
+<div id="exercise-2.-entering-data" class="section level2 unnumbered">
+<h2>EXERCISE 2. Entering data</h2>
+<p>We will use data from a research paper that investigated
+whether plants were able to respond to stress cues emitted from their drought-stressed neighbours.
+The research team used <em>Pisum sativum</em> plants in an experimental setup that allowed them to connect the plants’ root systems. One plant in the central position of a row was subjected to osmotic stress, while neighbouring plants remained unstressed on both sides.
+Plants on one side of the stressed plant shared roots with others in the group but
+did not share roots with the stressed plant;
+these were the control group.
+On the other side, the stressed plant shared its roots with its nearest unstressed neighbour, and all the other plants shared their roots with their nearest neighbour.
+(<strong>Insert a figure of the layout?</strong>)
+Stress was quantified fifteen minutes after the induction of drought by measuring the width of the stomatal openings on the leaves of the plants.
+(<strong>Insert citation and update references</strong>)</p>
+<p>The dataset with the results of this experiment is given in the file:
+<code>Malik_et-al_2011_dataset.csv</code>. We will use this data in the next exercise,
+but first, we need to load it into R.
+(<strong>Should this be given as a table instead?</strong>)</p>
+<div id="questions" class="section level3 unnumbered">
+<h3>Questions</h3>
+<ol style="list-style-type: decimal">
+<li>Follow the instructions in Chapter <a href="data-entry.html#data-entry">6</a> and load the dataset.</li>
+<li>Looking at the dataset, can you tell how many treatments were applied in the experiment? How many plants were used for each treatment?</li>
+<li>What is the smallest stomatal width measured? What is the largest?</li>
+<li>After you have loaded the dataset into your R session, submit the .csv and metadata to the <code>Biology Data Repository</code> on <code>BrightSpace</code></li>
+</ol>
+</div>
+</div>
+<div id="exercise-3.-discrete-independent-variable" class="section level2 unnumbered">
+<h2>EXERCISE 3. Discrete independent variable</h2>
+<div id="make-a-graph" class="section level3 unnumbered">
+<h3>Make a graph</h3>
+<p>Plot data to replicate a bar chart from Campbell book. Replot as box plot. Save in .pdf or related format. Provide links to relevant section of this manual.</p>
+</div>
+<div id="write-the-hypothesis-as-an-equation" class="section level3 unnumbered">
+<h3>Write the hypothesis as an equation</h3>
+<p>Link to relevant section of this manual.</p>
+</div>
+<div id="questions-1" class="section level3 unnumbered">
+<h3>Questions</h3>
+<ol style="list-style-type: decimal">
+<li>In the bar graph, what can you tell about the stomatal openings of the treatment plant vs. the control plants? Is it consistent across all the individual plants?</li>
+<li>Label the following on the box plot (mean, 25% and 75% quantiles, 95% confidence limits, outliers).</li>
+<li>What does the box plot tell you about the differences between the treatment plants (plants 6-11) vs. the control plants that the treatment plant does not?</li>
+<li>Why do you think a scientist might choose to represent these data one way over another?</li>
+<li>Hand in your equations and the answers to questions 1 to 4.</li>
+<li>Print the graph and hand it in. Follow the instructions for figures in the BIOL 1001 lab manual.</li>
+</ol>
+</div>
+</div>
+<div id="exercise-4.-continuous-independent-variable" class="section level2 unnumbered">
+<h2>EXERCISE 4. Continuous independent variable</h2>
+<div id="make-a-graph-1" class="section level3 unnumbered">
+<h3>Make a graph</h3>
+<p>Line graph</p>
+</div>
+<div id="write-the-hypothesis-as-an-equation-1" class="section level3 unnumbered">
+<h3>Write the hypothesis as an equation</h3>
+</div>
+<div id="questions-2" class="section level3 unnumbered">
+<h3>Questions</h3>
+<ol style="list-style-type: decimal">
+<li>Hand in your equations.</li>
+<li>Print the graph and hand it in. Follow the instructions for figures in the BIOL 1001 lab manual.</li>
+</ol>
 
+</div>
+</div>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="lab2.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-
+<a href="hypothesis.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="references.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -234,7 +340,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/rstudio/bookdown-demo/edit/master/13-references.Rmd",
+"link": "https://github.com/rstudio/bookdown-demo/edit/master/08-BIOL-1001-lab-2.Rmd",
 "text": "Edit"
 },
 "history": {
