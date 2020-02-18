@@ -15,4 +15,5 @@ https://www.usgs.gov/products/data-and-tools/data-management/metadata-creation
 
 Browse http://sciencebase.gov and http://data.usgs.gov for both good and bad examples fo these standards in use (as well as examples from before)  http://Data.gov will have more examples too
 
+The metadata sectin of this paper is really great for a quick run down of what metadata is: https://ojs.library.queensu.ca/index.php/IEE/article/view/4608
  
