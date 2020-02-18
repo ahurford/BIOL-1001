@@ -4,21 +4,21 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 7 Making graphs with R | Quantitative skills for biology</title>
-  <meta name="description" content="Chapter 7 Making graphs with R | Quantitative skills for biology" />
+  <title>Chapter 7 Making graphs in R | Quantitative skills for biology</title>
+  <meta name="description" content="Chapter 7 Making graphs in R | Quantitative skills for biology" />
   <meta name="generator" content="bookdown 0.16 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 7 Making graphs with R | Quantitative skills for biology" />
+  <meta property="og:title" content="Chapter 7 Making graphs in R | Quantitative skills for biology" />
   <meta property="og:type" content="book" />
   
   
-  <meta property="og:description" content="Chapter 7 Making graphs with R | Quantitative skills for biology" />
+  <meta property="og:description" content="Chapter 7 Making graphs in R | Quantitative skills for biology" />
   <meta name="github-repo" content="ahurford/quantitative-training-resources/tree/master/Quantitative training guides/quant-guide" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 7 Making graphs with R | Quantitative skills for biology" />
+  <meta name="twitter:title" content="Chapter 7 Making graphs in R | Quantitative skills for biology" />
   
-  <meta name="twitter:description" content="Chapter 7 Making graphs with R | Quantitative skills for biology" />
+  <meta name="twitter:description" content="Chapter 7 Making graphs in R | Quantitative skills for biology" />
   
 
 
@@ -131,7 +131,12 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li class="chapter" data-level="6" data-path="data-entry.html"><a href="data-entry.html"><i class="fa fa-check"></i><b>6</b> Entering data</a><ul>
 <li class="chapter" data-level="6.1" data-path="data-entry.html"><a href="data-entry.html#loading-data"><i class="fa fa-check"></i><b>6.1</b> Loading data</a></li>
 </ul></li>
-<li class="chapter" data-level="7" data-path="graph.html"><a href="graph.html"><i class="fa fa-check"></i><b>7</b> Making graphs with R</a></li>
+<li class="chapter" data-level="7" data-path="graph.html"><a href="graph.html"><i class="fa fa-check"></i><b>7</b> Making graphs in R</a><ul>
+<li class="chapter" data-level="7.1" data-path="graph.html"><a href="graph.html#other-useful-plot-functions"><i class="fa fa-check"></i><b>7.1</b> Other useful plot functions</a></li>
+<li class="chapter" data-level="7.2" data-path="graph.html"><a href="graph.html#getting-a-bit-more-sophisticated"><i class="fa fa-check"></i><b>7.2</b> Getting a bit more sophisticated</a></li>
+<li class="chapter" data-level="7.3" data-path="graph.html"><a href="graph.html#first-we-plot-x-and-y-with-the-temp-vector-as-x-and-the-fisha-vector-as-y"><i class="fa fa-check"></i><b>7.3</b> First we plot x and y with the “temp” vector as “x” and the “fishA” vector as y</a></li>
+<li class="chapter" data-level="7.4" data-path="graph.html"><a href="graph.html#then-to-add-a-second-vector-of-data-fishb-to-the-same-plot-we-use"><i class="fa fa-check"></i><b>7.4</b> Then to add a second vector of data (fishB) to the same plot, we use:</a></li>
+</ul></li>
 <li class="chapter" data-level="8" data-path="hypothesis.html"><a href="hypothesis.html"><i class="fa fa-check"></i><b>8</b> Writing preditions as equations</a></li>
 <li class="chapter" data-level="9" data-path="lab2.html"><a href="lab2.html"><i class="fa fa-check"></i><b>9</b> BIOL 1001: LABORATORY 2</a><ul>
 <li class="chapter" data-level="" data-path="lab2.html"><a href="lab2.html#biological-data-with-computers"><i class="fa fa-check"></i>BIOLOGICAL DATA WITH COMPUTERS</a></li>
@@ -170,10 +175,78 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 
             <section class="normal" id="section-">
 <div id="graph" class="section level1">
-<h1><span class="header-section-number">Chapter 7</span> Making graphs with R</h1>
-<p>Okay, it probably is easy to just do it in base R!</p>
-<p>In think it’s good to provide link outs to software carpentary or pirates guide to R for these sections. We can make our own text since then we won’t lose it, but at the end give the links.</p>
+<h1><span class="header-section-number">Chapter 7</span> Making graphs in R</h1>
+<p>You might have had experience making graphs using Excel. However, making graphs with Excel is NOT recommended. This is because the defaults in Excel do not meet standards for good scientific graphs.</p>
+<p>You can make very attractive, clean, professions graphs and figures in R. This chapter is a basic introduction to plot functions in R. More advanced users can use the package “ggplot” (see chatper XX in this manual) There are many good reference manuals for making sophisticated graphs (e.g., Murrell 2006; Mittal 2011).</p>
+<p>In base R, the “plot” function simply looks to plot two data vectors “x” and “y”. For example if</p>
+<p><code>x &lt;- cbind(2,4,6,8,10) y &lt;- cbind(10,20,30,40,50) plot(x,y)</code></p>
+<p>Will give you a graph like this:</p>
+<div class="figure" style="text-align: center"><span id="fig:scatterplot1"></span>
+<img src="./figures/Fig9.1.jpg" alt="A poor example of a scatter plot" width="70%" />
+<p class="caption">
+Figure 7.1: A poor example of a scatter plot
+</p>
+</div>
+<p>NOT THAT THIS DOES NOT MEET THE STANDARDS OF A GOOD FIGURE!</p>
+<p>What’s missing?</p>
+<ul>
+<li>meaningufl x and y axis labels</li>
+<li>maybe it’s more appropriate to show this data connected with a line</li>
+<li>maybe you want the symbols to be a different shape or colour</li>
+</ul>
+<p>You can address these issues with the plot function. Try using the help function to figure out what to do (refer to chapter 8 “Getting help in R” to recall how to use help files)</p>
+<p><code>help(plot)</code></p>
+<p>You’ll see there are a lot of argument options. First, let’s fix the axis labels.</p>
+<p><code>plot(x,y, xlab = &quot;temperature (degrees C)&quot;, ylab = &quot;growth rate (cm)&quot;)</code></p>
+This one is a little better:
+<div class="figure" style="text-align: center"><span id="fig:scatterplot2"></span>
+<img src="./figures/Fig9.2.jpg" alt="The same scatter plot as Figure 9.1, but with axis lables" width="70%" />
+<p class="caption">
+Figure 7.2: The same scatter plot as Figure 9.1, but with axis lables
+</p>
+</div>
+<p>If you want to change the symbols, you use the pch function to change the style.</p>
+<p><strong>TIP</strong> you can make a little cheat sheet for pch codes using this code. Print it out and tape it up on your wall by your computer, or in the front of your notebook as a handy reference.</p>
+<p><code>#++++++++++++++++++++++++++++++++++++++++++++ #generate a plot of point shapes which R knows about. #++++++++++++++++++++++++++++++++++++++++++++ generateRPointShapes&lt;-function(){   oldPar&lt;-par()   par(font=2, mar=c(0.5,0,0,0))   y=rev(c(rep(1,6),rep(2,5), rep(3,5), rep(4,5), rep(5,5)))   x=c(rep(1:5,5),6)   plot(x, y, pch = 0:25, cex=1.5, ylim=c(1,5.5), xlim=c(1,6.5),         axes=FALSE, xlab=&quot;&quot;, ylab=&quot;&quot;, bg=&quot;blue&quot;)   text(x, y, labels=0:25, pos=3)   par(mar=oldPar$mar,font=oldPar$font ) } generateRPointShapes()</code></p>
+<p>So, let’s re-do the graph in Figure 9.1, but with filled triangles.</p>
+<p><code>plot(x,y, pch = 17, xlab = &quot;temperature (degrees C)&quot;, ylab = &quot;growth rate (cm)&quot;)</code></p>
+<p>And we get…</p>
+<div class="figure" style="text-align: center"><span id="fig:scatterplot3"></span>
+<img src="./figures/Fig9.3.jpg" alt="The same scatter plot as Figure 9.2, but with symbols as filled triangles" width="70%" />
+<p class="caption">
+Figure 7.3: The same scatter plot as Figure 9.2, but with symbols as filled triangles
+</p>
+</div>
+<div id="other-useful-plot-functions" class="section level2">
+<h2><span class="header-section-number">7.1</span> Other useful plot functions</h2>
+<p>The generic “plot” function makes a scatter plot, with variations.</p>
+<p>For other types of plots, R has different functions, but all have similar arguments for adjusting the labels, spacing, tic marks, symbols, etc.</p>
+<p>See the following</p>
+<p><code>barplot{graphics}</code> to make bar graphs <code>boxplot{graphics}</code> to make boxplots <code>hist{graphics}</code> to make a histogram</p>
+</div>
+<div id="getting-a-bit-more-sophisticated" class="section level2">
+<h2><span class="header-section-number">7.2</span> Getting a bit more sophisticated</h2>
+<p>It’s not hard to get more sophisticate with R graphics. The best approach is to explore one of the reference books listed to figure out how to do what you want to do.</p>
+<p>One thing most undergrads will probably need or want to do is to visualize two sets of data on the same graph. For example, the goldfish data in the Appendix of the BIOL 1001 lab manual shows the opercular beats of two fish in response to temperature. It would be logical to show both fish on the same graph, but with different symbols. Here’s how you would do it:</p>
+<p>```temp &lt;- cbind(5, 8, 12, 16, 20, 23) #This creates the vecor of data for the x-axis fishA &lt;- cbind(36, 42, 59, 73, 88, 96) #This creates the vector of data for Fish A fishB &lt;- cbind(40, 49, 61, 71, 82, 90) #This creates the vector of data for Fish B</p>
+</div>
+<div id="first-we-plot-x-and-y-with-the-temp-vector-as-x-and-the-fisha-vector-as-y" class="section level2">
+<h2><span class="header-section-number">7.3</span> First we plot x and y with the “temp” vector as “x” and the “fishA” vector as y</h2>
+<p>plot(temp, fishA, pch = 17, xlab = “temperature (degrees C)”, ylab = “opercular beats (bpm)”)</p>
+</div>
+<div id="then-to-add-a-second-vector-of-data-fishb-to-the-same-plot-we-use" class="section level2">
+<h2><span class="header-section-number">7.4</span> Then to add a second vector of data (fishB) to the same plot, we use:</h2>
+<p>points(temp, fishB, pch = 17, col = “dimgray”)```</p>
+<p>Voila!</p>
+<div class="figure" style="text-align: center"><span id="fig:goldfishplot"></span>
+<img src="./figures/Fig9.4.jpg" alt="The effect of water temperature on opercular beats per minute (bpm) for two goldfish; goldfish A (black triangles) and goldfish B (grey triangles)" width="70%" />
+<p class="caption">
+Figure 7.4: The effect of water temperature on opercular beats per minute (bpm) for two goldfish; goldfish A (black triangles) and goldfish B (grey triangles)
+</p>
+</div>
+<p>Note that the difference in the two symbols is described in the caption. For most scientific journals it is preferred to describe the symbology in the caption, rather than use a legend. However, with more complex graphs, or for some publications, you may wish to include a legend. Legends can be a bit tricky to work with in R - we’ll leave those for a more advanced course.</p>
 
+</div>
 </div>
             </section>
 

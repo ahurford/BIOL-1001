@@ -1,5 +1,108 @@
-# Making graphs with R {#graph}
+# Making graphs in R {#graph}
 
-Okay, it probably is easy to just do it in base R!
+You might have had experience making graphs using Excel. However, making graphs with Excel is NOT recommended. This is because the defaults in Excel do not meet standards for good scientific graphs.
 
-In think it's good to provide link outs to software carpentary or pirates guide to R for these sections. We can make our own text since then we won't lose it, but at the end give the links.
+You can make very attractive, clean, professions graphs and figures in R. This chapter is a basic introduction to plot functions in R. More advanced users can use the package "ggplot" (see chatper XX in this manual) There are many good reference manuals for making sophisticated graphs (e.g., Murrell 2006; Mittal 2011). 
+
+In base R, the "plot" function simply looks to plot two data vectors "x" and "y". For example if
+
+``` 
+x <- cbind(2,4,6,8,10)
+y <- cbind(10,20,30,40,50)
+plot(x,y)```
+
+Will give you a graph like this:
+
+```{r scatterplot1, fig.cap="A poor example of a scatter plot", fig.align='center', out.width="70%", fig.show='hold', echo=FALSE}
+knitr::include_graphics('./figures/Fig9.1.jpg')
+```
+
+NOT THAT THIS DOES NOT MEET THE STANDARDS OF A GOOD FIGURE!
+
+What's missing?
+
+- meaningufl x and y axis labels 
+- maybe it's more appropriate to show this data connected with a line
+- maybe you want the symbols to be a different shape or colour
+
+You can address these issues with the plot function. Try using the help function to figure out what to do (refer to chapter 8 "Getting help in R" to recall how to use help files)
+
+``` help(plot)```
+
+You'll see there are a lot of argument options. First, let's fix the axis labels.
+
+```plot(x,y, xlab = "temperature (degrees C)", ylab = "growth rate (cm)")```
+
+This one is a little better: 
+```{r scatterplot2, fig.cap="The same scatter plot as Figure 9.1, but with axis lables", fig.align='center', out.width="70%", fig.show='hold', echo=FALSE}
+knitr::include_graphics('./figures/Fig9.2.jpg')
+```
+
+If you want to change the symbols, you use the pch function to change the style.
+
+**TIP** you can make a little cheat sheet for pch codes using this code. Print it out and tape it up on your wall by your computer, or in the front of your notebook as a handy reference.
+
+```#++++++++++++++++++++++++++++++++++++++++++++
+#generate a plot of point shapes which R knows about.
+#++++++++++++++++++++++++++++++++++++++++++++
+generateRPointShapes<-function(){
+  oldPar<-par()
+  par(font=2, mar=c(0.5,0,0,0))
+  y=rev(c(rep(1,6),rep(2,5), rep(3,5), rep(4,5), rep(5,5)))
+  x=c(rep(1:5,5),6)
+  plot(x, y, pch = 0:25, cex=1.5, ylim=c(1,5.5), xlim=c(1,6.5), 
+       axes=FALSE, xlab="", ylab="", bg="blue")
+  text(x, y, labels=0:25, pos=3)
+  par(mar=oldPar$mar,font=oldPar$font )
+}
+generateRPointShapes()```
+
+
+So, let's re-do the graph in Figure 9.1, but with filled triangles.
+
+```plot(x,y, pch = 17, xlab = "temperature (degrees C)", ylab = "growth rate (cm)")```
+
+And we get...
+
+```{r scatterplot3, fig.cap="The same scatter plot as Figure 9.2, but with symbols as filled triangles", fig.align='center', out.width="70%", fig.show='hold', echo=FALSE}
+knitr::include_graphics('./figures/Fig9.3.jpg')
+```
+
+## Other useful plot functions
+
+The generic "plot" function makes a scatter plot, with variations. 
+
+For other types of plots, R has different functions, but all have similar arguments for adjusting the labels, spacing, tic marks, symbols, etc. 
+
+See the following
+
+```barplot{graphics}``` to make bar graphs
+```boxplot{graphics}``` to make boxplots
+```hist{graphics}``` to make a histogram
+
+
+## Getting a bit more sophisticated
+
+It's not hard to get more sophisticate with R graphics. The best approach is to explore one of the reference books listed to figure out how to do what you want to do.
+
+One thing most undergrads will probably need or want to do is to visualize two sets of data on the same graph. For example, the goldfish data in the Appendix of the BIOL 1001 lab manual shows the opercular beats of two fish in response to temperature. It would be logical to show both fish on the same graph, but with different symbols. Here's how you would do it:
+
+```temp <- cbind(5, 8, 12, 16, 20, 23) #This creates the vecor of data for the x-axis
+fishA <- cbind(36, 42, 59, 73, 88, 96) #This creates the vector of data for Fish A
+fishB <- cbind(40, 49, 61, 71, 82, 90) #This creates the vector of data for Fish B
+
+## First we plot x and y with the "temp" vector as "x" and the "fishA" vector as y 
+
+plot(temp, fishA, pch = 17, xlab = "temperature (degrees C)", ylab = "opercular beats (bpm)")
+
+## Then to add a second vector of data (fishB) to the same plot, we use:
+points(temp, fishB, pch = 17, col = "dimgray")```
+
+
+Voila!
+
+```{r goldfishplot, fig.cap="The effect of water temperature on opercular beats per minute (bpm) for two goldfish; goldfish A (black triangles) and goldfish B (grey triangles)", fig.align='center', out.width="70%", fig.show='hold', echo=FALSE}
+knitr::include_graphics('./figures/Fig9.4.jpg')
+```
+
+Note that the difference in the two symbols is described in the caption. For most scientific journals it is preferred to describe the symbology in the caption, rather than use a legend. However, with more complex graphs, or for some publications, you may wish to include a legend. Legends can be a bit tricky to work with in R - we'll leave those for a more advanced course. 
