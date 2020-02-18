@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Chapter 6 Entering data | Quantitative skills for biology</title>
   <meta name="description" content="Chapter 6 Entering data | Quantitative skills for biology" />
-  <meta name="generator" content="bookdown 0.16 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.13 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Chapter 6 Entering data | Quantitative skills for biology" />
   <meta property="og:type" content="book" />
@@ -38,9 +38,6 @@
 <link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
-<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
-
-
 
 
 
@@ -206,17 +203,27 @@ data2 &lt;-<span class="st"> </span><span class="kw">read.csv</span>(<span class
 <p>Here, the argument <code>file =</code> of <code>read.csv</code> is the name of the file we want to read. Notice that the filename needs to be a character string, so we put it in quotes.</p>
 <p>To take a look at our data, we can print then by typing the name and hitting Enter (or Return).</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">data1</code></pre></div>
-<pre><code>##           weight NaCl.0.percent NaCl.0.9.percent NaCl.2.percent NaCl.5.percent
-## 1        initial             NA               NA             NA             NA
-## 2          final             NA               NA             NA             NA
-## 3     difference             NA               NA             NA             NA
-## 4 percent-change             NA               NA             NA             NA</code></pre>
+<pre><code>##           weight NaCl.0.percent NaCl.0.9.percent NaCl.2.percent
+## 1        initial             NA               NA             NA
+## 2          final             NA               NA             NA
+## 3     difference             NA               NA             NA
+## 4 percent-change             NA               NA             NA
+##   NaCl.5.percent
+## 1             NA
+## 2             NA
+## 3             NA
+## 4             NA</code></pre>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">data2</code></pre></div>
-<pre><code>##           weight NaCl.0.percent NaCl.0.9.percent NaCl.2.percent NaCl.5.percent
-## 1        initial             NA               NA             NA             NA
-## 2          final             NA               NA             NA             NA
-## 3     difference             NA               NA             NA             NA
-## 4 percent-change             NA               NA             NA             NA</code></pre>
+<pre><code>##           weight NaCl.0.percent NaCl.0.9.percent NaCl.2.percent
+## 1        initial             NA               NA             NA
+## 2          final             NA               NA             NA
+## 3     difference             NA               NA             NA
+## 4 percent-change             NA               NA             NA
+##   NaCl.5.percent
+## 1             NA
+## 2             NA
+## 3             NA
+## 4             NA</code></pre>
 <p>Open your data in Excel.</p>
 <p>You might have just done this in Excel. We did not teach this method because…</p>
 <div id="loading-data" class="section level2">
@@ -236,13 +243,11 @@ data2 &lt;-<span class="st"> </span><span class="kw">read.csv</span>(<span class
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
 <script src="libs/gitbook-2.6.7/js/lunr.js"></script>
-<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
 <script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
-<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
 <script>
 gitbook.require(["gitbook"], function(gitbook) {
 gitbook.start({
@@ -250,11 +255,12 @@ gitbook.start({
 "github": false,
 "facebook": true,
 "twitter": true,
+"google": false,
 "linkedin": false,
 "weibo": false,
 "instapaper": false,
 "vk": false,
-"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+"all": ["facebook", "google", "twitter", "linkedin", "weibo", "instapaper"]
 },
 "fontsettings": {
 "theme": "white",
@@ -266,10 +272,6 @@ gitbook.start({
 "text": "Edit"
 },
 "history": {
-"link": null,
-"text": null
-},
-"view": {
 "link": null,
 "text": null
 },

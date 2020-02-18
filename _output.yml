@@ -10,3 +10,4 @@ bookdown::gitbook:
     download: ["epub"]
 
 bookdown::epub_book: default
+

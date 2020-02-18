@@ -5,29 +5,29 @@ title: "Quantitative skills for biology"
 site: bookdown::bookdown_site
 output: bookdown::gitbook #bookdown::html_document2
 documentclass: book
-bibliography: [book.bib, packages.bib]
+bibliography: [references.bib, packages.bib]
 biblio-style: apalike
 link-citations: yes
 github-repo: ahurford/quantitative-training-resources/tree/master/Quantitative training guides/quant-guide
 description: "Quantitative skills for biology"
 ---
 
-
-
 # Introduction
 
-Amy will write this section
+(**Joany can you get these references going for me. There is a reference.bib file. Thanks, Amy**)
 
-Quantitative skills are important in biology. Quantitative skills include performing statistical analyses, using computer software to manage and reformat data, design experiments, understand graphs, vizualizing data, identify genes from DNA sequences, construct 3D models of protiens, and make phylogenies. Many of these tasks are now performed using computers, and elements of computer programming, statistics, and applied mathematics can be useful for professional biologists. Quantitative skills are being incorporated throughout the biology major.
+Quantitative skills are important in biology. Quantitative skills include performing statistical analyses, managing and reformatting data, designing experiments, interpreting graphs, vizualizing data, identifying genes from DNA sequences, constructing 3D models of proteins, and making phylogenies. All of these tasks are now performed using computer software, and elements of computer programming, statistics, and applied mathematics can be useful for professional biologists. Quantitative skills and best practices in data science are now being incorporated throughout the biology major.
 
-- Why is this important
-- Why have we made the choices we did (R, pedagogy citations)
-Biologists use a variety of tools and in recent years, the use of computers has become widespread. Many different softwares are used by biologists including Microsoft Office, R, Python, and ArcGIS. First year biology, will introduce you to using R to visualize data, although we note that many of the same end results could be generated using different software. Our choice of R is for the following reasons:
+Teaching quantitative skills is necessary since a survey reported that more than 90% of ecologists found, that in retrospect, their training in statistics and mathematics, during their undergraduate biology major, was too low \citep{Barra}. This same study found that practicing ecologists recommended that 30% of coursework during a biology major be dedicated to quantitative training.
 
-1. R programming is a valued skill: citation.
+Today's biologists use a variety of softwares and particularly, `Microsoft Office`, `R`, `Python`, and `ArcGIS`. Much of this quantitative training manual teaches data manipulation and visualization in `R`. Our choice of `R` is for the following reasons:
 
-1. Reproducibility:
+1. A valued skill: As of March 2019, `R` is the [fifth ranked software](http://r4stats.com/articles/popularity/) listed in job advertisements for Data Scientists. `Python` is the number one ranked software, but `R` has a strong reputation for statistical analyses, which are an important in biology.
+
+1. Reproducibility: `R` is a scripting software, so unlike _point and click_ softwares, the steps to produce a data analysis or figure are fully reproducible.
 
 1. Accessibility: `R` is free.
 
-1. No limits: while it is possible to need data visualization options or statistical analysis that are unavailable in `Microsoft Excel` this is rarely a problem in `R`: there is an `R` package for anything, from [serious](https://rviews.rstudio.com/2017/10/09/population-modeling-in-r/) to [fun](https://www.r-bloggers.com/useless-but-fun-r-packages/)).
+1. No limits: `R` has a large user community and contributed packages allow you to do almost anything. `R` packages range from [serious](https://rviews.rstudio.com/2017/10/09/population-modeling-in-r/) to [fun](https://www.r-bloggers.com/useless-but-fun-r-packages/)).
+
+1. Popularity: A survey studies from of 30 ecology journals found that in 2017, 58% of article used `R` as the primary tool to generate their results \citep{Lai}.
