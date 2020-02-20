@@ -10,16 +10,16 @@
 
   <meta property="og:title" content="Chapter 6 Entering data | Quantitative skills for biology" />
   <meta property="og:type" content="book" />
-
-
+  
+  
   <meta property="og:description" content="Chapter 6 Entering data | Quantitative skills for biology" />
   <meta name="github-repo" content="ahurford/quantitative-training-resources/tree/master/Quantitative training guides/quant-guide" />
 
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:title" content="Chapter 6 Entering data | Quantitative skills for biology" />
-
+  
   <meta name="twitter:description" content="Chapter 6 Entering data | Quantitative skills for biology" />
-
+  
 
 
 
@@ -27,8 +27,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
-
-
+  
+  
 <link rel="prev" href="data.html"/>
 <link rel="next" href="graph.html"/>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
@@ -38,6 +38,9 @@
 <link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
 
 
 
@@ -246,7 +249,6 @@ That is why a comma separates each of the values in the rows for the different s
 <p>Here, the argument <code>file =</code> of <code>read.csv</code> is the name of the file we want to read.
 Notice that the filename needs to be a character string, so we put it in quotes.</p>
 <p>To take a look at our data, we can print then by typing the name and hitting Enter (or Return).</p>
-<<<<<<< HEAD
 <div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb4-1" data-line-number="1">data1</a></code></pre></div>
 <pre><code>##           weight NaCl.0.percent NaCl.0.9.percent NaCl.2.percent NaCl.5.percent
 ## 1        initial             NA               NA             NA             NA
@@ -259,30 +261,6 @@ Notice that the filename needs to be a character string, so we put it in quotes.
 ## 2          final             NA               NA             NA             NA
 ## 3     difference             NA               NA             NA             NA
 ## 4 percent-change             NA               NA             NA             NA</code></pre>
-=======
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">data1</code></pre></div>
-<pre><code>##           weight NaCl.0.percent NaCl.0.9.percent NaCl.2.percent
-## 1        initial             NA               NA             NA
-## 2          final             NA               NA             NA
-## 3     difference             NA               NA             NA
-## 4 percent-change             NA               NA             NA
-##   NaCl.5.percent
-## 1             NA
-## 2             NA
-## 3             NA
-## 4             NA</code></pre>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">data2</code></pre></div>
-<pre><code>##           weight NaCl.0.percent NaCl.0.9.percent NaCl.2.percent
-## 1        initial             NA               NA             NA
-## 2          final             NA               NA             NA
-## 3     difference             NA               NA             NA
-## 4 percent-change             NA               NA             NA
-##   NaCl.5.percent
-## 1             NA
-## 2             NA
-## 3             NA
-## 4             NA</code></pre>
->>>>>>> f4cccc45f00000e3b0f9a4c3c2ae7010c207d090
 <p>Open your data in Excel.</p>
 <p>You might have just done this in Excel. We did not teach this method because…</p>
 <div id="loading-data" class="section level2">
@@ -302,11 +280,13 @@ Notice that the filename needs to be a character string, so we put it in quotes.
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
 <script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
 <script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
 <script>
 gitbook.require(["gitbook"], function(gitbook) {
 gitbook.start({
@@ -314,12 +294,11 @@ gitbook.start({
 "github": false,
 "facebook": true,
 "twitter": true,
-"google": false,
 "linkedin": false,
 "weibo": false,
 "instapaper": false,
 "vk": false,
-"all": ["facebook", "google", "twitter", "linkedin", "weibo", "instapaper"]
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
 },
 "fontsettings": {
 "theme": "white",
@@ -331,6 +310,10 @@ gitbook.start({
 "text": "Edit"
 },
 "history": {
+"link": null,
+"text": null
+},
+"view": {
 "link": null,
 "text": null
 },
