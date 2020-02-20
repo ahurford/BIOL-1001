@@ -14,7 +14,7 @@ plot(x,y)```
 Will give you a graph like this:
 
 ```{r scatterplot1, fig.cap="A poor example of a scatter plot", fig.align='center', out.width="70%", fig.show='hold', echo=FALSE}
-knitr::include_graphics('./figures/Fig9.1.jpg')
+knitr::include_graphics('./figures/Fig7.1.jpg')
 ```
 
 NOT THAT THIS DOES NOT MEET THE STANDARDS OF A GOOD FIGURE!
@@ -34,8 +34,8 @@ You'll see there are a lot of argument options. First, let's fix the axis labels
 ```plot(x,y, xlab = "temperature (degrees C)", ylab = "growth rate (cm)")```
 
 This one is a little better: 
-```{r scatterplot2, fig.cap="The same scatter plot as Figure 9.1, but with axis lables", fig.align='center', out.width="70%", fig.show='hold', echo=FALSE}
-knitr::include_graphics('./figures/Fig9.2.jpg')
+```{r scatterplot2, fig.cap="The same scatter plot as Figure 7.1, but with axis lables", fig.align='center', out.width="70%", fig.show='hold', echo=FALSE}
+knitr::include_graphics('./figures/Fig7.2.jpg')
 ```
 
 If you want to change the symbols, you use the pch function to change the style.
@@ -58,14 +58,14 @@ generateRPointShapes<-function(){
 generateRPointShapes()```
 
 
-So, let's re-do the graph in Figure 9.1, but with filled triangles.
+So, let's re-do the graph in Figure 7.1, but with filled triangles.
 
 ```plot(x,y, pch = 17, xlab = "temperature (degrees C)", ylab = "growth rate (cm)")```
 
 And we get...
 
-```{r scatterplot3, fig.cap="The same scatter plot as Figure 9.2, but with symbols as filled triangles", fig.align='center', out.width="70%", fig.show='hold', echo=FALSE}
-knitr::include_graphics('./figures/Fig9.3.jpg')
+```{r scatterplot3, fig.cap="The same scatter plot as Figure 7.2, but with symbols as filled triangles", fig.align='center', out.width="70%", fig.show='hold', echo=FALSE}
+knitr::include_graphics('./figures/Fig7.3.jpg')
 ```
 
 ## Other useful plot functions
@@ -102,7 +102,7 @@ points(temp, fishB, pch = 17, col = "dimgray")```
 Voila!
 
 ```{r goldfishplot, fig.cap="The effect of water temperature on opercular beats per minute (bpm) for two goldfish; goldfish A (black triangles) and goldfish B (grey triangles)", fig.align='center', out.width="70%", fig.show='hold', echo=FALSE}
-knitr::include_graphics('./figures/Fig9.4.jpg')
+knitr::include_graphics('./figures/Fig7.4.jpg')
 ```
 
 Note that the difference in the two symbols is described in the caption. For most scientific journals it is preferred to describe the symbology in the caption, rather than use a legend. However, with more complex graphs, or for some publications, you may wish to include a legend. Legends can be a bit tricky to work with in R - we'll leave those for a more advanced course. 
