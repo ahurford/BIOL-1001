@@ -20,7 +20,7 @@ Teaching quantitative skills is necessary since a survey reported that more than
 
 Today's biologists use a variety of softwares and particularly, `Microsoft Office`, `R`, `Python`, and `ArcGIS`. Much of this quantitative training manual teaches data manipulation and visualization in `R`. Our choice of `R` is for the following reasons:
 
-1. A valued skill: As of March 2019, `R` is the [fifth ranked software](http://r4stats.com/articles/popularity/) listed in job advertisements for Data Scientists. `Python` is the number one ranked software, but `R` has a strong reputation for statistical analyses, which are an important in biology.
+1. A valued skill: As of March 2019, `R` is the [fifth ranked software](http://r4stats.com/articles/popularity/) listed in job advertisements for Data Scientists. `Python` is the number one ranked software, but `R` has a strong reputation for statistical analyses, which are an important tool in biology.
 
 1. Reproducibility: `R` is a scripting software, so unlike _point and click_ softwares, the steps to produce a data analysis or figure are fully reproducible.
 
@@ -28,4 +28,4 @@ Today's biologists use a variety of softwares and particularly, `Microsoft Offic
 
 1. No limits: `R` has a large user community and contributed packages allow you to do almost anything. `R` packages range from [serious](https://rviews.rstudio.com/2017/10/09/population-modeling-in-r/) to [fun](https://www.r-bloggers.com/useless-but-fun-r-packages/)).
 
-1. Popularity: A survey studies from of 30 ecology journals found that in 2017, 58% of article used `R` as the primary tool to generate their results [@lai2019evaluating].
+1. Popularity: A survey of studies from of 30 ecology journals found that in 2017, 58% of article used `R` as the primary tool to generate their results [@lai2019evaluating].
