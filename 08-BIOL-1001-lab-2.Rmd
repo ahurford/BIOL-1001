@@ -36,23 +36,32 @@ Maybe borrow a little exercise from software carpentary. Nothing to hand in/asse
 ## EXERCISE 2.	Entering data {-}
 
 We will use data from a research paper that investigated 
-whether plants were able to respond to stress cues emitted from their drought-stressed neighbours.
+whether plants were able to respond to stress cues emitted from their drought-stressed neighbours
+[@falik2011rumor].
 The research team used _Pisum sativum_ plants in an experimental setup that allowed them to connect the plants' root systems. One plant in the central position of a row was subjected to osmotic stress, while neighbouring plants remained unstressed on both sides. 
 Plants on one side of the stressed plant shared roots with others in the group but
 did not share roots with the stressed plant; 
 these were the control group. 
-On the other side, the stressed plant shared its roots with its nearest unstressed neighbour, and all the other plants shared their roots with their nearest neighbour.
-(**Insert a figure of the layout?**)
-Stress was quantified fifteen minutes after the induction of drought by measuring the width of the stomatal openings on the leaves of the plants. 
-(**Insert citation and update references**)
+On the other side, the stressed plant shared its roots with its nearest unstressed neighbour, and all the other plants shared their roots with their nearest neighbour
+(See Figure \@ref(fig:setup)).
 
-The results of this experiment are as follows:
-(**Joany make table here**)
+```{r setup, fig.cap="Experimental set up for testing stress cues. Circles represent plants and connector lines represent the plants with connected roots. The numbers of the plants correspond to those of Table 9.1. Osmotic stress was induced in plant 6 (Modified from Falik et al., 2011).", fig.align='center', out.width="70%", fig.show='hold', echo=FALSE}
+knitr::include_graphics('./figures/Falik_et-al_2011_setup.png')
+```
+
+
+Stress was quantified fifteen minutes after the induction of drought by measuring the width of the stomatal openings on the leaves of the plants. The results of this experiment are as follows:
+
+```{r raw-data, echo = FALSE, results = 'asis'}
+library(knitr)
+dataset <- read.csv("Falik_et-al_2011_dataset.csv")
+kable(dataset[1:3], caption = "Raw data from Falik and collaborators (2011).")
+```
 
 ### Questions {-}
 1. Follow the instructions in Chapter \@ref(data-entry) and enter the data into `R` and then save the data as a .csv. Submit your .csv file to the `Biology Data Repository` Brightspace.
 
-1. Follow the instructions in Chapter X and write metadata for the data that you saved in .csv formate. Submit your metadata to the `Biology Data Repository` Brightspace.
+1. Follow the instructions in Chapter \@ref(data) and write metadata for the data that you saved in .csv formate. Submit your metadata to the `Biology Data Repository` Brightspace.
 
 1. Looking at the dataset, can you tell how many treatments were applied in the experiment? How many plants were used for each treatment?
 
@@ -61,11 +70,11 @@ The results of this experiment are as follows:
 ## EXERCISE 3.	Discrete independent variable {-}
 ### Questions {-}
 
-1. Follow the instructions in Chapter X. Replicate the figure from the Campbell textbook (bar plot). Export your bar graph as a .pdf and insert it into Microsoft Word (or similar software). Add a caption to your bar plot. Print your graph to hand in with your lab report.
+1. Follow the instructions in Chapter \@ref(graph). Replicate the figure from the Campbell textbook (bar plot). Export your bar graph as a .pdf and insert it into Microsoft Word (or similar software). Add a caption to your bar plot. Print your graph to hand in with your lab report.
 
 1. In the bar graph, what can you tell about the stomatal openings of the treatment plant vs. the control plants? Is it consistent across all the individual plants?
 
-1. Follow the instructions in Chapter X, re-plot the data from EXERCISE 1 as a boxplot. Export your boxplot as a .pdf and insert it into Microsoft Word (or similar software). Add a caption to your boxplot.
+1. Follow the instructions in Chapter \@ref(graph), re-plot the data from EXERCISE 1 as a boxplot. Export your boxplot as a .pdf and insert it into Microsoft Word (or similar software). Add a caption to your boxplot.
 
 1.	Label the following on the boxplot: mean, 25% and 75% quantiles, 95% confidence limits, outliers. It is acceptible to write these labels in with pen or pencil.
 
@@ -76,17 +85,18 @@ The results of this experiment are as follows:
 
 ### Write the hypothesis as an equation {-}
 ### Questions {-}
-1. Follow the instructions in Chapter X. Write a hypothesis, prediction, and equation for these data.
+1. Follow the instructions in Chapter \@ref(hypothesis). Write a hypothesis, prediction, and equation for these data.
 
 
 ## EXERCISE 4. Continuous independent variable {-}
 
 ### Make a graph {-}
 
-1. For some continous data that we will provide as a .csv. Use the ``Import DataSet'' button and import the data.
+1. For some continous data that we will provide as a .csv. Use the `Import DataSet` button and import the data.
 
-1. Follow the instructions in Chapter X, to make a scatterplot for these data.
+1. Follow the instructions in Chapter \@ref(graph), to make a scatterplot for these data.
 
-1. Follow the instructions in Chapter X, to make a line graphs for these data. Export your line graph as a .pdf and insert it into Microsoft Word (or similar software). Write a figure caption. Print your graph and hand it in with your lab report for this week.
+1. Follow the instructions in Chapter \@ref(graph), to make a line graphs for these data. Export your line graph as a .pdf and insert it into Microsoft Word (or similar software). Write a figure caption. Print your graph and hand it in with your lab report for this week.
 
-1. Follow the instructions in Chapter X. Write a hypothesis, prediction, and equation for these data.
+1. Follow the instructions in Chapter \@ref(hypothesis). Write a hypothesis, prediction, and equation for these data.
+
