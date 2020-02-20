@@ -14,11 +14,9 @@ description: "Quantitative skills for biology"
 
 # Introduction
 
-(**Joany can you get these references going for me. There is a reference.bib file. Thanks, Amy**)
-
 Quantitative skills are important in biology. Quantitative skills include performing statistical analyses, managing and reformatting data, designing experiments, interpreting graphs, vizualizing data, identifying genes from DNA sequences, constructing 3D models of proteins, and making phylogenies. All of these tasks are now performed using computer software, and elements of computer programming, statistics, and applied mathematics can be useful for professional biologists. Quantitative skills and best practices in data science are now being incorporated throughout the biology major.
 
-Teaching quantitative skills is necessary since a survey reported that more than 90% of ecologists found, that in retrospect, their training in statistics and mathematics, during their undergraduate biology major, was too low \citep{Barra}. This same study found that practicing ecologists recommended that 30% of coursework during a biology major be dedicated to quantitative training.
+Teaching quantitative skills is necessary since a survey reported that more than 90% of ecologists found, that in retrospect, their training in statistics and mathematics, during their undergraduate biology major, was too low [@barraquand2014lack]. This same study found that practicing ecologists recommended that 30% of coursework during a biology major be dedicated to quantitative training.
 
 Today's biologists use a variety of softwares and particularly, `Microsoft Office`, `R`, `Python`, and `ArcGIS`. Much of this quantitative training manual teaches data manipulation and visualization in `R`. Our choice of `R` is for the following reasons:
 
@@ -30,4 +28,4 @@ Today's biologists use a variety of softwares and particularly, `Microsoft Offic
 
 1. No limits: `R` has a large user community and contributed packages allow you to do almost anything. `R` packages range from [serious](https://rviews.rstudio.com/2017/10/09/population-modeling-in-r/) to [fun](https://www.r-bloggers.com/useless-but-fun-r-packages/)).
 
-1. Popularity: A survey studies from of 30 ecology journals found that in 2017, 58% of article used `R` as the primary tool to generate their results \citep{Lai}.
+1. Popularity: A survey studies from of 30 ecology journals found that in 2017, 58% of article used `R` as the primary tool to generate their results [@lai2019evaluating].
