@@ -7,7 +7,7 @@ output: bookdown::gitbook #bookdown::html_document2
 documentclass: book
 bibliography: [references.bib]
 biblio-style: apalike
-link-citations: false
+link-citations: true
 github-repo: ahurford/quantitative-training-resources/tree/master/Quantitative training guides/quant-guide
 description: "Quantitative skills for biology"
 ---
