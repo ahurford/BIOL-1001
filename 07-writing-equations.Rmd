@@ -1,4 +1,8 @@
-# Writing preditions as equations {#hypothesis}
+# Hypothesis, predictions and equations {#hypothesis}
+
+(**Sorry Joany, I meant this one: https://github.com/ahurford/quantitative-training-2/blob/master/first%20year/Biology%201001%20-%20Lab%20Manual%20-%20Fall%202019%20v0.4.docx in .docx with tracked changes: however, not all the track changes are accepted. You'll have to make a personal copy, accept the changes, cut and paste then just do a bit with the formatting, symbols and boxes**)
+
+https://github.com/ahurford/quantitative-training-2/blob/master/first%20year/Biology%201001%20-%20Lab%20Manual%20-%20Fall%202019%20v0.4.docx
 
 The process of science is often called the scientific method.
 Many scientific investigations begin with the statement of a problem, 
