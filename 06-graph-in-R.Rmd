@@ -1,5 +1,7 @@
 # Making graphs in R {#graph}
 
+(** Joany can you work on getting this figures in. The should be in the figures folder **)
+
 You might have had experience making graphs using Excel. However, making graphs with Excel is NOT recommended. This is because the defaults in Excel do not meet standards for good scientific graphs.
 
 You can make very attractive, clean, professions graphs and figures in R. This chapter is a basic introduction to plot functions in R. More advanced users can use the package "ggplot" (see chatper XX in this manual) There are many good reference manuals for making sophisticated graphs (e.g., Murrell 2006; Mittal 2011). 
@@ -14,7 +16,7 @@ plot(x,y)```
 Will give you a graph like this:
 
 ```{r scatterplot1, fig.cap="A poor example of a scatter plot", fig.align='center', out.width="70%", fig.show='hold', echo=FALSE}
-knitr::include_graphics('./figures/Fig7.1.jpg')
+knitr::include_graphics("./figures/Fig7.1.jpeg")
 ```
 
 NOT THAT THIS DOES NOT MEET THE STANDARDS OF A GOOD FIGURE!
