@@ -25,7 +25,7 @@ What's missing?
 - maybe it's more appropriate to show this data connected with a line
 - maybe you want the symbols to be a different shape or colour
 
-You can address these issues with the plot function. Try using the help function to figure out what to do (refer to chapter 8 "Getting help in R" to recall how to use help files)
+You can address these issues with the plot function. Try using the help function to figure out what to do (refer to Chapter \@ref(help), "Getting help in R", to recall how to use help files):
 
 ``` help(plot)```
 

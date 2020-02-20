@@ -1,6 +1,6 @@
 # Getting R help {#help}
 
-The first place most people go for R help is the "Help" tabe in the "Files/Plots/Packages/Help" pane on thue console (described in Chapter 4). Here you can do a search by topic/term using the search window at the top right. You can also click the "house" icon to go to the home menu for the help files and use the table of contents there to navigate to what you are looking for.
+The first place most people go for R help is the "Help" tabe in the "Files/Plots/Packages/Help" pane on the console (described in Chapter \@ref(rstudio)). Here you can do a search by topic/term using the search window at the top right. You can also click the "house" icon to go to the home menu for the help files and use the table of contents there to navigate to what you are looking for.
 
 ## Using R help
 
@@ -56,6 +56,6 @@ knitr::include_graphics("./figures/HelpDoc_partB.jpg")
 
 ## Common errors
 
--Spelling mistakes
--Input to a function is the wrong data type
+- Spelling mistakes
+- Input to a function is the wrong data type
 
