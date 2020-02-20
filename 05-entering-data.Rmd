@@ -1,4 +1,6 @@
-# Entering data {#data-entry}
+# Entering and loading data {#data-entry}
+
+## Entering data
 
 Good data organization is the foundation of any research project, 
 and this begins with entering and archiving data. 
@@ -14,7 +16,7 @@ Here, you will learn how to enter the data from your experiments
 and save them using R. 
 
 Let's start by
-making table 1 for your report, which we will call 
+making Table 1 for your report, which we will call 
 `solution-concentration-effect-on-potato.csv`:
 
 ```{r}
@@ -34,12 +36,12 @@ decimals greater than or equal to zero, and likely less than
 100 since you measured mass in grams and the potato
 cubes for the experiments were 8 cm^3^ in size. 
 
-Notice that we used the file extension ".csv".  
+Notice that we used the file extension ".csv".
 CSV stands for comma-separated values, which is a format for 
 tabular data stored in a text file where a comma separates the columns of the data. 
 That is why a comma separates each of the values in the rows for the different solutions. 
 
-Now, we will make table 2, which includes the class averages and we will call 
+Now, we will make Table 2, which includes the class averages and we will call 
 `solution-concentration-effect-on-potato-averages.csv`:
 
 ```{r}
@@ -53,6 +55,17 @@ write.csv(x = table1, file = "solution-concentration-effect-on-potato-averages.c
           row.names = FALSE)
 ```
 
+
+You might have just done this in Excel. We did not teach this method because...
+
+## Loading or importing data
+
+We will look at two ways of importing data into R, via a command or using the import feature.
+Both options are equivalent; and when they are sucsesfull you will see your data as
+a new object in the Environment tab (in the Environment/History pane).
+
+### The programmatic way {#programmatic}
+
 We can load our our data files in CSV format into R using the function `read.csv` in the following way:
 
 ```{r}
@@ -63,17 +76,48 @@ data2 <- read.csv(file = "solution-concentration-effect-on-potato-averages.csv")
 Here, the argument `file =` of `read.csv` is the name of the file we want to read.
 Notice that the filename needs to be a character string, so we put it in quotes.
 
-To take a look at our data, we can print then by typing the name and hitting Enter (or Return).
+
+### The RStudio way
+
+In RStudio, click on the Environment tab. 
+Then, click on `Import Dataset` and select `From Text (base)`. 
+
+```{r import-feature, fig.cap="Using the Import Dataset feature.", fig.align='center', out.width="80%", fig.show='hold', echo=FALSE}
+knitr::include_graphics('./figures/import-feature.png')
+```
+
+This feature will open a file browser where you can locate the `.csv` file,
+in our case, for Table 1, it is called `solution-concentration-effect-on-potato.csv`.
+Once you have selected the file click `Open`. 
+A dialog for importing the file will open up:
+on the left you can set the options on the import; 
+on the top right you can see `Input File`, which is how the file looks like;
+on the bottom right you can see `Data Frame`, 
+which is a preview of how the file or data will look like in R.
+In the `Name` field, write `data1` to rename the dataset.
+Set `Heading` to `Yes`, this will 
+tell R to read and include the first row of the file as the names of the columns - 
+This is an important step! 
+You will see that the column names appear in bold in the `Data Frame` box.
+When you are ready click `Import`.
+
+```{r import-dialog, fig.cap="Dataset import options.", fig.align='center', out.width="70%", fig.show='hold', echo=FALSE}
+knitr::include_graphics('./figures/import-dialog.png')
+```
+
+RStudio will now run the R code that imports your dataset. 
+It will be similar to the command used in Section \@ref(programmatic).
+
+## Inspecting the data
+
+To take a look at our dataset, we can print it by typing the name in the Console and hitting `Enter` (or `Return`).
 
 ```{r}
 data1
 data2
 ```
 
-Open your data in Excel.
-
-You might have just done this in Excel. We did not teach this method because...
-
-## Loading data
-
-Click the Import Data button.
+You can also open the dataset by clicking on the object `data1` in the Environment tab. 
+This will open a new tab with the dataset, instead of printing it into the Console,
+which is a good choice if your dataset is larger.
+Another option is to open the dataset using Microsoft Excel from your computer file browser.

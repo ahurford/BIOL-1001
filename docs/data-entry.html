@@ -4,21 +4,21 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 6 Entering data | Quantitative skills for biology</title>
-  <meta name="description" content="Chapter 6 Entering data | Quantitative skills for biology" />
+  <title>Chapter 6 Entering and loading data | Quantitative skills for biology</title>
+  <meta name="description" content="Chapter 6 Entering and loading data | Quantitative skills for biology" />
   <meta name="generator" content="bookdown 0.17 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 6 Entering data | Quantitative skills for biology" />
+  <meta property="og:title" content="Chapter 6 Entering and loading data | Quantitative skills for biology" />
   <meta property="og:type" content="book" />
   
   
-  <meta property="og:description" content="Chapter 6 Entering data | Quantitative skills for biology" />
+  <meta property="og:description" content="Chapter 6 Entering and loading data | Quantitative skills for biology" />
   <meta name="github-repo" content="ahurford/quantitative-training-resources/tree/master/Quantitative training guides/quant-guide" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 6 Entering data | Quantitative skills for biology" />
+  <meta name="twitter:title" content="Chapter 6 Entering and loading data | Quantitative skills for biology" />
   
-  <meta name="twitter:description" content="Chapter 6 Entering data | Quantitative skills for biology" />
+  <meta name="twitter:description" content="Chapter 6 Entering and loading data | Quantitative skills for biology" />
   
 
 
@@ -153,8 +153,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="4.5" data-path="help.html"><a href="help.html#common-errors"><i class="fa fa-check"></i><b>4.5</b> Common errors</a></li>
 </ul></li>
 <li class="chapter" data-level="5" data-path="data.html"><a href="data.html"><i class="fa fa-check"></i><b>5</b> Data and metadata</a></li>
-<li class="chapter" data-level="6" data-path="data-entry.html"><a href="data-entry.html"><i class="fa fa-check"></i><b>6</b> Entering data</a><ul>
-<li class="chapter" data-level="6.1" data-path="data-entry.html"><a href="data-entry.html#loading-data"><i class="fa fa-check"></i><b>6.1</b> Loading data</a></li>
+<li class="chapter" data-level="6" data-path="data-entry.html"><a href="data-entry.html"><i class="fa fa-check"></i><b>6</b> Entering and loading data</a><ul>
+<li class="chapter" data-level="6.1" data-path="data-entry.html"><a href="data-entry.html#entering-data"><i class="fa fa-check"></i><b>6.1</b> Entering data</a></li>
+<li class="chapter" data-level="6.2" data-path="data-entry.html"><a href="data-entry.html#loading-or-importing-data"><i class="fa fa-check"></i><b>6.2</b> Loading or importing data</a><ul>
+<li class="chapter" data-level="6.2.1" data-path="data-entry.html"><a href="data-entry.html#programmatic"><i class="fa fa-check"></i><b>6.2.1</b> The programmatic way</a></li>
+<li class="chapter" data-level="6.2.2" data-path="data-entry.html"><a href="data-entry.html#the-rstudio-way"><i class="fa fa-check"></i><b>6.2.2</b> The RStudio way</a></li>
+</ul></li>
+<li class="chapter" data-level="6.3" data-path="data-entry.html"><a href="data-entry.html#inspecting-the-data"><i class="fa fa-check"></i><b>6.3</b> Inspecting the data</a></li>
 </ul></li>
 <li class="chapter" data-level="7" data-path="graph.html"><a href="graph.html"><i class="fa fa-check"></i><b>7</b> Making graphs in R</a><ul>
 <li class="chapter" data-level="7.1" data-path="graph.html"><a href="graph.html#other-useful-plot-functions"><i class="fa fa-check"></i><b>7.1</b> Other useful plot functions</a></li>
@@ -200,7 +205,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
             <section class="normal" id="section-">
 <div id="data-entry" class="section level1">
-<h1><span class="header-section-number">Chapter 6</span> Entering data</h1>
+<h1><span class="header-section-number">Chapter 6</span> Entering and loading data</h1>
+<div id="entering-data" class="section level2">
+<h2><span class="header-section-number">6.1</span> Entering data</h2>
 <p>Good data organization is the foundation of any research project,
 and this begins with entering and archiving data.
 There are several reasonable options for data entry, for example:</p>
@@ -214,7 +221,7 @@ There are several reasonable options for data entry, for example:</p>
 Here, you will learn how to enter the data from your experiments
 and save them using R.</p>
 <p>Let’s start by
-making table 1 for your report, which we will call
+making Table 1 for your report, which we will call
 <code>solution-concentration-effect-on-potato.csv</code>:</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb1-1" data-line-number="1">table1 &lt;-<span class="st"> </span><span class="kw">data.frame</span>(<span class="dt">weight =</span> <span class="kw">c</span>(<span class="st">&quot;initial&quot;</span>, <span class="st">&quot;final&quot;</span>, </a>
 <a class="sourceLine" id="cb1-2" data-line-number="2">                                <span class="st">&quot;difference&quot;</span>, <span class="st">&quot;percent-change&quot;</span>), </a>
@@ -229,11 +236,11 @@ Keep in mind that the values entered into the tables should be
 decimals greater than or equal to zero, and likely less than
 100 since you measured mass in grams and the potato
 cubes for the experiments were 8 cm<sup>3</sup> in size.</p>
-<p>Notice that we used the file extension “.csv”.<br />
+<p>Notice that we used the file extension “.csv”.
 CSV stands for comma-separated values, which is a format for
 tabular data stored in a text file where a comma separates the columns of the data.
 That is why a comma separates each of the values in the rows for the different solutions.</p>
-<p>Now, we will make table 2, which includes the class averages and we will call
+<p>Now, we will make Table 2, which includes the class averages and we will call
 <code>solution-concentration-effect-on-potato-averages.csv</code>:</p>
 <div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb2-1" data-line-number="1">table2 &lt;-<span class="st"> </span><span class="kw">data.frame</span>(<span class="dt">weight =</span> <span class="kw">c</span>(<span class="st">&quot;percent-change&quot;</span>, <span class="st">&quot;minimum-value&quot;</span>, </a>
 <a class="sourceLine" id="cb2-2" data-line-number="2">                                <span class="st">&quot;maximum-value&quot;</span>, <span class="st">&quot;difference&quot;</span>), </a>
@@ -243,12 +250,58 @@ That is why a comma separates each of the values in the rows for the different s
 <a class="sourceLine" id="cb2-6" data-line-number="6">                     <span class="st">&quot;NaCl-5-percent&quot;</span> =<span class="st"> </span><span class="kw">c</span>(<span class="ot">NA</span>, <span class="ot">NA</span>, <span class="ot">NA</span>, <span class="ot">NA</span>))</a>
 <a class="sourceLine" id="cb2-7" data-line-number="7"><span class="kw">write.csv</span>(<span class="dt">x =</span> table1, <span class="dt">file =</span> <span class="st">&quot;solution-concentration-effect-on-potato-averages.csv&quot;</span>, </a>
 <a class="sourceLine" id="cb2-8" data-line-number="8">          <span class="dt">row.names =</span> <span class="ot">FALSE</span>)</a></code></pre></div>
+<p>You might have just done this in Excel. We did not teach this method because…</p>
+</div>
+<div id="loading-or-importing-data" class="section level2">
+<h2><span class="header-section-number">6.2</span> Loading or importing data</h2>
+<p>We will look at two ways of importing data into R, via a command or using the import feature.
+Both options are equivalent; and when they are sucsesfull you will see your data as
+a new object in the Environment tab (in the Environment/History pane).</p>
+<div id="programmatic" class="section level3">
+<h3><span class="header-section-number">6.2.1</span> The programmatic way</h3>
 <p>We can load our our data files in CSV format into R using the function <code>read.csv</code> in the following way:</p>
 <div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb3-1" data-line-number="1">data1 &lt;-<span class="st"> </span><span class="kw">read.csv</span>(<span class="dt">file =</span> <span class="st">&quot;solution-concentration-effect-on-potato.csv&quot;</span>)</a>
 <a class="sourceLine" id="cb3-2" data-line-number="2">data2 &lt;-<span class="st"> </span><span class="kw">read.csv</span>(<span class="dt">file =</span> <span class="st">&quot;solution-concentration-effect-on-potato-averages.csv&quot;</span>)</a></code></pre></div>
 <p>Here, the argument <code>file =</code> of <code>read.csv</code> is the name of the file we want to read.
 Notice that the filename needs to be a character string, so we put it in quotes.</p>
-<p>To take a look at our data, we can print then by typing the name and hitting Enter (or Return).</p>
+</div>
+<div id="the-rstudio-way" class="section level3">
+<h3><span class="header-section-number">6.2.2</span> The RStudio way</h3>
+<p>In RStudio, click on the Environment tab.
+Then, click on <code>Import Dataset</code> and select <code>From Text (base)</code>.</p>
+<div class="figure" style="text-align: center"><span id="fig:import-feature"></span>
+<img src="figures/import-feature.png" alt="Using the Import Dataset feature." width="80%" />
+<p class="caption">
+Figure 6.1: Using the Import Dataset feature.
+</p>
+</div>
+<p>This feature will open a file browser where you can locate the <code>.csv</code> file,
+in our case, for Table 1, it is called <code>solution-concentration-effect-on-potato.csv</code>.
+Once you have selected the file click <code>Open</code>.
+A dialog for importing the file will open up:
+on the left you can set the options on the import;
+on the top right you can see <code>Input File</code>, which is how the file looks like;
+on the bottom right you can see <code>Data Frame</code>,
+which is a preview of how the file or data will look like in R.
+In the <code>Name</code> field, write <code>data1</code> to rename the dataset.
+Set <code>Heading</code> to <code>Yes</code>, this will
+tell R to read and include the first row of the file as the names of the columns -
+This is an important step!
+You will see that the column names appear in bold in the <code>Data Frame</code> box.
+When you are ready click <code>Import</code>.</p>
+<div class="figure" style="text-align: center"><span id="fig:import-dialog"></span>
+<img src="figures/import-dialog.png" alt="Dataset import options." width="70%" />
+<p class="caption">
+Figure 6.2: Dataset import options.
+</p>
+</div>
+<p>RStudio will now run the R code that imports your dataset.
+It will be similar to the command used in Section <a href="data-entry.html#programmatic">6.2.1</a>.</p>
+</div>
+</div>
+<div id="inspecting-the-data" class="section level2">
+<h2><span class="header-section-number">6.3</span> Inspecting the data</h2>
+<p>To take a look at our dataset, we can print it by typing the name in the Console and hitting <code>Enter</code> (or <code>Return</code>).</p>
 <div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb4-1" data-line-number="1">data1</a></code></pre></div>
 <pre><code>##           weight NaCl.0.percent NaCl.0.9.percent NaCl.2.percent NaCl.5.percent
 ## 1        initial             NA               NA             NA             NA
@@ -261,11 +314,10 @@ Notice that the filename needs to be a character string, so we put it in quotes.
 ## 2          final             NA               NA             NA             NA
 ## 3     difference             NA               NA             NA             NA
 ## 4 percent-change             NA               NA             NA             NA</code></pre>
-<p>Open your data in Excel.</p>
-<p>You might have just done this in Excel. We did not teach this method because…</p>
-<div id="loading-data" class="section level2">
-<h2><span class="header-section-number">6.1</span> Loading data</h2>
-<p>Click the Import Data button.</p>
+<p>You can also open the dataset by clicking on the object <code>data1</code> in the Environment tab.
+This will open a new tab with the dataset, instead of printing it into the Console,
+which is a good choice if your dataset is larger.
+Another option is to open the dataset using Microsoft Excel from your computer file browser.</p>
 
 </div>
 </div>
