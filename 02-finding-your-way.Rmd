@@ -8,7 +8,11 @@ knitr::include_graphics('./figures/Fig5.1.jpg')
 
 ## Source pane
 
-This is where you create and edit R scripts. R scripts are just text files with a ".R" extension at the end of the filename. When you've written and saved a script, you can re-use it for future projects. So, before you start typing here, you should save the file under a new name. 
+This is where you create and edit `R` scripts. `R` scripts are lists of commands which have meanings due to functions defined in `R` and when saved have a `.R` extension. When you've written and saved a script, you can re-use it for future projects. Try it now, open and save a new `.R` file to save your work in. In the top menu select `File > New File > R Script`, then `File > Save As`. 
+
+Code that is written in the `Source` pane is generally read from top to bottom when you click the `Source` button, which appears on the righthand side of the `Source` pane if your pane is sufficiently large. If you have a small pane and this button does not appear, you can equivalently select `Code > Source` from the top menu bar.
+
+If you would like to run one line or several lines of your script only (not all the lines), then place your cursor on the line you want to execute and click the `Run` button (equivalenty `Code > Run Selected Line(s)`).
 
 ## Console pane
 
@@ -55,4 +59,3 @@ Packages are add-on functions and datasets that you can add to your `R` installa
 ### Help tab {-}
 
 This lets you get help with R functions. Type the name of the function in the search window (blank bar with the magnifying glass beside it). See Chapter \@ref(help) "Getting R help" for more details.
-

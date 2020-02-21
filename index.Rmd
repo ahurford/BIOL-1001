@@ -7,20 +7,20 @@ output: bookdown::gitbook #bookdown::html_document2
 documentclass: book
 bibliography: [references.bib]
 biblio-style: apalike
-link-citations: true
+link-citations: false
 github-repo: ahurford/quantitative-training-resources/tree/master/Quantitative training guides/quant-guide
 description: "Quantitative skills for biology"
 ---
 
-# Introduction
+# Introduction {#intro}
 
-Quantitative skills are important in biology. Quantitative skills include performing statistical analyses, managing and reformatting data, designing experiments, interpreting graphs, vizualizing data, identifying genes from DNA sequences, constructing 3D models of proteins, and making phylogenies. All of these tasks are now performed using computer software, and elements of computer programming, statistics, and applied mathematics can be useful for professional biologists. Quantitative skills and best practices in data science are now being incorporated throughout the biology major.
+Quantitative skills are necessary in biology. Quantitative skills include performing statistical analyses, mathematical modelling, managing and reformatting data, designing experiments, interpreting graphs, vizualizing data, identifying genes from DNA sequences, constructing 3D models of proteins, and making phylogenies. All of these tasks are now performed using computer software, and elements of computer programming, statistics, and applied mathematics can be useful for professional biologists. Quantitative skills and best practices in data science are now being incorporated throughout the biology major.
 
 Teaching quantitative skills is necessary since a survey reported that more than 90% of ecologists found, that in retrospect, their training in statistics and mathematics, during their undergraduate biology major, was too low [@barraquand2014lack]. This same study found that practicing ecologists recommended that 30% of coursework during a biology major be dedicated to quantitative training.
 
-Today's biologists use a variety of softwares and particularly, `Microsoft Office`, `R`, `Python`, and `ArcGIS`. Much of this quantitative training manual teaches data manipulation and visualization in `R`. Our choice of `R` is for the following reasons:
+Today's biologists use a variety of softwares, and particularly, `Microsoft Office`, `R`, `Python`, and `ArcGIS`. Much of this quantitative training manual teaches data manipulation and visualization in `R`. Our choice of `R` is for the following reasons:
 
-1. A valued skill: As of March 2019, `R` is the [fifth ranked software](http://r4stats.com/articles/popularity/) listed in job advertisements for Data Scientists. `Python` is the number one ranked software, but `R` has a strong reputation for statistical analyses, which are an important tool in biology.
+1. A valued skill: As of March 2019, `R` is the [fifth ranked software](http://r4stats.com/articles/popularity/) listed in job advertisements for Data Scientists. `Python` is the number one ranked software, but `R` is a popular statistical software and is popular in biology due to the need to analyze the results of experiments using statistics.
 
 1. Reproducibility: `R` is a scripting software, so unlike _point and click_ softwares, the steps to produce a data analysis or figure are fully reproducible.
 

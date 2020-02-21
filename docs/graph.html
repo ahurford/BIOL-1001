@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Chapter 7 Making graphs in R | Quantitative skills for biology</title>
   <meta name="description" content="Chapter 7 Making graphs in R | Quantitative skills for biology" />
-  <meta name="generator" content="bookdown 0.16 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.13 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Chapter 7 Making graphs in R | Quantitative skills for biology" />
   <meta property="og:type" content="book" />
@@ -38,9 +38,6 @@
 <link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
-<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
-
-
 
 
 
@@ -141,6 +138,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li class="chapter" data-level="7.2" data-path="graph.html"><a href="graph.html#getting-a-bit-more-sophisticated"><i class="fa fa-check"></i><b>7.2</b> Getting a bit more sophisticated</a></li>
 <li class="chapter" data-level="7.3" data-path="graph.html"><a href="graph.html#first-we-plot-x-and-y-with-the-temp-vector-as-x-and-the-fisha-vector-as-y"><i class="fa fa-check"></i><b>7.3</b> First we plot x and y with the “temp” vector as “x” and the “fishA” vector as y</a></li>
 <li class="chapter" data-level="7.4" data-path="graph.html"><a href="graph.html#then-to-add-a-second-vector-of-data-fishb-to-the-same-plot-we-use"><i class="fa fa-check"></i><b>7.4</b> Then to add a second vector of data (fishB) to the same plot, we use:</a></li>
+<li class="chapter" data-level="7.5" data-path="graph.html"><a href="graph.html#pch-cheatsheet"><i class="fa fa-check"></i><b>7.5</b> pch Cheatsheet</a></li>
 </ul></li>
 <li class="chapter" data-level="8" data-path="hypothesis.html"><a href="hypothesis.html"><i class="fa fa-check"></i><b>8</b> Hypothesis, predictions and equations</a></li>
 <li class="chapter" data-level="9" data-path="lab2.html"><a href="lab2.html"><i class="fa fa-check"></i><b>9</b> BIOL 1001: LABORATORY 2</a><ul>
@@ -158,6 +156,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li class="chapter" data-level="" data-path="lab2.html"><a href="lab2.html#make-a-graph"><i class="fa fa-check"></i>Make a graph</a></li>
 </ul></li>
 </ul></li>
+<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
 
@@ -180,51 +179,71 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
             <section class="normal" id="section-">
 <div id="graph" class="section level1">
 <h1><span class="header-section-number">Chapter 7</span> Making graphs in R</h1>
-<p>(** Joany can you work on getting this figures in. The should be in the figures folder **)</p>
-<p>You might have had experience making graphs using Excel. However, making graphs with Excel is NOT recommended. This is because the defaults in Excel do not meet standards for good scientific graphs.</p>
-<p>You can make very attractive, clean, professions graphs and figures in R. This chapter is a basic introduction to plot functions in R. More advanced users can use the package “ggplot” (see chatper XX in this manual) There are many good reference manuals for making sophisticated graphs (e.g., Murrell 2006; Mittal 2011).</p>
-<p>In base R, the “plot” function simply looks to plot two data vectors “x” and “y”. For example if</p>
-<p><code>x &lt;- cbind(2,4,6,8,10) y &lt;- cbind(10,20,30,40,50) plot(x,y)</code></p>
-<p>Will give you a graph like this:</p>
+<p><strong>(AH: I worked here a bit. Need instructions to export figures)</strong></p>
+<p>You might have had experience making graphs using <code>Microsoft Excel</code>, however, making graphs with <code>Excel</code> is not recommended. A number of reasons to choose <code>R</code> over <code>Excel</code> are given in Chapter <a href="index.html#intro">1</a>. In addition, the defaults in <code>Excel</code> do not meet standards for good scientific graphs and you do not have the option to learn more sophisticated graphs after you master the basics, as the range of options available in <code>Excel</code> is limited.</p>
+<p>You can make very attractive, clean, professional graphs and figures in <code>R</code>. This chapter is a basic introduction to <code>plot()</code> functions in <code>R</code>. More advanced users can use the package <code>ggplot</code>. There are many good reference manuals for making sophisticated graphs (e.g., Murrell 2006; Mittal 2011).</p>
+<p>In <code>R</code>, <code>plot()</code> is a built-in function: you do not need to install a package to call it. There are two mandatory arguments <code>x</code> and <code>y</code> which are vectors that must have the same length. For example,</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">x &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">2</span>,<span class="dv">4</span>,<span class="dv">6</span>,<span class="dv">8</span>,<span class="dv">10</span>)
+y &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">10</span>,<span class="dv">20</span>,<span class="dv">30</span>,<span class="dv">40</span>,<span class="dv">50</span>)</code></pre></div>
+<p>Copy and paste the above code into your <code>Console</code> and type <code>Enter/Return</code>. Note that to make a vector we need to use <code>c()</code>. Now, query the value of <code>x</code> by typing <code>x</code> into your <code>Console</code></p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">x</code></pre></div>
+<pre><code>## [1]  2  4  6  8 10</code></pre>
+<p>This lets us know that <code>x</code> is a vector that is a list of 5 numbers.</p>
+<p>The command <code>plot(x,y)</code> will mark points on the graph by taking elements in the same position in the <code>x</code> and <code>y</code> vectors. For example, in the first position of the <code>x</code> and <code>y</code> vectors are <code>2</code> and <code>10</code>, respectively. Because <code>plot(x,y)</code> has <code>x</code> as its first argument, the values of <code>x</code> will correspond to the horizontal axis of the plot. Therefore, the first element of the lists <code>x</code> and <code>y</code>, will be reflected in the plot as a point marked at the <code>2</code> position of the horizontal axis and the <code>10</code> position on the vertical axis.</p>
+<p>As the vectors <code>x</code> and <code>y</code> in our example are a list of 5 numbers our graph will consist of 5 points, generated by pairing values in the <code>x</code> and <code>y</code> vectors in the same position.</p>
+<pre><code>x &lt;- c(2,4,6,8,10)
+y &lt;- c(10,20,30,40,50)
+plot(x,y)</code></pre>
+<p>Will give a graph like this:</p>
 <div class="figure" style="text-align: center"><span id="fig:scatterplot1"></span>
-<img src="./figures/Fig7.1.jpeg" alt="A poor example of a scatter plot" width="70%" />
+<img src="figures/Fig_7_1.jpeg" alt="A poor example of a scatter plot" width="70%" />
 <p class="caption">
 Figure 7.1: A poor example of a scatter plot
 </p>
 </div>
-<p>NOT THAT THIS DOES NOT MEET THE STANDARDS OF A GOOD FIGURE!</p>
-<p>What’s missing?</p>
+<p>Try it yourself by copy and pasting the above code into your <code>Console</code>. If <code>x</code> and <code>y</code> do not have the same lengths, the <code>plot()</code> function will give an error. Try the code below by copy and pasting it into your console:</p>
+<pre><code>x &lt;- c(2)
+y &lt;- c(10,20,30,40,50)
+plot(x,y)</code></pre>
+<p>Note the error message that is generated so that if you get this error later when coding on your own you might remember that this error is generated because <code>x</code> and <code>y</code> have different lengths.</p>
+<p>Now try this code:</p>
+<pre><code>x &lt;- c(2,2,2,2,2)
+y &lt;- c(10,20,30,40,50)
+plot(x,y)
+length(x)
+length(y)</code></pre>
+<p>Note we can use <code>length()</code> to query the length of <code>x</code> and <code>y</code>. In addition, the names <code>x</code> and <code>y</code> are the users choice. A nearly identical plot is generated with the code:</p>
+<pre><code>A &lt;- c(2,2,2,2,2)
+B &lt;- c(10,20,30,40,50)
+plot(A,B)</code></pre>
+<p>The key is the internal consistency: <code>A</code> and <code>B</code> are the names of the vectors and these same names appear as the arguments of <code>plot(A,B)</code>. Can you guess what happens if you try <code>plot(B,A)</code> or <code>plot(A,A)</code>? Type these into your <code>Console</code> and give it a try.</p>
+<p>Note that all of the Figures we have made so far are not great: none meet the standards of a good figure. What’s missing?</p>
 <ul>
-<li>meaningufl x and y axis labels</li>
-<li>maybe it’s more appropriate to show this data connected with a line</li>
-<li>maybe you want the symbols to be a different shape or colour</li>
+<li>meaningful <code>x</code> and <code>y</code> axis labels,</li>
+<li>maybe it’s more appropriate to show this data connected with a line, and</li>
+<li>maybe you want the symbols to be a different shape or colour.</li>
 </ul>
-<p>You can address these issues with the plot function. Try using the help function to figure out what to do (refer to Chapter <a href="help.html#help">4</a>, “Getting help in R”, to recall how to use help files):</p>
-<p><code>help(plot)</code></p>
-<p>You’ll see there are a lot of argument options. First, let’s fix the axis labels.</p>
-<p><code>plot(x,y, xlab = &quot;temperature (degrees C)&quot;, ylab = &quot;growth rate (cm)&quot;)</code></p>
-This one is a little better:
-<div class="figure" style="text-align: center"><span id="fig:scatterplot2"></span>
-<img src="./figures/Fig7.2.jpg" alt="The same scatter plot as Figure 7.1, but with axis lables" width="70%" />
-<p class="caption">
-Figure 7.2: The same scatter plot as Figure 7.1, but with axis lables
-</p>
-</div>
-<p>If you want to change the symbols, you use the pch function to change the style.</p>
-<p><strong>TIP</strong> you can make a little cheat sheet for pch codes using this code. Print it out and tape it up on your wall by your computer, or in the front of your notebook as a handy reference.</p>
-<p><code>#++++++++++++++++++++++++++++++++++++++++++++ #generate a plot of point shapes which R knows about. #++++++++++++++++++++++++++++++++++++++++++++ generateRPointShapes&lt;-function(){   oldPar&lt;-par()   par(font=2, mar=c(0.5,0,0,0))   y=rev(c(rep(1,6),rep(2,5), rep(3,5), rep(4,5), rep(5,5)))   x=c(rep(1:5,5),6)   plot(x, y, pch = 0:25, cex=1.5, ylim=c(1,5.5), xlim=c(1,6.5),         axes=FALSE, xlab=&quot;&quot;, ylab=&quot;&quot;, bg=&quot;blue&quot;)   text(x, y, labels=0:25, pos=3)   par(mar=oldPar$mar,font=oldPar$font ) } generateRPointShapes()</code></p>
+<p>In addition, to the two manadatory arguments <code>x</code> and <code>y</code>, the <code>plot()</code> function has other optional argument that can be called to make a better figure. Try using the <code>help()</code> learn about more options to change the look of your plot (refer to Chapter <a href="help.html#help">4</a>, <em>Getting help in R</em>, to recall how to display and read help files):</p>
+<pre><code>help(plot)</code></pre>
+<p>You’ll see there are a lot of optional arguments. First, let’s fix the axis labels.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">x &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">2</span>,<span class="dv">4</span>,<span class="dv">6</span>,<span class="dv">8</span>,<span class="dv">10</span>)
+y &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">10</span>,<span class="dv">20</span>,<span class="dv">30</span>,<span class="dv">40</span>,<span class="dv">50</span>)
+<span class="kw">plot</span>(x,y, <span class="dt">xlab =</span> <span class="st">&quot;temperature (degrees C)&quot;</span>, <span class="dt">ylab =</span> <span class="st">&quot;growth rate (cm)&quot;</span>)</code></pre></div>
+<p><img src="quant-guide_files/figure-html/unnamed-chunk-9-1.png" width="672" /></p>
+<p>This one is a little better.</p>
+<p>If you want to change the symbols, you use the <code>pch</code> argument to change the style (see Section X).</p>
 <p>So, let’s re-do the graph in Figure 7.1, but with filled triangles.</p>
 <p><code>plot(x,y, pch = 17, xlab = &quot;temperature (degrees C)&quot;, ylab = &quot;growth rate (cm)&quot;)</code></p>
 <p>And we get…</p>
 <div class="figure" style="text-align: center"><span id="fig:scatterplot3"></span>
-<img src="./figures/Fig7.3.jpg" alt="The same scatter plot as Figure 7.2, but with symbols as filled triangles" width="70%" />
+<img src="./figures/Fig_7_3.jpg" alt="The same scatter plot as Figure 7.2, but with symbols as filled triangles" width="70%" />
 <p class="caption">
-Figure 7.3: The same scatter plot as Figure 7.2, but with symbols as filled triangles
+Figure 7.2: The same scatter plot as Figure 7.2, but with symbols as filled triangles
 </p>
 </div>
 <div id="other-useful-plot-functions" class="section level2">
 <h2><span class="header-section-number">7.1</span> Other useful plot functions</h2>
-<p>The generic “plot” function makes a scatter plot, with variations.</p>
+<p>The generic <code>plot()</code> function makes a scatter plot, with variations.</p>
 <p>For other types of plots, R has different functions, but all have similar arguments for adjusting the labels, spacing, tic marks, symbols, etc.</p>
 <p>See the following</p>
 <p><code>barplot{graphics}</code> to make bar graphs <code>boxplot{graphics}</code> to make boxplots <code>hist{graphics}</code> to make a histogram</p>
@@ -244,12 +263,31 @@ Figure 7.3: The same scatter plot as Figure 7.2, but with symbols as filled tria
 <p>points(temp, fishB, pch = 17, col = “dimgray”)```</p>
 <p>Voila!</p>
 <div class="figure" style="text-align: center"><span id="fig:goldfishplot"></span>
-<img src="./figures/Fig7.4.jpg" alt="The effect of water temperature on opercular beats per minute (bpm) for two goldfish; goldfish A (black triangles) and goldfish B (grey triangles)" width="70%" />
+<img src="./figures/Fig_7_4.jpg" alt="The effect of water temperature on opercular beats per minute (bpm) for two goldfish; goldfish A (black triangles) and goldfish B (grey triangles)" width="70%" />
 <p class="caption">
-Figure 7.4: The effect of water temperature on opercular beats per minute (bpm) for two goldfish; goldfish A (black triangles) and goldfish B (grey triangles)
+Figure 7.3: The effect of water temperature on opercular beats per minute (bpm) for two goldfish; goldfish A (black triangles) and goldfish B (grey triangles)
 </p>
 </div>
 <p>Note that the difference in the two symbols is described in the caption. For most scientific journals it is preferred to describe the symbology in the caption, rather than use a legend. However, with more complex graphs, or for some publications, you may wish to include a legend. Legends can be a bit tricky to work with in R - we’ll leave those for a more advanced course.</p>
+</div>
+<div id="pch-cheatsheet" class="section level2">
+<h2><span class="header-section-number">7.5</span> pch Cheatsheet</h2>
+<p>You can make a little cheat sheet for <code>pch</code> codes using this code. Print it out and tape it up on your wall by your computer, or in the front of your notebook as a handy reference.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co">#++++++++++++++++++++++++++++++++++++++++++++</span>
+<span class="co">#generate a plot of point shapes which R knows about.</span>
+<span class="co">#++++++++++++++++++++++++++++++++++++++++++++</span>
+generateRPointShapes&lt;-function(){
+  oldPar&lt;-<span class="kw">par</span>()
+  <span class="kw">par</span>(<span class="dt">font=</span><span class="dv">2</span>, <span class="dt">mar=</span><span class="kw">c</span>(<span class="fl">0.5</span>,<span class="dv">0</span>,<span class="dv">0</span>,<span class="dv">0</span>))
+  y=<span class="kw">rev</span>(<span class="kw">c</span>(<span class="kw">rep</span>(<span class="dv">1</span>,<span class="dv">6</span>),<span class="kw">rep</span>(<span class="dv">2</span>,<span class="dv">5</span>), <span class="kw">rep</span>(<span class="dv">3</span>,<span class="dv">5</span>), <span class="kw">rep</span>(<span class="dv">4</span>,<span class="dv">5</span>), <span class="kw">rep</span>(<span class="dv">5</span>,<span class="dv">5</span>)))
+  x=<span class="kw">c</span>(<span class="kw">rep</span>(<span class="dv">1</span>:<span class="dv">5</span>,<span class="dv">5</span>),<span class="dv">6</span>)
+  <span class="kw">plot</span>(x, y, <span class="dt">pch =</span> <span class="dv">0</span>:<span class="dv">25</span>, <span class="dt">cex=</span><span class="fl">1.5</span>, <span class="dt">ylim=</span><span class="kw">c</span>(<span class="dv">1</span>,<span class="fl">5.5</span>), <span class="dt">xlim=</span><span class="kw">c</span>(<span class="dv">1</span>,<span class="fl">6.5</span>), 
+       <span class="dt">axes=</span><span class="ot">FALSE</span>, <span class="dt">xlab=</span><span class="st">&quot;&quot;</span>, <span class="dt">ylab=</span><span class="st">&quot;&quot;</span>, <span class="dt">bg=</span><span class="st">&quot;blue&quot;</span>)
+  <span class="kw">text</span>(x, y, <span class="dt">labels=</span><span class="dv">0</span>:<span class="dv">25</span>, <span class="dt">pos=</span><span class="dv">3</span>)
+  <span class="kw">par</span>(<span class="dt">mar=</span>oldPar$mar,<span class="dt">font=</span>oldPar$font )
+}
+<span class="kw">generateRPointShapes</span>()</code></pre></div>
+<p><img src="quant-guide_files/figure-html/unnamed-chunk-10-1.png" width="672" /></p>
 
 </div>
 </div>
@@ -264,13 +302,11 @@ Figure 7.4: The effect of water temperature on opercular beats per minute (bpm) 
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
 <script src="libs/gitbook-2.6.7/js/lunr.js"></script>
-<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
 <script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
-<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
 <script>
 gitbook.require(["gitbook"], function(gitbook) {
 gitbook.start({
@@ -278,11 +314,12 @@ gitbook.start({
 "github": false,
 "facebook": true,
 "twitter": true,
+"google": false,
 "linkedin": false,
 "weibo": false,
 "instapaper": false,
 "vk": false,
-"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+"all": ["facebook", "google", "twitter", "linkedin", "weibo", "instapaper"]
 },
 "fontsettings": {
 "theme": "white",
@@ -294,10 +331,6 @@ gitbook.start({
 "text": "Edit"
 },
 "history": {
-"link": null,
-"text": null
-},
-"view": {
 "link": null,
 "text": null
 },
