@@ -104,8 +104,8 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Introduction</a></li>
 <li class="chapter" data-level="2" data-path="install.html"><a href="install.html"><i class="fa fa-check"></i><b>2</b> How to install R and R Studio</a></li>
 <li class="chapter" data-level="3" data-path="rstudio.html"><a href="rstudio.html"><i class="fa fa-check"></i><b>3</b> Finding your way around RStudio</a><ul>
-<li class="chapter" data-level="3.1" data-path="rstudio.html"><a href="rstudio.html#source-pane"><i class="fa fa-check"></i><b>3.1</b> Source pane</a></li>
-<li class="chapter" data-level="3.2" data-path="rstudio.html"><a href="rstudio.html#console-pane"><i class="fa fa-check"></i><b>3.2</b> Console pane</a></li>
+<li class="chapter" data-level="3.1" data-path="rstudio.html"><a href="rstudio.html#console-pane"><i class="fa fa-check"></i><b>3.1</b> Console pane</a></li>
+<li class="chapter" data-level="3.2" data-path="rstudio.html"><a href="rstudio.html#source-pane"><i class="fa fa-check"></i><b>3.2</b> Source pane</a></li>
 <li class="chapter" data-level="3.3" data-path="rstudio.html"><a href="rstudio.html#enviornmenthistory-pane"><i class="fa fa-check"></i><b>3.3</b> Enviornment/History pane</a><ul>
 <li class="chapter" data-level="" data-path="rstudio.html"><a href="rstudio.html#environment-tab"><i class="fa fa-check"></i>Environment tab</a></li>
 <li class="chapter" data-level="" data-path="rstudio.html"><a href="rstudio.html#history-tab"><i class="fa fa-check"></i>History tab</a></li>
@@ -134,11 +134,14 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li class="chapter" data-level="6.3" data-path="data-entry.html"><a href="data-entry.html#inspecting-the-data"><i class="fa fa-check"></i><b>6.3</b> Inspecting the data</a></li>
 </ul></li>
 <li class="chapter" data-level="7" data-path="graph.html"><a href="graph.html"><i class="fa fa-check"></i><b>7</b> Making graphs in R</a><ul>
-<li class="chapter" data-level="7.1" data-path="graph.html"><a href="graph.html#other-useful-plot-functions"><i class="fa fa-check"></i><b>7.1</b> Other useful plot functions</a></li>
-<li class="chapter" data-level="7.2" data-path="graph.html"><a href="graph.html#getting-a-bit-more-sophisticated"><i class="fa fa-check"></i><b>7.2</b> Getting a bit more sophisticated</a></li>
-<li class="chapter" data-level="7.3" data-path="graph.html"><a href="graph.html#first-we-plot-x-and-y-with-the-temp-vector-as-x-and-the-fisha-vector-as-y"><i class="fa fa-check"></i><b>7.3</b> First we plot x and y with the “temp” vector as “x” and the “fishA” vector as y</a></li>
-<li class="chapter" data-level="7.4" data-path="graph.html"><a href="graph.html#then-to-add-a-second-vector-of-data-fishb-to-the-same-plot-we-use"><i class="fa fa-check"></i><b>7.4</b> Then to add a second vector of data (fishB) to the same plot, we use:</a></li>
-<li class="chapter" data-level="7.5" data-path="graph.html"><a href="graph.html#pch-cheatsheet"><i class="fa fa-check"></i><b>7.5</b> pch Cheatsheet</a></li>
+<li class="chapter" data-level="7.1" data-path="graph.html"><a href="graph.html#scatter-and-line-plots-with-plotxy"><i class="fa fa-check"></i><b>7.1</b> Scatter and line plots with <code>plot(x,y)</code></a><ul>
+<li class="chapter" data-level="7.1.1" data-path="graph.html"><a href="graph.html#adding-axes-labels-and-changing-symbols"><i class="fa fa-check"></i><b>7.1.1</b> Adding axes labels and changing symbols</a></li>
+<li class="chapter" data-level="7.1.2" data-path="graph.html"><a href="graph.html#line-graphs"><i class="fa fa-check"></i><b>7.1.2</b> Line graphs</a></li>
+<li class="chapter" data-level="7.1.3" data-path="graph.html"><a href="graph.html#exporting-your-graphs"><i class="fa fa-check"></i><b>7.1.3</b> Exporting your graphs</a></li>
+</ul></li>
+<li class="chapter" data-level="7.2" data-path="graph.html"><a href="graph.html#other-useful-plot-functions"><i class="fa fa-check"></i><b>7.2</b> Other useful plot functions</a></li>
+<li class="chapter" data-level="7.3" data-path="graph.html"><a href="graph.html#getting-a-bit-more-sophisticated"><i class="fa fa-check"></i><b>7.3</b> Getting a bit more sophisticated</a></li>
+<li class="chapter" data-level="7.4" data-path="graph.html"><a href="graph.html#pch"><i class="fa fa-check"></i><b>7.4</b> pch cheatsheet</a></li>
 </ul></li>
 <li class="chapter" data-level="8" data-path="hypothesis.html"><a href="hypothesis.html"><i class="fa fa-check"></i><b>8</b> Hypothesis, predictions and equations</a></li>
 <li class="chapter" data-level="9" data-path="lab2.html"><a href="lab2.html"><i class="fa fa-check"></i><b>9</b> BIOL 1001: LABORATORY 2</a><ul>
@@ -181,25 +184,59 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <h1><span class="header-section-number">Chapter 3</span> Finding your way around RStudio</h1>
 <p>R studio has 4 windows (also known as “panes”) that are inter-linked. The default layout is shown in Figure <a href="rstudio.html#fig:panes">3.1</a>. You can move the layout of the panes and change their size and shape by clicking and dragging with your mouse along the window pane borders. The details of what happens in each pane are detailed below.</p>
 <div class="figure" style="text-align: center"><span id="fig:panes"></span>
-<img src="./figures/Fig5.1.jpg" alt="Panes in RStudio." width="70%" />
+<img src="figures/Fig_5_1.jpg" alt="Panes in RStudio." width="70%" />
 <p class="caption">
 Figure 3.1: Panes in RStudio.
 </p>
 </div>
-<div id="source-pane" class="section level2">
-<h2><span class="header-section-number">3.1</span> Source pane</h2>
-<p>This is where you create and edit <code>R</code> scripts. <code>R</code> scripts are lists of commands which have meanings due to functions defined in <code>R</code> and when saved have a <code>.R</code> extension. When you’ve written and saved a script, you can re-use it for future projects. Try it now, open and save a new <code>.R</code> file to save your work in. In the top menu select <code>File &gt; New File &gt; R Script</code>, then <code>File &gt; Save As</code>.</p>
-<p>Code that is written in the <code>Source</code> pane is generally read from top to bottom when you click the <code>Source</code> button, which appears on the righthand side of the <code>Source</code> pane if your pane is sufficiently large. If you have a small pane and this button does not appear, you can equivalently select <code>Code &gt; Source</code> from the top menu bar.</p>
-<p>If you would like to run one line or several lines of your script only (not all the lines), then place your cursor on the line you want to execute and click the <code>Run</code> button (equivalenty <code>Code &gt; Run Selected Line(s)</code>).</p>
-</div>
 <div id="console-pane" class="section level2">
-<h2><span class="header-section-number">3.2</span> Console pane</h2>
-<p>On the surface, this looks a lot like the source pane, since it’s where you can also type code. However, it differs because there is a prompt (the “&gt;” symbol) and here the code is actually evaluated.</p>
-<ul>
-<li>TRY IT! type 5 + 5 in the console at the prompt and press “enter”. You’ll see the R gives the correct output (10).</li>
-</ul>
-<p><strong>TIP</strong> you should try to type code in the source pane, so it gets saved. You can test it by clicking the “Run” button on the top of the source pane.</p>
-<p><strong>TIP</strong> use the console to test code/debug, or do a quick analysis. If you want to see a previous line of code you types, press the up arrow to scorss through past comments, from most to least recent.</p>
+<h2><span class="header-section-number">3.1</span> Console pane</h2>
+<p>The Console pane is labelled 1 in Figure X. The Console pane has a prompt (the <code>&gt;</code> symbol) and here the code is evaluated (also referred to as executed).</p>
+<p>TRY IT! type 5 + 5 in the console at the prompt and press “enter”. You’ll see the R gives the correct output (10).</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="dv">5+5</span></code></pre></div>
+<pre><code>## [1] 10</code></pre>
+<p>Use the console to test and query code, or do a quick analysis that you do not want to save. Press the up arrow to scroll through past commands, from most to least recent.</p>
+<p>You can overwrite variables. The current value of your variable is the last value you gave it. In the console type:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">x =<span class="st"> </span><span class="dv">2</span></code></pre></div>
+<p>Press <code>enter/return</code></p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">x =<span class="st"> </span><span class="dv">1</span></code></pre></div>
+<p>Press <code>enter/return</code>. What is the value of</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">x +<span class="st"> </span><span class="dv">1</span></code></pre></div>
+<pre><code>## [1] 2</code></pre>
+<p>Type:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">x</code></pre></div>
+<pre><code>## [1] 1</code></pre>
+<p>to query the current value of <code>x</code>.</p>
+<hr />
+<p>EXCERCISE</p>
+<p>Can you write the code, and execute the commands in the correct order so that <code>x + 1 = 6</code>?</p>
+<hr />
+</div>
+<div id="source-pane" class="section level2">
+<h2><span class="header-section-number">3.2</span> Source pane</h2>
+<p>The Source pane is labelled Y in Figure X. The Source pane is where you create, save, and edit <code>R</code> scripts. <code>R</code> scripts are blocks of code that perform a task that you want to save (i.e., are the answer to the EXERCISE above, or import and clean data to make a figure) and when saved have a <code>.R</code> extension. When you’ve written and saved a script, you can re-use it for future projects. Try it now: open and save a new <code>.R</code> file to save your work in. In the top menu select <code>File &gt; New File &gt; R Script</code>, then <code>File &gt; Save As</code>. Paste the following <code>R</code> code into your script and save it:</p>
+<pre><code>x = 4
+x = 6</code></pre>
+<p>Now, you have saved this code, but has it been evaluated? To answer this question type <code>x</code> in your <code>Console</code> and press ENTER:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">x</code></pre></div>
+<pre><code>## [1] 1</code></pre>
+<p>It is important to note that saving commands in a script in your <code>Source</code> window does not evaluate the commands in your <code>Console</code>. To execute the commands, with your script displayed in the <code>Source</code> pane, you need to click the <code>Source</code> button (righthand side of the source pane, equivalently select <code>Code &gt; Source</code> from the top menu bar; note, if you have a small <code>Source</code> pane the <code>Source</code> button may not appear and you may need to make it bigger or use the menu bar).</p>
+<p><code>Source</code> your script and then evalate <code>x</code> in your <code>Console</code>. If you have done this task correctly the value of <code>x</code> should be <code>6</code> and it will appear as <code>[1] 6</code> in your <code>Console</code>.</p>
+<p>What happened to <code>x = 2</code>? When <code>Source</code> is called the commands are executed in the <code>Console</code> from top to bottom as they appear in the script. Therefore, <code>x = 2</code> was only the current value of <code>x</code> for a very short time before it was overwritten with the command <code>x = 6</code>.</p>
+<hr />
+<p>EXERCISE</p>
+<p>Edit your script so that now it reads:</p>
+<pre><code>x = 4
+y = x + 1
+x = 6
+z = x + 1</code></pre>
+<p><code>Source</code> the script and then query the values of <code>y</code> and <code>z</code> in your <code>Console</code>.</p>
+<pre><code>&gt; y
+&gt; z</code></pre>
+<p>Explain why the values of <code>y</code> and <code>z</code> are <code>5</code> and <code>7</code> respectively.</p>
+<hr />
+<p>… AH: This is where I stopped editing</p>
+<p>If you would like to run one line or several lines of your script only (not all the lines), then place your cursor on the line you want to execute and click the <code>Run</code> button (equivalenty <code>Code &gt; Run Selected Line(s)</code>).</p>
 </div>
 <div id="enviornmenthistory-pane" class="section level2">
 <h2><span class="header-section-number">3.3</span> Enviornment/History pane</h2>
@@ -224,6 +261,7 @@ Figure 3.1: Panes in RStudio.
 <div id="plots-tab" class="section level3 unnumbered">
 <h3>Plots tab</h3>
 <p>This tab lets you see all the plots (graphs) that you create. You can also uset the buttons at the top to zoom, and to export the graph as a PDF or jpeg file.</p>
+<p>Mention the back arrow if mutiple plots are made.</p>
 </div>
 <div id="packages-tab" class="section level3 unnumbered">
 <h3>Packages tab</h3>
@@ -233,6 +271,7 @@ Figure 3.1: Panes in RStudio.
 <div id="help-tab" class="section level3 unnumbered">
 <h3>Help tab</h3>
 <p>This lets you get help with R functions. Type the name of the function in the search window (blank bar with the magnifying glass beside it). See Chapter <a href="help.html#help">4</a> “Getting R help” for more details.</p>
+<p>Add links to other resources</p>
 
 </div>
 </div>
