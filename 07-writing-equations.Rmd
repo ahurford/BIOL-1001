@@ -1,8 +1,107 @@
 # Hypothesis, predictions and equations {#hypothesis}
 
-(**AH: Sorry Joany, I meant this one: https://github.com/ahurford/quantitative-training-2/blob/master/first%20year/Biology%201001%20-%20Lab%20Manual%20-%20Fall%202019%20v0.4.docx in .docx with tracked changes: however, not all the track changes are accepted. You'll have to make a personal copy, accept the changes, cut and paste then just do a bit with the formatting, symbols and boxes**)
+The proposed answer to a problem is termed a **hypothesis**. Hypotheses are formulated generally on the basis of some preliminary observations in combination with prior knowledge.
+	
+How does the presence of a concentration gradient affect the direction of osmosis?  There are three possible answers to this problem.
 
-(**Up to here is the content of "Appendix II - The Scientific Method".**
-**Should we continue with "Appendix III - Writing up Experiments"?**)
+<div class="alert alert-info">
+<strong>H1</strong>.	Water diffuses from a hypertonic solution into a hypotonic solution.
+	
+<strong>H2</strong>.	Water diffuses from a hypotonic solution into a hypertonic solution.
+	
+<strong>H3</strong>.	Water diffuses equally in both directions.
+</div>
 
-(** AH: Just the part that is Hypothesis, predictions and equations**)
+All three meet the basic requirement of a hypothesis, namely, they are predictive, are clearly expressed and are an answer to the problem; however, #2 is the most likely hypothesis given background reading on osmosis.
+	
+**Predictions** are generated from the hypothesis and framed in terms of a specific experiment or analysis.
+	
+### Experiment 1
+Consider an osmometer containing a 30% glucose and dye solution placed in a beaker containing distilled water. If hypothesis #2 holds true water will diffuse from the hypotonic solution (the water in the beaker) into the hypertonic solution (the 30% glucose and dye solution in the osmometer) and the water will rise in the pipette. Note how this prediction was generated using the if ... then ... format.
+
+I.e.	*if* the hypothesis holds true, *then* a specific event will occur (prediction).
+
+<div class="alert alert-info">
+The prediction corresponding to <strong>H2</strong> is:  <br>
+*if* water diffuses from a hypotonic solution into a hypertonic solution (hypothesis), <br>
+*then* water will diffuse from the beaker into the osmometer causing the water in the pipette to rise.
+</div>
+	
+Although  hypotheses and predictions are similar, two basic differences exist: hypotheses are **general**, predictions are **specific**; hypotheses are written in the present tense, predictions in the future tense.
+	
+**Equations** write the predictions in mathematical notation so that statistical tests can be applied to determine if the hypothesis is supported. The equation corresponding to the prediction in the box above is:
+
+<div class="alert alert-info">
+$v_F > v_0$ <br>
+$v_F$ is the final volume of the glucose-dye solution in the osmometer (units: mL), <br>
+$v_0$ is the initial volume of glucose-dye solution in the osmometer (units: mL).
+</div>
+
+*	When writing your prediction as an equation *you* get to choose the notation: you might have instead decided that *y* is the final volume of the glucose-dye solution; this choice is also correct if you correctly explain what variable is represented by what you have chosen to call *y*. You many choose any lower or upper case Arabic (i.e., *a,b,c*…) or greek (i.e., α, β, γ, …) letters for your variables and you may also choose to use subscripts.
+
+*	Choose symbols that are one letter long. For example, $vF$ (two symbols long) is a less preferred symbol choice because this could be confused with $v$ multiplied by $F$.
+
+*	It is usual to choose symbols that are intuitive (i.e. here, $v$ helps us think of volume and $F$ helps us think of ‘final’). Commonly, μ or bar notation, i.e., $\bar{\nu}$ represents the mean of multiple observations. It is a good idea to avoid “O” which can be confused with zero, and e, i, π and Σ, which have specific definitions in mathematics, however, these considerations are preferred, an answer that does not use these conventions is not necessarily wrong. The necessary element of your answer is that you provide a description of the notation you define.
+
+*	You must provide the units for the quantities you define.
+
+*	The dependent variable (see below for a defintion) is to appear on the lefthand side of the equals or inequality.
+
+You will not perform statistical tests in BIOL 1001 or 1002. However, learning how to write your predictions as an equation will help you to understand how your hypothesis and predictions connect to statistical tests that help determine whether a hypothesis is supported or refuted.
+	
+##	Types of variables
+	
+Generally, a hypothesis describes the effect of one factor on another, for example, the effect of a concentration gradient on the direction of osmosis. These factors are called **variables** and are of two types: the variable that is changed (varied) by the experimenter is called the INDEPENDENT VARIABLE, and the variable that changes as a consequence of the changes to the independent variable is called the DEPENDENT VARIABLE. In our example:
+	
+*	The glucose concentration in the osmometer is the INDEPENDENT VARIABLE because it is created by the experimenter, and
+
+*	The volume of water in the pipette is the DEPENDENT VARIABLE because it is affected directly by the concentrations inside and outside the osmometer, and is the measured response.
+
+### Experiment 2
+
+Consider an expanded version of the previous experiment, where we now consider concentrations of 30, 60, and 90% glucose in the osmometer, all in beakers of distilled water.
+	
+For Experiment 2, we might have the following as our hypothesis, prediction and equation:
+
+<div class="alert alert-info">
+Hypothesis: When a solution is more hypertonic, more water will diffuse into it from a hypotonic solution.
+	
+Prediction: The volume of water in the osmometer will be largest for the 90% glucose solution, and smallest for the 30% glucose solution.
+	
+Equation: $v_F = bg + v_0$,  
+where $v_F$ is the final volume of liquid in the osmometer (mL), $b$ is the change in final volume per unit glucose concentration (mL per %), g is the glucose concentration (%), and $v_0$ is the final volume when the glucose concentration is zero (mL).
+</div>
+
+Note that in Experiment 2, the independent variable, glucose concentration, takes three different values, (30, 60 and 90%) and these values are taken from options along a continuum. As such, in the above equation we have treated glucose concentration as a CONTINUOUS variable. This changes our hypothesis and predictions. Let’s examine the new equation more closely.
+	
+*	We predicted an increasing relationship between glucose concentration and the final volume of water in the osmometer. In writing our equation, we, more specifically, assumed a linear, or “straight-line”, relationship. An increasing relationship does not have to be a linear relationship, however, without a good reason to assume otherwise, we should assume that a prediction stating an increasing or decreasing relationship between two variables corresponds to a linear (or “straight-line”) relationship with where an increasing relationship has a positive slope and a decreasing relationship has a negative slope.
+  
+* Recall that the equation for a straight-line is: $y = m x + b$,
+where $y$ corresponds to the vertical axis of a graph, $x$ corresponds to the horizontal axis, $m$ is the slope of the line and $b$ is the y-axis intercept (corresponding to $x = 0$). Note that the *equation* above is simply the equation for a straight-line written in the notation of our experiment:
+    + $v_F$, the dependent variable, is $y$,
+    + $b$, the effect of $g$ on $v_F$, is $m$, the slope,
+    + $g$, the independent variable, is $x$,
+    + $v_0$, the final volume when $g = 0$, is $b$.
+  
+*	Note that the units for each term are equal:
+    + $v_F$ has units mL
+    + $bg$ has units $\frac{mL}{\%} \cdot \% =$ mL
+    + $v_0$ has units mL
+	Finally, lets consider a third experiment where the independent variable is DISCRETE. 
+	
+### Experiment 3
+
+The Glycemic Index Foundation of South Africa designates Beverages as “Low”, “Intermediate” or “High” Glycemic Index (GI) values. In this experiment, 3 beverages from each group: Low, Intermediate, and High, are used in place of the glucose solution in the osmometer, and for each of these 9 experiments the solution in the beaker is distilled water.
+	
+In Experiment 3, the independent variable is DISCRETE because each beverage belongs to a group. The hypothesis, prediction, and equation for Experiment 3 might be:
+
+<div class="alert alert-info">
+Hypothesis: When a solution is more hypertonic, more water will diffuse into it from a hypotonic solution.  
+
+Prediction: The volume of water in the osmometer will be largest for the three beverages from the “High” GI group, and smallest for the 3 beverages from the “Low” GI group.  
+
+Equation: $μ_H > μ_I > μ_L$,  
+where $μ_H$ is the mean volume of liquid in the osmometer for the three “High” GI beverages (mL), $μ_I$ is the mean volume of liquid in the osmometer for the three “Intermediate” GI beverages (mL), and $μ_L$ is the mean volume of liquid in the osmometer for the three “Low” GI beverages (mL).
+</div>
+
+*	The equation for Experiment 3 is similar to the equation for Experiment 1. For Experiment 3, there were three beverages in each group, so we defined a measure of the central tendency, in this case the mean, so that we could compare between the groups.  
