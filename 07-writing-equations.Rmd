@@ -16,7 +16,7 @@ All three meet the basic requirement of a hypothesis, namely, they are predictiv
 	
 **Predictions** are generated from the hypothesis and framed in terms of a specific experiment or analysis.
 	
-### Experiment 1
+### Experiment 1 {-}
 Consider an osmometer containing a 30% glucose and dye solution placed in a beaker containing distilled water. If hypothesis #2 holds true water will diffuse from the hypotonic solution (the water in the beaker) into the hypertonic solution (the 30% glucose and dye solution in the osmometer) and the water will rise in the pipette. Note how this prediction was generated using the if ... then ... format.
 
 I.e.	*if* the hypothesis holds true, *then* a specific event will occur (prediction).
@@ -57,7 +57,7 @@ Generally, a hypothesis describes the effect of one factor on another, for examp
 
 *	The volume of water in the pipette is the DEPENDENT VARIABLE because it is affected directly by the concentrations inside and outside the osmometer, and is the measured response.
 
-### Experiment 2
+### Experiment 2 {-}
 
 Consider an expanded version of the previous experiment, where we now consider concentrations of 30, 60, and 90% glucose in the osmometer, all in beakers of distilled water.
 	
@@ -89,7 +89,7 @@ where $y$ corresponds to the vertical axis of a graph, $x$ corresponds to the ho
     + $v_0$ has units mL
 	Finally, lets consider a third experiment where the independent variable is DISCRETE. 
 	
-### Experiment 3
+### Experiment 3 {-}
 
 The Glycemic Index Foundation of South Africa designates Beverages as “Low”, “Intermediate” or “High” Glycemic Index (GI) values. In this experiment, 3 beverages from each group: Low, Intermediate, and High, are used in place of the glucose solution in the osmometer, and for each of these 9 experiments the solution in the beaker is distilled water.
 	

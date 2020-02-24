@@ -429,3 +429,4 @@ $RECYCLE.BIN/
 *.lnk
 
 # End of https://www.gitignore.io/api/r,tex,linux,macos,latex,mdbook,windows,libreoffice,microsoftoffice
+.Rproj.user
