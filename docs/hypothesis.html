@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="" xml:lang="">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
 <head>
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Chapter 8 Hypothesis, predictions and equations | Quantitative skills for biology</title>
   <meta name="description" content="Chapter 8 Hypothesis, predictions and equations | Quantitative skills for biology" />
-  <meta name="generator" content="bookdown 0.17 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.16 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Chapter 8 Hypothesis, predictions and equations | Quantitative skills for biology" />
   <meta property="og:type" content="book" />
@@ -51,66 +51,41 @@
 
 
 <style type="text/css">
-a.sourceLine { display: inline-block; line-height: 1.25; }
-a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
-a.sourceLine:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode { white-space: pre; position: relative; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-code.sourceCode { white-space: pre-wrap; }
-a.sourceLine { text-indent: -1em; padding-left: 1em; }
-}
-pre.numberSource a.sourceLine
-  { position: relative; left: -4em; }
-pre.numberSource a.sourceLine::before
-  { content: attr(data-line-number);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; pointer-events: all; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-    color: #aaaaaa;
-  }
-pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
-div.sourceCode
-  {  }
-@media screen {
-a.sourceLine::before { text-decoration: underline; }
-}
-code span.al { color: #ff0000; font-weight: bold; } /* Alert */
-code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
-code span.at { color: #7d9029; } /* Attribute */
-code span.bn { color: #40a070; } /* BaseN */
-code span.bu { } /* BuiltIn */
-code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
-code span.ch { color: #4070a0; } /* Char */
-code span.cn { color: #880000; } /* Constant */
-code span.co { color: #60a0b0; font-style: italic; } /* Comment */
-code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
-code span.do { color: #ba2121; font-style: italic; } /* Documentation */
-code span.dt { color: #902000; } /* DataType */
-code span.dv { color: #40a070; } /* DecVal */
-code span.er { color: #ff0000; font-weight: bold; } /* Error */
-code span.ex { } /* Extension */
-code span.fl { color: #40a070; } /* Float */
-code span.fu { color: #06287e; } /* Function */
-code span.im { } /* Import */
-code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
-code span.kw { color: #007020; font-weight: bold; } /* Keyword */
-code span.op { color: #666666; } /* Operator */
-code span.ot { color: #007020; } /* Other */
-code span.pp { color: #bc7a00; } /* Preprocessor */
-code span.sc { color: #4070a0; } /* SpecialChar */
-code span.ss { color: #bb6688; } /* SpecialString */
-code span.st { color: #4070a0; } /* String */
-code span.va { color: #19177c; } /* Variable */
-code span.vs { color: #4070a0; } /* VerbatimString */
-code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+div.sourceCode { overflow-x: auto; }
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+td.sourceCode { padding-left: 5px; }
+code > span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code > span.dt { color: #902000; } /* DataType */
+code > span.dv { color: #40a070; } /* DecVal */
+code > span.bn { color: #40a070; } /* BaseN */
+code > span.fl { color: #40a070; } /* Float */
+code > span.ch { color: #4070a0; } /* Char */
+code > span.st { color: #4070a0; } /* String */
+code > span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code > span.ot { color: #007020; } /* Other */
+code > span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code > span.fu { color: #06287e; } /* Function */
+code > span.er { color: #ff0000; font-weight: bold; } /* Error */
+code > span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+code > span.cn { color: #880000; } /* Constant */
+code > span.sc { color: #4070a0; } /* SpecialChar */
+code > span.vs { color: #4070a0; } /* VerbatimString */
+code > span.ss { color: #bb6688; } /* SpecialString */
+code > span.im { } /* Import */
+code > span.va { color: #19177c; } /* Variable */
+code > span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code > span.op { color: #666666; } /* Operator */
+code > span.bu { } /* BuiltIn */
+code > span.ex { } /* Extension */
+code > span.pp { color: #bc7a00; } /* Preprocessor */
+code > span.at { color: #7d9029; } /* Attribute */
+code > span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
 </style>
 
 <link rel="stylesheet" href="style.css" type="text/css" />
@@ -173,11 +148,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="7.4" data-path="graph.html"><a href="graph.html#pch"><i class="fa fa-check"></i><b>7.4</b> pch cheatsheet</a></li>
 </ul></li>
 <li class="chapter" data-level="8" data-path="hypothesis.html"><a href="hypothesis.html"><i class="fa fa-check"></i><b>8</b> Hypothesis, predictions and equations</a><ul>
-<li class="chapter" data-level="" data-path="hypothesis.html"><a href="hypothesis.html#experiment-1"><i class="fa fa-check"></i>Experiment 1</a></li>
-<li class="chapter" data-level="8.1" data-path="hypothesis.html"><a href="hypothesis.html#types-of-variables"><i class="fa fa-check"></i><b>8.1</b> Types of variables</a><ul>
-<li class="chapter" data-level="" data-path="hypothesis.html"><a href="hypothesis.html#experiment-2"><i class="fa fa-check"></i>Experiment 2</a></li>
-<li class="chapter" data-level="" data-path="hypothesis.html"><a href="hypothesis.html#experiment-3"><i class="fa fa-check"></i>Experiment 3</a></li>
-</ul></li>
+<li class="chapter" data-level="8.1" data-path="hypothesis.html"><a href="hypothesis.html#discrete-and-continuous-variables"><i class="fa fa-check"></i><b>8.1</b> Discrete and continuous variables</a></li>
 </ul></li>
 <li class="chapter" data-level="9" data-path="lab2.html"><a href="lab2.html"><i class="fa fa-check"></i><b>9</b> BIOL 1001: LABORATORY 2</a><ul>
 <li class="chapter" data-level="" data-path="lab2.html"><a href="lab2.html#biological-data-with-computers"><i class="fa fa-check"></i>BIOLOGICAL DATA WITH COMPUTERS</a></li>
@@ -218,30 +189,32 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
             <section class="normal" id="section-">
 <div id="hypothesis" class="section level1">
 <h1><span class="header-section-number">Chapter 8</span> Hypothesis, predictions and equations</h1>
-<p>The proposed answer to a problem is termed a <strong>hypothesis</strong>. Hypotheses are formulated generally on the basis of some preliminary observations in combination with prior knowledge.</p>
+<p>The proposed answer to a problem is termed a <strong>hypothesis</strong>. Hypotheses are formulated on the basis of some preliminary observations in combination with prior knowledge.</p>
 <p>How does the presence of a concentration gradient affect the direction of osmosis? There are three possible answers to this problem.</p>
 <div class="alert alert-info">
+<p><strong>Hypotheses</strong></p>
 <p><strong>H1</strong>. Water diffuses from a hypertonic solution into a hypotonic solution.</p>
 <p><strong>H2</strong>. Water diffuses from a hypotonic solution into a hypertonic solution.</p>
 <p><strong>H3</strong>. Water diffuses equally in both directions.</p>
 </div>
 <p>All three meet the basic requirement of a hypothesis, namely, they are predictive, are clearly expressed and are an answer to the problem; however, #2 is the most likely hypothesis given background reading on osmosis.</p>
-<p><strong>Predictions</strong> are generated from the hypothesis and framed in terms of a specific experiment or analysis.</p>
-<div id="experiment-1" class="section level3 unnumbered">
-<h3>Experiment 1</h3>
-<p>Consider an osmometer containing a 30% glucose and dye solution placed in a beaker containing distilled water. If hypothesis #2 holds true water will diffuse from the hypotonic solution (the water in the beaker) into the hypertonic solution (the 30% glucose and dye solution in the osmometer) and the water will rise in the pipette. Note how this prediction was generated using the if … then … format.</p>
-<p>I.e. <em>if</em> the hypothesis holds true, <em>then</em> a specific event will occur (prediction).</p>
+<p><strong>Predictions</strong> are generated from the hypothesis and framed in terms of a specific experiment or analysis. Let’s define a specific experiment:</p>
+<hr />
+<p>EXPERIMENT 1</p>
+<p>An osmometer containing a 30% glucose and dye solution is placed in a beaker containing distilled water.</p>
+<hr />
+<p>If hypothesis #2 holds true water will diffuse from the hypotonic solution (the water in the beaker) into the hypertonic solution (the 30% glucose and dye solution in the osmometer) and the water will rise in the pipette. Note how this prediction was generated using the if … then … format.</p>
+<p>i.e. <em>if</em> the hypothesis holds true, <em>then</em> a specific event will occur (prediction).</p>
 <div class="alert alert-info">
-<p>The prediction corresponding to <strong>H2</strong> is: <br>
-<em>if</em> water diffuses from a hypotonic solution into a hypertonic solution (hypothesis), <br>
-<em>then</em> water will diffuse from the beaker into the osmometer causing the water in the pipette to rise.</p>
+<p>The <strong>prediction</strong> corresponding to H2 for Experiment 1 is: <br></p>
+<p><em>if</em> water diffuses from a hypotonic solution into a hypertonic solution (hypothesis), <br> <em>then</em> water will diffuse from the beaker into the osmometer causing the water in the pipette to rise.</p>
 </div>
 <p>Although hypotheses and predictions are similar, two basic differences exist: hypotheses are <strong>general</strong>, predictions are <strong>specific</strong>; hypotheses are written in the present tense, predictions in the future tense.</p>
 <p><strong>Equations</strong> write the predictions in mathematical notation so that statistical tests can be applied to determine if the hypothesis is supported. The equation corresponding to the prediction in the box above is:</p>
 <div class="alert alert-info">
-<p><span class="math inline">\(v_F &gt; v_0\)</span> <br>
-<span class="math inline">\(v_F\)</span> is the final volume of the glucose-dye solution in the osmometer (units: mL), <br>
-<span class="math inline">\(v_0\)</span> is the initial volume of glucose-dye solution in the osmometer (units: mL).</p>
+<p>The <strong>equation</strong> corresponding to the prediction above is:</p>
+<p><span class="math inline">\(v_F &gt; v_0\)</span> <br></p>
+<p>where <span class="math inline">\(v_F\)</span> is the final volume of the glucose-dye solution in the osmometer (units: mL), and <br> <span class="math inline">\(v_0\)</span> is the initial volume of glucose-dye solution in the osmometer (units: mL).</p>
 </div>
 <ul>
 <li><p>When writing your prediction as an equation <em>you</em> get to choose the notation: you might have instead decided that <em>y</em> is the final volume of the glucose-dye solution; this choice is also correct if you correctly explain what variable is represented by what you have chosen to call <em>y</em>. You many choose any lower or upper case Arabic (i.e., <em>a,b,c</em>…) or greek (i.e., α, β, γ, …) letters for your variables and you may also choose to use subscripts.</p></li>
@@ -251,29 +224,29 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li><p>The dependent variable (see below for a defintion) is to appear on the lefthand side of the equals or inequality.</p></li>
 </ul>
 <p>You will not perform statistical tests in BIOL 1001 or 1002. However, learning how to write your predictions as an equation will help you to understand how your hypothesis and predictions connect to statistical tests that help determine whether a hypothesis is supported or refuted.</p>
-</div>
-<div id="types-of-variables" class="section level2">
-<h2><span class="header-section-number">8.1</span> Types of variables</h2>
-<p>Generally, a hypothesis describes the effect of one factor on another, for example, the effect of a concentration gradient on the direction of osmosis. These factors are called <strong>variables</strong> and are of two types: the variable that is changed (varied) by the experimenter is called the INDEPENDENT VARIABLE, and the variable that changes as a consequence of the changes to the independent variable is called the DEPENDENT VARIABLE. In our example:</p>
+<div id="discrete-and-continuous-variables" class="section level2">
+<h2><span class="header-section-number">8.1</span> Discrete and continuous variables</h2>
+<p>Generally, a hypothesis describes the effect of one factor on another, for example, the effect of a concentration gradient on the direction of osmosis. These factors are called <strong>variables</strong> and are of two types: the variable that is changed (varied) by the experimenter is called the <strong>independent variable</strong>, and the variable that changes as a consequence of the changes to the independent variable is called the <strong>dependent variable</strong>. In our example:</p>
 <ul>
-<li><p>The glucose concentration in the osmometer is the INDEPENDENT VARIABLE because it is created by the experimenter, and</p></li>
-<li><p>The volume of water in the pipette is the DEPENDENT VARIABLE because it is affected directly by the concentrations inside and outside the osmometer, and is the measured response.</p></li>
+<li><p>The glucose concentration in the osmometer is the <strong>independent variable</strong> because it is created by the experimenter, and</p></li>
+<li><p>The volume of water in the pipette is the <strong>dependent variable</strong> because it is affected directly by the concentrations inside and outside the osmometer, and is the measured response.</p></li>
 </ul>
-<div id="experiment-2" class="section level3 unnumbered">
-<h3>Experiment 2</h3>
+<hr />
+<p>EXPERIMENT 2</p>
 <p>Consider an expanded version of the previous experiment, where we now consider concentrations of 30, 60, and 90% glucose in the osmometer, all in beakers of distilled water.</p>
+<hr />
 <p>For Experiment 2, we might have the following as our hypothesis, prediction and equation:</p>
 <div class="alert alert-info">
-<p>Hypothesis: When a solution is more hypertonic, more water will diffuse into it from a hypotonic solution.</p>
-<p>Prediction: The volume of water in the osmometer will be largest for the 90% glucose solution, and smallest for the 30% glucose solution.</p>
-<p>Equation: <span class="math inline">\(v_F = bg + v_0\)</span>,<br />
-where <span class="math inline">\(v_F\)</span> is the final volume of liquid in the osmometer (mL), <span class="math inline">\(b\)</span> is the change in final volume per unit glucose concentration (mL per %), g is the glucose concentration (%), and <span class="math inline">\(v_0\)</span> is the final volume when the glucose concentration is zero (mL).</p>
+<p><strong>Hypothesis:</strong> When a solution is more hypertonic, more water will diffuse into it from a hypotonic solution.</p>
+<p><strong>Prediction:</strong> The volume of water in the osmometer will be largest for the 90% glucose solution, and smallest for the 30% glucose solution.</p>
+<p><strong>Equation:</strong></p>
+<p><span class="math inline">\(v_F = bg + v_0\)</span>,</p>
+<p>where <span class="math inline">\(v_F\)</span> is the final volume of liquid in the osmometer (mL), <span class="math inline">\(b\)</span> is the change in final volume per unit glucose concentration (mL per %), g is the glucose concentration (%), and <span class="math inline">\(v_0\)</span> is the final volume when the glucose concentration is zero (mL).</p>
 </div>
 <p>Note that in Experiment 2, the independent variable, glucose concentration, takes three different values, (30, 60 and 90%) and these values are taken from options along a continuum. As such, in the above equation we have treated glucose concentration as a CONTINUOUS variable. This changes our hypothesis and predictions. Let’s examine the new equation more closely.</p>
 <ul>
 <li><p>We predicted an increasing relationship between glucose concentration and the final volume of water in the osmometer. In writing our equation, we, more specifically, assumed a linear, or “straight-line”, relationship. An increasing relationship does not have to be a linear relationship, however, without a good reason to assume otherwise, we should assume that a prediction stating an increasing or decreasing relationship between two variables corresponds to a linear (or “straight-line”) relationship with where an increasing relationship has a positive slope and a decreasing relationship has a negative slope.</p></li>
-<li>Recall that the equation for a straight-line is: <span class="math inline">\(y = m x + b\)</span>,
-where <span class="math inline">\(y\)</span> corresponds to the vertical axis of a graph, <span class="math inline">\(x\)</span> corresponds to the horizontal axis, <span class="math inline">\(m\)</span> is the slope of the line and <span class="math inline">\(b\)</span> is the y-axis intercept (corresponding to <span class="math inline">\(x = 0\)</span>). Note that the <em>equation</em> above is simply the equation for a straight-line written in the notation of our experiment:
+<li>Recall that the equation for a straight-line is: <span class="math inline">\(y = m x + b\)</span>, where <span class="math inline">\(y\)</span> corresponds to the vertical axis of a graph, <span class="math inline">\(x\)</span> corresponds to the horizontal axis, <span class="math inline">\(m\)</span> is the slope of the line and <span class="math inline">\(b\)</span> is the y-axis intercept (corresponding to <span class="math inline">\(x = 0\)</span>). Note that the <em>equation</em> above is simply the equation for a straight-line written in the notation of our experiment:
 <ul>
 <li><span class="math inline">\(v_F\)</span>, the dependent variable, is <span class="math inline">\(y\)</span>,</li>
 <li><span class="math inline">\(b\)</span>, the effect of <span class="math inline">\(g\)</span> on <span class="math inline">\(v_F\)</span>, is <span class="math inline">\(m\)</span>, the slope,</li>
@@ -284,26 +257,25 @@ where <span class="math inline">\(y\)</span> corresponds to the vertical axis of
 <ul>
 <li><span class="math inline">\(v_F\)</span> has units mL</li>
 <li><span class="math inline">\(bg\)</span> has units <span class="math inline">\(\frac{mL}{\%} \cdot \% =\)</span> mL</li>
-<li><span class="math inline">\(v_0\)</span> has units mL
-Finally, lets consider a third experiment where the independent variable is DISCRETE.</li>
+<li><span class="math inline">\(v_0\)</span> has units mL Finally, lets consider a third experiment where the independent variable is DISCRETE.</li>
 </ul></li>
 </ul>
-</div>
-<div id="experiment-3" class="section level3 unnumbered">
-<h3>Experiment 3</h3>
+<hr />
+<p>EXPERIMENT 3</p>
 <p>The Glycemic Index Foundation of South Africa designates Beverages as “Low”, “Intermediate” or “High” Glycemic Index (GI) values. In this experiment, 3 beverages from each group: Low, Intermediate, and High, are used in place of the glucose solution in the osmometer, and for each of these 9 experiments the solution in the beaker is distilled water.</p>
-<p>In Experiment 3, the independent variable is DISCRETE because each beverage belongs to a group. The hypothesis, prediction, and equation for Experiment 3 might be:</p>
+<hr />
+<p>In Experiment 3, the independent variable is <strong>discrete</strong> because each beverage belongs to a group. The hypothesis, prediction, and equation for Experiment 3 might be:</p>
 <div class="alert alert-info">
-<p>Hypothesis: When a solution is more hypertonic, more water will diffuse into it from a hypotonic solution.</p>
-<p>Prediction: The volume of water in the osmometer will be largest for the three beverages from the “High” GI group, and smallest for the 3 beverages from the “Low” GI group.</p>
-<p>Equation: <span class="math inline">\(μ_H &gt; μ_I &gt; μ_L\)</span>,<br />
-where <span class="math inline">\(μ_H\)</span> is the mean volume of liquid in the osmometer for the three “High” GI beverages (mL), <span class="math inline">\(μ_I\)</span> is the mean volume of liquid in the osmometer for the three “Intermediate” GI beverages (mL), and <span class="math inline">\(μ_L\)</span> is the mean volume of liquid in the osmometer for the three “Low” GI beverages (mL).</p>
+<p><strong>Hypothesis:</strong> When a solution is more hypertonic, more water will diffuse into it from a hypotonic solution.</p>
+<p><strong>Prediction:</strong> The volume of water in the osmometer will be largest for the three beverages from the “High” GI group, and smallest for the 3 beverages from the “Low” GI group.</p>
+<p><strong>Equation:</strong></p>
+<p><span class="math inline">\(μ_H &gt; μ_I &gt; μ_L\)</span>,</p>
+<p>where <span class="math inline">\(μ_H\)</span> is the mean volume of liquid in the osmometer for the three “High” GI beverages (mL), <span class="math inline">\(μ_I\)</span> is the mean volume of liquid in the osmometer for the three “Intermediate” GI beverages (mL), and <span class="math inline">\(μ_L\)</span> is the mean volume of liquid in the osmometer for the three “Low” GI beverages (mL).</p>
 </div>
 <ul>
 <li>The equation for Experiment 3 is similar to the equation for Experiment 1. For Experiment 3, there were three beverages in each group, so we defined a measure of the central tendency, in this case the mean, so that we could compare between the groups.</li>
 </ul>
 
-</div>
 </div>
 </div>
             </section>
@@ -367,7 +339,7 @@ gitbook.start({
   (function () {
     var script = document.createElement("script");
     script.type = "text/javascript";
-    var src = "true";
+    var src = "";
     if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
     if (location.protocol !== "file:")
       if (/^https?:/.test(src))
