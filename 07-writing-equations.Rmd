@@ -11,7 +11,7 @@ How does the presence of a concentration gradient affect the direction of osmosi
 	
 <strong>H2</strong>.	Water diffuses from a hypotonic solution into a hypertonic solution.
 	
-<strong>H3</strong>.	Water diffuses equally in both directions.
+<strong>H3</strong>.	Water diffuses equally in both directions along the osmotic gradient.
 </div>
 
 All three meet the basic requirement of a hypothesis, namely, they are predictive, are clearly expressed and are an answer to the problem; however, #2 is the most likely hypothesis given background reading on osmosis.
@@ -61,6 +61,29 @@ $v_0$ is the initial volume of glucose-dye solution in the osmometer (units: mL)
 *	The dependent variable (see below for a defintion) is to appear on the lefthand side of the equals or inequality.
 
 You will not perform statistical tests in BIOL 1001 or 1002. However, learning how to write your predictions as an equation will help you to understand how your hypothesis and predictions connect to statistical tests that help determine whether a hypothesis is supported or refuted.
+
+## Hypothesis testing
+
+### Null hypotheses
+Null means nothing or zero and null hypotheses usually describe outcomes where the independent variables have no effect. Null hypotheses are usually paired with alternative hypotheses whereby the independent variable does have an affect. As such, H3 is a potential null hypothesis, since this hypothesis describes the concentration gradient having no effect on the direction of difussion, and could be paired with the alternative hypothesis, H2. Null hypothesis testing compares the data to the null hypothesis, and assesses the probability that such data could be recorded if the null hypothesis were true. When written as an equation, frequently null hypotheses are expressed with as a given parameter set equal to zero.
+
+<div class="alert alert-info">
+
+<strong>Null Hypothesis:</strong> Water diffuses equally in both directions along the osmotic gradient.
+
+<strong>Alternative Hypothesis</strong>.	Water diffuses from a hypotonic solution into a hypertonic solution.
+	
+<strong>Prediction under the null hypothesiss:</strong> The volume of water in the osmometer will not change.
+	
+<strong>Equation under the null hypothesis:</strong>
+
+$v_F = v_0$,  
+
+where $v_F$ is the final volume of the glucose-dye solution in the osmometer (units: mL), and <br>
+$v_0$ is the initial volume of glucose-dye solution in the osmometer (units: mL).
+</div>
+
+Historically, many statistical analyses have been performed in the null hypothesis testing framework. More recently, information theoretic approaches that assess the relative support for each of multiple working hypotheses have gained popularity (burnham and anderson).
 	
 ##	Discrete and continuous variables
 	
@@ -90,6 +113,11 @@ For Experiment 2, we might have the following as our hypothesis, prediction and 
 $v_F = bg + v_0$,  
 
 where $v_F$ is the final volume of liquid in the osmometer (mL), $b$ is the change in final volume per unit glucose concentration (mL per %), g is the glucose concentration (%), and $v_0$ is the final volume when the glucose concentration is zero (mL).
+
+<strong>Null Hypothesis:</strong> The hypertonicity of the solution has no effect of diffusion.
+
+<strong>Equation under the null hypothesis:</strong> The null hypothesis is represented by setting $b=0$ in the above equation.
+
 </div>
 
 Note that in Experiment 2, the independent variable, glucose concentration, takes three different values, (30, 60 and 90%) and these values are taken from options along a continuum. As such, in the above equation we have treated glucose concentration as a CONTINUOUS variable. This changes our hypothesis and predictions. Let’s examine the new equation more closely.
@@ -129,6 +157,19 @@ In Experiment 3, the independent variable is **discrete** because each beverage 
 $μ_H > μ_I > μ_L$,
 
 where $μ_H$ is the mean volume of liquid in the osmometer for the three “High” GI beverages (mL), $μ_I$ is the mean volume of liquid in the osmometer for the three “Intermediate” GI beverages (mL), and $μ_L$ is the mean volume of liquid in the osmometer for the three “Low” GI beverages (mL).
+
+<strong>Null Hypothesis:</strong> Concentration gradients do not affect difussion.
+
+<strong>Equation under the null hypothesis:</strong> At least two of mean volumes of liquid in the osmometer at the end of the experiment are equal, i.e., at least one of the following is true:
+
+$μ_H = μ_I$,
+
+$μ_H = μ_L$, or
+
+$μ_I = μ_L$.
+
 </div>
 
 *	The equation for Experiment 3 is similar to the equation for Experiment 1. For Experiment 3, there were three beverages in each group, so we defined a measure of the central tendency, in this case the mean, so that we could compare between the groups.  
+
+## Further reading

@@ -148,7 +148,11 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li class="chapter" data-level="7.4" data-path="graph.html"><a href="graph.html#pch"><i class="fa fa-check"></i><b>7.4</b> pch cheatsheet</a></li>
 </ul></li>
 <li class="chapter" data-level="8" data-path="hypothesis.html"><a href="hypothesis.html"><i class="fa fa-check"></i><b>8</b> Hypothesis, predictions and equations</a><ul>
-<li class="chapter" data-level="8.1" data-path="hypothesis.html"><a href="hypothesis.html#discrete-and-continuous-variables"><i class="fa fa-check"></i><b>8.1</b> Discrete and continuous variables</a></li>
+<li class="chapter" data-level="8.1" data-path="hypothesis.html"><a href="hypothesis.html#hypothesis-testing"><i class="fa fa-check"></i><b>8.1</b> Hypothesis testing</a><ul>
+<li class="chapter" data-level="8.1.1" data-path="hypothesis.html"><a href="hypothesis.html#null-hypotheses"><i class="fa fa-check"></i><b>8.1.1</b> Null hypotheses</a></li>
+</ul></li>
+<li class="chapter" data-level="8.2" data-path="hypothesis.html"><a href="hypothesis.html#discrete-and-continuous-variables"><i class="fa fa-check"></i><b>8.2</b> Discrete and continuous variables</a></li>
+<li class="chapter" data-level="8.3" data-path="hypothesis.html"><a href="hypothesis.html#further-reading"><i class="fa fa-check"></i><b>8.3</b> Further reading</a></li>
 </ul></li>
 <li class="chapter" data-level="9" data-path="lab2.html"><a href="lab2.html"><i class="fa fa-check"></i><b>9</b> BIOL 1001: LABORATORY 2</a><ul>
 <li class="chapter" data-level="" data-path="lab2.html"><a href="lab2.html#biological-data-with-computers"><i class="fa fa-check"></i>BIOLOGICAL DATA WITH COMPUTERS</a></li>
@@ -195,7 +199,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <p><strong>Hypotheses</strong></p>
 <p><strong>H1</strong>. Water diffuses from a hypertonic solution into a hypotonic solution.</p>
 <p><strong>H2</strong>. Water diffuses from a hypotonic solution into a hypertonic solution.</p>
-<p><strong>H3</strong>. Water diffuses equally in both directions.</p>
+<p><strong>H3</strong>. Water diffuses equally in both directions along the osmotic gradient.</p>
 </div>
 <p>All three meet the basic requirement of a hypothesis, namely, they are predictive, are clearly expressed and are an answer to the problem; however, #2 is the most likely hypothesis given background reading on osmosis.</p>
 <p><strong>Predictions</strong> are generated from the hypothesis and framed in terms of a specific experiment or analysis. Let’s define a specific experiment:</p>
@@ -224,8 +228,24 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li><p>The dependent variable (see below for a defintion) is to appear on the lefthand side of the equals or inequality.</p></li>
 </ul>
 <p>You will not perform statistical tests in BIOL 1001 or 1002. However, learning how to write your predictions as an equation will help you to understand how your hypothesis and predictions connect to statistical tests that help determine whether a hypothesis is supported or refuted.</p>
+<div id="hypothesis-testing" class="section level2">
+<h2><span class="header-section-number">8.1</span> Hypothesis testing</h2>
+<div id="null-hypotheses" class="section level3">
+<h3><span class="header-section-number">8.1.1</span> Null hypotheses</h3>
+<p>Null means nothing or zero and null hypotheses usually describe outcomes where the independent variables have no effect. Null hypotheses are usually paired with alternative hypotheses whereby the independent variable does have an affect. As such, H3 is a potential null hypothesis, since this hypothesis describes the concentration gradient having no effect on the direction of difussion, and could be paired with the alternative hypothesis, H2. Null hypothesis testing compares the data to the null hypothesis, and assesses the probability that such data could be recorded if the null hypothesis were true. When written as an equation, frequently null hypotheses are expressed with as a given parameter set equal to zero.</p>
+<div class="alert alert-info">
+<p><strong>Null Hypothesis:</strong> Water diffuses equally in both directions along the osmotic gradient.</p>
+<p><strong>Alternative Hypothesis</strong>. Water diffuses from a hypotonic solution into a hypertonic solution.</p>
+<p><strong>Prediction under the null hypothesiss:</strong> The volume of water in the osmometer will not change.</p>
+<p><strong>Equation under the null hypothesis:</strong></p>
+<p><span class="math inline">\(v_F = v_0\)</span>,</p>
+<p>where <span class="math inline">\(v_F\)</span> is the final volume of the glucose-dye solution in the osmometer (units: mL), and <br> <span class="math inline">\(v_0\)</span> is the initial volume of glucose-dye solution in the osmometer (units: mL).</p>
+</div>
+<p>Historically, many statistical analyses have been performed in the null hypothesis testing framework. More recently, information theoretic approaches that assess the relative support for each of multiple working hypotheses have gained popularity (burnham and anderson).</p>
+</div>
+</div>
 <div id="discrete-and-continuous-variables" class="section level2">
-<h2><span class="header-section-number">8.1</span> Discrete and continuous variables</h2>
+<h2><span class="header-section-number">8.2</span> Discrete and continuous variables</h2>
 <p>Generally, a hypothesis describes the effect of one factor on another, for example, the effect of a concentration gradient on the direction of osmosis. These factors are called <strong>variables</strong> and are of two types: the variable that is changed (varied) by the experimenter is called the <strong>independent variable</strong>, and the variable that changes as a consequence of the changes to the independent variable is called the <strong>dependent variable</strong>. In our example:</p>
 <ul>
 <li><p>The glucose concentration in the osmometer is the <strong>independent variable</strong> because it is created by the experimenter, and</p></li>
@@ -242,6 +262,8 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <p><strong>Equation:</strong></p>
 <p><span class="math inline">\(v_F = bg + v_0\)</span>,</p>
 <p>where <span class="math inline">\(v_F\)</span> is the final volume of liquid in the osmometer (mL), <span class="math inline">\(b\)</span> is the change in final volume per unit glucose concentration (mL per %), g is the glucose concentration (%), and <span class="math inline">\(v_0\)</span> is the final volume when the glucose concentration is zero (mL).</p>
+<p><strong>Null Hypothesis:</strong> The hypertonicity of the solution has no effect of diffusion.</p>
+<p><strong>Equation under the null hypothesis:</strong> The null hypothesis is represented by setting <span class="math inline">\(b=0\)</span> in the above equation.</p>
 </div>
 <p>Note that in Experiment 2, the independent variable, glucose concentration, takes three different values, (30, 60 and 90%) and these values are taken from options along a continuum. As such, in the above equation we have treated glucose concentration as a CONTINUOUS variable. This changes our hypothesis and predictions. Let’s examine the new equation more closely.</p>
 <ul>
@@ -271,10 +293,18 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <p><strong>Equation:</strong></p>
 <p><span class="math inline">\(μ_H &gt; μ_I &gt; μ_L\)</span>,</p>
 <p>where <span class="math inline">\(μ_H\)</span> is the mean volume of liquid in the osmometer for the three “High” GI beverages (mL), <span class="math inline">\(μ_I\)</span> is the mean volume of liquid in the osmometer for the three “Intermediate” GI beverages (mL), and <span class="math inline">\(μ_L\)</span> is the mean volume of liquid in the osmometer for the three “Low” GI beverages (mL).</p>
+<p><strong>Null Hypothesis:</strong> Concentration gradients do not affect difussion.</p>
+<p><strong>Equation under the null hypothesis:</strong> At least two of mean volumes of liquid in the osmometer at the end of the experiment are equal, i.e., at least one of the following is true:</p>
+<p><span class="math inline">\(μ_H = μ_I\)</span>,</p>
+<p><span class="math inline">\(μ_H = μ_L\)</span>, or</p>
+<p><span class="math inline">\(μ_I = μ_L\)</span>.</p>
 </div>
 <ul>
 <li>The equation for Experiment 3 is similar to the equation for Experiment 1. For Experiment 3, there were three beverages in each group, so we defined a measure of the central tendency, in this case the mean, so that we could compare between the groups.</li>
 </ul>
+</div>
+<div id="further-reading" class="section level2">
+<h2><span class="header-section-number">8.3</span> Further reading</h2>
 
 </div>
 </div>
