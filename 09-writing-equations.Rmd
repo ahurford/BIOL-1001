@@ -1,9 +1,10 @@
 # Hypothesis, predictions and equations {#hypothesis}
 
-The proposed answer to a problem is termed a **hypothesis**. Hypotheses are formulated on the basis of some preliminary observations in combination with prior knowledge.
-	
-How does the presence of a concentration gradient affect the direction of osmosis?  There are three possible answers to this problem.
+The proposed answer to a question is termed a **hypothesis**. Hypotheses are formulated on the basis of some preliminary observations and/or prior knowledge.
 
+How does the presence of a concentration gradient affect the diffusion of water? There are three possible answers to this question. Indeed, many questions may generate multiple alternative hypotheses.
+
+(**we are considering changing these examples to be about moose to make them more fun**)
 <div class="alert alert-info">
 <strong>Hypotheses</strong>
 
@@ -61,29 +62,6 @@ $v_0$ is the initial volume of glucose-dye solution in the osmometer (units: mL)
 *	The dependent variable (see below for a defintion) is to appear on the lefthand side of the equals or inequality.
 
 You will not perform statistical tests in BIOL 1001 or 1002. However, learning how to write your predictions as an equation will help you to understand how your hypothesis and predictions connect to statistical tests that help determine whether a hypothesis is supported or refuted.
-
-## Hypothesis testing
-
-### Null hypotheses
-Null means nothing or zero and null hypotheses usually describe outcomes where the independent variables have no effect. Null hypotheses are usually paired with alternative hypotheses whereby the independent variable does have an affect. As such, H3 is a potential null hypothesis, since this hypothesis describes the concentration gradient having no effect on the direction of difussion, and could be paired with the alternative hypothesis, H2. Null hypothesis testing compares the data to the null hypothesis, and assesses the probability that such data could be recorded if the null hypothesis were true. When written as an equation, frequently null hypotheses are expressed with as a given parameter set equal to zero.
-
-<div class="alert alert-info">
-
-<strong>Null Hypothesis:</strong> Water diffuses equally in both directions along the osmotic gradient.
-
-<strong>Alternative Hypothesis</strong>.	Water diffuses from a hypotonic solution into a hypertonic solution.
-	
-<strong>Prediction under the null hypothesiss:</strong> The volume of water in the osmometer will not change.
-	
-<strong>Equation under the null hypothesis:</strong>
-
-$v_F = v_0$,  
-
-where $v_F$ is the final volume of the glucose-dye solution in the osmometer (units: mL), and <br>
-$v_0$ is the initial volume of glucose-dye solution in the osmometer (units: mL).
-</div>
-
-Historically, many statistical analyses have been performed in the null hypothesis testing framework. More recently, information theoretic approaches that assess the relative support for each of multiple working hypotheses have gained popularity (burnham and anderson).
 	
 ##	Discrete and continuous variables
 	
@@ -97,7 +75,8 @@ Generally, a hypothesis describes the effect of one factor on another, for examp
 
 EXPERIMENT 2
 
-Consider an expanded version of the previous experiment, where we now consider concentrations of 30, 60, and 90% glucose in the osmometer, all in beakers of distilled water.
+
+This experiment will test how concentrations of 30, 60, and 90% glucose in an osmometer will influence the flow of water molecules across two solutions. 
 
 ---
 	
@@ -113,10 +92,6 @@ For Experiment 2, we might have the following as our hypothesis, prediction and 
 $v_F = bg + v_0$,  
 
 where $v_F$ is the final volume of liquid in the osmometer (mL), $b$ is the change in final volume per unit glucose concentration (mL per %), g is the glucose concentration (%), and $v_0$ is the final volume when the glucose concentration is zero (mL).
-
-<strong>Null Hypothesis:</strong> The hypertonicity of the solution has no effect of diffusion.
-
-<strong>Equation under the null hypothesis:</strong> The null hypothesis is represented by setting $b=0$ in the above equation.
 
 </div>
 
@@ -135,7 +110,7 @@ where $y$ corresponds to the vertical axis of a graph, $x$ corresponds to the ho
     + $v_F$ has units mL
     + $bg$ has units $\frac{mL}{\%} \cdot \% =$ mL
     + $v_0$ has units mL
-	Finally, lets consider a third experiment where the independent variable is DISCRETE. 
+	Finally, lets consider a third experiment where the independent variable is *discrete*. 
 	
 ---
 
@@ -158,18 +133,31 @@ $μ_H > μ_I > μ_L$,
 
 where $μ_H$ is the mean volume of liquid in the osmometer for the three “High” GI beverages (mL), $μ_I$ is the mean volume of liquid in the osmometer for the three “Intermediate” GI beverages (mL), and $μ_L$ is the mean volume of liquid in the osmometer for the three “Low” GI beverages (mL).
 
-<strong>Null Hypothesis:</strong> Concentration gradients do not affect difussion.
-
-<strong>Equation under the null hypothesis:</strong> At least two of mean volumes of liquid in the osmometer at the end of the experiment are equal, i.e., at least one of the following is true:
-
-$μ_H = μ_I$,
-
-$μ_H = μ_L$, or
-
-$μ_I = μ_L$.
-
 </div>
 
 *	The equation for Experiment 3 is similar to the equation for Experiment 1. For Experiment 3, there were three beverages in each group, so we defined a measure of the central tendency, in this case the mean, so that we could compare between the groups.  
+
+## Hypothesis testing
+
+### Null hypotheses
+Null means nothing or zero and null hypotheses usually describe outcomes where the independent variables have no effect. Null hypotheses are usually paired with alternative hypotheses whereby the independent variable does have an affect. As such, H3 is a potential null hypothesis, since this hypothesis describes the concentration gradient having no effect on the direction of difussion, and could be paired with the alternative hypothesis, H2. When written as an equation, frequently null hypotheses are expressed with as a given parameter set equal to zero.
+
+<div class="alert alert-info">
+
+<strong>Null Hypothesis:</strong> Water diffuses equally in both directions along the osmotic gradient.
+
+<strong>Alternative Hypothesis</strong>.	Water diffuses from a hypotonic solution into a hypertonic solution.
+	
+<strong>Prediction under the null hypothesiss:</strong> The volume of water in the osmometer will not change.
+	
+<strong>Equation under the null hypothesis:</strong>
+
+$v_F = v_0$,  
+
+where $v_F$ is the final volume of the glucose-dye solution in the osmometer (units: mL), and <br>
+$v_0$ is the initial volume of glucose-dye solution in the osmometer (units: mL).
+</div>
+
+Historically, many statistical analyses have been performed in the null hypothesis testing framework. More recently, information theoretic approaches that assess the relative support for each of multiple working hypotheses have gained popularity (burnham and anderson).
 
 ## Further reading
