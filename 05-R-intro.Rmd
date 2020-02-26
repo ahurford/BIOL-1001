@@ -1,4 +1,4 @@
-# Introduction to R 
+# Introduction to R {#rintro}
 
 This is a brief introduction to R, focussing on basic programming concepts and best practices.
 
@@ -13,7 +13,7 @@ Once you open an R script (or any file), an editor panel will appear in the top 
 
 The working directory is a folder on your computer where R will look for data, save your plots, etc. To make your workflow easier, it is good practice to save everything related to one project in the same place, as it will save you time typing up computer paths or finding the files across your computer. For example, you could save your script and all the data for this exercises in a folder called "Intro-to-R". It is good practice to avoid spaces in file names because it can confuse R.
 
-To find out where your working directory is now, run the function `getwd()`. If you want to change it, you can use `setwd("dir")`, where "dir" is the path to the folder that you want to use. Notice that the path must be written inside quotation marks. You'll see that in the console R runs the command for changing the working directory. 
+To find out where your working directory is now, run the function `getwd()`. If you want to change it, you can use `setwd("dir")`, where `"dir"` is the path to the folder that you want to use. Notice that the path must be written inside quotation marks. You'll see that in the console R runs the command for changing the working directory. 
 
 Alternatively, you can set the working directory from the Files tab in the Files/Plot/Packages/Help pane. For this, navigate to the folder whence you want to read and save files or create a new one by clicking `New Folder`. Once you have located the folder, click on it to access it. Then, click `More` and select `Set As Working Directory`. 
 
@@ -67,6 +67,8 @@ x
 
 In R, the `#` sign is a special character that indicates a comment. Anything that is written directly to the right of a `#` sign will be ignored by R. Comment your scripts often!
 
+**TRY IT!** In your script, write a couple of sentences to explain each of the commands we have used so far.
+
 ## Precedence
 
 The order of operations follows the standard precedence (from highest to lowest):
@@ -76,6 +78,8 @@ The order of operations follows the standard precedence (from highest to lowest)
 * Multiplication or division: `*`, `/`
 * Addition or subtraction: `+`, `-`
 
+**TRY IT!** Using R, can you calculate if the result of `1 + (2 * 3 * 5)` is the same as `(1 + 2) * 3 * 5`? 
+
 ## Mathematical functions
 
 R comes with many built in mathematical functions. Functions are called by typing its name followed by open and closing parentheses. Whatever we write inside the parentheses are the function's arguments:
@@ -84,50 +88,66 @@ R comes with many built in mathematical functions. Functions are called by typin
 sqrt(x)
 ```
 
+**TRY IT!** Calculate the natural logarithm of `x`. Hint: the function to do so is `log()`, and the argument would be the name of the variable that we want to use.
+
+## Data types
+
+There are 6 basic data types in R:
+
+* Character: `h` or `hello`.
+* Numeric (real or decimal): `3` or `315.5`.
+* Integer: `4L` (the letter L specifies that this is an integer).
+* Logical: `TRUE` or `FALSE`.
+* Complex: `7+4i`.
+
 ## Vectorization
 
-So far we assigned our variables with *scalars* (a 1 dimensional object with a length of 1). But, R is a vectorized language, which means that variables and functions can have vectors as values. A *vector* is a set of values, in a specific order, and of the same data type. 
+Elements of these data types may be combined to form data structures, such as vectors.
+A *vector* is a set of values, in a specific order, and of the same data type. 
+Further, vectors are *atomic*, which means that they can only contain one class of data.
+For example:
 
-Vectors are *atomic*, which means that they can only contain one class of data.
 ```{r}
 rgb <- c("red", "green", "blue")
 rgb
-y <- 3:7
+y <- c(2, 3, 5, 7)
 y
 ```
 
-# check the type of data
+To check what kind of data object it is you can use the funcion `class`. To see check how long is the object you can use `length()` for one-dimensional objects, or `dim()` for objects of two or more dimensions. For example:
+
 ```{r}
 class(x)
-class(rgb)
+length(x)
 ```
 
-# Vectors can also be used as arguments to functions
-
-```{r}
-length(y) # count the number of elements in y
-```
-
-# But different classes cannot be mixed in the same object
-
-```{r}
-semiprimes <- c(4, 6, 9, "ten")
-class(semiprimes)
-```
+**TRY IT!** What are the data types and lengths of the vectors `rgb` and `y`?
 
 The core idea behind vectorization is that operations can be applied at once 
-to an entire set of values
+to an entire set of values. For example:
 
 ```{r}
 y * 3
 ```
 
-**TRY IT!** Create a vector with a sequence of numbers using the function `seq`. Hint: try `?seq`.
+**TRY IT!** Create a vector with a sequence of numbers using the function `seq`. Hint: run `?seq` in the console to display the help page of the function.
+
+A key point of the previous example is that vectors can be used as arguments to functions. But, different classes cannot be mixed in the same object. For instance, if we combine numeric with character data types, R will coerce all elements to be characters:
+
+```{r}
+primes <- c(2, 3, 5, "seven")
+class(primes)
+```
+
+For this reason, and to avoid errors, it is important to check frequently the data type of the objects that you are working with.
 
 ## R Packages
 
 Functions can be added to R with packages, which are stored on [CRAN](https://cran.r-project.org/web/packages/index.html) (the Comprehensive R Archive Network). 
 
-To install a package you use the function `install.packages("packagename")`, where `packagename` is the name of the package you want to install. To see what packages are installed by type `installed.packages()`.
+To install a package you use the function `install.packages("packagename")`, where `packagename` is the name of the package you want to install. To see what packages are installed by type `installed.packages()`. Packages are loaded into the R session with the `library(packagename)` function. 
 
-Packages are loaded with the `library("packagename")` function. 
+As an alternative, you can install a package through the Packages tab in the the Files/Plots/Packages/Help pane. For this, click on `Install`, this feature will open a window with a blank field where you can type the name of the package. When you are ready click on `Install` to proceed with the installation. You will see in the console that R displays some information about where the package is being downloaded from and a progress bar. You can also load a package from this tab. For this, find the the package that you want to load either by scrolling trough the list or by writing its name on the search bar to the right of the tab. Once you find it, click on the checkbox to the left of the package name. You will see that R runs the command to load the package in the console. 
+
+**TRY IT!** Install the package `ggplot2`, by either using the `install.packages` command or the `Install` feature. Then, load the package either with the `library()` or the checkbox. 
+

@@ -4,21 +4,21 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 4 Getting R help | Quantitative skills for biology</title>
-  <meta name="description" content="Chapter 4 Getting R help | Quantitative skills for biology" />
+  <title>Chapter 6 Introduction to R | Quantitative skills for biology</title>
+  <meta name="description" content="Chapter 6 Introduction to R | Quantitative skills for biology" />
   <meta name="generator" content="bookdown 0.17 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 4 Getting R help | Quantitative skills for biology" />
+  <meta property="og:title" content="Chapter 6 Introduction to R | Quantitative skills for biology" />
   <meta property="og:type" content="book" />
   
   
-  <meta property="og:description" content="Chapter 4 Getting R help | Quantitative skills for biology" />
+  <meta property="og:description" content="Chapter 6 Introduction to R | Quantitative skills for biology" />
   <meta name="github-repo" content="ahurford/quantitative-training-resources/tree/master/Quantitative training guides/quant-guide" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 4 Getting R help | Quantitative skills for biology" />
+  <meta name="twitter:title" content="Chapter 6 Introduction to R | Quantitative skills for biology" />
   
-  <meta name="twitter:description" content="Chapter 4 Getting R help | Quantitative skills for biology" />
+  <meta name="twitter:description" content="Chapter 6 Introduction to R | Quantitative skills for biology" />
   
 
 
@@ -29,8 +29,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="rstudio.html"/>
-<link rel="next" href="data.html"/>
+<link rel="prev" href="data.html"/>
+<link rel="next" href="data-entry.html"/>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -230,52 +230,119 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="help" class="section level1">
-<h1><span class="header-section-number">Chapter 4</span> Getting R help</h1>
-<p>The first place most people go for R help is the “Help” tabe in the “Files/Plots/Packages/Help” pane on the console (described in Chapter <a href="rstudio.html#rstudio">3</a>). Here you can do a search by topic/term using the search window at the top right. You can also click the “house” icon to go to the home menu for the help files and use the table of contents there to navigate to what you are looking for.</p>
-<div id="using-r-help" class="section level2">
-<h2><span class="header-section-number">4.1</span> Using R help</h2>
-<p>The hardest part about R help files is that at first they don’t seem that helpful, and to new R users, they seem to be written in code. However, all of the help pages are structured the same way, so once you learn how to de-code them, you’ll be well on your way. Below is an example of how to interpret R help files</p>
+<div id="rintro" class="section level1">
+<h1><span class="header-section-number">Chapter 6</span> Introduction to R</h1>
+<p>This is a brief introduction to R, focussing on basic programming concepts and best practices.</p>
+<div id="workflow" class="section level2">
+<h2><span class="header-section-number">6.1</span> Workflow</h2>
+<p>You can interact directly with the console, but it is considered best practice to write an .R file and run commands in the console from that script. This allows saving the code and running all at once with the <code>source</code> function. Remember to click Save often, so that you actually save your script!</p>
+<p>Once you open an R script (or any file), an editor panel will appear in the top left. From there you can run the current line (or a selected block of code) by clicking on the <code>Run</code> button in the editor panel, or in the <code>Code</code> menu select <code>Run Lines</code>. There is also a <code>Re-run</code> button next to the <code>Run</code> button, which allows to run again the previous code block including any new modifications you have just made.</p>
 </div>
-<div id="r-cheatsheets" class="section level2">
-<h2><span class="header-section-number">4.2</span> R “Cheatsheets”</h2>
-<p>Because R is open source software, there is also a culture of open access help. Several R programmers have made helpful “cheatSheets” that are worth printing off and hanging by your desk. Try <a href="https://cran.r-project.org/doc/contrib/Short-refcard.pdf">this one</a> by Tom Short for starters.</p>
+<div id="working-directory" class="section level2">
+<h2><span class="header-section-number">6.2</span> Working directory</h2>
+<p>The working directory is a folder on your computer where R will look for data, save your plots, etc. To make your workflow easier, it is good practice to save everything related to one project in the same place, as it will save you time typing up computer paths or finding the files across your computer. For example, you could save your script and all the data for this exercises in a folder called “Intro-to-R”. It is good practice to avoid spaces in file names because it can confuse R.</p>
+<p>To find out where your working directory is now, run the function <code>getwd()</code>. If you want to change it, you can use <code>setwd(&quot;dir&quot;)</code>, where <code>&quot;dir&quot;</code> is the path to the folder that you want to use. Notice that the path must be written inside quotation marks. You’ll see that in the console R runs the command for changing the working directory.</p>
+<p>Alternatively, you can set the working directory from the Files tab in the Files/Plot/Packages/Help pane. For this, navigate to the folder whence you want to read and save files or create a new one by clicking <code>New Folder</code>. Once you have located the folder, click on it to access it. Then, click <code>More</code> and select <code>Set As Working Directory</code>.</p>
+<p><strong>TRY IT!</strong> Set the working directory to a folder in your Desktop called “Intro-to-R”.</p>
 </div>
-<div id="r-books" class="section level2">
-<h2><span class="header-section-number">4.3</span> R books</h2>
-<p>As with the cheatsheets, there are open access books out there (as well as expensive ones to buy). For beginners, “The Pirates Gude to R” by Nathaniel D. Phillips is <strong>HIGHLY</strong> recommended. You can access it <a href="https://bookdown.org/ndphillips/YaRrr/">here</a></p>
+<div id="variables-and-assignment" class="section level2">
+<h2><span class="header-section-number">6.3</span> Variables and assignment</h2>
+<p>The assignment operator is <code>&lt;-</code>. It stores whatever you write on the right to variables on
+the left. Variable names can be made up of letters, numbers, underscores and periods. But, they cannot start with a number nor contain spaces. For instance:</p>
+<div class="sourceCode" id="cb17"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb17-1" data-line-number="1">x &lt;-<span class="st"> </span><span class="dv">10</span></a></code></pre></div>
+<p>Notice that assigning a variable does not print its value,
+but if you look at the <code>Environment</code> panel, you will see the new variable there.
+You can also check that it is stored by calling the variable:</p>
+<div class="sourceCode" id="cb18"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb18-1" data-line-number="1">x </a></code></pre></div>
+<pre><code>## [1] 10</code></pre>
+<p><strong>TRY IT!</strong> Define a varible “y” with the value of 3.</p>
+<div id="shortcuts" class="section level3">
+<h3><span class="header-section-number">6.3.1</span> Shortcuts</h3>
+<p>In RStudio, the assignment operator is written in a keystroke by hitting <code>Alt</code>+<code>-</code>.</p>
+<p>A practical way of running code from a script by using a keyboard shortcut. In GNU/Linux and Windows, you can hit <code>Ctrl</code>+<code>Return</code>, on macOS the equivalent is <code>⌘ Command</code>+<code>Return</code>. This shortcut also allows running a selected block of code.</p>
+<p>You can alternate between the script and console panels with the <code>Ctrl</code>+<code>1</code> and <code>Ctrl</code>+<code>2</code> shortcuts.</p>
+<p>From the console, you can go back to the previous command by hitting the <code>up</code> arrow. If you press the <code>up</code> arrow multiple times you will walk back through the history. You can navigate the history by pressing the <code>down</code> arrow as well. You can edit any command from there by using the <code>left</code> arrow or <code>delete</code> keys.</p>
 </div>
-<div id="how-to-interpret-r-help-files" class="section level2">
-<h2><span class="header-section-number">4.4</span> How to interpret R help files</h2>
-<p>R documentation follows the following format. As an example, we’ll use the screenshot below for a really simple statistical command (the t-test) to walk you through the R documentation. Numbers below correspond to the labels on the screenshot.</p>
-<ol style="list-style-type: decimal">
-<li><p><strong>header</strong> This simply gives the command for the thing you are trying to do, in R language</p></li>
-<li><p><strong>Title</strong> This is a title of the function/command/tool in more plain language</p></li>
-<li><p><strong>Description</strong> This section provides a short description of what the command does, written in reaonably plain language</p></li>
-<li><p><strong>Usage</strong> This is where you see an example of R code that you use to execute the command (<strong>TIP</strong> you can tell what text in the help file is R code and what is other information by the font. Example code is in Courier font). Any example prefaced teh two hashtags (“##”) is a comment that adds additonal descitpion or provides different options for the comment. For example, for the t-test here, the first exampe is for the default method, where you are doing a t-test for a difference between two numeric vectors of data values (“x” and “y”). The second example is where you are applying the t-test to a formula instead of two numeric vectors. Until you start doing more advanced statistics, the default method will usually be what you use.</p></li>
-<li><p><strong>Arguments</strong> This section breaks down every element in the R code under “Usage” above it and describes what the input is that you need to provide. It also gives you details about the options as well as what the defaults are. For example, for the t-test documentation here, it tells you that “x” is “a (non-empty) numeric vector of data values”. It also tells you that this is what “y” is but not that it tells you that “y” is optional (i.e., you can do a t-test on just one vector of data values). This fact is also shown in the example code where it says “y = NULL”).</p></li>
-</ol>
-<p>Note that you often do not have to input ALL the arguments. If you are happy with the defaults you don’t have to type in the code. For example, the description of the argument “alternative” tells you that you can specify whether the alternative hypothesis is two-sided (i.e., two-tailed), or one-tailed, in which case you have to say whether the alternative hypothesis is that the second set of data (e.g., the treatment) are greater or less than the first (e.g., the control). The default is that you are assuming the alternative hypothesis is two-sided. If this is what you want, then your code only needs to look like this</p>
-<p><code>t.test(x, y)</code></p>
-<p>However, if you want a one-sided test, and your alternate hypothesis is that the treatment (y) is greater than the control (x), then you need to type a bit more code, like this:</p>
-<p><code>t.test(x, y, alternative = c(&quot;greater&quot;))</code></p>
-<ol start="6" style="list-style-type: decimal">
-<li><p><strong>Details</strong> This sectin gives you a little more detail (written a bit more like a stats text) about what the function is doing. For more advanced functions, there may be details on the types of inputs allowed and other caveats. <em>This section is really helpful to read closely!</em></p></li>
-<li><p><strong>Value</strong> This section lists the objects (output) created when you execute the command. The relevance of this list will become more clear once you start using R.</p></li>
-<li><p><strong>See Also</strong> This section is usually just links to similar commands to the one you are reading up on, or related to it somewhow. These can be useful to explore when doing more complex statistical tests, or if you are not sure which test you should be using. Clicking the link will just take you to the Documentation page for that command, which will be set up exactly the same way as this one.</p></li>
-</ol>
-<p>9 <strong>Examples</strong> This gives sample code and output. If you have installed the necessary package(s) to run this code, you can just try the code out yourself by typing the code <em>exactly</em> as shown in the example in the Console window of RStudio. It will call data that comes built in with the package when you installed it and can be a helpful way for you to understand how the command is working before you try it with your own data.</p>
-<p><img src="figures/HelpDoc_partA.jpg" width="95%" style="display: block; margin: auto;" /></p>
-<p><img src="figures/HelpDoc_partB.jpg" width="95%" style="display: block; margin: auto;" /></p>
 </div>
-<div id="debugging" class="section level2">
-<h2><span class="header-section-number">4.5</span> Debugging</h2>
+<div id="using-variables" class="section level2">
+<h2><span class="header-section-number">6.4</span> Using variables</h2>
+<p>Variables can be used in calculations</p>
+<div class="sourceCode" id="cb20"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb20-1" data-line-number="1">x <span class="op">+</span><span class="st"> </span>x</a></code></pre></div>
+<pre><code>## [1] 20</code></pre>
+<p>Variables can also be reassigned</p>
+<div class="sourceCode" id="cb22"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb22-1" data-line-number="1">x &lt;-<span class="st"> </span><span class="dv">314</span></a>
+<a class="sourceLine" id="cb22-2" data-line-number="2">x</a></code></pre></div>
+<pre><code>## [1] 314</code></pre>
+</div>
+<div id="comments" class="section level2">
+<h2><span class="header-section-number">6.5</span> Comments</h2>
+<p>In R, the <code>#</code> sign is a special character that indicates a comment. Anything that is written directly to the right of a <code>#</code> sign will be ignored by R. Comment your scripts often!</p>
+<p><strong>TRY IT!</strong> In your script, write a couple of sentences to explain each of the commands we have used so far.</p>
+</div>
+<div id="precedence" class="section level2">
+<h2><span class="header-section-number">6.6</span> Precedence</h2>
+<p>The order of operations follows the standard precedence (from highest to lowest):</p>
 <ul>
-<li>Spelling mistakes</li>
-<li>Input to a function is the wrong data type</li>
-<li>Run line by line</li>
-<li>Cut and paste example</li>
+<li>Parentheses <code>(</code>, <code>)</code></li>
+<li>Exponents or roots: <code>^</code></li>
+<li>Multiplication or division: <code>*</code>, <code>/</code></li>
+<li>Addition or subtraction: <code>+</code>, <code>-</code></li>
 </ul>
+<p><strong>TRY IT!</strong> Using R, can you calculate if the result of <code>1 + (2 * 3 * 5)</code> is the same as <code>(1 + 2) * 3 * 5</code>?</p>
+</div>
+<div id="mathematical-functions" class="section level2">
+<h2><span class="header-section-number">6.7</span> Mathematical functions</h2>
+<p>R comes with many built in mathematical functions. Functions are called by typing its name followed by open and closing parentheses. Whatever we write inside the parentheses are the function’s arguments:</p>
+<div class="sourceCode" id="cb24"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb24-1" data-line-number="1"><span class="kw">sqrt</span>(x)</a></code></pre></div>
+<pre><code>## [1] 17.72005</code></pre>
+<p><strong>TRY IT!</strong> Calculate the natural logarithm of <code>x</code>. Hint: the function to do so is <code>log()</code>, and the argument would be the name of the variable that we want to use.</p>
+</div>
+<div id="data-types" class="section level2">
+<h2><span class="header-section-number">6.8</span> Data types</h2>
+<p>There are 6 basic data types in R:</p>
+<ul>
+<li>Character: <code>h</code> or <code>hello</code>.</li>
+<li>Numeric (real or decimal): <code>3</code> or <code>315.5</code>.</li>
+<li>Integer: <code>4L</code> (the letter L specifies that this is an integer).</li>
+<li>Logical: <code>TRUE</code> or <code>FALSE</code>.</li>
+<li>Complex: <code>7+4i</code>.</li>
+</ul>
+</div>
+<div id="vectorization" class="section level2">
+<h2><span class="header-section-number">6.9</span> Vectorization</h2>
+<p>Elements of these data types may be combined to form data structures, such as vectors.
+A <em>vector</em> is a set of values, in a specific order, and of the same data type.
+Further, vectors are <em>atomic</em>, which means that they can only contain one class of data.
+For example:</p>
+<div class="sourceCode" id="cb26"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb26-1" data-line-number="1">rgb &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;red&quot;</span>, <span class="st">&quot;green&quot;</span>, <span class="st">&quot;blue&quot;</span>)</a>
+<a class="sourceLine" id="cb26-2" data-line-number="2">rgb</a></code></pre></div>
+<pre><code>## [1] &quot;red&quot;   &quot;green&quot; &quot;blue&quot;</code></pre>
+<div class="sourceCode" id="cb28"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb28-1" data-line-number="1">y &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">5</span>, <span class="dv">7</span>)</a>
+<a class="sourceLine" id="cb28-2" data-line-number="2">y</a></code></pre></div>
+<pre><code>## [1] 2 3 5 7</code></pre>
+<p>To check what kind of data object it is you can use the funcion <code>class</code>. To see check how long is the object you can use <code>length()</code> for one-dimensional objects, or <code>dim()</code> for objects of two or more dimensions. For example:</p>
+<div class="sourceCode" id="cb30"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb30-1" data-line-number="1"><span class="kw">class</span>(x)</a></code></pre></div>
+<pre><code>## [1] &quot;numeric&quot;</code></pre>
+<div class="sourceCode" id="cb32"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb32-1" data-line-number="1"><span class="kw">length</span>(x)</a></code></pre></div>
+<pre><code>## [1] 1</code></pre>
+<p><strong>TRY IT!</strong> What are the data types and lengths of the vectors <code>rgb</code> and <code>y</code>?</p>
+<p>The core idea behind vectorization is that operations can be applied at once
+to an entire set of values. For example:</p>
+<div class="sourceCode" id="cb34"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb34-1" data-line-number="1">y <span class="op">*</span><span class="st"> </span><span class="dv">3</span></a></code></pre></div>
+<pre><code>## [1]  6  9 15 21</code></pre>
+<p><strong>TRY IT!</strong> Create a vector with a sequence of numbers using the function <code>seq</code>. Hint: run <code>?seq</code> in the console to display the help page of the function.</p>
+<p>A key point of the previous example is that vectors can be used as arguments to functions. But, different classes cannot be mixed in the same object. For instance, if we combine numeric with character data types, R will coerce all elements to be characters:</p>
+<div class="sourceCode" id="cb36"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb36-1" data-line-number="1">primes &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">5</span>, <span class="st">&quot;seven&quot;</span>)</a>
+<a class="sourceLine" id="cb36-2" data-line-number="2"><span class="kw">class</span>(primes)</a></code></pre></div>
+<pre><code>## [1] &quot;character&quot;</code></pre>
+<p>For this reason, and to avoid errors, it is important to check frequently the data type of the objects that you are working with.</p>
+</div>
+<div id="r-packages" class="section level2">
+<h2><span class="header-section-number">6.10</span> R Packages</h2>
+<p>Functions can be added to R with packages, which are stored on <a href="https://cran.r-project.org/web/packages/index.html">CRAN</a> (the Comprehensive R Archive Network).</p>
+<p>To install a package you use the function <code>install.packages(&quot;packagename&quot;)</code>, where <code>packagename</code> is the name of the package you want to install. To see what packages are installed by type <code>installed.packages()</code>. Packages are loaded into the R session with the <code>library(packagename)</code> function.</p>
+<p>As an alternative, you can install a package through the Packages tab in the the Files/Plots/Packages/Help pane. For this, click on <code>Install</code>, this feature will open a window with a blank field where you can type the name of the package. When you are ready click on <code>Install</code> to proceed with the installation. You will see in the console that R displays some information about where the package is being downloaded from and a progress bar. You can also load a package from this tab. For this, find the the package that you want to load either by scrolling trough the list or by writing its name on the search bar to the right of the tab. Once you find it, click on the checkbox to the left of the package name. You will see that R runs the command to load the package in the console.</p>
+<p><strong>TRY IT!</strong> Install the package <code>ggplot2</code>, by either using the <code>install.packages</code> command or the <code>Install</code> feature. Then, load the package either with the <code>library()</code> or the checkbox.</p>
 
 </div>
 </div>
@@ -284,8 +351,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           </div>
         </div>
       </div>
-<a href="rstudio.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="data.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="data.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="data-entry.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -316,7 +383,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/rstudio/bookdown-demo/edit/master/03-getting-R-help.Rmd",
+"link": "https://github.com/rstudio/bookdown-demo/edit/master/05-R-intro.Rmd",
 "text": "Edit"
 },
 "history": {
