@@ -406,7 +406,7 @@ Figure 10.1: Experimental set up for testing stress cues. Circles represent plan
 <h3>Questions</h3>
 <ol style="list-style-type: decimal">
 <li><p>Follow the instructions in Chapter <a href="data-entry.html#data-entry">7</a> and enter the data into <code>R</code> and then save the data as a .csv. Submit your .csv file to the <code>Biology Data Repository</code> Brightspace.</p></li>
-<li><p>Follow the instructions in Chapter <a href="data.html#data">5</a> and write metadata for the data that you saved in .csv formate. Submit your metadata to the <code>Biology Data Repository</code> Brightspace.</p></li>
+<li><p>Follow the instructions in Chapter <a href="data.html#data">5</a> and write metadata for the data that you saved in .csv format. Submit your metadata to the <code>Biology Data Repository</code> Brightspace.</p></li>
 <li><p>Looking at the dataset, can you tell how many treatments were applied in the experiment? How many plants were used for each treatment?</p></li>
 <li><p>What is the smallest stomatal width measured? What is the largest?</p></li>
 </ol>
@@ -419,7 +419,7 @@ Figure 10.1: Experimental set up for testing stress cues. Circles represent plan
 <ol style="list-style-type: decimal">
 <li><p>Follow the instructions in Chapter <a href="graph.html#graph">8</a>. Replicate the figure from the Campbell textbook (bar plot). Export your bar graph as a .pdf and insert it into Microsoft Word (or similar software). Add a caption to your bar plot. Print your graph to hand in with your lab report.</p></li>
 <li><p>In the bar graph, what can you tell about the stomatal openings of the treatment plant vs. the control plants? Is it consistent across all the individual plants?</p></li>
-<li><p>Follow the instructions in Chapter <a href="graph.html#graph">8</a>, re-plot the data from EXERCISE 1 as a boxplot. Export your boxplot as a .pdf and insert it into Microsoft Word (or similar software). Add a caption to your boxplot.</p></li>
+<li><p>Follow the instructions in Chapter <a href="graph.html#graph">8</a> to re-plot the data from EXERCISE 1 as a boxplot that compares control versus treatment. Export your boxplot as a pdf file and insert it into Microsoft Word (or similar software). Add a caption to your boxplot.</p></li>
 <li><p>Label the following on the boxplot: mean, 25% and 75% quantiles, 95% confidence limits, outliers. It is acceptible to write these labels in with pen or pencil.</p></li>
 <li><p>What does the boxplot tell you about the differences between the treatment plants (plants 6-11) vs. the control plants that the treatment plant does not?</p></li>
 <li><p>Why do you think a scientist might choose to represent these data one way over another?</p></li>
@@ -437,12 +437,71 @@ Figure 10.1: Experimental set up for testing stress cues. Circles represent plan
 </div>
 <div id="exercise-4.-continuous-independent-variable" class="section level2 unnumbered">
 <h2>EXERCISE 4. Continuous independent variable</h2>
+<p>The increase of carbon dioxide in the atmosphere is expected to reduce the concentrations of carbonate ions in the surface of the ocean. This process, in general called ocean acidification, affects the biology and survival of a wide range of marine species because it prevents the formation of shells and plates of calcium carbonate.
+A long term study on coral reefs showed how the net community calcification rate (G, mmol CaCO<sub>3</sub>m<sup>-2</sup>d<sup>-1</sup>) is related to the concentration of carbonate (CO<sub>3</sub><sup>2-</sup>, <span class="math inline">\(\mu\)</span>mol<span class="math inline">\(\cdot\)</span>kg<sup>-1</sup>) <span class="citation">(Langdon et al. 2000)</span>.
+We will use the data from the research paper to understand this relationship.
+The results of this experiment are as follows:</p>
+<table>
+<caption><span id="tab:langdon-data">Table 10.2: </span>Raw data from Langdon and collaborators (2000).</caption>
+<thead>
+<tr class="header">
+<th align="right">CO3</th>
+<th align="right">G</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="right">230.77</td>
+<td align="right">2.99</td>
+</tr>
+<tr class="even">
+<td align="right">230.09</td>
+<td align="right">4.07</td>
+</tr>
+<tr class="odd">
+<td align="right">233.79</td>
+<td align="right">6.25</td>
+</tr>
+<tr class="even">
+<td align="right">235.86</td>
+<td align="right">7.34</td>
+</tr>
+<tr class="odd">
+<td align="right">241.84</td>
+<td align="right">8.62</td>
+</tr>
+<tr class="even">
+<td align="right">248.27</td>
+<td align="right">9.36</td>
+</tr>
+<tr class="odd">
+<td align="right">254.96</td>
+<td align="right">12.45</td>
+</tr>
+<tr class="even">
+<td align="right">259.80</td>
+<td align="right">14.45</td>
+</tr>
+<tr class="odd">
+<td align="right">265.79</td>
+<td align="right">17.36</td>
+</tr>
+<tr class="even">
+<td align="right">271.09</td>
+<td align="right">19.54</td>
+</tr>
+<tr class="odd">
+<td align="right">273.88</td>
+<td align="right">22.61</td>
+</tr>
+</tbody>
+</table>
 <div id="make-a-graph" class="section level3 unnumbered">
 <h3>Make a graph</h3>
 <ol style="list-style-type: decimal">
-<li><p>For some continous data that we will provide as a .csv. Use the <code>Import DataSet</code> button and import the data.</p></li>
-<li><p>Follow the instructions in Chapter <a href="graph.html#graph">8</a>, to make a scatterplot for these data.</p></li>
-<li><p>Follow the instructions in Chapter <a href="graph.html#graph">8</a>, to make a line graphs for these data. Export your line graph as a .pdf and insert it into Microsoft Word (or similar software). Write a figure caption. Print your graph and hand it in with your lab report for this week.</p></li>
+<li><p>We provide this data as a .csv called <code>Langdon_et-al_2000_dataset.csv</code>. Follow the instructions in Chapter <a href="data-entry.html#data-entry">7</a> and import the data.</p></li>
+<li><p>Follow the instructions in Chapter <a href="graph.html#graph">8</a> to make a scatterplot for these data and replicate the figure from the Campbell textbook.</p></li>
+<li><p>Follow the instructions in Chapter <a href="graph.html#graph">8</a> to make a line graph for these data. Export your line graph as a pdf file and insert it into Microsoft Word (or similar software). Write a figure caption. Print your graph and hand it in with your lab report for this week.</p></li>
 <li><p>Follow the instructions in Chapter <a href="hypothesis.html#hypothesis">9</a>. Write a hypothesis, prediction, and equation for these data.</p></li>
 </ol>
 
