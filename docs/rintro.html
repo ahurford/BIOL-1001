@@ -165,7 +165,12 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="6.6" data-path="rintro.html"><a href="rintro.html#precedence"><i class="fa fa-check"></i><b>6.6</b> Precedence</a></li>
 <li class="chapter" data-level="6.7" data-path="rintro.html"><a href="rintro.html#mathematical-functions"><i class="fa fa-check"></i><b>6.7</b> Mathematical functions</a></li>
 <li class="chapter" data-level="6.8" data-path="rintro.html"><a href="rintro.html#data-types"><i class="fa fa-check"></i><b>6.8</b> Data types</a></li>
-<li class="chapter" data-level="6.9" data-path="rintro.html"><a href="rintro.html#vectorization"><i class="fa fa-check"></i><b>6.9</b> Vectorization</a></li>
+<li class="chapter" data-level="6.9" data-path="rintro.html"><a href="rintro.html#data-structures"><i class="fa fa-check"></i><b>6.9</b> Data structures</a><ul>
+<li class="chapter" data-level="" data-path="rintro.html"><a href="rintro.html#vectors"><i class="fa fa-check"></i>Vectors</a></li>
+<li class="chapter" data-level="" data-path="rintro.html"><a href="rintro.html#matrices"><i class="fa fa-check"></i>Matrices</a></li>
+<li class="chapter" data-level="" data-path="rintro.html"><a href="rintro.html#lists"><i class="fa fa-check"></i>Lists</a></li>
+<li class="chapter" data-level="" data-path="rintro.html"><a href="rintro.html#data-frames"><i class="fa fa-check"></i>Data frames</a></li>
+</ul></li>
 <li class="chapter" data-level="6.10" data-path="rintro.html"><a href="rintro.html#r-packages"><i class="fa fa-check"></i><b>6.10</b> R Packages</a></li>
 </ul></li>
 <li class="chapter" data-level="7" data-path="data-entry.html"><a href="data-entry.html"><i class="fa fa-check"></i><b>7</b> Entering and loading data</a><ul>
@@ -308,11 +313,12 @@ You can also check that it is stored by calling the variable:</p>
 <li>Complex: <code>7+4i</code>.</li>
 </ul>
 </div>
-<div id="vectorization" class="section level2">
-<h2><span class="header-section-number">6.9</span> Vectorization</h2>
-<p>Elements of these data types may be combined to form data structures, such as vectors.
-A <em>vector</em> is a set of values, in a specific order, and of the same data type.
-Further, vectors are <em>atomic</em>, which means that they can only contain one class of data.
+<div id="data-structures" class="section level2">
+<h2><span class="header-section-number">6.9</span> Data structures</h2>
+<p>Elements of these data types may be combined to form data structures. We will look at three of them.</p>
+<div id="vectors" class="section level3 unnumbered">
+<h3>Vectors</h3>
+<p>A <em>vector</em> is a set of values, in a specific order, and of the same data type. To create a vector we can use the function <code>c()</code>, where the “c” stands for concatenate or combine.
 For example:</p>
 <div class="sourceCode" id="cb26"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb26-1" data-line-number="1">rgb &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;red&quot;</span>, <span class="st">&quot;green&quot;</span>, <span class="st">&quot;blue&quot;</span>)</a>
 <a class="sourceLine" id="cb26-2" data-line-number="2">rgb</a></code></pre></div>
@@ -321,21 +327,81 @@ For example:</p>
 <a class="sourceLine" id="cb28-2" data-line-number="2">y</a></code></pre></div>
 <pre><code>## [1] 2 3 5 7</code></pre>
 <p>To check what kind of data object it is you can use the funcion <code>class</code>. To see check how long is the object you can use <code>length()</code> for one-dimensional objects, or <code>dim()</code> for objects of two or more dimensions. For example:</p>
-<div class="sourceCode" id="cb30"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb30-1" data-line-number="1"><span class="kw">class</span>(x)</a></code></pre></div>
-<pre><code>## [1] &quot;numeric&quot;</code></pre>
-<div class="sourceCode" id="cb32"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb32-1" data-line-number="1"><span class="kw">length</span>(x)</a></code></pre></div>
-<pre><code>## [1] 1</code></pre>
-<p><strong>TRY IT!</strong> What are the data types and lengths of the vectors <code>rgb</code> and <code>y</code>?</p>
+<div class="sourceCode" id="cb30"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb30-1" data-line-number="1"><span class="kw">class</span>(rgb)</a></code></pre></div>
+<pre><code>## [1] &quot;character&quot;</code></pre>
+<div class="sourceCode" id="cb32"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb32-1" data-line-number="1"><span class="kw">length</span>(rgb)</a></code></pre></div>
+<pre><code>## [1] 3</code></pre>
+<p><strong>TRY IT!</strong> What is the data type and length of the vector <code>y</code>?</p>
 <p>The core idea behind vectorization is that operations can be applied at once
 to an entire set of values. For example:</p>
 <div class="sourceCode" id="cb34"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb34-1" data-line-number="1">y <span class="op">*</span><span class="st"> </span><span class="dv">3</span></a></code></pre></div>
 <pre><code>## [1]  6  9 15 21</code></pre>
 <p><strong>TRY IT!</strong> Create a vector with a sequence of numbers using the function <code>seq</code>. Hint: run <code>?seq</code> in the console to display the help page of the function.</p>
-<p>A key point of the previous example is that vectors can be used as arguments to functions. But, different classes cannot be mixed in the same object. For instance, if we combine numeric with character data types, R will coerce all elements to be characters:</p>
+<p>A key point of the previous example is that vectors can be used as arguments to functions. But, vectors are <em>atomic</em>, which means that they can only contain one class of data. In other words, different classes cannot be mixed in the same object. For instance, if we combine numeric with character data types, R will coerce all elements to be characters:</p>
 <div class="sourceCode" id="cb36"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb36-1" data-line-number="1">primes &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">5</span>, <span class="st">&quot;seven&quot;</span>)</a>
 <a class="sourceLine" id="cb36-2" data-line-number="2"><span class="kw">class</span>(primes)</a></code></pre></div>
 <pre><code>## [1] &quot;character&quot;</code></pre>
 <p>For this reason, and to avoid errors, it is important to check frequently the data type of the objects that you are working with.</p>
+</div>
+<div id="matrices" class="section level3 unnumbered">
+<h3>Matrices</h3>
+<p>In R, matrices are a type of vectors with two dimensions: the number of rows and columns. As with vectors, the elements of a matrix must be of the same data type (numeric or character). One way of creating a matrix with the function <code>matrix()</code>. Keep in mind that matrices are filled column-wise:</p>
+<div class="sourceCode" id="cb38"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb38-1" data-line-number="1">M &lt;-<span class="st"> </span><span class="kw">matrix</span>(</a>
+<a class="sourceLine" id="cb38-2" data-line-number="2">  <span class="kw">c</span>(<span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">6</span>, <span class="dv">7</span>),</a>
+<a class="sourceLine" id="cb38-3" data-line-number="3">  <span class="dt">nrow =</span> <span class="dv">2</span>,</a>
+<a class="sourceLine" id="cb38-4" data-line-number="4">  <span class="dt">ncol =</span> <span class="dv">2</span>)</a>
+<a class="sourceLine" id="cb38-5" data-line-number="5">M</a></code></pre></div>
+<pre><code>##      [,1] [,2]
+## [1,]    4    6
+## [2,]    5    7</code></pre>
+<p>We can confirm the type of data with the function <code>class()</code>, and look at the size of the matrix with the function <code>dim()</code>:</p>
+<div class="sourceCode" id="cb40"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb40-1" data-line-number="1"><span class="kw">class</span>(M)</a></code></pre></div>
+<pre><code>## [1] &quot;matrix&quot;</code></pre>
+<div class="sourceCode" id="cb42"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb42-1" data-line-number="1"><span class="kw">dim</span>(M)</a></code></pre></div>
+<pre><code>## [1] 2 2</code></pre>
+<p><strong>TRY IT!</strong> Create a 3 by 3 matrix in which the elements are the numbers from zero to nine.</p>
+</div>
+<div id="lists" class="section level3 unnumbered">
+<h3>Lists</h3>
+<p>A list is a special type of vector, where each element can be of a different data type. To create a list we can use the function <code>list()</code>:</p>
+<div class="sourceCode" id="cb44"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb44-1" data-line-number="1">my_list &lt;-<span class="st"> </span><span class="kw">list</span>(<span class="dv">5</span>, <span class="st">&quot;hello&quot;</span>, <span class="ot">TRUE</span>, <span class="dv">1</span><span class="op">+</span>4i)</a>
+<a class="sourceLine" id="cb44-2" data-line-number="2">my_list</a></code></pre></div>
+<pre><code>## [[1]]
+## [1] 5
+## 
+## [[2]]
+## [1] &quot;hello&quot;
+## 
+## [[3]]
+## [1] TRUE
+## 
+## [[4]]
+## [1] 1+4i</code></pre>
+<div class="sourceCode" id="cb46"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb46-1" data-line-number="1"><span class="kw">class</span>(my_list)</a></code></pre></div>
+<pre><code>## [1] &quot;list&quot;</code></pre>
+<p>As you can see from the output, each element of the list starts on a new line.
+Lists can be useful inside functions because you can combine different kinds of results into a single object that a function can return.</p>
+<p><strong>TRY IT!</strong> What is the lenght of the object <code>my_list</code>?</p>
+</div>
+<div id="data-frames" class="section level3 unnumbered">
+<h3>Data frames</h3>
+<p>A data frame is a type of list in which every element of the list has the same length, that means that a data frame is a “rectangular” list. We can create a data frame with the function <code>data.frame()</code>:</p>
+<div class="sourceCode" id="cb48"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb48-1" data-line-number="1">df &lt;-<span class="st"> </span><span class="kw">data.frame</span>(<span class="dt">id =</span> letters[<span class="dv">1</span><span class="op">:</span><span class="dv">10</span>], <span class="dt">x =</span> <span class="dv">1</span><span class="op">:</span><span class="dv">10</span>, <span class="dt">y =</span> <span class="dv">11</span><span class="op">:</span><span class="dv">20</span>)</a>
+<a class="sourceLine" id="cb48-2" data-line-number="2">df</a></code></pre></div>
+<pre><code>##    id  x  y
+## 1   a  1 11
+## 2   b  2 12
+## 3   c  3 13
+## 4   d  4 14
+## 5   e  5 15
+## 6   f  6 16
+## 7   g  7 17
+## 8   h  8 18
+## 9   i  9 19
+## 10  j 10 20</code></pre>
+<p>To get some information on our data frame, we can use again the function <code>dim()</code>. Other useful functions for data frames are <code>nrow()</code>, <code>ncol()</code>, <code>head()</code>, and <code>tail()</code>.</p>
+<p><strong>TRY IT!</strong> Create a dataframe as especified above. What information you can get from the functions <code>nrow()</code>, <code>ncol()</code>, <code>head()</code>, and <code>tail()</code>.</p>
+</div>
 </div>
 <div id="r-packages" class="section level2">
 <h2><span class="header-section-number">6.10</span> R Packages</h2>

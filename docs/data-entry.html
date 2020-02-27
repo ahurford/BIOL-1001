@@ -165,7 +165,12 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="6.6" data-path="rintro.html"><a href="rintro.html#precedence"><i class="fa fa-check"></i><b>6.6</b> Precedence</a></li>
 <li class="chapter" data-level="6.7" data-path="rintro.html"><a href="rintro.html#mathematical-functions"><i class="fa fa-check"></i><b>6.7</b> Mathematical functions</a></li>
 <li class="chapter" data-level="6.8" data-path="rintro.html"><a href="rintro.html#data-types"><i class="fa fa-check"></i><b>6.8</b> Data types</a></li>
-<li class="chapter" data-level="6.9" data-path="rintro.html"><a href="rintro.html#vectorization"><i class="fa fa-check"></i><b>6.9</b> Vectorization</a></li>
+<li class="chapter" data-level="6.9" data-path="rintro.html"><a href="rintro.html#data-structures"><i class="fa fa-check"></i><b>6.9</b> Data structures</a><ul>
+<li class="chapter" data-level="" data-path="rintro.html"><a href="rintro.html#vectors"><i class="fa fa-check"></i>Vectors</a></li>
+<li class="chapter" data-level="" data-path="rintro.html"><a href="rintro.html#matrices"><i class="fa fa-check"></i>Matrices</a></li>
+<li class="chapter" data-level="" data-path="rintro.html"><a href="rintro.html#lists"><i class="fa fa-check"></i>Lists</a></li>
+<li class="chapter" data-level="" data-path="rintro.html"><a href="rintro.html#data-frames"><i class="fa fa-check"></i>Data frames</a></li>
+</ul></li>
 <li class="chapter" data-level="6.10" data-path="rintro.html"><a href="rintro.html#r-packages"><i class="fa fa-check"></i><b>6.10</b> R Packages</a></li>
 </ul></li>
 <li class="chapter" data-level="7" data-path="data-entry.html"><a href="data-entry.html"><i class="fa fa-check"></i><b>7</b> Entering and loading data</a><ul>
@@ -249,14 +254,14 @@ and save them using R.</p>
 <p>Let’s start by
 making Table 1 for your report, which we will call
 <code>solution-concentration-effect-on-potato.csv</code>:</p>
-<div class="sourceCode" id="cb38"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb38-1" data-line-number="1">table1 &lt;-<span class="st"> </span><span class="kw">data.frame</span>(<span class="dt">weight =</span> <span class="kw">c</span>(<span class="st">&quot;initial&quot;</span>, <span class="st">&quot;final&quot;</span>, </a>
-<a class="sourceLine" id="cb38-2" data-line-number="2">                                <span class="st">&quot;difference&quot;</span>, <span class="st">&quot;percent-change&quot;</span>), </a>
-<a class="sourceLine" id="cb38-3" data-line-number="3">                     <span class="st">&quot;NaCl-0-percent&quot;</span> =<span class="st"> </span><span class="kw">c</span>(<span class="ot">NA</span>, <span class="ot">NA</span>, <span class="ot">NA</span>, <span class="ot">NA</span>), </a>
-<a class="sourceLine" id="cb38-4" data-line-number="4">                     <span class="st">&quot;NaCl-0.9-percent&quot;</span> =<span class="st"> </span><span class="kw">c</span>(<span class="ot">NA</span>, <span class="ot">NA</span>, <span class="ot">NA</span>, <span class="ot">NA</span>), </a>
-<a class="sourceLine" id="cb38-5" data-line-number="5">                     <span class="st">&quot;NaCl-2-percent&quot;</span> =<span class="st"> </span><span class="kw">c</span>(<span class="ot">NA</span>, <span class="ot">NA</span>, <span class="ot">NA</span>, <span class="ot">NA</span>), </a>
-<a class="sourceLine" id="cb38-6" data-line-number="6">                     <span class="st">&quot;NaCl-5-percent&quot;</span> =<span class="st"> </span><span class="kw">c</span>(<span class="ot">NA</span>, <span class="ot">NA</span>, <span class="ot">NA</span>, <span class="ot">NA</span>))</a>
-<a class="sourceLine" id="cb38-7" data-line-number="7"><span class="kw">write.csv</span>(<span class="dt">x =</span> table1, <span class="dt">file =</span> <span class="st">&quot;solution-concentration-effect-on-potato.csv&quot;</span>, </a>
-<a class="sourceLine" id="cb38-8" data-line-number="8">          <span class="dt">row.names =</span> <span class="ot">FALSE</span>)</a></code></pre></div>
+<div class="sourceCode" id="cb50"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb50-1" data-line-number="1">table1 &lt;-<span class="st"> </span><span class="kw">data.frame</span>(<span class="dt">weight =</span> <span class="kw">c</span>(<span class="st">&quot;initial&quot;</span>, <span class="st">&quot;final&quot;</span>, </a>
+<a class="sourceLine" id="cb50-2" data-line-number="2">                                <span class="st">&quot;difference&quot;</span>, <span class="st">&quot;percent-change&quot;</span>), </a>
+<a class="sourceLine" id="cb50-3" data-line-number="3">                     <span class="st">&quot;NaCl-0-percent&quot;</span> =<span class="st"> </span><span class="kw">c</span>(<span class="ot">NA</span>, <span class="ot">NA</span>, <span class="ot">NA</span>, <span class="ot">NA</span>), </a>
+<a class="sourceLine" id="cb50-4" data-line-number="4">                     <span class="st">&quot;NaCl-0.9-percent&quot;</span> =<span class="st"> </span><span class="kw">c</span>(<span class="ot">NA</span>, <span class="ot">NA</span>, <span class="ot">NA</span>, <span class="ot">NA</span>), </a>
+<a class="sourceLine" id="cb50-5" data-line-number="5">                     <span class="st">&quot;NaCl-2-percent&quot;</span> =<span class="st"> </span><span class="kw">c</span>(<span class="ot">NA</span>, <span class="ot">NA</span>, <span class="ot">NA</span>, <span class="ot">NA</span>), </a>
+<a class="sourceLine" id="cb50-6" data-line-number="6">                     <span class="st">&quot;NaCl-5-percent&quot;</span> =<span class="st"> </span><span class="kw">c</span>(<span class="ot">NA</span>, <span class="ot">NA</span>, <span class="ot">NA</span>, <span class="ot">NA</span>))</a>
+<a class="sourceLine" id="cb50-7" data-line-number="7"><span class="kw">write.csv</span>(<span class="dt">x =</span> table1, <span class="dt">file =</span> <span class="st">&quot;solution-concentration-effect-on-potato.csv&quot;</span>, </a>
+<a class="sourceLine" id="cb50-8" data-line-number="8">          <span class="dt">row.names =</span> <span class="ot">FALSE</span>)</a></code></pre></div>
 <p>In the above code, make sure to replace the <code>NA</code>’s with the values from your experiment.
 Keep in mind that the values entered into the tables should be
 decimals greater than or equal to zero, and likely less than
@@ -268,14 +273,14 @@ tabular data stored in a text file where a comma separates the columns of the da
 That is why a comma separates each of the values in the rows for the different solutions.</p>
 <p>Now, we will make Table 2, which includes the class averages and we will call
 <code>solution-concentration-effect-on-potato-averages.csv</code>:</p>
-<div class="sourceCode" id="cb39"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb39-1" data-line-number="1">table2 &lt;-<span class="st"> </span><span class="kw">data.frame</span>(<span class="dt">weight =</span> <span class="kw">c</span>(<span class="st">&quot;percent-change&quot;</span>, <span class="st">&quot;minimum-value&quot;</span>, </a>
-<a class="sourceLine" id="cb39-2" data-line-number="2">                                <span class="st">&quot;maximum-value&quot;</span>, <span class="st">&quot;difference&quot;</span>), </a>
-<a class="sourceLine" id="cb39-3" data-line-number="3">                     <span class="st">&quot;NaCl-0-percent&quot;</span> =<span class="st"> </span><span class="kw">c</span>(<span class="ot">NA</span>, <span class="ot">NA</span>, <span class="ot">NA</span>, <span class="ot">NA</span>), </a>
-<a class="sourceLine" id="cb39-4" data-line-number="4">                     <span class="st">&quot;NaCl-0.9-percent&quot;</span> =<span class="st"> </span><span class="kw">c</span>(<span class="ot">NA</span>, <span class="ot">NA</span>, <span class="ot">NA</span>, <span class="ot">NA</span>), </a>
-<a class="sourceLine" id="cb39-5" data-line-number="5">                     <span class="st">&quot;NaCl-2-percent&quot;</span> =<span class="st"> </span><span class="kw">c</span>(<span class="ot">NA</span>, <span class="ot">NA</span>, <span class="ot">NA</span>, <span class="ot">NA</span>), </a>
-<a class="sourceLine" id="cb39-6" data-line-number="6">                     <span class="st">&quot;NaCl-5-percent&quot;</span> =<span class="st"> </span><span class="kw">c</span>(<span class="ot">NA</span>, <span class="ot">NA</span>, <span class="ot">NA</span>, <span class="ot">NA</span>))</a>
-<a class="sourceLine" id="cb39-7" data-line-number="7"><span class="kw">write.csv</span>(<span class="dt">x =</span> table1, <span class="dt">file =</span> <span class="st">&quot;solution-concentration-effect-on-potato-averages.csv&quot;</span>, </a>
-<a class="sourceLine" id="cb39-8" data-line-number="8">          <span class="dt">row.names =</span> <span class="ot">FALSE</span>)</a></code></pre></div>
+<div class="sourceCode" id="cb51"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb51-1" data-line-number="1">table2 &lt;-<span class="st"> </span><span class="kw">data.frame</span>(<span class="dt">weight =</span> <span class="kw">c</span>(<span class="st">&quot;percent-change&quot;</span>, <span class="st">&quot;minimum-value&quot;</span>, </a>
+<a class="sourceLine" id="cb51-2" data-line-number="2">                                <span class="st">&quot;maximum-value&quot;</span>, <span class="st">&quot;difference&quot;</span>), </a>
+<a class="sourceLine" id="cb51-3" data-line-number="3">                     <span class="st">&quot;NaCl-0-percent&quot;</span> =<span class="st"> </span><span class="kw">c</span>(<span class="ot">NA</span>, <span class="ot">NA</span>, <span class="ot">NA</span>, <span class="ot">NA</span>), </a>
+<a class="sourceLine" id="cb51-4" data-line-number="4">                     <span class="st">&quot;NaCl-0.9-percent&quot;</span> =<span class="st"> </span><span class="kw">c</span>(<span class="ot">NA</span>, <span class="ot">NA</span>, <span class="ot">NA</span>, <span class="ot">NA</span>), </a>
+<a class="sourceLine" id="cb51-5" data-line-number="5">                     <span class="st">&quot;NaCl-2-percent&quot;</span> =<span class="st"> </span><span class="kw">c</span>(<span class="ot">NA</span>, <span class="ot">NA</span>, <span class="ot">NA</span>, <span class="ot">NA</span>), </a>
+<a class="sourceLine" id="cb51-6" data-line-number="6">                     <span class="st">&quot;NaCl-5-percent&quot;</span> =<span class="st"> </span><span class="kw">c</span>(<span class="ot">NA</span>, <span class="ot">NA</span>, <span class="ot">NA</span>, <span class="ot">NA</span>))</a>
+<a class="sourceLine" id="cb51-7" data-line-number="7"><span class="kw">write.csv</span>(<span class="dt">x =</span> table1, <span class="dt">file =</span> <span class="st">&quot;solution-concentration-effect-on-potato-averages.csv&quot;</span>, </a>
+<a class="sourceLine" id="cb51-8" data-line-number="8">          <span class="dt">row.names =</span> <span class="ot">FALSE</span>)</a></code></pre></div>
 <p>You might have just done this in Excel. We did not teach this method because…</p>
 </div>
 <div id="loading-or-importing-data" class="section level2">
@@ -286,8 +291,8 @@ a new object in the Environment tab (in the Environment/History pane).</p>
 <div id="programmatic" class="section level3">
 <h3><span class="header-section-number">7.2.1</span> The programmatic way</h3>
 <p>We can load our our data files in CSV format into R using the function <code>read.csv</code> in the following way:</p>
-<div class="sourceCode" id="cb40"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb40-1" data-line-number="1">data1 &lt;-<span class="st"> </span><span class="kw">read.csv</span>(<span class="dt">file =</span> <span class="st">&quot;solution-concentration-effect-on-potato.csv&quot;</span>)</a>
-<a class="sourceLine" id="cb40-2" data-line-number="2">data2 &lt;-<span class="st"> </span><span class="kw">read.csv</span>(<span class="dt">file =</span> <span class="st">&quot;solution-concentration-effect-on-potato-averages.csv&quot;</span>)</a></code></pre></div>
+<div class="sourceCode" id="cb52"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb52-1" data-line-number="1">data1 &lt;-<span class="st"> </span><span class="kw">read.csv</span>(<span class="dt">file =</span> <span class="st">&quot;solution-concentration-effect-on-potato.csv&quot;</span>)</a>
+<a class="sourceLine" id="cb52-2" data-line-number="2">data2 &lt;-<span class="st"> </span><span class="kw">read.csv</span>(<span class="dt">file =</span> <span class="st">&quot;solution-concentration-effect-on-potato-averages.csv&quot;</span>)</a></code></pre></div>
 <p>Here, the argument <code>file =</code> of <code>read.csv</code> is the name of the file we want to read.
 Notice that the filename needs to be a character string, so we put it in quotes.</p>
 </div>
@@ -328,13 +333,13 @@ It will be similar to the command used in Section <a href="data-entry.html#progr
 <div id="inspecting-the-data" class="section level2">
 <h2><span class="header-section-number">7.3</span> Inspecting the data</h2>
 <p>To take a look at our dataset, we can print it by typing the name in the Console and hitting <code>Enter</code> (or <code>Return</code>).</p>
-<div class="sourceCode" id="cb41"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb41-1" data-line-number="1">data1</a></code></pre></div>
+<div class="sourceCode" id="cb53"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb53-1" data-line-number="1">data1</a></code></pre></div>
 <pre><code>##           weight NaCl.0.percent NaCl.0.9.percent NaCl.2.percent NaCl.5.percent
 ## 1        initial             NA               NA             NA             NA
 ## 2          final             NA               NA             NA             NA
 ## 3     difference             NA               NA             NA             NA
 ## 4 percent-change             NA               NA             NA             NA</code></pre>
-<div class="sourceCode" id="cb43"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb43-1" data-line-number="1">data2</a></code></pre></div>
+<div class="sourceCode" id="cb55"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb55-1" data-line-number="1">data2</a></code></pre></div>
 <pre><code>##           weight NaCl.0.percent NaCl.0.9.percent NaCl.2.percent NaCl.5.percent
 ## 1        initial             NA               NA             NA             NA
 ## 2          final             NA               NA             NA             NA

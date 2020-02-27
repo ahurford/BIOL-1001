@@ -100,11 +100,13 @@ There are 6 basic data types in R:
 * Logical: `TRUE` or `FALSE`.
 * Complex: `7+4i`.
 
-## Vectorization
+## Data structures
 
-Elements of these data types may be combined to form data structures, such as vectors.
-A *vector* is a set of values, in a specific order, and of the same data type. 
-Further, vectors are *atomic*, which means that they can only contain one class of data.
+Elements of these data types may be combined to form data structures. We will look at three of them.
+
+### Vectors {-}
+
+A *vector* is a set of values, in a specific order, and of the same data type. To create a vector we can use the function `c()`, where the "c" stands for concatenate or combine.
 For example:
 
 ```{r}
@@ -117,11 +119,11 @@ y
 To check what kind of data object it is you can use the funcion `class`. To see check how long is the object you can use `length()` for one-dimensional objects, or `dim()` for objects of two or more dimensions. For example:
 
 ```{r}
-class(x)
-length(x)
+class(rgb)
+length(rgb)
 ```
 
-**TRY IT!** What are the data types and lengths of the vectors `rgb` and `y`?
+**TRY IT!** What is the data type and length of the vector `y`?
 
 The core idea behind vectorization is that operations can be applied at once 
 to an entire set of values. For example:
@@ -132,7 +134,7 @@ y * 3
 
 **TRY IT!** Create a vector with a sequence of numbers using the function `seq`. Hint: run `?seq` in the console to display the help page of the function.
 
-A key point of the previous example is that vectors can be used as arguments to functions. But, different classes cannot be mixed in the same object. For instance, if we combine numeric with character data types, R will coerce all elements to be characters:
+A key point of the previous example is that vectors can be used as arguments to functions. But, vectors are *atomic*, which means that they can only contain one class of data. In other words, different classes cannot be mixed in the same object. For instance, if we combine numeric with character data types, R will coerce all elements to be characters:
 
 ```{r}
 primes <- c(2, 3, 5, "seven")
@@ -140,6 +142,54 @@ class(primes)
 ```
 
 For this reason, and to avoid errors, it is important to check frequently the data type of the objects that you are working with.
+
+### Matrices {-}
+
+In R, matrices are a type of vectors with two dimensions: the number of rows and columns. As with vectors, the elements of a matrix must be of the same data type (numeric or character). One way of creating a matrix with the function `matrix()`. Keep in mind that matrices are filled column-wise:
+
+```{r}
+M <- matrix(
+  c(4, 5, 6, 7),
+  nrow = 2,
+  ncol = 2)
+M
+```
+
+We can confirm the type of data with the function `class()`, and look at the size of the matrix with the function `dim()`:
+```{r}
+class(M)
+dim(M)
+```
+
+**TRY IT!** Create a 3 by 3 matrix in which the elements are the numbers from zero to nine.
+
+### Lists {-}
+
+A list is a special type of vector, where each element can be of a different data type. To create a list we can use the function `list()`:
+
+```{r}
+my_list <- list(5, "hello", TRUE, 1+4i)
+my_list
+class(my_list)
+```
+
+As you can see from the output, each element of the list starts on a new line.
+Lists can be useful inside functions because you can combine different kinds of results into a single object that a function can return.
+
+**TRY IT!** What is the lenght of the object `my_list`?
+
+### Data frames {-}
+
+A data frame is a type of list in which every element of the list has the same length, that means that a data frame is a “rectangular” list. We can create a data frame with the function `data.frame()`:
+
+```{r}
+df <- data.frame(id = letters[1:10], x = 1:10, y = 11:20)
+df
+```
+
+To get some information on our data frame, we can use again the function `dim()`. Other useful functions for data frames are `nrow()`, `ncol()`, `head()`, and `tail()`.
+
+**TRY IT!** Create a dataframe as especified above. What information you can get from the functions `nrow()`, `ncol()`, `head()`, and `tail()`.
 
 ## R Packages
 
