@@ -1,8 +1,8 @@
 # Making graphs in R {#graph}
 
 **(AH: Yolanda, I edited a bit here, hope that's okay. Note that ```{r} actually runs the R code and makes the figures, so you don't actually have to import the figures they're generated via R)**
-**(YW: I like your changes! Note that there are two references (Murreel 2006 and Mittal 2011) in the first section. I don't know how to use the reference command in R, I will put them in manually in the references chapter. 
-**(AH: Need instructions to export figures
+**(YW: I like your changes! Note that there are two references (Murreel 2006 and Abedin and Mittal 2014) in the first section. I don't know how to use the reference command in R, I will put them in manually in the references chapter. 
+**(AH: Need instructions to export figures  YW: started that. I'm sure there's room to improve. 
 Also, typ = "l" for a line graphs, and also, here I think we should make a note about is x is not monotonically increasing how the plot can get messed up)**
 
 **(AH: Add links to other resources that covers these same topics)
@@ -11,7 +11,7 @@ Also, typ = "l" for a line graphs, and also, here I think we should make a note 
 
 You might have had experience making graphs using `Microsoft Excel`, however, making graphs with `Excel` is not recommended. A number of reasons to choose `R` over `Excel` are given in Chapter \@ref(intro). In addition, the defaults in `Excel` do not meet standards for good scientific graphs and you do not have the option to learn more sophisticated graphs after you master the basics, as the range of options available in `Excel` is limited.
 
-You can make very attractive, clean, professional graphs and figures in `R`. This chapter is a basic introduction to `plot()` functions in `R`. More advanced users can use the package `ggplot`. There are many good reference manuals for making sophisticated graphs (e.g., Murrell 2006; Mittal 2011). 
+You can make very attractive, clean, professional graphs and figures in `R`. This chapter is a basic introduction to `plot()` functions in `R`. More advanced users can use the package `ggplot`. There are many good reference manuals for making sophisticated graphs (e.g., Murrell 2006; Abedin and Mittal 2014). 
 
 ## Scatter and line plots with `plot(x,y)`
 In `R`, `plot()` is a built-in function: you do not need to install a package to call it. There are two mandatory arguments `x` and `y` which are vectors that must have the same length. For example,
@@ -135,7 +135,13 @@ In the above graph, we wanted `"growth rate (cm)"` and the vertical axis and thi
 
 ### Exporting your graphs
 
-## Other useful plot functions
+Once you've got plots in the "plot" window that you like, you can export them using them so that you can insert them into things like a word document, a power point file or a website. Click on the down error on the "Export" button in the Plots pane in R Studio, then select either to save as an Image or as a PDF. In the "Image" option you can choose various file formats (JPEG, TIFF, PNG, etc.). 
+
+
+Be sure to check that you have the correct file path (circled o the figure below) and then give your figure a file name that makes sense (see rectangle in the figure below).
+
+
+## Other usesful plot functions
 
 The generic `plot()` function makes a scatter plot, with variations. 
 
