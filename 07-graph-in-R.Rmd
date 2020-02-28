@@ -137,9 +137,15 @@ In the above graph, we wanted `"growth rate (cm)"` and the vertical axis and thi
 
 Once you've got plots in the "plot" window that you like, you can export them using them so that you can insert them into things like a word document, a power point file or a website. Click on the down error on the "Export" button in the Plots pane in R Studio, then select either to save as an Image or as a PDF. In the "Image" option you can choose various file formats (JPEG, TIFF, PNG, etc.). 
 
+```{r panes, fig.cap="Export button in the Plots Window", fig.align='center', out.width="70%", fig.show='hold', echo=FALSE}
+knitr::include_graphics('./figures/ExportPlotWindow.jpg')
+```
 
-Be sure to check that you have the correct file path (circled o the figure below) and then give your figure a file name that makes sense (see rectangle in the figure below).
+Be sure to check that you have the correct file path (circled in the figure below) and then give your figure a file name that makes sense (see rectangle in the figure below).
 
+```{r panes, fig.cap="Setting file path (oval - click the Directory button to change the file path) and file name for your exported figure", fig.align='center', out.width="70%", fig.show='hold', echo=FALSE}
+knitr::include_graphics('./figures/ExportPlot.jpg')
+```
 
 ## Other usesful plot functions
 
@@ -160,21 +166,26 @@ It's not hard to get more sophisticate with R graphics. The best approach is to 
 
 One thing most undergrads will probably need or want to do is to visualize two sets of data on the same graph. For example, the goldfish data in the Appendix of the BIOL 1001 lab manual shows the opercular beats of two fish in response to temperature. It would be logical to show both fish on the same graph, but with different symbols. Here's how you would do it:
 
-```{r} 
-temp <- cbind(5, 8, 12, 16, 20, 23) #This creates the vecor of data for the x-axis```
-```{r}
-fishA <- cbind(36, 42, 59, 73, 88, 96) #This creates the vector of data for Fish A```
-```{r}
-fishB <- cbind(40, 49, 61, 71, 82, 90) #This creates the vector of data for Fish B```
+```{r} temp <-cbind(5, 8, 12, 16, 20, 23)```
+This creats the vector of data for the x-axis.
+
+
+```{r} temp <- cbind(5, 8, 12, 16, 20, 23)```
+
+This creates the vector of data for the x-axis
+
+```{r} fishA <- cbind(36, 42, 59, 73, 88, 96)```
+This creates the vector of data for Fish A```
+
+```{r} fishB <- cbind(40, 49, 61, 71, 82, 90)``` 
+This creates the vector of data for Fish B```
 
 First we plot x and y with the "temp" vector as "x" and the "fishA" vector as y 
 
-```{r}
-plot(temp, fishA, pch = 17, xlab = "temperature (degrees C)", ylab = "opercular beats (bpm)")```
+```{r} plot(temp, fishA, pch = 17, xlab = "temperature (degrees C)", ylab = "opercular beats (bpm)")```
 
 Then to add a second vector of data (fishB) to the same plot, we use:
-```{r}
-points(temp, fishB, pch = 17, col = "dimgray")```
+```{r} points(temp, fishB, pch = 17, col = "dimgray")```
 
 
 Voila!
@@ -184,6 +195,10 @@ knitr::include_graphics('./figures/Fig_7_4.jpg')
 ```
 
 Note that the difference in the two symbols is described in the caption. For most scientific journals it is preferred to describe the symbology in the caption, rather than use a legend. However, with more complex graphs, or for some publications, you may wish to include a legend. Legends can be a bit tricky to work with in R - we'll leave those for a more advanced course. 
+
+Finally, if you wanted to have a line joining the points, you'd specify the ```type = "l"``` in the arguments of the plot fuction (l is for line, p is for points, b is for both).
+
+```{r} plot(temp, fishA, pch = 17, type = "l", xlab = "temperature (degrees C)", ylab = "opercular beats (bpm)")```
 
 ## pch cheatsheet {#pch}
 As it is hard to remember that `pch = 17` corresponds to filled triangles you can make a little cheat sheet for `pch` codes using the code below. You may want to print out a chart of the `pch` codes and tape it up on your wall by your computer, or in the front of your notebook as a handy reference.
