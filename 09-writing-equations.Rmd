@@ -27,7 +27,7 @@ An osmometer containing a 30% glucose and dye solution is placed in a beaker con
 
 ---
 
-If hypothesis #2 holds true water will diffuse from the hypotonic solution (the water in the beaker) into the hypertonic solution (the 30% glucose and dye solution in the osmometer) and the water will rise in the pipette. Note how this prediction was generated using the if ... then ... format.
+If hypothesis #2 holds, then true water will diffuse from the hypotonic solution (the water in the beaker) into the hypertonic solution (the 30% glucose and dye solution in the osmometer) and the water will rise in the pipette. Note how this prediction was generated using the if ... then ... format.
 
 i.e.	*if* the hypothesis holds true, *then* a specific event will occur (prediction).
 
@@ -140,7 +140,7 @@ where $μ_H$ is the mean volume of liquid in the osmometer for the three “High
 ## Hypothesis testing
 
 ### Null hypotheses
-Null means nothing or zero and null hypotheses usually describe outcomes where the independent variables have no effect. Null hypotheses are usually paired with alternative hypotheses whereby the independent variable does have an affect. As such, H3 is a potential null hypothesis, since this hypothesis describes the concentration gradient having no effect on the direction of difussion, and could be paired with the alternative hypothesis, H2. When written as an equation, frequently null hypotheses are expressed with as a given parameter set equal to zero.
+Null means nothing or zero and null hypotheses usually describe outcomes where the independent variables have no effect. Null hypotheses are usually paired with alternative hypotheses whereby the independent variable does have an effect. As such, H3 is a potential null hypothesis, since this hypothesis describes the concentration gradient having no effect on the direction of difussion, and could be paired with the alternative hypothesis, H2. When written as an equation, frequently null hypotheses are expressed as a given parameter set equal to zero.
 
 <div class="alert alert-info">
 
@@ -158,6 +158,6 @@ where $v_F$ is the final volume of the glucose-dye solution in the osmometer (un
 $v_0$ is the initial volume of glucose-dye solution in the osmometer (units: mL).
 </div>
 
-Historically, many statistical analyses have been performed in the null hypothesis testing framework. More recently, information theoretic approaches that assess the relative support for each of multiple working hypotheses have gained popularity (burnham and anderson).
+Historically, many statistical analyses have been performed in the null hypothesis testing framework. More recently, information theoretic approaches that assess the relative support for each of multiple working hypotheses have gained popularity (Burnham and Anderson 2003); that approach may be introduced in upper year courses. 
 
 ## Further reading
