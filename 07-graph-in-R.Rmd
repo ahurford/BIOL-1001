@@ -1,7 +1,7 @@
 # Making graphs in R {#graph}
 
 **(AH: Yolanda, I edited a bit here, hope that's okay. Note that ```{r} actually runs the R code and makes the figures, so you don't actually have to import the figures they're generated via R)**
-
+**(YW: I like your changes! Note that there are two references (Murreel 2006 and Mittal 2011) in the first section. I don't know how to use the reference command in R, I will put them in manually in the references chapter. 
 **(AH: Need instructions to export figures
 Also, typ = "l" for a line graphs, and also, here I think we should make a note about is x is not monotonically increasing how the plot can get messed up)**
 
@@ -154,15 +154,20 @@ It's not hard to get more sophisticate with R graphics. The best approach is to 
 
 One thing most undergrads will probably need or want to do is to visualize two sets of data on the same graph. For example, the goldfish data in the Appendix of the BIOL 1001 lab manual shows the opercular beats of two fish in response to temperature. It would be logical to show both fish on the same graph, but with different symbols. Here's how you would do it:
 
-```temp <- cbind(5, 8, 12, 16, 20, 23) #This creates the vecor of data for the x-axis
-fishA <- cbind(36, 42, 59, 73, 88, 96) #This creates the vector of data for Fish A
-fishB <- cbind(40, 49, 61, 71, 82, 90) #This creates the vector of data for Fish B
+```{r} 
+temp <- cbind(5, 8, 12, 16, 20, 23) #This creates the vecor of data for the x-axis```
+```{r}
+fishA <- cbind(36, 42, 59, 73, 88, 96) #This creates the vector of data for Fish A```
+```{r}
+fishB <- cbind(40, 49, 61, 71, 82, 90) #This creates the vector of data for Fish B```
 
 First we plot x and y with the "temp" vector as "x" and the "fishA" vector as y 
 
-plot(temp, fishA, pch = 17, xlab = "temperature (degrees C)", ylab = "opercular beats (bpm)")
+```{r}
+plot(temp, fishA, pch = 17, xlab = "temperature (degrees C)", ylab = "opercular beats (bpm)")```
 
 Then to add a second vector of data (fishB) to the same plot, we use:
+```{r}
 points(temp, fishB, pch = 17, col = "dimgray")```
 
 
