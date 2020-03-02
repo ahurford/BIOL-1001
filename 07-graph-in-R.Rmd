@@ -1,13 +1,11 @@
 # Making graphs in R {#graph}
 
-**(AH: Yolanda, I edited a bit here, hope that's okay. Note that ```{r} actually runs the R code and makes the figures, so you don't actually have to import the figures they're generated via R)**
-**(YW: I like your changes! Note that there are two references (Murreel 2006 and Abedin and Mittal 2014) in the first section. I don't know how to use the reference command in R, I will put them in manually in the references chapter. 
-**(AH: Need instructions to export figures  YW: started that. I'm sure there's room to improve. 
-Also, typ = "l" for a line graphs, and also, here I think we should make a note about is x is not monotonically increasing how the plot can get messed up)**
+## Author communication
+AH: Yolanda, I edited to get this up an running. The {r} stuff was good, it just likes new lines in specific places so I added that in. The label panes was applied to multiple figures. That argument is supposed to be a unique identifier so that you are refer to Figure panes, however, that doesn't work if multiple figures are labelled panes. Regarding the references, they are actually in a file called references.bib, not 20-references.Rmd.
 
-**(AH: Add links to other resources that covers these same topics)
+AH: Joany, Yolanda has added these references at the end of 20-references.Rmd, the need to be moved into references.bib - Note that there are two references (Murreel 2006 and Abedin and Mittal 2014). Regarding Burnham and Anderson, which I cited in the writing as hypotheses as equations section, that section I am working on with Shawn, it is still in early draft form.
 
-**(AH: Joany do you want to read over this section and meet with me to talk about wht to do to improve it)**
+## Making graphs in R
 
 You might have had experience making graphs using `Microsoft Excel`, however, making graphs with `Excel` is not recommended. A number of reasons to choose `R` over `Excel` are given in Chapter \@ref(intro). In addition, the defaults in `Excel` do not meet standards for good scientific graphs and you do not have the option to learn more sophisticated graphs after you master the basics, as the range of options available in `Excel` is limited.
 
@@ -137,13 +135,13 @@ In the above graph, we wanted `"growth rate (cm)"` and the vertical axis and thi
 
 Once you've got plots in the "plot" window that you like, you can export them using them so that you can insert them into things like a word document, a power point file or a website. Click on the down error on the "Export" button in the Plots pane in R Studio, then select either to save as an Image or as a PDF. In the "Image" option you can choose various file formats (JPEG, TIFF, PNG, etc.). 
 
-```{r panes, fig.cap="Export button in the Plots Window", fig.align='center', out.width="70%", fig.show='hold', echo=FALSE}
+```{r panes2, fig.cap="Export button in the Plots Window", fig.align='center', out.width="70%", fig.show='hold', echo=FALSE}
 knitr::include_graphics('./figures/ExportPlotWindow.jpg')
 ```
 
 Be sure to check that you have the correct file path (circled in the figure below) and then give your figure a file name that makes sense (see rectangle in the figure below).
 
-```{r panes, fig.cap="Setting file path (oval - click the Directory button to change the file path) and file name for your exported figure", fig.align='center', out.width="70%", fig.show='hold', echo=FALSE}
+```{r panes3, fig.cap="Setting file path (oval - click the Directory button to change the file path) and file name for your exported figure", fig.align='center', out.width="70%", fig.show='hold', echo=FALSE}
 knitr::include_graphics('./figures/ExportPlot.jpg')
 ```
 
@@ -166,39 +164,50 @@ It's not hard to get more sophisticate with R graphics. The best approach is to 
 
 One thing most undergrads will probably need or want to do is to visualize two sets of data on the same graph. For example, the goldfish data in the Appendix of the BIOL 1001 lab manual shows the opercular beats of two fish in response to temperature. It would be logical to show both fish on the same graph, but with different symbols. Here's how you would do it:
 
-```{r} temp <-cbind(5, 8, 12, 16, 20, 23)```
+```{r}
+temp <-cbind(5, 8, 12, 16, 20, 23)
+```
 This creats the vector of data for the x-axis.
 
+```{r}
+fishA <- cbind(36, 42, 59, 73, 88, 96)
+```
 
-```{r} temp <- cbind(5, 8, 12, 16, 20, 23)```
+This creates the vector of data for `Fish A`.
 
-This creates the vector of data for the x-axis
+```{r}
+fishB <- cbind(40, 49, 61, 71, 82, 90)
+```
 
-```{r} fishA <- cbind(36, 42, 59, 73, 88, 96)```
-This creates the vector of data for Fish A```
+This creates the vector of data for `Fish B`.
 
-```{r} fishB <- cbind(40, 49, 61, 71, 82, 90)``` 
-This creates the vector of data for Fish B```
+First we plot `x` and `y` with the `temp` vector as `x` and the `fishA` vector as `y` 
 
-First we plot x and y with the "temp" vector as "x" and the "fishA" vector as y 
+```{r}
+plot(temp, fishA, pch = 17, xlab = "temperature (degrees C)", ylab = "opercular beats (bpm)")
+```
 
-```{r} plot(temp, fishA, pch = 17, xlab = "temperature (degrees C)", ylab = "opercular beats (bpm)")```
+Then to add a second vector of data (`fishB`) to the same plot, we use:
 
-Then to add a second vector of data (fishB) to the same plot, we use:
-```{r} points(temp, fishB, pch = 17, col = "dimgray")```
+```{r}
+plot(temp, fishA, pch = 17, xlab = "temperature (degrees C)", ylab = "opercular beats (bpm)")
+points(temp, fishB, pch = 17, col = "dimgray")
+```
 
 
 Voila!
 
 ```{r goldfishplot, fig.cap="The effect of water temperature on opercular beats per minute (bpm) for two goldfish; goldfish A (black triangles) and goldfish B (grey triangles)", fig.align='center', out.width="70%", fig.show='hold', echo=FALSE}
-knitr::include_graphics('./figures/Fig_7_4.jpg')
+knitr::include_graphics('./figures/Fig_7_4.jpeg')
 ```
 
 Note that the difference in the two symbols is described in the caption. For most scientific journals it is preferred to describe the symbology in the caption, rather than use a legend. However, with more complex graphs, or for some publications, you may wish to include a legend. Legends can be a bit tricky to work with in R - we'll leave those for a more advanced course. 
 
 Finally, if you wanted to have a line joining the points, you'd specify the ```type = "l"``` in the arguments of the plot fuction (l is for line, p is for points, b is for both).
 
-```{r} plot(temp, fishA, pch = 17, type = "l", xlab = "temperature (degrees C)", ylab = "opercular beats (bpm)")```
+```{r}
+plot(temp, fishA, pch = 17, type = "l", xlab = "temperature (degrees C)", ylab = "opercular beats (bpm)")
+```
 
 ## pch cheatsheet {#pch}
 As it is hard to remember that `pch = 17` corresponds to filled triangles you can make a little cheat sheet for `pch` codes using the code below. You may want to print out a chart of the `pch` codes and tape it up on your wall by your computer, or in the front of your notebook as a handy reference.

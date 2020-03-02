@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="" xml:lang="">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
 <head>
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Chapter 8 Making graphs in R | Quantitative skills for biology</title>
   <meta name="description" content="Chapter 8 Making graphs in R | Quantitative skills for biology" />
-  <meta name="generator" content="bookdown 0.17 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.13 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Chapter 8 Making graphs in R | Quantitative skills for biology" />
   <meta property="og:type" content="book" />
@@ -38,9 +38,6 @@
 <link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
-<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
-
-
 
 
 
@@ -51,66 +48,41 @@
 
 
 <style type="text/css">
-a.sourceLine { display: inline-block; line-height: 1.25; }
-a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
-a.sourceLine:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode { white-space: pre; position: relative; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-code.sourceCode { white-space: pre-wrap; }
-a.sourceLine { text-indent: -1em; padding-left: 1em; }
-}
-pre.numberSource a.sourceLine
-  { position: relative; left: -4em; }
-pre.numberSource a.sourceLine::before
-  { content: attr(data-line-number);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; pointer-events: all; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-    color: #aaaaaa;
-  }
-pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
-div.sourceCode
-  {  }
-@media screen {
-a.sourceLine::before { text-decoration: underline; }
-}
-code span.al { color: #ff0000; font-weight: bold; } /* Alert */
-code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
-code span.at { color: #7d9029; } /* Attribute */
-code span.bn { color: #40a070; } /* BaseN */
-code span.bu { } /* BuiltIn */
-code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
-code span.ch { color: #4070a0; } /* Char */
-code span.cn { color: #880000; } /* Constant */
-code span.co { color: #60a0b0; font-style: italic; } /* Comment */
-code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
-code span.do { color: #ba2121; font-style: italic; } /* Documentation */
-code span.dt { color: #902000; } /* DataType */
-code span.dv { color: #40a070; } /* DecVal */
-code span.er { color: #ff0000; font-weight: bold; } /* Error */
-code span.ex { } /* Extension */
-code span.fl { color: #40a070; } /* Float */
-code span.fu { color: #06287e; } /* Function */
-code span.im { } /* Import */
-code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
-code span.kw { color: #007020; font-weight: bold; } /* Keyword */
-code span.op { color: #666666; } /* Operator */
-code span.ot { color: #007020; } /* Other */
-code span.pp { color: #bc7a00; } /* Preprocessor */
-code span.sc { color: #4070a0; } /* SpecialChar */
-code span.ss { color: #bb6688; } /* SpecialString */
-code span.st { color: #4070a0; } /* String */
-code span.va { color: #19177c; } /* Variable */
-code span.vs { color: #4070a0; } /* VerbatimString */
-code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+div.sourceCode { overflow-x: auto; }
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+td.sourceCode { padding-left: 5px; }
+code > span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code > span.dt { color: #902000; } /* DataType */
+code > span.dv { color: #40a070; } /* DecVal */
+code > span.bn { color: #40a070; } /* BaseN */
+code > span.fl { color: #40a070; } /* Float */
+code > span.ch { color: #4070a0; } /* Char */
+code > span.st { color: #4070a0; } /* String */
+code > span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code > span.ot { color: #007020; } /* Other */
+code > span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code > span.fu { color: #06287e; } /* Function */
+code > span.er { color: #ff0000; font-weight: bold; } /* Error */
+code > span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+code > span.cn { color: #880000; } /* Constant */
+code > span.sc { color: #4070a0; } /* SpecialChar */
+code > span.vs { color: #4070a0; } /* VerbatimString */
+code > span.ss { color: #bb6688; } /* SpecialString */
+code > span.im { } /* Import */
+code > span.va { color: #19177c; } /* Variable */
+code > span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code > span.op { color: #666666; } /* Operator */
+code > span.bu { } /* BuiltIn */
+code > span.ex { } /* Extension */
+code > span.pp { color: #bc7a00; } /* Preprocessor */
+code > span.at { color: #7d9029; } /* Attribute */
+code > span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
 </style>
 
 <link rel="stylesheet" href="style.css" type="text/css" />
@@ -182,14 +154,16 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="7.3" data-path="data-entry.html"><a href="data-entry.html#inspecting-the-data"><i class="fa fa-check"></i><b>7.3</b> Inspecting the data</a></li>
 </ul></li>
 <li class="chapter" data-level="8" data-path="graph.html"><a href="graph.html"><i class="fa fa-check"></i><b>8</b> Making graphs in R</a><ul>
-<li class="chapter" data-level="8.1" data-path="graph.html"><a href="graph.html#scatter-and-line-plots-with-plotxy"><i class="fa fa-check"></i><b>8.1</b> Scatter and line plots with <code>plot(x,y)</code></a><ul>
-<li class="chapter" data-level="8.1.1" data-path="graph.html"><a href="graph.html#adding-axes-labels-and-changing-symbols"><i class="fa fa-check"></i><b>8.1.1</b> Adding axes labels and changing symbols</a></li>
-<li class="chapter" data-level="8.1.2" data-path="graph.html"><a href="graph.html#line-graphs"><i class="fa fa-check"></i><b>8.1.2</b> Line graphs</a></li>
-<li class="chapter" data-level="8.1.3" data-path="graph.html"><a href="graph.html#exporting-your-graphs"><i class="fa fa-check"></i><b>8.1.3</b> Exporting your graphs</a></li>
+<li class="chapter" data-level="8.1" data-path="graph.html"><a href="graph.html#author-communication"><i class="fa fa-check"></i><b>8.1</b> Author communication</a></li>
+<li class="chapter" data-level="8.2" data-path="graph.html"><a href="graph.html#making-graphs-in-r"><i class="fa fa-check"></i><b>8.2</b> Making graphs in R</a></li>
+<li class="chapter" data-level="8.3" data-path="graph.html"><a href="graph.html#scatter-and-line-plots-with-plotxy"><i class="fa fa-check"></i><b>8.3</b> Scatter and line plots with <code>plot(x,y)</code></a><ul>
+<li class="chapter" data-level="8.3.1" data-path="graph.html"><a href="graph.html#adding-axes-labels-and-changing-symbols"><i class="fa fa-check"></i><b>8.3.1</b> Adding axes labels and changing symbols</a></li>
+<li class="chapter" data-level="8.3.2" data-path="graph.html"><a href="graph.html#line-graphs"><i class="fa fa-check"></i><b>8.3.2</b> Line graphs</a></li>
+<li class="chapter" data-level="8.3.3" data-path="graph.html"><a href="graph.html#exporting-your-graphs"><i class="fa fa-check"></i><b>8.3.3</b> Exporting your graphs</a></li>
 </ul></li>
-<li class="chapter" data-level="8.2" data-path="graph.html"><a href="graph.html#other-useful-plot-functions"><i class="fa fa-check"></i><b>8.2</b> Other useful plot functions</a></li>
-<li class="chapter" data-level="8.3" data-path="graph.html"><a href="graph.html#getting-a-bit-more-sophisticated"><i class="fa fa-check"></i><b>8.3</b> Getting a bit more sophisticated</a></li>
-<li class="chapter" data-level="8.4" data-path="graph.html"><a href="graph.html#pch"><i class="fa fa-check"></i><b>8.4</b> pch cheatsheet</a></li>
+<li class="chapter" data-level="8.4" data-path="graph.html"><a href="graph.html#other-usesful-plot-functions"><i class="fa fa-check"></i><b>8.4</b> Other usesful plot functions</a></li>
+<li class="chapter" data-level="8.5" data-path="graph.html"><a href="graph.html#getting-a-bit-more-sophisticated"><i class="fa fa-check"></i><b>8.5</b> Getting a bit more sophisticated</a></li>
+<li class="chapter" data-level="8.6" data-path="graph.html"><a href="graph.html#pch"><i class="fa fa-check"></i><b>8.6</b> pch cheatsheet</a></li>
 </ul></li>
 <li class="chapter" data-level="9" data-path="hypothesis.html"><a href="hypothesis.html"><i class="fa fa-check"></i><b>9</b> Hypothesis, predictions and equations</a><ul>
 <li class="chapter" data-level="9.1" data-path="hypothesis.html"><a href="hypothesis.html#discrete-and-continuous-variables"><i class="fa fa-check"></i><b>9.1</b> Discrete and continuous variables</a></li>
@@ -237,20 +211,23 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
             <section class="normal" id="section-">
 <div id="graph" class="section level1">
 <h1><span class="header-section-number">Chapter 8</span> Making graphs in R</h1>
-<p><strong>(AH: Yolanda, I edited a bit here, hope that’s okay. Note that ```{r} actually runs the R code and makes the figures, so you don’t actually have to import the figures they’re generated via R)</strong></p>
-<p><strong>(AH: Need instructions to export figures
-Also, typ = “l” for a line graphs, and also, here I think we should make a note about is x is not monotonically increasing how the plot can get messed up)</strong></p>
-<p>**(AH: Add links to other resources that covers these same topics)</p>
-<p><strong>(AH: Joany do you want to read over this section and meet with me to talk about wht to do to improve it)</strong></p>
+<div id="author-communication" class="section level2">
+<h2><span class="header-section-number">8.1</span> Author communication</h2>
+<p>AH: Yolanda, I edited to get this up an running. The {r} stuff was good, it just likes new lines in specific places so I added that in. The label panes was applied to multiple figures. That argument is supposed to be a unique identifier so that you are refer to Figure panes, however, that doesn’t work if multiple figures are labelled panes. Regarding the references, they are actually in a file called references.bib, not 20-references.Rmd.</p>
+<p>AH: Joany, Yolanda has added these references at the end of 20-references.Rmd, the need to be moved into references.bib - Note that there are two references (Murreel 2006 and Abedin and Mittal 2014). Regarding Burnham and Anderson, which I cited in the writing as hypotheses as equations section, that section I am working on with Shawn, it is still in early draft form.</p>
+</div>
+<div id="making-graphs-in-r" class="section level2">
+<h2><span class="header-section-number">8.2</span> Making graphs in R</h2>
 <p>You might have had experience making graphs using <code>Microsoft Excel</code>, however, making graphs with <code>Excel</code> is not recommended. A number of reasons to choose <code>R</code> over <code>Excel</code> are given in Chapter <a href="index.html#intro">1</a>. In addition, the defaults in <code>Excel</code> do not meet standards for good scientific graphs and you do not have the option to learn more sophisticated graphs after you master the basics, as the range of options available in <code>Excel</code> is limited.</p>
-<p>You can make very attractive, clean, professional graphs and figures in <code>R</code>. This chapter is a basic introduction to <code>plot()</code> functions in <code>R</code>. More advanced users can use the package <code>ggplot</code>. There are many good reference manuals for making sophisticated graphs (e.g., Murrell 2006; Mittal 2011).</p>
+<p>You can make very attractive, clean, professional graphs and figures in <code>R</code>. This chapter is a basic introduction to <code>plot()</code> functions in <code>R</code>. More advanced users can use the package <code>ggplot</code>. There are many good reference manuals for making sophisticated graphs (e.g., Murrell 2006; Abedin and Mittal 2014).</p>
+</div>
 <div id="scatter-and-line-plots-with-plotxy" class="section level2">
-<h2><span class="header-section-number">8.1</span> Scatter and line plots with <code>plot(x,y)</code></h2>
+<h2><span class="header-section-number">8.3</span> Scatter and line plots with <code>plot(x,y)</code></h2>
 <p>In <code>R</code>, <code>plot()</code> is a built-in function: you do not need to install a package to call it. There are two mandatory arguments <code>x</code> and <code>y</code> which are vectors that must have the same length. For example,</p>
-<div class="sourceCode" id="cb57"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb57-1" data-line-number="1">x &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">2</span>,<span class="dv">4</span>,<span class="dv">6</span>,<span class="dv">8</span>,<span class="dv">10</span>)</a>
-<a class="sourceLine" id="cb57-2" data-line-number="2">y &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">10</span>,<span class="dv">20</span>,<span class="dv">30</span>,<span class="dv">40</span>,<span class="dv">50</span>)</a></code></pre></div>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">x &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">2</span>,<span class="dv">4</span>,<span class="dv">6</span>,<span class="dv">8</span>,<span class="dv">10</span>)
+y &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">10</span>,<span class="dv">20</span>,<span class="dv">30</span>,<span class="dv">40</span>,<span class="dv">50</span>)</code></pre></div>
 <p>Copy and paste the above code into your <code>Console</code> and type <code>Enter/Return</code>. Note that to make a vector we need to use <code>c()</code>. Now, query the value of <code>x</code> by typing <code>x</code> into your <code>Console</code></p>
-<div class="sourceCode" id="cb58"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb58-1" data-line-number="1">x</a></code></pre></div>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">x</code></pre></div>
 <pre><code>## [1]  2  4  6  8 10</code></pre>
 <p>This lets us know that <code>x</code> is a vector that is a list of 5 numbers.</p>
 <p>The command <code>plot(x,y)</code> will mark points on the graph by taking elements in the same position in the <code>x</code> and <code>y</code> vectors. For example, in the first position of the <code>x</code> and <code>y</code> vectors are <code>2</code> and <code>10</code>, respectively. Because <code>plot(x,y)</code> has <code>x</code> as its first argument, the values of <code>x</code> will correspond to the horizontal axis of the plot. Therefore, the first element of the lists <code>x</code> and <code>y</code>, will be reflected in the plot as a point marked at the <code>2</code> position of the horizontal axis and the <code>10</code> position on the vertical axis.</p>
@@ -298,7 +275,7 @@ b = c(2,4,6)
 plot(x,y)</code></pre>
 <hr />
 <div id="adding-axes-labels-and-changing-symbols" class="section level3">
-<h3><span class="header-section-number">8.1.1</span> Adding axes labels and changing symbols</h3>
+<h3><span class="header-section-number">8.3.1</span> Adding axes labels and changing symbols</h3>
 <p>Note that all of the Figures we have made so far are not great: none meet the standards of a good figure. What’s missing?</p>
 <ul>
 <li>meaningful <code>x</code> and <code>y</code> axis labels,</li>
@@ -308,73 +285,94 @@ plot(x,y)</code></pre>
 <p>In addition, to the two manadatory arguments <code>x</code> and <code>y</code>, the <code>plot()</code> function has other optional argument that can be called to make a better figure. Try using the <code>help()</code> learn about more options to change the look of your plot (refer to Chapter <a href="help.html#help">4</a>, <em>Getting help in R</em>, to recall how to display and read help files):</p>
 <pre><code>help(plot)</code></pre>
 <p>You’ll see there are a lot of optional arguments. First, let’s fix the axis labels.</p>
-<div class="sourceCode" id="cb67"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb67-1" data-line-number="1">x &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">2</span>,<span class="dv">4</span>,<span class="dv">6</span>,<span class="dv">8</span>,<span class="dv">10</span>)</a>
-<a class="sourceLine" id="cb67-2" data-line-number="2">y &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">10</span>,<span class="dv">20</span>,<span class="dv">30</span>,<span class="dv">40</span>,<span class="dv">50</span>)</a>
-<a class="sourceLine" id="cb67-3" data-line-number="3"><span class="kw">plot</span>(x,y, <span class="dt">xlab =</span> <span class="st">&quot;temperature (degrees C)&quot;</span>, <span class="dt">ylab =</span> <span class="st">&quot;growth rate (cm)&quot;</span>)</a></code></pre></div>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">x &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">2</span>,<span class="dv">4</span>,<span class="dv">6</span>,<span class="dv">8</span>,<span class="dv">10</span>)
+y &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">10</span>,<span class="dv">20</span>,<span class="dv">30</span>,<span class="dv">40</span>,<span class="dv">50</span>)
+<span class="kw">plot</span>(x,y, <span class="dt">xlab =</span> <span class="st">&quot;temperature (degrees C)&quot;</span>, <span class="dt">ylab =</span> <span class="st">&quot;growth rate (cm)&quot;</span>)</code></pre></div>
 <p><img src="quant-guide_files/figure-html/unnamed-chunk-30-1.png" width="672" /></p>
 <p>This one is a little better. Copy and paste the above code into your <code>Console</code> to make sure you can make the graph with axes labels.</p>
-<p>If you want to change the symbols, you use the <code>pch</code> argument to change the style (see Section <a href="graph.html#pch">8.4</a>). Note, that <code>pch = 17</code> corresponds to filled triangles, so let’s make the graph, but with filled triangles.</p>
-<div class="sourceCode" id="cb68"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb68-1" data-line-number="1"><span class="kw">plot</span>(x,y, <span class="dt">pch =</span> <span class="dv">17</span>, <span class="dt">xlab =</span> <span class="st">&quot;temperature (degrees C)&quot;</span>, <span class="dt">ylab =</span> <span class="st">&quot;growth rate (cm)&quot;</span>)</a></code></pre></div>
+<p>If you want to change the symbols, you use the <code>pch</code> argument to change the style (see Section <a href="graph.html#pch">8.6</a>). Note, that <code>pch = 17</code> corresponds to filled triangles, so let’s make the graph, but with filled triangles.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">plot</span>(x,y, <span class="dt">pch =</span> <span class="dv">17</span>, <span class="dt">xlab =</span> <span class="st">&quot;temperature (degrees C)&quot;</span>, <span class="dt">ylab =</span> <span class="st">&quot;growth rate (cm)&quot;</span>)</code></pre></div>
 <p><img src="quant-guide_files/figure-html/unnamed-chunk-31-1.png" width="672" /></p>
 <p>Note that the order of the optional arguments is unimportant (the function arguments are separated by <code>,</code>) particularly where arguments are labelled with <code>xlab =</code> or <code>ylab =</code>. Lets try to see if we can put the arguments out of order and end up with the wrong graph:</p>
-<div class="sourceCode" id="cb69"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb69-1" data-line-number="1"><span class="kw">plot</span>(<span class="dt">pch =</span> <span class="dv">17</span>, <span class="dt">ylab =</span> <span class="st">&quot;growth rate (cm)&quot;</span>, <span class="dt">xlab =</span> <span class="st">&quot;temperature (degrees C)&quot;</span>, y,x)</a></code></pre></div>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">plot</span>(<span class="dt">pch =</span> <span class="dv">17</span>, <span class="dt">ylab =</span> <span class="st">&quot;growth rate (cm)&quot;</span>, <span class="dt">xlab =</span> <span class="st">&quot;temperature (degrees C)&quot;</span>, y,x)</code></pre></div>
 <p><img src="quant-guide_files/figure-html/unnamed-chunk-32-1.png" width="672" /></p>
 <p>In the above graph, we wanted <code>&quot;growth rate (cm)&quot;</code> and the vertical axis and this has appeared correctly, but the values of growth rate should be <code>c(10,20,30,40,50)</code> and now we see the values of <code>y</code> have appeared on the horizontal axes rather than on the vertical axis where they should be. This is because <code>y</code> appears before <code>x</code> in the plot command and whichever vector appears first will be read as corresponding to the values on the horizontal axis. On the other hand <code>&quot;ylab=&quot;</code> appears before <code>&quot;xlab=&quot;</code> but this does not cause a problem because <code>&quot;ylab=&quot;</code> still appears on the vertical axis as it should.</p>
 </div>
 <div id="line-graphs" class="section level3">
-<h3><span class="header-section-number">8.1.2</span> Line graphs</h3>
+<h3><span class="header-section-number">8.3.2</span> Line graphs</h3>
 </div>
 <div id="exporting-your-graphs" class="section level3">
-<h3><span class="header-section-number">8.1.3</span> Exporting your graphs</h3>
+<h3><span class="header-section-number">8.3.3</span> Exporting your graphs</h3>
+<p>Once you’ve got plots in the “plot” window that you like, you can export them using them so that you can insert them into things like a word document, a power point file or a website. Click on the down error on the “Export” button in the Plots pane in R Studio, then select either to save as an Image or as a PDF. In the “Image” option you can choose various file formats (JPEG, TIFF, PNG, etc.).</p>
+<div class="figure" style="text-align: center"><span id="fig:panes2"></span>
+<img src="figures/ExportPlotWindow.jpg" alt="Export button in the Plots Window" width="70%" />
+<p class="caption">
+Figure 8.2: Export button in the Plots Window
+</p>
+</div>
+<p>Be sure to check that you have the correct file path (circled in the figure below) and then give your figure a file name that makes sense (see rectangle in the figure below).</p>
+<div class="figure" style="text-align: center"><span id="fig:panes3"></span>
+<img src="figures/ExportPlot.jpg" alt="Setting file path (oval - click the Directory button to change the file path) and file name for your exported figure" width="70%" />
+<p class="caption">
+Figure 8.3: Setting file path (oval - click the Directory button to change the file path) and file name for your exported figure
+</p>
 </div>
 </div>
-<div id="other-useful-plot-functions" class="section level2">
-<h2><span class="header-section-number">8.2</span> Other useful plot functions</h2>
+</div>
+<div id="other-usesful-plot-functions" class="section level2">
+<h2><span class="header-section-number">8.4</span> Other usesful plot functions</h2>
 <p>The generic <code>plot()</code> function makes a scatter plot, with variations.</p>
 <p>For other types of plots, R has different functions, but all have similar arguments for adjusting the labels, spacing, tic marks, symbols, etc.</p>
 <p>See the following</p>
-<p><code>barplot{graphics}</code> to make bar graphs
-<code>boxplot{graphics}</code> to make boxplots
-<code>hist{graphics}</code> to make a histogram</p>
+<p><code>barplot{graphics}</code> to make bar graphs <code>boxplot{graphics}</code> to make boxplots <code>hist{graphics}</code> to make a histogram</p>
 </div>
 <div id="getting-a-bit-more-sophisticated" class="section level2">
-<h2><span class="header-section-number">8.3</span> Getting a bit more sophisticated</h2>
+<h2><span class="header-section-number">8.5</span> Getting a bit more sophisticated</h2>
 <p>It’s not hard to get more sophisticate with R graphics. The best approach is to explore one of the reference books listed to figure out how to do what you want to do.</p>
 <p>One thing most undergrads will probably need or want to do is to visualize two sets of data on the same graph. For example, the goldfish data in the Appendix of the BIOL 1001 lab manual shows the opercular beats of two fish in response to temperature. It would be logical to show both fish on the same graph, but with different symbols. Here’s how you would do it:</p>
-<p>```temp &lt;- cbind(5, 8, 12, 16, 20, 23) #This creates the vecor of data for the x-axis
-fishA &lt;- cbind(36, 42, 59, 73, 88, 96) #This creates the vector of data for Fish A
-fishB &lt;- cbind(40, 49, 61, 71, 82, 90) #This creates the vector of data for Fish B</p>
-<p>First we plot x and y with the “temp” vector as “x” and the “fishA” vector as y</p>
-<p>plot(temp, fishA, pch = 17, xlab = “temperature (degrees C)”, ylab = “opercular beats (bpm)”)</p>
-<p>Then to add a second vector of data (fishB) to the same plot, we use:
-points(temp, fishB, pch = 17, col = “dimgray”)```</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">temp &lt;-<span class="kw">cbind</span>(<span class="dv">5</span>, <span class="dv">8</span>, <span class="dv">12</span>, <span class="dv">16</span>, <span class="dv">20</span>, <span class="dv">23</span>)</code></pre></div>
+<p>This creats the vector of data for the x-axis.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">fishA &lt;-<span class="st"> </span><span class="kw">cbind</span>(<span class="dv">36</span>, <span class="dv">42</span>, <span class="dv">59</span>, <span class="dv">73</span>, <span class="dv">88</span>, <span class="dv">96</span>)</code></pre></div>
+<p>This creates the vector of data for <code>Fish A</code>.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">fishB &lt;-<span class="st"> </span><span class="kw">cbind</span>(<span class="dv">40</span>, <span class="dv">49</span>, <span class="dv">61</span>, <span class="dv">71</span>, <span class="dv">82</span>, <span class="dv">90</span>)</code></pre></div>
+<p>This creates the vector of data for <code>Fish B</code>.</p>
+<p>First we plot <code>x</code> and <code>y</code> with the <code>temp</code> vector as <code>x</code> and the <code>fishA</code> vector as <code>y</code></p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">plot</span>(temp, fishA, <span class="dt">pch =</span> <span class="dv">17</span>, <span class="dt">xlab =</span> <span class="st">&quot;temperature (degrees C)&quot;</span>, <span class="dt">ylab =</span> <span class="st">&quot;opercular beats (bpm)&quot;</span>)</code></pre></div>
+<p><img src="quant-guide_files/figure-html/unnamed-chunk-36-1.png" width="672" /></p>
+<p>Then to add a second vector of data (<code>fishB</code>) to the same plot, we use:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">plot</span>(temp, fishA, <span class="dt">pch =</span> <span class="dv">17</span>, <span class="dt">xlab =</span> <span class="st">&quot;temperature (degrees C)&quot;</span>, <span class="dt">ylab =</span> <span class="st">&quot;opercular beats (bpm)&quot;</span>)
+<span class="kw">points</span>(temp, fishB, <span class="dt">pch =</span> <span class="dv">17</span>, <span class="dt">col =</span> <span class="st">&quot;dimgray&quot;</span>)</code></pre></div>
+<p><img src="quant-guide_files/figure-html/unnamed-chunk-37-1.png" width="672" /></p>
 <p>Voila!</p>
 <div class="figure" style="text-align: center"><span id="fig:goldfishplot"></span>
-<img src="./figures/Fig_7_4.jpg" alt="The effect of water temperature on opercular beats per minute (bpm) for two goldfish; goldfish A (black triangles) and goldfish B (grey triangles)" width="70%" />
+<img src="figures/Fig_7_4.jpeg" alt="The effect of water temperature on opercular beats per minute (bpm) for two goldfish; goldfish A (black triangles) and goldfish B (grey triangles)" width="70%" />
 <p class="caption">
-Figure 8.2: The effect of water temperature on opercular beats per minute (bpm) for two goldfish; goldfish A (black triangles) and goldfish B (grey triangles)
+Figure 8.4: The effect of water temperature on opercular beats per minute (bpm) for two goldfish; goldfish A (black triangles) and goldfish B (grey triangles)
 </p>
 </div>
 <p>Note that the difference in the two symbols is described in the caption. For most scientific journals it is preferred to describe the symbology in the caption, rather than use a legend. However, with more complex graphs, or for some publications, you may wish to include a legend. Legends can be a bit tricky to work with in R - we’ll leave those for a more advanced course.</p>
+<p>Finally, if you wanted to have a line joining the points, you’d specify the <code>type = &quot;l&quot;</code> in the arguments of the plot fuction (l is for line, p is for points, b is for both).</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">plot</span>(temp, fishA, <span class="dt">pch =</span> <span class="dv">17</span>, <span class="dt">type =</span> <span class="st">&quot;l&quot;</span>, <span class="dt">xlab =</span> <span class="st">&quot;temperature (degrees C)&quot;</span>, <span class="dt">ylab =</span> <span class="st">&quot;opercular beats (bpm)&quot;</span>)</code></pre></div>
+<p><img src="quant-guide_files/figure-html/unnamed-chunk-38-1.png" width="672" /></p>
 </div>
 <div id="pch" class="section level2">
-<h2><span class="header-section-number">8.4</span> pch cheatsheet</h2>
+<h2><span class="header-section-number">8.6</span> pch cheatsheet</h2>
 <p>As it is hard to remember that <code>pch = 17</code> corresponds to filled triangles you can make a little cheat sheet for <code>pch</code> codes using the code below. You may want to print out a chart of the <code>pch</code> codes and tape it up on your wall by your computer, or in the front of your notebook as a handy reference.</p>
-<div class="sourceCode" id="cb70"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb70-1" data-line-number="1"><span class="co">#++++++++++++++++++++++++++++++++++++++++++++</span></a>
-<a class="sourceLine" id="cb70-2" data-line-number="2"><span class="co">#generate a plot of point shapes which R knows about.</span></a>
-<a class="sourceLine" id="cb70-3" data-line-number="3"><span class="co">#++++++++++++++++++++++++++++++++++++++++++++</span></a>
-<a class="sourceLine" id="cb70-4" data-line-number="4">generateRPointShapes&lt;-<span class="cf">function</span>(){</a>
-<a class="sourceLine" id="cb70-5" data-line-number="5">  oldPar&lt;-<span class="kw">par</span>()</a>
-<a class="sourceLine" id="cb70-6" data-line-number="6">  <span class="kw">par</span>(<span class="dt">font=</span><span class="dv">2</span>, <span class="dt">mar=</span><span class="kw">c</span>(<span class="fl">0.5</span>,<span class="dv">0</span>,<span class="dv">0</span>,<span class="dv">0</span>))</a>
-<a class="sourceLine" id="cb70-7" data-line-number="7">  y=<span class="kw">rev</span>(<span class="kw">c</span>(<span class="kw">rep</span>(<span class="dv">1</span>,<span class="dv">6</span>),<span class="kw">rep</span>(<span class="dv">2</span>,<span class="dv">5</span>), <span class="kw">rep</span>(<span class="dv">3</span>,<span class="dv">5</span>), <span class="kw">rep</span>(<span class="dv">4</span>,<span class="dv">5</span>), <span class="kw">rep</span>(<span class="dv">5</span>,<span class="dv">5</span>)))</a>
-<a class="sourceLine" id="cb70-8" data-line-number="8">  x=<span class="kw">c</span>(<span class="kw">rep</span>(<span class="dv">1</span><span class="op">:</span><span class="dv">5</span>,<span class="dv">5</span>),<span class="dv">6</span>)</a>
-<a class="sourceLine" id="cb70-9" data-line-number="9">  <span class="kw">plot</span>(x, y, <span class="dt">pch =</span> <span class="dv">0</span><span class="op">:</span><span class="dv">25</span>, <span class="dt">cex=</span><span class="fl">1.5</span>, <span class="dt">ylim=</span><span class="kw">c</span>(<span class="dv">1</span>,<span class="fl">5.5</span>), <span class="dt">xlim=</span><span class="kw">c</span>(<span class="dv">1</span>,<span class="fl">6.5</span>), </a>
-<a class="sourceLine" id="cb70-10" data-line-number="10">       <span class="dt">axes=</span><span class="ot">FALSE</span>, <span class="dt">xlab=</span><span class="st">&quot;&quot;</span>, <span class="dt">ylab=</span><span class="st">&quot;&quot;</span>, <span class="dt">bg=</span><span class="st">&quot;blue&quot;</span>)</a>
-<a class="sourceLine" id="cb70-11" data-line-number="11">  <span class="kw">text</span>(x, y, <span class="dt">labels=</span><span class="dv">0</span><span class="op">:</span><span class="dv">25</span>, <span class="dt">pos=</span><span class="dv">3</span>)</a>
-<a class="sourceLine" id="cb70-12" data-line-number="12">  <span class="kw">par</span>(<span class="dt">mar=</span>oldPar<span class="op">$</span>mar,<span class="dt">font=</span>oldPar<span class="op">$</span>font )</a>
-<a class="sourceLine" id="cb70-13" data-line-number="13">}</a>
-<a class="sourceLine" id="cb70-14" data-line-number="14"><span class="kw">generateRPointShapes</span>()</a></code></pre></div>
-<p><img src="quant-guide_files/figure-html/unnamed-chunk-33-1.png" width="672" /></p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co">#++++++++++++++++++++++++++++++++++++++++++++</span>
+<span class="co">#generate a plot of point shapes which R knows about.</span>
+<span class="co">#++++++++++++++++++++++++++++++++++++++++++++</span>
+generateRPointShapes&lt;-function(){
+  oldPar&lt;-<span class="kw">par</span>()
+  <span class="kw">par</span>(<span class="dt">font=</span><span class="dv">2</span>, <span class="dt">mar=</span><span class="kw">c</span>(<span class="fl">0.5</span>,<span class="dv">0</span>,<span class="dv">0</span>,<span class="dv">0</span>))
+  y=<span class="kw">rev</span>(<span class="kw">c</span>(<span class="kw">rep</span>(<span class="dv">1</span>,<span class="dv">6</span>),<span class="kw">rep</span>(<span class="dv">2</span>,<span class="dv">5</span>), <span class="kw">rep</span>(<span class="dv">3</span>,<span class="dv">5</span>), <span class="kw">rep</span>(<span class="dv">4</span>,<span class="dv">5</span>), <span class="kw">rep</span>(<span class="dv">5</span>,<span class="dv">5</span>)))
+  x=<span class="kw">c</span>(<span class="kw">rep</span>(<span class="dv">1</span>:<span class="dv">5</span>,<span class="dv">5</span>),<span class="dv">6</span>)
+  <span class="kw">plot</span>(x, y, <span class="dt">pch =</span> <span class="dv">0</span>:<span class="dv">25</span>, <span class="dt">cex=</span><span class="fl">1.5</span>, <span class="dt">ylim=</span><span class="kw">c</span>(<span class="dv">1</span>,<span class="fl">5.5</span>), <span class="dt">xlim=</span><span class="kw">c</span>(<span class="dv">1</span>,<span class="fl">6.5</span>), 
+       <span class="dt">axes=</span><span class="ot">FALSE</span>, <span class="dt">xlab=</span><span class="st">&quot;&quot;</span>, <span class="dt">ylab=</span><span class="st">&quot;&quot;</span>, <span class="dt">bg=</span><span class="st">&quot;blue&quot;</span>)
+  <span class="kw">text</span>(x, y, <span class="dt">labels=</span><span class="dv">0</span>:<span class="dv">25</span>, <span class="dt">pos=</span><span class="dv">3</span>)
+  <span class="kw">par</span>(<span class="dt">mar=</span>oldPar$mar,<span class="dt">font=</span>oldPar$font )
+}
+<span class="kw">generateRPointShapes</span>()</code></pre></div>
+<p><img src="quant-guide_files/figure-html/unnamed-chunk-39-1.png" width="672" /></p>
 
 </div>
 </div>
@@ -389,13 +387,11 @@ Figure 8.2: The effect of water temperature on opercular beats per minute (bpm) 
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
 <script src="libs/gitbook-2.6.7/js/lunr.js"></script>
-<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
 <script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
-<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
 <script>
 gitbook.require(["gitbook"], function(gitbook) {
 gitbook.start({
@@ -403,11 +399,12 @@ gitbook.start({
 "github": false,
 "facebook": true,
 "twitter": true,
+"google": false,
 "linkedin": false,
 "weibo": false,
 "instapaper": false,
 "vk": false,
-"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+"all": ["facebook", "google", "twitter", "linkedin", "weibo", "instapaper"]
 },
 "fontsettings": {
 "theme": "white",
@@ -419,10 +416,6 @@ gitbook.start({
 "text": "Edit"
 },
 "history": {
-"link": null,
-"text": null
-},
-"view": {
 "link": null,
 "text": null
 },
@@ -439,7 +432,7 @@ gitbook.start({
   (function () {
     var script = document.createElement("script");
     script.type = "text/javascript";
-    var src = "true";
+    var src = "";
     if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
     if (location.protocol !== "file:")
       if (/^https?:/.test(src))
