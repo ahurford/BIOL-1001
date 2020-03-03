@@ -1,13 +1,3 @@
 `r if (knitr:::is_html_output()) '
 # References {-}
 '`
-
-
-YW to JM: There are some references in the document not linked here... Burnham and Anderson 2003 (in chapter 9) and two references in chapter 8. I've put them in manually below, maybe at some point you can show me how to work the referencing in bookdown... thanks!
-
-Abedin, Jaynal and Hrishi Mittal. 2011. R graphics cookbook. 2nd edition. Packt Publishing.
-
-Burnham, Kenneth P., and David R. Anderson. 2003. Model selection and multimodel inference: a practical information-theoretic approach. Springer, NY. 
-
-Murrell, Paul. 2006. R graphics. Chapman and Hall, CRC Press. Available [here](https://www.stat.auckland.ac.nz/~paul/RG2e/)
-
