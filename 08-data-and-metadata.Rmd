@@ -2,9 +2,9 @@
 
 ## Data
 
-Data are information collected through research. Manipulation and analysis of these data (which involves testing the hypothesis) will yield the results of your research. A crucial step during this research process is ensuring the reproducibility of your results; this means that your results (either experimental or theoretical) must be repeatable by yourself and others within the scientific community. Therefore, sharing your scientific data becomes fundamental. Prope data sharing has the added benefit of allowing the data to be reused in other projects that you may not have been initially intended (e.g. meta-analyses); hence, other scientists can build directly on this to generate further knowledge 
+Data are information collected through research. Manipulation and analysis of these data (which involves testing the hypothesis) will yield the results of your research. A crucial step during this research process is ensuring the reproducibility of your results; this means that your results (either experimental or theoretical) must be repeatable by yourself and others within the scientific community. Therefore, sharing your scientific data becomes fundamental. Proper data sharing has the added benefit of allowing the data to be reused in other projects that you may not have been initially intended (e.g. meta-analyses); hence, other scientists can build directly on this to generate further knowledge 
 [@hampton2015tao; @white2013nine].
-In this sense, planning an experiment involves more than thinking through the physical manipulations required, but also requires thinking about how to store and share the data and metadata that will enable others to reuse that information effectively. 
+In this sense, planning an experiment involves more than thinking through the physical manipulations required, but also requires thinking about how to store and share the data and metadata that will enable others to reuse that information effectively
 [@hampton2015tao].
 
 ### Data guidelines
@@ -45,7 +45,7 @@ We recommend [@hart2016ten; @white2013nine]:
 * Don't do calculations in the raw data files
 * Minimize redundancy using multiple tables
 * Don’t use multiple tables in one sheet, or multiple tabs in a file.
-* Make Backups
+* Make backups
 
 ## Metadata
 
