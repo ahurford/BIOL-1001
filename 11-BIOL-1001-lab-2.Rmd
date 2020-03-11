@@ -111,3 +111,5 @@ kable(dataset[1:11,1:2], caption = "Raw data from Langdon and collaborators (200
 
 1. Follow the instructions in Chapter \@ref(hypothesis). Write a hypothesis, prediction, and equation for these data.
 
+## Status
+This lab is not finished.

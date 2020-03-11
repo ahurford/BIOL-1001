@@ -29,3 +29,6 @@ Today's biologists use a variety of softwares, and particularly, `Microsoft Offi
 1. No limits: `R` has a large user community and contributed packages allow you to do almost anything. `R` packages range from [serious](https://rviews.rstudio.com/2017/10/09/population-modeling-in-r/) to [fun](https://www.r-bloggers.com/useless-but-fun-r-packages/)).
 
 1. Popularity: A survey of studies from of 30 ecology journals found that in 2017, 58% of article used `R` as the primary tool to generate their results [@lai2019evaluating].
+
+## Status
+This chapter needs feedback from colleagues
