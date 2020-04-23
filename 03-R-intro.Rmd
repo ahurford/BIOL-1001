@@ -1,6 +1,10 @@
 # Introduction to R {#rintro}
 
-This is a brief introduction to R, focussing on basic programming concepts and best practices.
+This is a brief introduction to R, focussing on basic programming concepts and best practices. 
+
+For **BIOL 1001**, this chapter will be the bulk of the activity you document and hand in for the evaluation of the *Intro to R* lab. Throughout this chapter, there are several places where we've indicated **HAND IN**. These are pieces of information you'll copy into a Word document to hand in for your evaluation of this lab (don't forget to include you name and student number in this document!).
+
+
 
 ## Workflow
 
@@ -21,7 +25,7 @@ Alternatively, you can set the working directory from the Files tab in the Files
 
 ## Variables and assignment
 
-The assignment operator is `<-`. It stores whatever you write on the right to variables on
+The assignment operator is `<-`. You create this by typing the "less than" sign (the `<` symbol located above the comma) followed by a hypen. It stores whatever you write on the right to variables on
 the left. Variable names can be made up of letters, numbers, underscores and periods. But, they cannot start with a number nor contain spaces. For instance:
 
 ```{r}
@@ -37,6 +41,8 @@ x
 ```
 
 **TRY IT!** Define a varible "y" with the value of 3. 
+
+**TIP** Try to give your variables meaningful names. For example, if you know you are working with variables that represent different measurements you took on a plant, you might name your variables things like `leaf.length` or `stem.diameter`
 
 ### Shortcuts
 
@@ -65,9 +71,9 @@ x
 
 ## Comments
 
-In R, the `#` sign is a special character that indicates a comment. Anything that is written directly to the right of a `#` sign will be ignored by R. Comment your scripts often!
+In R, the `#` sign is a special character that indicates a comment. Anything that is written directly to the right of a `#` sign will be ignored by R. Comment your scripts often! You can use a whole line o `####` symbols to create blocks or headings to make your script easier to read.
 
-**TRY IT!** In your script, write a couple of sentences to explain each of the commands we have used so far.
+**HAND IN** Write a couple of sentences to explain each of the commands we have used so far. You may also want to annotate your script you've been developing with the commands to save for future reference. Remember to use the `#` feature to comment. 
 
 ## Precedence
 
@@ -124,6 +130,7 @@ length(rgb)
 ```
 
 **TRY IT!** What is the data type and length of the vector `y`?
+**HAND IN** Tell us what the type and length of vector `y` is.
 
 The core idea behind vectorization is that operations can be applied at once 
 to an entire set of values. For example:
@@ -132,7 +139,9 @@ to an entire set of values. For example:
 y * 3
 ```
 
-**TRY IT!** Create a vector with a sequence of numbers using the function `seq`. Hint: run `?seq` in the console to display the help page of the function.
+**TRY IT!** Create a vector with a sequence of numbers using the function `seq`. Hint: run `?seq` in the console to display the help page of the function. Remember, you can find a guide to the help files in Chapter \@ref(help)
+
+**HAND IN** Copy the line of code you used to create a vector with a sequence of numbers from 0-20, increasing by 5. 
 
 A key point of the previous example is that vectors can be used as arguments to functions. But, vectors are *atomic*, which means that they can only contain one class of data. In other words, different classes cannot be mixed in the same object. For instance, if we combine numeric with character data types, R will coerce all elements to be characters:
 
@@ -162,6 +171,7 @@ dim(M)
 ```
 
 **TRY IT!** Create a 3 by 3 matrix in which the elements are the numbers from zero to nine.
+**HAND IN** Hand in a copy of the code you used to create the above matrix. Copy-paste the resulting matrix from the console into the Word document.
 
 ### Lists {-}
 
@@ -176,7 +186,8 @@ class(my_list)
 As you can see from the output, each element of the list starts on a new line.
 Lists can be useful inside functions because you can combine different kinds of results into a single object that a function can return.
 
-**TRY IT!** What is the lenght of the object `my_list`?
+**TRY IT!** What is the length of the object `my_list`?
+**HAND IN** State the length of the object `my_list`
 
 ### Data frames {-}
 
@@ -187,9 +198,11 @@ df <- data.frame(id = letters[1:10], x = 1:10, y = 11:20)
 df
 ```
 
-To get some information on our data frame, we can use again the function `dim()`. Other useful functions for data frames are `nrow()`, `ncol()`, `head()`, and `tail()`.
+To get some information on our data frame, we can use again the function `dim()`.
 
-**TRY IT!** Create a dataframe as especified above. What information you can get from the functions `nrow()`, `ncol()`, `head()`, and `tail()`.
+**TRY IT!** Create a dataframe as specified above.
+
+**HAND IN** Write down what information you can get from the functions `nrow()`, `ncol()`, `head()`, and `tail()` that describe the dataframe `df` you just created. 
 
 ## R Packages
 

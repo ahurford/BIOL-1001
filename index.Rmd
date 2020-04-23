@@ -18,17 +18,18 @@ Many biology-relevant skills are now performed using computers: statistical anal
 
 Teaching quantitative skills is necessary since a survey reported that more than 90% of ecologists found, that in retrospect, their training in statistics and mathematics, during their undergraduate biology major, was too low [@barraquand2014lack]. This same study found that practicing ecologists recommended that 30% of coursework during a biology major be dedicated to quantitative training.
 
-Today's biologists use a variety of softwares, and particularly, `Microsoft Office`, `R`, `Python`, and `ArcGIS`. Much of this quantitative training manual teaches data manipulation and visualization in `R`. Our choice of `R` is for the following reasons:
+Today's biologists use a variety of softwares, and particularly, `Microsoft Office`, `R`, `Python`, and `ArcGIS`. In graduate research, many biologists use quantitiatve tools to do things like devlop mathematical models to predict disease spread or population growth, apply bioinformatics analyses to genetics data to look at genetic relatedness between individuals, or use computer programming to model the structure of protein modlecules  
+
+Much of this quantitative training manual teaches data manipulation and visualization in `R`. Our choice of `R` is for the following reasons:
 
 1. A valued skill: As of March 2019, `R` is the [fifth ranked software](http://r4stats.com/articles/popularity/) listed in job advertisements for Data Scientists. `Python` is the number one ranked software, but `R` is a popular statistical software and is popular in biology due to the need to analyze the results of experiments using statistics.
 
-1. Reproducibility: `R` is a scripting software, so unlike _point and click_ softwares, the steps to produce a data analysis or figure are fully reproducible.
+2. Reproducibility: `R` is a scripting software, so unlike _point and click_ softwares, the steps to produce a data analysis or figure are fully reproducible.
 
-1. Accessibility: `R` is free.
+3. Accessibility: `R` is free, unlike many statistical software packages which are quite expensive. This means that researchers or organizations, such as environmental NGOs, with limited budgets can still do sophisticated analysis. 
 
-1. No limits: `R` has a large user community and contributed packages allow you to do almost anything. `R` packages range from [serious](https://rviews.rstudio.com/2017/10/09/population-modeling-in-r/) to [fun](https://www.r-bloggers.com/useless-but-fun-r-packages/)).
+4. No limits: `R` has a large user community and contributed packages allow you to do almost anything. `R` packages range from [serious](https://rviews.rstudio.com/2017/10/09/population-modeling-in-r/) to [fun](https://www.r-bloggers.com/useless-but-fun-r-packages/)).
 
-1. Popularity: A survey of studies from of 30 ecology journals found that in 2017, 58% of article used `R` as the primary tool to generate their results [@lai2019evaluating].
+5. Popularity: A survey of studies from of 30 ecology journals found that in 2017, 58% of article used `R` as the primary tool to generate their results [@lai2019evaluating].
 
-## Status
-This chapter needs feedback from colleagues
+

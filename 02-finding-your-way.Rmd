@@ -1,6 +1,6 @@
 # Finding your way around RStudio {#rstudio}
 
-R studio has 4 windows (also known as "panes") that are inter-linked. The default layout is shown in Figure \@ref(fig:panes). You can move the layout of the panes and change their size and shape by clicking and dragging with your mouse along the window pane borders. The details of what happens in each pane are detailed below.
+R studio has 4 windows (also known as "panes") that are inter-linked. The default layout is shown in Figure \@ref(fig:panes). The first time you open `RStudio` you may not see the top left pane (the Source pane, labelled 2 in the figure below). To make it visible, use your mouse to select `File -> New File -> R Script`. You can move the layout of the panes and change their size and shape by clicking and dragging with your mouse along the window pane borders. The details of what happens in each pane are detailed below.
 
 ```{r panes, fig.cap="Panes in RStudio. 1. Source pane, to work with R scripts (code won't be evaluated until you send it to the console). 2. Console pane, where code is executed by R. 3. Environment/History pane, to view objects in the working space and command history, respectively. 4. Files/Plots/Packages/Help pane, to see the file directories, plots, installed packages and access R help, respectively.", fig.align='center', out.width="70%", fig.show='hold', echo=FALSE}
 knitr::include_graphics('./figures/Fig_5_1.jpg')
@@ -8,9 +8,9 @@ knitr::include_graphics('./figures/Fig_5_1.jpg')
 
 ## Console pane
 
-The Console pane (labelled 2 in Figure \@ref(fig:panes)) is where code is evaluated (also referred to as executed). The Console pane has a prompt (the `>` symbol), which tell you that R is ready to receive input. You can type code here to evaluate it and get an output.
+The Console pane (labelled 1 in Figure \@ref(fig:panes)) is where code is evaluated (also referred to as executed). The Console pane has a prompt (the `>` symbol), which tell you that R is ready to receive input. You can type code here to evaluate it and get an output.
 
-**TRY IT!** Type 5 + 5 in the console at the prompt and press `enter` or `return`. You'll see that R gives the correct output (Don't worry about the [1] for now, we'll discuss what this means in Chapter X).
+**TRY IT!** Type 5 + 5 in the console at the prompt and press `enter` or `return`. You'll see that R gives the correct output (Don't worry about the [1] for now, we'll discuss what this means later.
 
 ```{r}
 5+5
@@ -69,7 +69,7 @@ Can you write the code, and execute the commands in the correct order so that `x
 
 ## Source pane
 
-The Source pane (labelled 1 in Figure \@ref(fig:panes)) is where you create, save, and edit `R` scripts. `R` scripts are blocks of code that perform a task that you want to save (e.g.., are the answer to the EXERCISE above, or import and clean data to make a figure) and when saved have a `.R` extension. When you've written and saved a script, you can re-use it for future projects. 
+The Source pane (labelled 2 in Figure \@ref(fig:panes)) is where you create, save, and edit `R` scripts. `R` scripts are blocks of code that perform a task that you want to save (e.g.., are the answer to the EXERCISE above, or import and clean data to make a figure) and when saved have a `.R` extension. When you've written and saved a script, you can re-use it for future projects. 
 Try it now: open and save a new `.R` file to save your work in. In the top menu select `File > New File > R Script`, then `File > Save As`. Paste the following `R` code into your script and save it:
 
 ```
@@ -165,4 +165,3 @@ See Chapter \@ref(help) "Getting R help" for more details on reading the help fi
 
 This tab is similar to the Plots tab, but it is used to view local web content. For example, to display generated web content or applications that you are developing. This is a more advanced feature and we will not cover it in this guide.
 
-Add links to other resources

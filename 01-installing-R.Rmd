@@ -1,6 +1,8 @@
 # How to install R and R Studio {#install}
 
-`R` can be installed from https://www.r-project.org/. If you have problems with installing `R` this same website provides advice on how to seek support.
+`R` comes in two parts. baseR is the "guts" of R and is a stand-alone command-line system for using R. `RStudio Desktop` is a more user-friendly way to use R. To use `RStudioDesktop` you need to install both `R` and `RStudioDesktop`. Here's how:
+
+`R` can be installed from https://www.r-project.org/. Click on the `CRAN` link on the left-hand side and select a location from the list on the left that is closest to you, geographically (Halifax if you are on campus at MUN). If you have problems with installing `R` this same website provides advice on how to seek support.
 
 `R` is a scripting language. `R Studio` is a graphical user interface (GUI) that facilitates `R` coding by providing buttons and menus to provide options for some commonly used commands. Download the free version `RStudio Desktop` from https://rstudio.com/products/rstudio/
 
