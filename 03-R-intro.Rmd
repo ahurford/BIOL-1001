@@ -2,7 +2,7 @@
 
 This is a brief introduction to R, focussing on basic programming concepts and best practices. 
 
-For **BIOL 1001**, this chapter will be the bulk of the activity you document and hand in for the evaluation of the *Intro to R* lab. Throughout this chapter, there are several places where we've indicated **HAND IN**. These are pieces of information you'll copy into a Word document to hand in for your evaluation of this lab (don't forget to include you name and student number in this document!).
+For **BIOL 1001**, work through this chapter along with Chapter \@ref(graphs) for the *Intro to R* lab. Throughout these two chapters, there are several places where we've indicated **HAND IN**. These are pieces of information you'll copy into a Word document to hand in for your evaluation of this lab (don't forget to include you name and student number in this document!).
 
 
 
@@ -130,6 +130,7 @@ length(rgb)
 ```
 
 **TRY IT!** What is the data type and length of the vector `y`?
+
 **HAND IN** Tell us what the type and length of vector `y` is.
 
 The core idea behind vectorization is that operations can be applied at once 
@@ -171,6 +172,7 @@ dim(M)
 ```
 
 **TRY IT!** Create a 3 by 3 matrix in which the elements are the numbers from zero to nine.
+
 **HAND IN** Hand in a copy of the code you used to create the above matrix. Copy-paste the resulting matrix from the console into the Word document.
 
 ### Lists {-}
@@ -187,6 +189,7 @@ As you can see from the output, each element of the list starts on a new line.
 Lists can be useful inside functions because you can combine different kinds of results into a single object that a function can return.
 
 **TRY IT!** What is the length of the object `my_list`?
+
 **HAND IN** State the length of the object `my_list`
 
 ### Data frames {-}
@@ -208,7 +211,7 @@ To get some information on our data frame, we can use again the function `dim()`
 
 Functions can be added to R with packages, which are stored on [CRAN](https://cran.r-project.org/web/packages/index.html) (the Comprehensive R Archive Network). 
 
-To install a package you use the function `install.packages("packagename")`, where `packagename` is the name of the package you want to install. To see what packages are installed by type `installed.packages()`. Packages are loaded into the R session with the `library(packagename)` function. 
+To install a package you use the function `install.packages("packagename")`, where `packagename` is the name of the package you want to install (**NOTE** you need to include the " " marks when you type the function. To see what packages are installed by type `installed.packages()`. Packages are loaded into the R session with the `library(packagename)` function. 
 
 As an alternative, you can install a package through the Packages tab in the the Files/Plots/Packages/Help pane. For this, click on `Install`, this feature will open a window with a blank field where you can type the name of the package. When you are ready click on `Install` to proceed with the installation. You will see in the console that R displays some information about where the package is being downloaded from and a progress bar. You can also load a package from this tab. For this, find the the package that you want to load either by scrolling trough the list or by writing its name on the search bar to the right of the tab. Once you find it, click on the checkbox to the left of the package name. You will see that R runs the command to load the package in the console. 
 

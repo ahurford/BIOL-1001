@@ -1,12 +1,13 @@
 # BIOL 1001: LABORATORY 2 {#lab2}
 
+This lab is worth 5% of your final mark. Before completing this lab, you should re-familiarize yourself with Chapters \@ref(intro), \@ref(data), \@ref(hypotheses) and \@ref(graphs). If you need to consult the help files, use Chapter \@(help) to help guide you through the ```R``` help.
+
 ## BIOLOGICAL DATA WITH COMPUTERS {-}
 
 ---
 
 PURPOSE
 
-1. To familiarize with R Studio
 1. To learn how to record data in electronic format
 1. To learn how to write hypotheses as equations
 1. To learn how to choose the appropriate visualizations
@@ -18,26 +19,24 @@ PURPOSE
 
 Before coming to the laboratory:
 
-1. If you wish to use your own laptop, then install `R` and `RStudio`. For instructions see Chapter \@ref(install).
+1. Install `R` and `RStudio`. For instructions see Chapter \@ref(install).
  
 1. Before coming to the laboratory read:
  
 In the quant guide: 
 
-- Sections
+- Chapter \@ref(intro) 
+- Chapter \@ref(data)
+- Chapter \@ref(hypotheses)
+- Chapter \@ref(graphs).
 
-In the printed lab manual:
 
-- Appendix II: Something or other
  
-## EXERCISE 1.	Intro to RStudio {-}
-Maybe borrow a little exercise from software carpentary. Nothing to hand in/assess?
-
-## EXERCISE 2.	Entering data {-}
+## EXERCISE 1.	Entering data {-}
 
 We will use data from a research paper that investigated 
 whether plants were able to respond to stress cues emitted from their drought-stressed neighbours
-[@falik2011rumor].
+[@falik2011rumor]. This research project is also discussed in your textbook. 
 The research team used _Pisum sativum_ plants in an experimental setup that allowed them to connect the plants' root systems. One plant in the central position of a row was subjected to osmotic stress, while neighbouring plants remained unstressed on both sides. 
 Plants on one side of the stressed plant shared roots with others in the group but
 did not share roots with the stressed plant; 
@@ -67,18 +66,18 @@ kable(dataset[1:3], caption = "Raw data from Falik and collaborators (2011).")
 
 1. What is the smallest stomatal width measured? What is the largest?
 
-## EXERCISE 3.	Discrete independent variable {-}
+## EXERCISE 2.	Discrete independent variable {-}
 ### Questions {-}
 
-1. Follow the instructions in Chapter \@ref(graph). Replicate the figure from the Campbell textbook (bar plot). Export your bar graph as a .pdf and insert it into Microsoft Word (or similar software). Add a caption to your bar plot. Print your graph to hand in with your lab report.
+1. Follow the instructions in Chapter \@ref(graph). Replicate the figure from the Campbell textbook (bar plot). Export your bar graph as a .pdf and insert it into Microsoft Word (or similar software). Add a caption to your bar plot and hand it in with your lab report.
 
 1. In the bar graph, what can you tell about the stomatal openings of the treatment plant vs. the control plants? Is it consistent across all the individual plants?
 
 1. Follow the instructions in Chapter \@ref(graph) to re-plot the data from EXERCISE 1 as a boxplot that compares control versus treatment. Export your boxplot as a pdf file and insert it into Microsoft Word (or similar software). Add a caption to your boxplot.
 
-1.	Label the following on the boxplot: mean, 25% and 75% quantiles, 95% confidence limits, outliers. It is acceptible to write these labels in with pen or pencil.
+1.	Label the following on the boxplot: mean, 25% and 75% quantiles, 95% confidence limits, outliers. **HINT** you can insert the exported graph into a blank PowerPoint slide and use lines/text boxes to draw the labels. Then save the slide as an image file (e.g., JPEG) and insert it in your lab report.
 
-1.	What does the boxplot tell you about the differences between the treatment plants (plants 6-11) vs. the control plants that the treatment plant does not?
+1.	What does the boxplot tell you about the differences between the treatment plants (plants 6-11) vs. the control plants that the bar chart does not?
 
 1.	Why do you think a scientist might choose to represent these data one way over another?
 
@@ -88,10 +87,10 @@ kable(dataset[1:3], caption = "Raw data from Falik and collaborators (2011).")
 1. Follow the instructions in Chapter \@ref(hypothesis). Write a hypothesis, prediction, and equation for these data.
 
 
-## EXERCISE 4. Continuous independent variable {-}
+## EXERCISE 3. Continuous independent variable {-}
 
 The increase of carbon dioxide in the atmosphere is expected to reduce the concentrations of carbonate ions in the surface of the ocean. This process, in general called ocean acidification, affects the biology and survival of a wide range of marine species because it prevents the formation of shells and plates of calcium carbonate.
-A long term study on coral reefs showed how the net community calcification rate (G, mmol CaCO~3~m^-2^d^-1^) is related to the concentration of carbonate (CO~3~^2-^, $\mu$mol$\cdot$kg^-1^) [@langdon2000effect]. 
+A long term study on coral reefs showed how the net community calcification rate (G, measured in mmol CaCO~3~m^-2^d^-1^) is related to the concentration of carbonate (CO~3~^2-^, measured in  $\mu$mol$\cdot$kg^-1^) [@langdon2000effect]. 
 We will use the data from the research paper to understand this relationship.
 The results of this experiment are as follows:
 

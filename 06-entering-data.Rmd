@@ -3,7 +3,8 @@
 ## Entering data
 
 Good data organization is the foundation of any research project, 
-and this begins with entering and archiving data. 
+and this begins with entering and archiving data. More detail on the practice of good data entry and documentation can be found in Chapter \@ref(data). This chapter focuses on the "how to" of data entry in R.
+
 There are several reasonable options for data entry, for example:
 
 1. Spreadsheet
@@ -56,7 +57,15 @@ write.csv(x = table1, file = "solution-concentration-effect-on-potato-averages.c
 ```
 
 
-You might have just done this in Excel. We did not teach this method because...
+You might have just done this in Excel. We did not teach this method because Excel is not recommended for data entry. There are compatability issues between ```Excel``` and ```R``` that create problems. Spreadsheet software like Excel can be handy for data entry, but you should think carefully about how to organize your rows and columns first (see Chapter \@ref(data) for details). If you do have data in Excel, you should convert it to a .csv (comma delimited format) first, before you import to ```R```.
+
+Here are two articles that do a nice job discussing the differences and pros/cons of Excel vs. ```R```
+
+[Excel v R](https://www.jessesadler.com/post/excel-vs-r/): read the first section only
+
+[Understanding R programming over Excel](https://www.gapintelligence.com/blog/understanding-r-programming-over-excel-for-data-analysis/)
+
+
 
 ## Loading or importing data
 
@@ -64,7 +73,7 @@ We will look at two ways of importing data into R, via a command or using the im
 Both options are equivalent; and when they are sucsesfull you will see your data as
 a new object in the Environment tab (in the Environment/History pane).
 
-### The programmatic way {#programmatic}
+### The programmatic way (i.e., command line) {#programmatic}
 
 We can load our our data files in CSV format into R using the function `read.csv` in the following way:
 
@@ -77,7 +86,7 @@ Here, the argument `file =` of `read.csv` is the name of the file we want to rea
 Notice that the filename needs to be a character string, so we put it in quotes.
 
 
-### The RStudio way
+### The RStudio way (the "import" feature)
 
 In RStudio, click on the Environment tab. 
 Then, click on `Import Dataset` and select `From Text (base)`. 

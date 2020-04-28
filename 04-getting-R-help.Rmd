@@ -56,8 +56,34 @@ knitr::include_graphics("./figures/HelpDoc_partB.jpg")
 
 ## Debugging
 
-- Spelling mistakes
-- Input to a function is the wrong data type
-- Run line by line
-- Cut and paste example
+You are inevitably going to get error messages! Don't panic when you do! Debugging is part of using any coding language. Here are a few tips for debugging
 
+1. As a first step, check for spelling mistakes and typos. If you accidentally mis-spelled the name of the variable, vector or object you were specifying when you defined it (e.g., ```leaf.legnth <- c(2,4,6,8)```) then if you spell it the way you MEANT to spell it when you apply a function to it (for example lets say I want to convert the leaf length vector to milimetres by multiplying by 10 like this: ```leaf.length.mm <- leaf.length*10```) then I will get an error message because ```R``` is looking for something called ```leaf.length``` but I accidentally spelled it ```leaf.legnth```.
+- you will know you have a spelling issue when you get an error that says ```Error: object 'XXXX' not found``` where xxxx is the name of the thing you mis-spelled.
+
+- related to spelling errors is accidentally putting in a period instead of a comma, or missing a parentheses. 
+
+2. A second common error is input the wrong data type to a function. For example, if I create a vector of character data for leaf type, and a vector of leaf lengths (spelling correctly this time!), and then apply a t-test, I will get an error message because I cannot do a t-test with character data. However, the error message will not clearly state that. See code snippet below.
+
+```{r}
+leaf.length <- c(2.0, 2.1, 2.4, 2.2, 2.1)
+leaf.type <- c("simple", "compound", "lobed", "toothed", "palmate")
+t.test(leaf.length, leaf.type)
+```
+
+This will give the following error:
+
+```Error in if (stderr < 10 * .Machine$double.eps * max(abs(mx), abs(my))) stop("data are essentially constant") : 
+  missing value where TRUE/FALSE needed
+In addition: Warning messages:
+1: In mean.default(y) : argument is not numeric or logical: returning NA
+2: In var(y) : NAs introduced by coercion```
+
+
+*More tips*
+
+Learning to de-bug takes practice! If your error isn't due to one of the two reasons above, then the next step is to try running the code line-by-line to figure out where the error is.
+
+A good idea is to use Google or the ```R``` documentation files to find an example of code that is doing the same thing you want to do. Cut and paste it in as an example, and then modify it with your inputs.
+
+You can also try to type the exact text of the error message into Google, but this isn't always the most useful approach. 

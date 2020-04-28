@@ -1,13 +1,11 @@
 # Making graphs in R {#graph}
 
-## Author communication
-AH: Yolanda, I edited to get this up an running. The {r} stuff was good, it just likes new lines in specific places so I added that in. The label panes was applied to multiple figures. That argument is supposed to be a unique identifier so that you are refer to Figure panes, however, that doesn't work if multiple figures are labelled panes. Regarding the references, they are actually in a file called references.bib, not 20-references.Rmd.
 
 ## Making graphs in R
 
 You might have had experience making graphs using `Microsoft Excel`, however, making graphs with `Excel` is not recommended. A number of reasons to choose `R` over `Excel` are given in Chapter \@ref(intro). In addition, the defaults in `Excel` do not meet standards for good scientific graphs and you do not have the option to learn more sophisticated graphs after you master the basics, as the range of options available in `Excel` is limited.
 
-You can make very attractive, clean, professional graphs and figures in `R`. This chapter is a basic introduction to `plot()` functions in `R`. More advanced users can use the package `ggplot`. There are many good reference manuals for making sophisticated graphs [e.g. @abedin2014r; @murrell2018r]. 
+You can make very attractive, clean, professional graphs and figures in `R`. This chapter is a basic introduction to `plot()` functions in `R`. More advanced users can use the package `ggplot2`. There are many good reference manuals for making sophisticated graphs [e.g. @abedin2014r; @murrell2018r]. 
 
 ## Scatter plots with `plot(x,y)`
 In `R`, `plot()` is a built-in function: you do not need to install a package to call it. There are two mandatory arguments `x` and `y`, which are vectors that must have the same length. For example,
@@ -62,7 +60,8 @@ The key is the internal consistency: `A` and `B` are the names of the vectors an
 
 ---
 
-EXERCISES
+**HAND IN**
+ANSWER THE QUESTIONS IN THIS EXERCISE
 
 1. Which two vectors below will generate a plot if executed before `plot(a,b)`?
 
@@ -162,6 +161,10 @@ points(temp, fishB, pch = 17, col = "dimgray")
 Voila!
 
 Note that the difference in the two symbols is described in the caption. For most scientific journals it is preferred to describe the symbology in the caption, rather than use a legend. However, with more complex graphs, or for some publications, you may wish to include a legend. Legends can be a bit tricky to work with in R - we'll leave those for a more advanced course. 
+
+**HAND IN**
+
+Re-create the graph above on your own, but this time, make the symbol for ```fishA``` a open square and the symbol for ```fishB``` a filled cricle (**HINT** look at the pch cheatsheet in section 7.8). Export this plot and paste it into the Word document that you will hand in for your first lab. 
 
 ## Line graphs
 

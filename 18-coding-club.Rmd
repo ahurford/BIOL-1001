@@ -1,6 +1,6 @@
 # Coding club at MUN
 
-Starting in Fall 2020, we will begin a weekly coding club aimed at undergraduates in Biology (or related disciplines) that would like to improve their coding skills.
+Starting in Fall 2020, we hope to begin a weekly coding club aimed at undergraduates in Biology (or related disciplines) that would like to improve their coding skills.
 
 During the coding club you might like to:
 
