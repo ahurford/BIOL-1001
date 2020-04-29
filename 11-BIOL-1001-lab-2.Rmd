@@ -31,8 +31,56 @@ In the quant guide:
 - Chapter \@ref(graphs).
 
 
+## EXERCISE 1. Data entry and graphing with a continuous independent variable {-}
+
+The increase of carbon dioxide in the atmosphere is expected to reduce the concentrations of carbonate ions in the surface of the ocean. This process, in general called ocean acidification, affects the biology and survival of a wide range of marine species because it prevents the formation of shells and plates of calcium carbonate.
+A long term study on coral reefs showed how the net community calcification rate (G, measured in mmol CaCO~3~m^-2^d^-1^) is related to the concentration of carbonate (CO~3~^2-^, measured in  $\mu$mol$\cdot$kg^-1^) [@langdon2000effect]. 
+We will use the data from the research paper to understand this relationship.
+The results of this experiment are as follows:
+
+```{r langdon-data, echo = FALSE, results = 'asis'}
+library(knitr)
+dataset <- read.csv("Langdon_et-al_2000_dataset.csv")
+kable(dataset[1:11,1:2], caption = "Raw data from Langdon and collaborators (2000).")
+```
+### Enter the data {-}
+
+1. We provide this data as a .csv called `Langdon_et-al_2000_dataset.csv`. Follow the instructions in Chapter \@ref(data-entry) and import the data. Note that this is just a subset of the data from the full paper. 
+
+1. Follow the instructions in Chapter \@ref(data) and write metadata for the data that you saved in .csv format. Submit your metadata to the `Biology Data Repository` Brightspace.
+
+
+### Make a graph {-}
+
+1. Follow the instructions in Chapter \@ref(graph) to make a scatterplot for these data and replicate the figure from the Campbell textbook (see Figure A.1 below)
+
+**HINT** Think about what you are specifying as ```x``` and ```y``` in the ```plot``` function. Use the tools you learned about in Chapter \@ref(rintro) to explore the dataframe.
+
+**NEW TIP** instead of entering the data as a vector the way you learned in Chapter \@ref(graph), you can use the following code to create an x vector from a data frame (here I titled my data frame "langdon"; your name may be different, and created a vector of data called "CO3"). You can use this to create the vector of data that you need to plot on the x-axis, and then write you own code to create the vector of data for the y-axis. 
+
+```{r}
+langdon.data <- read.csv("Langdon_et-al_2000.csv")
+CO3 <- langdon.data$CO3
+```
+
+Use the examples in Chapter \@ref(graph) to create a fully labelled scatter plot. Export this and paste it into your document that you will hand in for this lab. 
+
+**HINT** if you want to add a line of best fit based on linear regression, use the code snippet below. The two terms on each side of the tilde ("~" symbol) tell R what the equation for the regression ```y~x``` is. Your terms for ```x``` and ```y``` might be different. You can chose a different colour (```col```) or line width (```lwd```).
+
+```{r}
+abline(lm(calcification~CO3), col = "red", lwd = 2)
+```
+
+```{r panes, fig.cap="Figure A.1. Scatterplot from Langdon et al. study of the effect of carbon dioxide on ocean acification. This figure is found in your textbook on pg. 60", fig.align='center', out.width="70%", fig.show='hold', echo=FALSE}
+knitr::include_graphics('./figures/Langdon_scatterplot.jpeg')
+```
+
+1. Follow the instructions in Chapter \@ref(graph) to make a line graph for these data. Export your line graph insert it into your lab report. Write a figure caption. 
+
+1. Follow the instructions in Chapter \@ref(hypothesis). Write a hypothesis, prediction, and equation for these data.
+
  
-## EXERCISE 1.	Entering data {-}
+## EXERCISE 2.	Barplots and boxplots with discrete independent variables {-}
 
 We will use data from a research paper that investigated 
 whether plants were able to respond to stress cues emitted from their drought-stressed neighbours
@@ -58,7 +106,7 @@ kable(dataset[1:3], caption = "Raw data from Falik and collaborators (2011).")
 ```
 
 ### Questions {-}
-1. Follow the instructions in Chapter \@ref(data-entry) and enter the data into `R` and then save the data as a .csv. Submit your .csv file to the `Biology Data Repository` Brightspace.
+1. Follow the instructions in Chapter \@ref(data-entry) to load the data file Falie_et-al_2011_dataset.csv using the command line (```read.csv```) option. **Note** that the data in the CSV file are ordered differently than in the list above (to verify this you can open the CSV file in Excel to see the full set).
 
 1. Follow the instructions in Chapter \@ref(data) and write metadata for the data that you saved in .csv format. Submit your metadata to the `Biology Data Repository` Brightspace.
 
@@ -66,14 +114,37 @@ kable(dataset[1:3], caption = "Raw data from Falik and collaborators (2011).")
 
 1. What is the smallest stomatal width measured? What is the largest?
 
-## EXERCISE 2.	Discrete independent variable {-}
+## EXERCISE 2b.	Making a barplot {-}
 ### Questions {-}
 
-1. Follow the instructions in Chapter \@ref(graph). Replicate the figure from the Campbell textbook (bar plot). Export your bar graph as a .pdf and insert it into Microsoft Word (or similar software). Add a caption to your bar plot and hand it in with your lab report.
+1. Follow the instructions below to replicate the figure from the Campbell textbook (bar plot; see Figure A.2 below). Export your bar graph insert it into your lab report. Add a caption to your bar plot and hand it in with your lab report.
 
-1. In the bar graph, what can you tell about the stomatal openings of the treatment plant vs. the control plants? Is it consistent across all the individual plants?
+```{r panes, fig.cap="Figure A.2. Barplot from Falik et al. study on plant stress and plant communication. This figure is found in your textbook on pg. 910", fig.align='center', out.width="70%", fig.show='hold', echo=FALSE}
+knitr::include_graphics('./figures/Falik_barplot.jpeg')
+```
 
-1. Follow the instructions in Chapter \@ref(graph) to re-plot the data from EXERCISE 1 as a boxplot that compares control versus treatment. Export your boxplot as a pdf file and insert it into Microsoft Word (or similar software). Add a caption to your boxplot.
+
+To make a barplot, use the code below as a starting point, and then use the resources in this guide to add appropriate x and y axis labels.
+
+```{r}
+width <- falik.data$width #This creates a vector of data of the plant stomatal widths
+plant <- falik.data$plant #The creates a vector of data of the plant ID numbers
+
+
+barplot(width, names = plant, col = c("blue", "red"))
+```
+
+1. In the barplot, what can you tell about the stomatal openings of the treatment plant vs. the control plants? Is it consistent across all the individual plants?
+
+1. Follow the instructions below to re-plot the data from EXERCISE 1 as a boxplot that compares control versus treatment. Export your boxplot and insert it into your lab report. Add a caption to your boxplot.
+
+````{r}
+control <- subset(falik.data, type == "control") #This subset command is a handy function to break the data into subsets. Here, we're creating a data frame with just the values from the control.
+treatment <- subset(falik.data, type == "15min") #Here we are subsetting the data to contain only the data from the treatment
+
+boxplot(control$width, treatment$width, names = c("contro", "treatment"), ylab = "stomatal opening (microns)")
+
+```
 
 1.	Label the following on the boxplot: mean, 25% and 75% quantiles, 95% confidence limits, outliers. **HINT** you can insert the exported graph into a blank PowerPoint slide and use lines/text boxes to draw the labels. Then save the slide as an image file (e.g., JPEG) and insert it in your lab report.
 
@@ -87,28 +158,3 @@ kable(dataset[1:3], caption = "Raw data from Falik and collaborators (2011).")
 1. Follow the instructions in Chapter \@ref(hypothesis). Write a hypothesis, prediction, and equation for these data.
 
 
-## EXERCISE 3. Continuous independent variable {-}
-
-The increase of carbon dioxide in the atmosphere is expected to reduce the concentrations of carbonate ions in the surface of the ocean. This process, in general called ocean acidification, affects the biology and survival of a wide range of marine species because it prevents the formation of shells and plates of calcium carbonate.
-A long term study on coral reefs showed how the net community calcification rate (G, measured in mmol CaCO~3~m^-2^d^-1^) is related to the concentration of carbonate (CO~3~^2-^, measured in  $\mu$mol$\cdot$kg^-1^) [@langdon2000effect]. 
-We will use the data from the research paper to understand this relationship.
-The results of this experiment are as follows:
-
-```{r langdon-data, echo = FALSE, results = 'asis'}
-library(knitr)
-dataset <- read.csv("Langdon_et-al_2000_dataset.csv")
-kable(dataset[1:11,1:2], caption = "Raw data from Langdon and collaborators (2000).")
-```
-
-### Make a graph {-}
-
-1. We provide this data as a .csv called `Langdon_et-al_2000_dataset.csv`. Follow the instructions in Chapter \@ref(data-entry) and import the data.
-
-1. Follow the instructions in Chapter \@ref(graph) to make a scatterplot for these data and replicate the figure from the Campbell textbook.
-
-1. Follow the instructions in Chapter \@ref(graph) to make a line graph for these data. Export your line graph as a pdf file and insert it into Microsoft Word (or similar software). Write a figure caption. Print your graph and hand it in with your lab report for this week.
-
-1. Follow the instructions in Chapter \@ref(hypothesis). Write a hypothesis, prediction, and equation for these data.
-
-## Status
-This lab is not finished.
