@@ -1,6 +1,6 @@
 # BIOL 1001: LABORATORY 2 {#lab2}
 
-This lab is worth 5% of your final mark. Before completing this lab, you should re-familiarize yourself with Chapters \@ref(intro), \@ref(data), \@ref(hypotheses) and \@ref(graphs). If you need to consult the help files, use Chapter \@(help) to help guide you through the ```R``` help.
+This lab is worth 5% of your final mark. Before completing this lab, you should re-familiarize yourself with Chapters \@ref(intro), \@ref(graph),\@ref(data) and \@ref(hypothesis). If you need to consult the help files, use Chapter \@(help) to help guide you through the ```R``` help.
 
 ## BIOLOGICAL DATA WITH COMPUTERS {-}
 
@@ -26,9 +26,10 @@ Before coming to the laboratory:
 In the quant guide: 
 
 - Chapter \@ref(intro) 
+- Chapter \@ref(graph)
 - Chapter \@ref(data)
-- Chapter \@ref(hypotheses)
-- Chapter \@ref(graphs).
+- Chapter \@ref(hypothesis)
+
 
 
 ## EXERCISE 1. Data entry and graphing with a continuous independent variable {-}
@@ -52,28 +53,26 @@ kable(dataset[1:11,1:2], caption = "Raw data from Langdon and collaborators (200
 
 ### Make a graph {-}
 
-1. Follow the instructions in Chapter \@ref(graph) to make a scatterplot for these data and replicate the figure from the Campbell textbook (see Figure A.1 below)
+1. Follow the instructions in Chapter \@ref(graph) to make a scatterplot for these data and replicate the figure from the Campbell textbook (see Figure 10.1 below)
 
 **HINT** Think about what you are specifying as ```x``` and ```y``` in the ```plot``` function. Use the tools you learned about in Chapter \@ref(rintro) to explore the dataframe.
 
 **NEW TIP** instead of entering the data as a vector the way you learned in Chapter \@ref(graph), you can use the following code to create an x vector from a data frame (here I titled my data frame "langdon"; your name may be different, and created a vector of data called "CO3"). You can use this to create the vector of data that you need to plot on the x-axis, and then write you own code to create the vector of data for the y-axis. 
 
+```{r langdon, fig.cap="Figure A.2. Barplot from Falik et al. study on plant stress and plant communication. This figure is found in your textbook on pg. 910", fig.align='center', out.width="70%", fig.show='hold', echo=FALSE}
+knitr::include_graphics('./figures/Landgon_scatterplot.jpeg')
+```
+
 ```{r}
-langdon.data <- read.csv("Langdon_et-al_2000.csv")
+langdon.data <- read.csv("Langdon_et-al_2000_dataset.csv")
 CO3 <- langdon.data$CO3
 ```
 
 Use the examples in Chapter \@ref(graph) to create a fully labelled scatter plot. Export this and paste it into your document that you will hand in for this lab. 
 
-**HINT** if you want to add a line of best fit based on linear regression, use the code snippet below. The two terms on each side of the tilde ("~" symbol) tell R what the equation for the regression ```y~x``` is. Your terms for ```x``` and ```y``` might be different. You can chose a different colour (```col```) or line width (```lwd```).
+**HINT** if you want to add a line of best fit based on linear regression, use the function ```abline```. Refer to the help files for assistance. The two terms on each side of the tilde ("~" symbol) tell R what the equation for the regression ```y~x``` is. 
 
-```{r}
-abline(lm(calcification~CO3), col = "red", lwd = 2)
-```
 
-```{r panes, fig.cap="Figure A.1. Scatterplot from Langdon et al. study of the effect of carbon dioxide on ocean acification. This figure is found in your textbook on pg. 60", fig.align='center', out.width="70%", fig.show='hold', echo=FALSE}
-knitr::include_graphics('./figures/Langdon_scatterplot.jpeg')
-```
 
 1. Follow the instructions in Chapter \@ref(graph) to make a line graph for these data. Export your line graph insert it into your lab report. Write a figure caption. 
 
@@ -101,8 +100,8 @@ Stress was quantified fifteen minutes after the induction of drought by measurin
 
 ```{r raw-data, echo = FALSE, results = 'asis'}
 library(knitr)
-dataset <- read.csv("Falik_et-al_2011_dataset.csv")
-kable(dataset[1:3], caption = "Raw data from Falik and collaborators (2011).")
+falik.data <- read.csv("Falik_et-al_2011_dataset.csv")
+kable(falik.data[1:3], caption = "Raw data from Falik and collaborators (2011).")
 ```
 
 ### Questions {-}
@@ -119,7 +118,7 @@ kable(dataset[1:3], caption = "Raw data from Falik and collaborators (2011).")
 
 1. Follow the instructions below to replicate the figure from the Campbell textbook (bar plot; see Figure A.2 below). Export your bar graph insert it into your lab report. Add a caption to your bar plot and hand it in with your lab report.
 
-```{r panes, fig.cap="Figure A.2. Barplot from Falik et al. study on plant stress and plant communication. This figure is found in your textbook on pg. 910", fig.align='center', out.width="70%", fig.show='hold', echo=FALSE}
+```{r falik, fig.cap="Figure A.2. Barplot from Falik et al. study on plant stress and plant communication. This figure is found in your textbook on pg. 910", fig.align='center', out.width="70%", fig.show='hold', echo=FALSE}
 knitr::include_graphics('./figures/Falik_barplot.jpeg')
 ```
 

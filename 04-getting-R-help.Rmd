@@ -65,13 +65,13 @@ You are inevitably going to get error messages! Don't panic when you do! Debuggi
 
 2. A second common error is input the wrong data type to a function. For example, if I create a vector of character data for leaf type, and a vector of leaf lengths (spelling correctly this time!), and then apply a t-test, I will get an error message because I cannot do a t-test with character data. However, the error message will not clearly state that. See code snippet below.
 
-```{r}
+```
 leaf.length <- c(2.0, 2.1, 2.4, 2.2, 2.1)
 leaf.type <- c("simple", "compound", "lobed", "toothed", "palmate")
 t.test(leaf.length, leaf.type)
 ```
 
-This will give the following error:
+This will give an error message. **TRY IT:** type the code above in the console and see what the error message is.
 
 ```Error in if (stderr < 10 * .Machine$double.eps * max(abs(mx), abs(my))) stop("data are essentially constant") : 
   missing value where TRUE/FALSE needed
