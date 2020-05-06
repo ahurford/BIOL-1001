@@ -13,7 +13,7 @@ The Console pane (labelled 1 in Figure \@ref(fig:panes)) is where code is evalua
 **TRY IT!** Type 5 + 5 in the console at the prompt and press `enter` or `return`. You'll see that R gives the correct output (Don't worry about the [1] for now, we'll discuss what this means later.
 
 ```{r}
-5+5
+5 + 5
 ```
 
 Use the console to test and query code, or do a quick analysis that you do not want to save. Press the up arrow to scroll through past commands, from most to least recent.

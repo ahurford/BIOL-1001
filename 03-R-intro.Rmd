@@ -42,7 +42,7 @@ x
 
 **TRY IT!** Define a varible "y" with the value of 3. 
 
-**TIP** Try to give your variables meaningful names. For example, if you know you are working with variables that represent different measurements you took on a plant, you might name your variables things like `leaf.length` or `stem.diameter`
+**TIP** Try to give your variables meaningful names. For example, if you know you are working with variables that represent different measurements you took on a plant, you might name your variables things like `leaf_length` or `stem_diameter`
 
 ### Shortcuts
 
@@ -171,7 +171,7 @@ class(M)
 dim(M)
 ```
 
-**TRY IT!** Create a 3 by 3 matrix in which the elements are the numbers from zero to nine.
+**TRY IT!** Create a 3 by 3 matrix in which the elements are the numbers from one to nine.
 
 **HAND IN** Hand in a copy of the code you used to create the above matrix. Copy-paste the resulting matrix from the console into the Word document.
 

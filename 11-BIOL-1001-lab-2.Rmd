@@ -1,6 +1,6 @@
 # BIOL 1001: LABORATORY 2 {#lab2}
 
-This lab is worth 5% of your final mark. Before completing this lab, you should re-familiarize yourself with Chapters \@ref(intro), \@ref(graph),\@ref(data) and \@ref(hypothesis). If you need to consult the help files, use Chapter \@(help) to help guide you through the ```R``` help.
+This lab is worth 5% of your final mark. Before completing this lab, you should re-familiarize yourself with Chapters \@ref(intro), \@ref(graph),\@ref(data) and \@ref(hypothesis). If you need to consult the help files, use Chapter \@ref(help) to help guide you through the ```R``` help.
 
 ## BIOLOGICAL DATA WITH COMPUTERS {-}
 
@@ -64,8 +64,8 @@ knitr::include_graphics('./figures/Landgon_scatterplot.jpeg')
 ```
 
 ```{r}
-langdon.data <- read.csv("Langdon_et-al_2000_dataset.csv")
-CO3 <- langdon.data$CO3
+langdon_data <- read.csv("Langdon_et-al_2000_dataset.csv")
+CO3 <- langdon_data$CO3
 ```
 
 Use the examples in Chapter \@ref(graph) to create a fully labelled scatter plot. Export this and paste it into your document that you will hand in for this lab. 
@@ -100,8 +100,8 @@ Stress was quantified fifteen minutes after the induction of drought by measurin
 
 ```{r raw-data, echo = FALSE, results = 'asis'}
 library(knitr)
-falik.data <- read.csv("Falik_et-al_2011_dataset.csv")
-kable(falik.data[1:3], caption = "Raw data from Falik and collaborators (2011).")
+falik_data <- read.csv("Falik_et-al_2011_dataset.csv")
+kable(falik_data[1:3], caption = "Raw data from Falik and collaborators (2011).")
 ```
 
 ### Questions {-}
@@ -126,8 +126,8 @@ knitr::include_graphics('./figures/Falik_barplot.jpeg')
 To make a barplot, use the code below as a starting point, and then use the resources in this guide to add appropriate x and y axis labels.
 
 ```{r}
-width <- falik.data$width #This creates a vector of data of the plant stomatal widths
-plant <- falik.data$plant #The creates a vector of data of the plant ID numbers
+width <- falik_data$width #This creates a vector of data of the plant stomatal widths
+plant <- falik_data$plant #The creates a vector of data of the plant ID numbers
 
 
 barplot(width, names = plant, col = c("blue", "red"))
@@ -138,10 +138,10 @@ barplot(width, names = plant, col = c("blue", "red"))
 1. Follow the instructions below to re-plot the data from EXERCISE 1 as a boxplot that compares control versus treatment. Export your boxplot and insert it into your lab report. Add a caption to your boxplot.
 
 ````{r}
-control <- subset(falik.data, type == "control") #This subset command is a handy function to break the data into subsets. Here, we're creating a data frame with just the values from the control.
-treatment <- subset(falik.data, type == "15min") #Here we are subsetting the data to contain only the data from the treatment
+control <- subset(falik_data, type == "control") #This subset command is a handy function to break the data into subsets. Here, we're creating a data frame with just the values from the control.
+treatment <- subset(falik_data, type == "15min") #Here we are subsetting the data to contain only the data from the treatment
 
-boxplot(control$width, treatment$width, names = c("contro", "treatment"), ylab = "stomatal opening (microns)")
+boxplot(control$width, treatment$width, names = c("control", "treatment"), ylab = "stomatal opening (microns)")
 
 ```
 

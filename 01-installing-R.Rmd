@@ -4,6 +4,6 @@
 
 `R` can be installed from https://www.r-project.org/. Click on the `CRAN` link on the left-hand side and select a location from the list on the left that is closest to you, geographically (Halifax if you are on campus at MUN). If you have problems with installing `R` this same website provides advice on how to seek support.
 
-`R` is a scripting language. `R Studio` is a graphical user interface (GUI) that facilitates `R` coding by providing buttons and menus to provide options for some commonly used commands. Download the free version `RStudio Desktop` from https://rstudio.com/products/rstudio/
+`R` is a scripting language. `R Studio` is a graphical user interface (GUI) that facilitates `R` coding by providing buttons and menus to provide options for some commonly used commands. Download the free version `RStudio Desktop` from https://rstudio.com/products/rstudio/.
 
-For further help installing `R` and `RStudio` see [YaRrr! The Pirate's Guide to R](https://bookdown.org/ndphillips/YaRrr/installing-base-r-and-rstudio.html)
+For further help installing `R` and `RStudio` see [YaRrr! The Pirate's Guide to R](https://bookdown.org/ndphillips/YaRrr/installing-base-r-and-rstudio.html).
