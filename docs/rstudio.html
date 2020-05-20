@@ -67,7 +67,7 @@ a.sourceLine { text-indent: -1em; padding-left: 1em; }
 pre.numberSource a.sourceLine
   { position: relative; left: -4em; }
 pre.numberSource a.sourceLine::before
-  { content: attr(data-line-number);
+  { content: attr(title);
     position: relative; left: -1em; text-align: right; vertical-align: baseline;
     border: none; pointer-events: all; display: inline-block;
     -webkit-touch-callout: none; -webkit-user-select: none;
@@ -259,25 +259,25 @@ Figure 3.1: Panes in RStudio. 1. Source pane, to work with R scripts (code won�
 <h2><span class="header-section-number">3.1</span> Console pane</h2>
 <p>The Console pane (labelled 1 in Figure <a href="rstudio.html#fig:panes">3.1</a>) is where code is evaluated (also referred to as executed). The Console pane has a prompt (the <code>&gt;</code> symbol), which tell you that R is ready to receive input. You can type code here to evaluate it and get an output.</p>
 <p><strong>TRY IT!</strong> Type 5 + 5 in the console at the prompt and press <code>enter</code> or <code>return</code>. You’ll see that R gives the correct output (Don’t worry about the [1] for now, we’ll discuss what this means later.</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb1-1" data-line-number="1"><span class="dv">5</span> <span class="op">+</span><span class="st"> </span><span class="dv">5</span></a></code></pre></div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb1-1" title="1"><span class="dv">5</span> <span class="op">+</span><span class="st"> </span><span class="dv">5</span></a></code></pre></div>
 <pre><code>## [1] 10</code></pre>
 <p>Use the console to test and query code, or do a quick analysis that you do not want to save. Press the up arrow to scroll through past commands, from most to least recent.</p>
 <p>To do more interesting things, we need to assign values to objects. For this, we create an object by specifying a name followed by the assignment operator <code>&lt;-</code> and the value we want to give it. For example:</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb3-1" data-line-number="1">x &lt;-<span class="st"> </span><span class="dv">5</span></a></code></pre></div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb3-1" title="1">x &lt;-<span class="st"> </span><span class="dv">5</span></a></code></pre></div>
 <p>When you run this code by pressing <code>enter/return</code> you will not see an output as you did before. But, you can ask R for the value by typing the object name and pressing <code>enter/return</code>:</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb4-1" data-line-number="1">x </a></code></pre></div>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb4-1" title="1">x </a></code></pre></div>
 <pre><code>## [1] 5</code></pre>
 <p>Now that we have saved the value of <code>x</code>, we can do arithmetic operations with it. For example, instead of adding two numbers, we can assign those values to objects and then add them.</p>
 <p><strong>TRY IT!</strong> Add 3 and 8 by assigning the values to objects. First assign 3 to <code>x</code> and 8 to <code>y</code>. Then add <code>x+y</code>.</p>
 <p>You can overwrite the value of objects The current value of your object is the last value you gave it. In the console type:</p>
-<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb6-1" data-line-number="1">x &lt;-<span class="st"> </span><span class="dv">2</span></a></code></pre></div>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb6-1" title="1">x &lt;-<span class="st"> </span><span class="dv">2</span></a></code></pre></div>
 <p>Press <code>enter/return</code>. Now type:</p>
-<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb7-1" data-line-number="1">x &lt;-<span class="st"> </span><span class="dv">1</span></a></code></pre></div>
+<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb7-1" title="1">x &lt;-<span class="st"> </span><span class="dv">1</span></a></code></pre></div>
 <p>Press <code>enter/return</code>. What is the value of</p>
-<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb8-1" data-line-number="1">x <span class="op">+</span><span class="st"> </span><span class="dv">1</span></a></code></pre></div>
+<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb8-1" title="1">x <span class="op">+</span><span class="st"> </span><span class="dv">1</span></a></code></pre></div>
 <pre><code>## [1] 2</code></pre>
 <p>Type:</p>
-<div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb10-1" data-line-number="1">x</a></code></pre></div>
+<div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb10-1" title="1">x</a></code></pre></div>
 <pre><code>## [1] 1</code></pre>
 <p>to query the current value of <code>x</code>.</p>
 <hr />
@@ -292,7 +292,7 @@ Try it now: open and save a new <code>.R</code> file to save your work in. In th
 <pre><code>x &lt;- 4
 x &lt;- 6</code></pre>
 <p>Now, you have saved this code, but has it been evaluated? To answer this question type <code>x</code> in your <code>Console</code> and press ENTER:</p>
-<div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb13-1" data-line-number="1">x</a></code></pre></div>
+<div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb13-1" title="1">x</a></code></pre></div>
 <pre><code>## [1] 1</code></pre>
 <p>It is important to note that saving commands in a script in your <code>Source</code> window does not evaluate the commands in your <code>Console</code>. To execute the commands, with your script displayed in the <code>Source</code> pane, you need to click the <code>Source</code> button (righthand side of the source pane, equivalently select <code>Code &gt; Source</code> from the top menu bar; note, if you have a small <code>Source</code> pane the <code>Source</code> button may not appear and you may need to make it bigger or use the menu bar).</p>
 <p><code>Source</code> your script and then evalate <code>x</code> in your <code>Console</code>. If you have done this task correctly the value of <code>x</code> should be <code>6</code> and it will appear as <code>[1] 6</code> in your <code>Console</code>.</p>
@@ -341,7 +341,7 @@ re-run this commands by selecting them and clicking <code>To Console</code> or i
 <div id="packages-tab" class="section level3 unnumbered">
 <h3>Packages tab</h3>
 <p>This tab shows a list of all the R packages installed on your computer (see Chapter X for more on packages). It also indicates which packages are loaded with a check mark. You can browse through the installed packages by typing the name in the blank search field.</p>
-<p>Packages are add-on functions and datasets that you can add to your <code>R</code> installation. To install a package you can click on <code>Install</code>, this feature will open a window with a blank field where you can type the name of the package. When you are ready click on <code>Install</code> to proceed with the installation. Alternatively, you can install with the command <code>install.packages(&quot;name&quot;)</code>, where “name” is the name of the package. When you install a packege in either way, you will see in the console that R displays some information about where the package is being downloaded from and a progress bar.</p>
+<p>Packages are add-on functions and datasets that you can add to your <code>R</code> installation. To install a package you can click on <code>Install</code>, this feature will open a window with a blank field where you can type the name of the package. When you are ready click on <code>Install</code> to proceed with the installation. Alternatively, you can install with the command <code>install.packages("name")</code>, where “name” is the name of the package. When you install a packege in either way, you will see in the console that R displays some information about where the package is being downloaded from and a progress bar.</p>
 <p><strong>TRY IT!</strong> One package that we will use later on is called <code>ggplot2</code>, install it by either using the <code>install.packages</code> command or the <code>Install</code> feature.</p>
 </div>
 <div id="help-tab" class="section level3 unnumbered">

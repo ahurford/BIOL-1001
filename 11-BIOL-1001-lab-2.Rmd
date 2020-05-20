@@ -57,9 +57,9 @@ kable(dataset[1:11,1:2], caption = "Raw data from Langdon and collaborators (200
 
 **HINT** Think about what you are specifying as ```x``` and ```y``` in the ```plot``` function. Use the tools you learned about in Chapter \@ref(rintro) to explore the dataframe.
 
-**NEW TIP** instead of entering the data as a vector the way you learned in Chapter \@ref(graph), you can use the following code to create an x vector from a data frame (here I titled my data frame "langdon"; your name may be different, and created a vector of data called "CO3"). You can use this to create the vector of data that you need to plot on the x-axis, and then write you own code to create the vector of data for the y-axis. 
+**NEW TIP** instead of entering the data as a vector the way you learned in Chapter \@ref(graph), you can use the code below to create an x vector from a data frame (here I titled my data frame "langdon_data"; your name may be different, and I created a vector of data called "CO3"). You can use this to create the vector of data that you need to plot on the x-axis, and then write you own code to create the vector of data for the y-axis. 
 
-```{r langdon, fig.cap="Figure A.2. Barplot from Falik et al. study on plant stress and plant communication. This figure is found in your textbook on pg. 910", fig.align='center', out.width="70%", fig.show='hold', echo=FALSE}
+```{r langdon, fig.cap="Scatterplot from Langdon et al. study on calcification rate in seawater as a function of carbonate concentration. This figure is found in your textbook on pg. 60", fig.align='center', out.width="70%", fig.show='hold', echo=FALSE}
 knitr::include_graphics('./figures/Landgon_scatterplot.jpeg')
 ```
 
@@ -70,11 +70,11 @@ CO3 <- langdon_data$CO3
 
 Use the examples in Chapter \@ref(graph) to create a fully labelled scatter plot. Export this and paste it into your document that you will hand in for this lab. 
 
-**HINT** if you want to add a line of best fit based on linear regression, use the function ```abline```. Refer to the help files for assistance. The two terms on each side of the tilde ("~" symbol) tell R what the equation for the regression ```y~x``` is. 
+**HINT** if you want to add a line of best fit based on linear regression, use the function ```abline``` using a linear regression model (the function ```lm```). Your code will look something like this: ```abline(lm(y~x))```  Refer to the help files for assistance. The two terms on each side of the tilde ("~" symbol) tell R what the equation for the regression ```y~x``` is. In your case substitute in what YOU defined as ```x``` and ```y``` in R.  
 
 
 
-1. Follow the instructions in Chapter \@ref(graph) to make a line graph for these data. Export your line graph insert it into your lab report. Write a figure caption. 
+1. Follow the instructions in Chapter \@ref(graph) to make a second graph - a line graph for these data. Export your line graph insert it into your lab report. Write a figure caption. 
 
 1. Follow the instructions in Chapter \@ref(hypothesis). Write a hypothesis, prediction, and equation for these data.
 
@@ -91,7 +91,7 @@ these were the control group.
 On the other side, the stressed plant shared its roots with its nearest unstressed neighbour, and all the other plants shared their roots with their nearest neighbour
 (See Figure \@ref(fig:setup)).
 
-```{r setup, fig.cap="Experimental set up for testing stress cues. Circles represent plants and connector lines represent the plants with connected roots. The numbers of the plants correspond to those of Table 9.1. Osmotic stress was induced in plant 6 (Modified from Falik et al., 2011).", fig.align='center', out.width="70%", fig.show='hold', echo=FALSE}
+```{r setup, fig.cap="Experimental set up for testing stress cues. Circles represent plants and connector lines represent the plants with connected roots. The numbers of the plants correspond to those of Table 10.2. Osmotic stress was induced in plant 6 (Modified from Falik et al., 2011).", fig.align='center', out.width="70%", fig.show='hold', echo=FALSE}
 knitr::include_graphics('./figures/Falik_et-al_2011_setup.png')
 ```
 
@@ -107,7 +107,6 @@ kable(falik_data[1:3], caption = "Raw data from Falik and collaborators (2011)."
 ### Questions {-}
 1. Follow the instructions in Chapter \@ref(data-entry) to load the data file Falie_et-al_2011_dataset.csv using the command line (```read.csv```) option. **Note** that the data in the CSV file are ordered differently than in the list above (to verify this you can open the CSV file in Excel to see the full set).
 
-1. Follow the instructions in Chapter \@ref(data) and write metadata for the data that you saved in .csv format. Submit your metadata to the `Biology Data Repository` Brightspace.
 
 1. Looking at the dataset, can you tell how many treatments were applied in the experiment? How many plants were used for each treatment?
 
@@ -118,7 +117,7 @@ kable(falik_data[1:3], caption = "Raw data from Falik and collaborators (2011)."
 
 1. Follow the instructions below to replicate the figure from the Campbell textbook (bar plot; see Figure A.2 below). Export your bar graph insert it into your lab report. Add a caption to your bar plot and hand it in with your lab report.
 
-```{r falik, fig.cap="Figure A.2. Barplot from Falik et al. study on plant stress and plant communication. This figure is found in your textbook on pg. 910", fig.align='center', out.width="70%", fig.show='hold', echo=FALSE}
+```{r falik, fig.cap="Barplot from Falik et al. study on plant stress and plant communication. This figure is found in your textbook on pg. 910", fig.align='center', out.width="70%", fig.show='hold', echo=FALSE}
 knitr::include_graphics('./figures/Falik_barplot.jpeg')
 ```
 
