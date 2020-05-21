@@ -18,7 +18,7 @@ Keep in mind the following [@hart2016ten; @white2013nine]:
 * Use standard data formats (properly formatted data are easier to use, e.g. .csv)
 * Keep raw data raw
 * Data should be structured for analysis (see below)
-* Link to relevant metadata (well documented data are easier to understand)
+* Link to relevant metadata (well documented data are easier to understand). See section below for more details on metadata
 * Store and share data (data that are shared in established repositories with open licenses is easier for others to find and use)
 
 Following these recommendations makes it easier for anyone to reuse your data, including yourself!

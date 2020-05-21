@@ -90,7 +90,7 @@ Note that all of the figures we have made so far are not great: none meet the st
 - maybe it's more appropriate to show this data connected with a line, and
 - maybe you want the symbols to be a different shape or colour.
 
-In addition, to the two manadatory arguments `x` and `y`, the `plot()` function has other optional argument that can be called to make a better figure. Try using the `help()` learn about more options to change the look of your plot (refer to Chapter \@ref(help), _Getting help in R_, to recall how to display and read help files):
+In addition, to the two manadatory arguments `x` and `y`, the `plot()` function has other optional argument that can be called to make a better figure. Try using the `help()` to learn about more options to change the look of your plot (refer to Chapter \@ref(help), _Getting help in R_, to recall how to display and read help files):
 
 ```{r} 
 help(plot)

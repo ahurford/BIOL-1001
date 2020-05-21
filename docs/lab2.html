@@ -219,8 +219,6 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="" data-path="lab2.html"><a href="lab2.html#exercise-2b.-making-a-barplot"><i class="fa fa-check"></i>EXERCISE 2b. Making a barplot</a><ul>
 <li class="chapter" data-level="" data-path="lab2.html"><a href="lab2.html#questions-1"><i class="fa fa-check"></i>Questions</a></li>
-<li class="chapter" data-level="" data-path="lab2.html"><a href="lab2.html#write-the-hypothesis-as-an-equation"><i class="fa fa-check"></i>Write the hypothesis as an equation</a></li>
-<li class="chapter" data-level="" data-path="lab2.html"><a href="lab2.html#questions-2"><i class="fa fa-check"></i>Questions</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="11" data-path="coding-club-at-mun.html"><a href="coding-club-at-mun.html"><i class="fa fa-check"></i><b>11</b> Coding club at MUN</a></li>
@@ -277,7 +275,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h2>EXERCISE 1. Data entry and graphing with a continuous independent variable</h2>
 <p>The increase of carbon dioxide in the atmosphere is expected to reduce the concentrations of carbonate ions in the surface of the ocean. This process, in general called ocean acidification, affects the biology and survival of a wide range of marine species because it prevents the formation of shells and plates of calcium carbonate.
 A long term study on coral reefs showed how the net community calcification rate (G, measured in mmol CaCO<sub>3</sub>m<sup>-2</sup>d<sup>-1</sup>) is related to the concentration of carbonate (CO<sub>3</sub><sup>2-</sup>, measured in <span class="math inline">\(\mu\)</span>mol<span class="math inline">\(\cdot\)</span>kg<sup>-1</sup>) <span class="citation">(Langdon et al. 2000)</span>.
-We will use the data from the research paper to understand this relationship.
+We will use the data from the research paper (which is summarized in pg. 60 of the textbook) to understand this relationship.
 The results of this experiment are as follows:</p>
 <pre><code>## Warning: package &#39;knitr&#39; was built under R version 3.6.1</code></pre>
 <table>
@@ -340,13 +338,12 @@ The results of this experiment are as follows:</p>
 </tbody>
 </table>
 <ol style="list-style-type: decimal">
-<li><p>We provide this data as a .csv called <code>Langdon_et-al_2000_dataset.csv</code>. Follow the instructions in Chapter <a href="data-entry.html#data-entry">6</a> and import the data. Note that this is just a subset of the data from the full paper.</p></li>
-<li><p>Follow the instructions in Chapter <a href="data.html#data">8</a> and write metadata for the data that you saved in .csv format. Submit your metadata to the <code>Biology Data Repository</code> Brightspace.</p></li>
+<li>We provide this data as a .csv called <code>Langdon_et-al_2000_dataset.csv</code>. Follow the instructions in Chapter <a href="data-entry.html#data-entry">6</a> and import the data. Note that this is just a subset of the data from the full paper. Include a copy of the code you used in your lab report.</li>
 </ol>
 <div id="make-a-graph" class="section level3 unnumbered">
 <h3>Make a graph</h3>
 <ol style="list-style-type: decimal">
-<li>Follow the instructions in Chapter <a href="graph.html#graph">7</a> to make a scatterplot for these data and replicate the figure from the Campbell textbook (see Figure 10.1 below)</li>
+<li>Follow the instructions in Chapter <a href="graph.html#graph">7</a> to make a scatterplot for these data and replicate the figure from the Campbell textbook (see Figure 10.1 below). Include both the code you wrote and the final figure in your lab report. NOTE: Don’t worry about figuring out how to write superscripts and subscripts in R. You can use the “^” symbol to indicate a superscript, and the “-” to indicate a subscript.</li>
 </ol>
 <p><strong>HINT</strong> Think about what you are specifying as <code>x</code> and <code>y</code> in the <code>plot</code> function. Use the tools you learned about in Chapter <a href="rintro.html#rintro">4</a> to explore the dataframe.</p>
 <p><strong>NEW TIP</strong> instead of entering the data as a vector the way you learned in Chapter <a href="graph.html#graph">7</a>, you can use the code below to create an x vector from a data frame (here I titled my data frame “langdon_data”; your name may be different, and I created a vector of data called “CO3”). You can use this to create the vector of data that you need to plot on the x-axis, and then write you own code to create the vector of data for the y-axis.</p>
@@ -358,10 +355,10 @@ Figure 10.1: Scatterplot from Langdon et al. study on calcification rate in sea
 </div>
 <div class="sourceCode" id="cb84"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb84-1" title="1">langdon_data &lt;-<span class="st"> </span><span class="kw">read.csv</span>(<span class="st">&quot;Langdon_et-al_2000_dataset.csv&quot;</span>)</a>
 <a class="sourceLine" id="cb84-2" title="2">CO3 &lt;-<span class="st"> </span>langdon_data<span class="op">$</span>CO3</a></code></pre></div>
-<p>Use the examples in Chapter <a href="graph.html#graph">7</a> to create a fully labelled scatter plot. Export this and paste it into your document that you will hand in for this lab.</p>
+<p>Use the examples in Chapter <a href="graph.html#graph">7</a> to create a fully labelled scatter plot. Export this and paste it into your document that you will hand in for this lab. Include both the code you wrote and the final figure in your lab report.</p>
 <p><strong>HINT</strong> if you want to add a line of best fit based on linear regression, use the function <code>abline</code> using a linear regression model (the function <code>lm</code>). Your code will look something like this: <code>abline(lm(y~x))</code> Refer to the help files for assistance. The two terms on each side of the tilde (“~” symbol) tell R what the equation for the regression <code>y~x</code> is. In your case substitute in what YOU defined as <code>x</code> and <code>y</code> in R.</p>
 <ol style="list-style-type: decimal">
-<li><p>Follow the instructions in Chapter <a href="graph.html#graph">7</a> to make a second graph - a line graph for these data. Export your line graph insert it into your lab report. Write a figure caption.</p></li>
+<li><p>Follow the instructions in Chapter <a href="graph.html#graph">7</a> to make a second graph - a line graph for these data. Export your line graph insert it into your lab report. Write a figure caption. Include both the code you wrote and the final figure in your lab report.</p></li>
 <li><p>Follow the instructions in Chapter <a href="hypothesis.html#hypothesis">9</a>. Write a hypothesis, prediction, and equation for these data.</p></li>
 </ol>
 </div>
@@ -378,7 +375,7 @@ these were the control group.
 On the other side, the stressed plant shared its roots with its nearest unstressed neighbour, and all the other plants shared their roots with their nearest neighbour
 (See Figure <a href="lab2.html#fig:setup">10.2</a>).</p>
 <div class="figure" style="text-align: center"><span id="fig:setup"></span>
-<img src="figures/Falik_et-al_2011_setup.png" alt="Experimental set up for testing stress cues. Circles represent plants and connector lines represent the plants with connected roots. The numbers of the plants correspond to those of Table 10.2. Osmotic stress was induced in plant 6 (Modified from Falik et al., 2011)." width="70%" />
+<img src="figures/Falik_et-al_2011_setup.jpg" alt="Experimental set up for testing stress cues. Circles represent plants and connector lines represent the plants with connected roots. The numbers of the plants correspond to those of Table 10.2. Osmotic stress was induced in plant 6 (Modified from Falik et al., 2011)." width="70%" />
 <p class="caption">
 Figure 10.2: Experimental set up for testing stress cues. Circles represent plants and connector lines represent the plants with connected roots. The numbers of the plants correspond to those of Table 10.2. Osmotic stress was induced in plant 6 (Modified from Falik et al., 2011).
 </p>
@@ -520,7 +517,7 @@ Figure 10.2: Experimental set up for testing stress cues. Circles represent plan
 <div id="questions-1" class="section level3 unnumbered">
 <h3>Questions</h3>
 <ol style="list-style-type: decimal">
-<li>Follow the instructions below to replicate the figure from the Campbell textbook (bar plot; see Figure A.2 below). Export your bar graph insert it into your lab report. Add a caption to your bar plot and hand it in with your lab report.</li>
+<li>Follow the instructions below to replicate the figure from the Campbell textbook (bar plot; see Figure 10.3 below). Export your bar graph insert it into your lab report. Add a caption to your bar plot and hand it in with your lab report. Include the code you wrote to generate the figure.</li>
 </ol>
 <div class="figure" style="text-align: center"><span id="fig:falik"></span>
 <img src="figures/Falik_barplot.jpeg" alt="Barplot from Falik et al. study on plant stress and plant communication. This figure is found in your textbook on pg. 910" width="70%" />
@@ -528,7 +525,7 @@ Figure 10.2: Experimental set up for testing stress cues. Circles represent plan
 Figure 10.3: Barplot from Falik et al. study on plant stress and plant communication. This figure is found in your textbook on pg. 910
 </p>
 </div>
-<p>To make a barplot, use the code below as a starting point, and then use the resources in this guide to add appropriate x and y axis labels.</p>
+<p>To make a barplot, use the code below as a starting point, and then use the resources in this guide to add appropriate x and y axis labels.Don’t worry about figuring out how to write the symbol “mu” in R; you can just write “um” or “micrometres” for now. The same goes for writing subscripts/superscripts. However, if you want to try writing greek symbols in R, see the code below for the boxplot example, and see if you can apply it to your barplot.</p>
 <div class="sourceCode" id="cb85"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb85-1" title="1">width &lt;-<span class="st"> </span>falik_data<span class="op">$</span>width <span class="co">#This creates a vector of data of the plant stomatal widths</span></a>
 <a class="sourceLine" id="cb85-2" title="2">plant &lt;-<span class="st"> </span>falik_data<span class="op">$</span>plant <span class="co">#The creates a vector of data of the plant ID numbers</span></a>
 <a class="sourceLine" id="cb85-3" title="3"></a>
@@ -537,26 +534,17 @@ Figure 10.3: Barplot from Falik et al. study on plant stress and plant communic
 <p><img src="quant-guide_files/figure-html/unnamed-chunk-46-1.png" width="672" /></p>
 <ol style="list-style-type: decimal">
 <li><p>In the barplot, what can you tell about the stomatal openings of the treatment plant vs. the control plants? Is it consistent across all the individual plants?</p></li>
-<li><p>Follow the instructions below to re-plot the data from EXERCISE 1 as a boxplot that compares control versus treatment. Export your boxplot and insert it into your lab report. Add a caption to your boxplot.</p></li>
+<li><p>Follow the instructions below to re-plot the data from EXERCISE 2b as a boxplot that compares control versus treatment. Export your boxplot and insert it into your lab report. Add a caption to your boxplot. NOTE: If you describe what the symbols/colours mean in the caption, then you do not need to include a legend!</p></li>
 </ol>
 <div class="sourceCode" id="cb86"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb86-1" title="1">control &lt;-<span class="st"> </span><span class="kw">subset</span>(falik_data, type <span class="op">==</span><span class="st"> &quot;control&quot;</span>) <span class="co">#This subset command is a handy function to break the data into subsets. Here, we&#39;re creating a data frame with just the values from the control.</span></a>
 <a class="sourceLine" id="cb86-2" title="2">treatment &lt;-<span class="st"> </span><span class="kw">subset</span>(falik_data, type <span class="op">==</span><span class="st"> &quot;15min&quot;</span>) <span class="co">#Here we are subsetting the data to contain only the data from the treatment</span></a>
 <a class="sourceLine" id="cb86-3" title="3"></a>
-<a class="sourceLine" id="cb86-4" title="4"><span class="kw">boxplot</span>(control<span class="op">$</span>width, treatment<span class="op">$</span>width, <span class="dt">names =</span> <span class="kw">c</span>(<span class="st">&quot;control&quot;</span>, <span class="st">&quot;treatment&quot;</span>), <span class="dt">ylab =</span> <span class="st">&quot;stomatal opening (microns)&quot;</span>)</a></code></pre></div>
+<a class="sourceLine" id="cb86-4" title="4"><span class="kw">boxplot</span>(control<span class="op">$</span>width, treatment<span class="op">$</span>width, <span class="dt">names =</span> <span class="kw">c</span>(<span class="st">&quot;control&quot;</span>, <span class="st">&quot;treatment&quot;</span>), <span class="dt">ylab =</span> <span class="kw">expression</span>(<span class="kw">paste</span>(<span class="st">&quot;stomatal opening ( &quot;</span>, mu, <span class="st">&quot;)&quot;</span>)))</a></code></pre></div>
 <p><img src="quant-guide_files/figure-html/unnamed-chunk-47-1.png" width="672" /></p>
 <ol style="list-style-type: decimal">
-<li><p>Label the following on the boxplot: mean, 25% and 75% quantiles, 95% confidence limits, outliers. <strong>HINT</strong> you can insert the exported graph into a blank PowerPoint slide and use lines/text boxes to draw the labels. Then save the slide as an image file (e.g., JPEG) and insert it in your lab report.</p></li>
+<li><p>Label the following on the boxplot: median, 25% and 75% quantiles, 95% confidence limits. <strong>HINT</strong> you can insert the exported graph into a blank PowerPoint slide and use lines/text boxes to draw the labels. Then save the slide as an image file (e.g., JPEG) and insert it in your lab report.</p></li>
 <li><p>What does the boxplot tell you about the differences between the treatment plants (plants 6-11) vs. the control plants that the bar chart does not?</p></li>
 <li><p>Why do you think a scientist might choose to represent these data one way over another?</p></li>
-</ol>
-</div>
-<div id="write-the-hypothesis-as-an-equation" class="section level3 unnumbered">
-<h3>Write the hypothesis as an equation</h3>
-</div>
-<div id="questions-2" class="section level3 unnumbered">
-<h3>Questions</h3>
-<ol style="list-style-type: decimal">
-<li>Follow the instructions in Chapter <a href="hypothesis.html#hypothesis">9</a>. Write a hypothesis, prediction, and equation for these data.</li>
 </ol>
 
 </div>
