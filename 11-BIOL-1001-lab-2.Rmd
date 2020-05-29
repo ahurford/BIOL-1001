@@ -1,4 +1,4 @@
-# BIOL 1001: LABORATORY 2 {#lab2}
+# BIOL 1001: QUANTIATIVE SKILLS LABORATORY PART 2 {#lab2}
 
 This lab is worth 5% of your final mark. Before completing this lab, you should re-familiarize yourself with Chapters \@ref(intro), \@ref(graph),\@ref(data) and \@ref(hypothesis). If you need to consult the help files, use Chapter \@ref(help) to help guide you through the ```R``` help.
 
@@ -41,41 +41,42 @@ The results of this experiment are as follows:
 
 ```{r langdon-data, echo = FALSE, results = 'asis'}
 library(knitr)
-dataset <- read.csv("Langdon_et-al_2000_dataset.csv")
+dataset <- read.csv("LangdonDataset.csv")
 kable(dataset[1:11,1:2], caption = "Raw data from Langdon and collaborators (2000).")
 ```
 ### Enter the data {-}
 
-1. We provide this data as a .csv called `Langdon_et-al_2000_dataset.csv`. Follow the instructions in Chapter \@ref(data-entry) and import the data. Note that this is just a subset of the data from the full paper. Include a copy of the code you used in your lab report.
+1. We provide this data as a .csv called `LangdonDataset.csv`. Download this file from Brightspace into the folder where your R files are. Then follow the instructions in Chapter \@ref(data-entry) and import the data. Note that this is just a subset of the data from the full paper. Include a copy of the code you used in your lab report.
 
 
 
 ### Make a graph {-}
 
-1. Follow the instructions in Chapter \@ref(graph) to make a scatterplot for these data and replicate the figure from the Campbell textbook (see Figure 10.1 below). Include both the code you wrote and the final figure in your lab report. NOTE: Don't worry about figuring out how to write superscripts and subscripts in R. You can use the "^" symbol to indicate a superscript, and the "-" to indicate a subscript. 
+1. Follow the instructions in Chapter \@ref(graph) to make a scatterplot for these data and replicate the figure from the Campbell textbook (see Figure 10.1 below). Include both the code you wrote and the final figure in your lab report. NOTE: Don't worry about figuring out how to write superscripts and subscripts in R for the axis-labels. You can use the "^" symbol to indicate a superscript, and the "-" to indicate a subscript. 
 
 **HINT** Think about what you are specifying as ```x``` and ```y``` in the ```plot``` function. Use the tools you learned about in Chapter \@ref(rintro) to explore the dataframe.
 
-**NEW TIP** instead of entering the data as a vector the way you learned in Chapter \@ref(graph), you can use the code below to create an x vector from a data frame (here I titled my data frame "langdon_data"; your name may be different, and I created a vector of data called "CO3"). You can use this to create the vector of data that you need to plot on the x-axis, and then write you own code to create the vector of data for the y-axis. 
+**NEW TIP** instead of entering the data as a vector the way you learned in Chapter \@ref(graph), you can use the code below to create an x vector from a data frame (here I titled my data frame "langdon_data"; your name may be different, and I created a vector of data called "CO3"). The ```$``` sign tells R to look in the data frame specified before the ```$``` sign (in the example below the data frame is "langdone_data" and then read the column that comes after the ```$``` sign (in the example here, it's CO3. The column header you specify after the $ sign MUST match the way it is shown in the dataframe EXACTLY. Use the commands you learned in Chapter \@ref(rintro) to confirm what the column header is. 
+
+You can use this to create the vector of data that you need to plot on the x-axis, and then write you own code to create the vector of data for the y-axis. 
 
 ```{r langdon, fig.cap="Scatterplot from Langdon et al. study on calcification rate in seawater as a function of carbonate concentration. This figure is found in your textbook on pg. 60", fig.align='center', out.width="70%", fig.show='hold', echo=FALSE}
 knitr::include_graphics('./figures/Landgon_scatterplot.jpeg')
 ```
 
 ```{r}
-langdon_data <- read.csv("Langdon_et-al_2000_dataset.csv")
+langdon_data <- read.csv("LangdonDataset.csv")
 CO3 <- langdon_data$CO3
 ```
 
 Use the examples in Chapter \@ref(graph) to create a fully labelled scatter plot. Export this and paste it into your document that you will hand in for this lab. Include both the code you wrote and the final figure in your lab report.
 
-**HINT** if you want to add a line of best fit based on linear regression, use the function ```abline``` using a linear regression model (the function ```lm```). Your code will look something like this: ```abline(lm(y~x))```  Refer to the help files for assistance. The two terms on each side of the tilde ("~" symbol) tell R what the equation for the regression ```y~x``` is. In your case substitute in what YOU defined as ```x``` and ```y``` in R.  
+**HINT** if you want to add a line of best fit based on linear regression, use the function ```abline``` using a linear regression model (the function ```lm```). Your code will look something like this: ```abline(lm(y~x))```  Refer to the help files for assistance. The two terms on each side of the tilde ("~" symbol) tell R what the equation for the regression ```y~x``` is. In your case substitute in what YOU defined as ```x``` and ```y``` in R.  **NOTE** for the lab assignment, this step is optional. 
 
 
 
 1. Follow the instructions in Chapter \@ref(graph) to make a second graph - a line graph for these data. Export your line graph insert it into your lab report. Write a figure caption. Include both the code you wrote and the final figure in your lab report.
 
-1. Follow the instructions in Chapter \@ref(hypothesis). Write a hypothesis, prediction, and equation for these data.
 
  
 ## EXERCISE 2.	Barplots and boxplots with discrete independent variables {-}
@@ -99,12 +100,12 @@ Stress was quantified fifteen minutes after the induction of drought by measurin
 
 ```{r raw-data, echo = FALSE, results = 'asis'}
 library(knitr)
-falik_data <- read.csv("Falik_et-al_2011_dataset.csv")
+falik_data <- read.csv("FalikDataset.csv")
 kable(falik_data[1:3], caption = "Raw data from Falik and collaborators (2011).")
 ```
 
 ### Questions {-}
-1. Follow the instructions in Chapter \@ref(data-entry) to load the data file Falie_et-al_2011_dataset.csv using the command line (```read.csv```) option. **Note** that the data in the CSV file are ordered differently than in the list above (to verify this you can open the CSV file in Excel to see the full set).
+1. Follow the instructions in Chapter \@ref(data-entry) to load the data file FalikDataset.csv using the command line (```read.csv```) option. **Note** that the data in the CSV file are ordered differently than in the list above (to verify this you can open the CSV file in Excel to see the full set).
 
 
 1. Looking at the dataset, can you tell how many treatments were applied in the experiment? How many plants were used for each treatment?
@@ -121,7 +122,7 @@ knitr::include_graphics('./figures/Falik_barplot.jpeg')
 ```
 
 
-To make a barplot, use the code below as a starting point, and then use the resources in this guide to add appropriate x and y axis labels.Don't worry about figuring out how to write the symbol "mu" in R; you can just write "um" or "micrometres" for now. The same goes for writing subscripts/superscripts. However, if you want to try writing greek symbols in R, see the code below for the boxplot example, and see if you can apply it to your barplot.
+To make a barplot, use the code below as a starting point, and then use the resources in this guide to add appropriate x and y axis labels.Don't worry about figuring out how to write the symbol "mu" in R; you can just write "um" or "micrometres" for now. However, if you want to try writing Greek symbols in R, look at the code below for the boxplot example, and see if you can apply it to your barplot.
 
 ```{r}
 width <- falik_data$width #This creates a vector of data of the plant stomatal widths
@@ -133,7 +134,7 @@ barplot(width, names = plant, col = c("blue", "red"))
 
 1. In the barplot, what can you tell about the stomatal openings of the treatment plant vs. the control plants? Is it consistent across all the individual plants?
 
-1. Follow the instructions below to re-plot the data from EXERCISE 2b as a boxplot that compares control versus treatment. Export your boxplot and insert it into your lab report. Add a caption to your boxplot. NOTE: If you describe what the symbols/colours mean in the caption, then you do not need to include a legend! 
+1. Follow the instructions below to re-plot the data from EXERCISE 2b as a boxplot that compares control versus treatment. Export your boxplot and insert it into your lab report. Add a caption to your boxplot. NOTE: If you describe what the symbols/colours mean in the caption, then you do not need to include a legend. If you want to try adding a legend (adding one is optional) then look up "legend" in the help window.
 
 ````{r}
 control <- subset(falik_data, type == "control") #This subset command is a handy function to break the data into subsets. Here, we're creating a data frame with just the values from the control.
