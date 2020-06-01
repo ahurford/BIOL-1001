@@ -46,7 +46,7 @@ kable(dataset[1:11,1:2], caption = "Raw data from Langdon and collaborators (200
 ```
 ### Enter the data {-}
 
-1. We provide this data as a .csv called `LangdonDataset.csv`. Download this file from Brightspace into the folder where your R files are. Then follow the instructions in Chapter \@ref(data-entry) and import the data. Note that this is just a subset of the data from the full paper. Include a copy of the code you used in your lab report.
+1. We provide this data as a .csv called `LangdonDataset.csv`. Download this file from Brightspace into the folder where your R files are. **NOTE** that in the `read.csv` command that what is inside the quote marks ```"``` MUST match the file name in your folder exactly. You also have to include the quotation marks. Then follow the instructions in Chapter \@ref(data-entry) and import the data. Note that this is just a subset of the data from the full paper. Include a copy of the code you used in your lab report.
 
 
 
@@ -56,7 +56,7 @@ kable(dataset[1:11,1:2], caption = "Raw data from Langdon and collaborators (200
 
 **HINT** Think about what you are specifying as ```x``` and ```y``` in the ```plot``` function. Use the tools you learned about in Chapter \@ref(rintro) to explore the dataframe.
 
-**NEW TIP** instead of entering the data as a vector the way you learned in Chapter \@ref(graph), you can use the code below to create an x vector from a data frame (here I titled my data frame "langdon_data"; your name may be different, and I created a vector of data called "CO3"). The ```$``` sign tells R to look in the data frame specified before the ```$``` sign (in the example below the data frame is "langdone_data" and then read the column that comes after the ```$``` sign (in the example here, it's CO3. The column header you specify after the $ sign MUST match the way it is shown in the dataframe EXACTLY. Use the commands you learned in Chapter \@ref(rintro) to confirm what the column header is. 
+**NEW TIP** instead of entering the data as a vector the way you learned in Chapter \@ref(graph), you can use the code below to create an x vector from a data frame (here I titled my data frame "langdon_data"; your name may be different, and I created a vector of data called "CO3"). The ```$``` sign tells R to look in the data frame specified before the ```$``` sign (in the example below the data frame is "langdon_data" and then read the column that comes after the ```$``` sign (in the example here, it's CO3. The column header you specify after the $ sign MUST match the way it is shown in the dataframe EXACTLY. Use the commands you learned in Chapter \@ref(rintro) to confirm what the column header is. 
 
 You can use this to create the vector of data that you need to plot on the x-axis, and then write you own code to create the vector of data for the y-axis. 
 
