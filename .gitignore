@@ -1,6 +1,50 @@
-
 # Created by https://www.gitignore.io/api/r,tex,linux,macos,latex,mdbook,windows,libreoffice,microsoftoffice
 # Edit at https://www.gitignore.io/?templates=r,tex,linux,macos,latex,mdbook,windows,libreoffice,microsoftoffice
+
+### R ###
+# History files
+.Rhistory
+.Rapp.history
+
+# Session Data files
+.RData
+.RDataTmp
+
+# User-specific files
+.Ruserdata
+
+# Example code in package build process
+*-Ex.R
+
+# Output files from R CMD build
+/*.tar.gz
+
+# Output files from R CMD check
+/*.Rcheck/
+
+# RStudio files
+.Rproj.user
+.Rproj.user/*
+
+# produced vignettes
+vignettes/*.html
+vignettes/*.pdf
+
+# OAuth2 token, see https://github.com/hadley/httr/releases/tag/v0.3
+.httr-oauth
+
+# knitr and R markdown default cache directories
+*_cache/
+/cache/
+
+# Temporary files created by R markdown
+*.utf8.md
+*.knit.md
+
+### R.Bookdown Stack ###
+# R package: bookdown caching files
+/*_files/
+
 
 ### LaTeX ###
 ## Core latex/pdflatex auxiliary files:
@@ -344,48 +388,6 @@ Backup of *.doc*
 # Visio autosave temporary files
 *.~vsd*
 
-### R ###
-# History files
-.Rhistory
-.Rapp.history
-
-# Session Data files
-.RData
-.RDataTmp
-
-# User-specific files
-.Ruserdata
-
-# Example code in package build process
-*-Ex.R
-
-# Output files from R CMD build
-/*.tar.gz
-
-# Output files from R CMD check
-/*.Rcheck/
-
-# RStudio files
-.Rproj.user/
-
-# produced vignettes
-vignettes/*.html
-vignettes/*.pdf
-
-# OAuth2 token, see https://github.com/hadley/httr/releases/tag/v0.3
-.httr-oauth
-
-# knitr and R markdown default cache directories
-*_cache/
-/cache/
-
-# Temporary files created by R markdown
-*.utf8.md
-*.knit.md
-
-### R.Bookdown Stack ###
-# R package: bookdown caching files
-/*_files/
 
 ### TeX ###
 
