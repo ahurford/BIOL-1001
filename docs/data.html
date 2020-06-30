@@ -67,7 +67,7 @@ a.sourceLine { text-indent: -1em; padding-left: 1em; }
 pre.numberSource a.sourceLine
   { position: relative; left: -4em; }
 pre.numberSource a.sourceLine::before
-  { content: attr(title);
+  { content: attr(data-line-number);
     position: relative; left: -1em; text-align: right; vertical-align: baseline;
     border: none; pointer-events: all; display: inline-block;
     -webkit-touch-callout: none; -webkit-user-select: none;
@@ -130,7 +130,12 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
 <li class="divider"></li>
 <li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Introduction</a></li>
-<li class="chapter" data-level="2" data-path="install.html"><a href="install.html"><i class="fa fa-check"></i><b>2</b> How to install R and R Studio</a></li>
+<li class="chapter" data-level="2" data-path="install.html"><a href="install.html"><i class="fa fa-check"></i><b>2</b> R and R Studio</a><ul>
+<li class="chapter" data-level="2.1" data-path="install.html"><a href="install.html#installing"><i class="fa fa-check"></i><b>2.1</b> Installing R and RStudio</a><ul>
+<li class="chapter" data-level="2.1.1" data-path="install.html"><a href="install.html#rstudio-cloud"><i class="fa fa-check"></i><b>2.1.1</b> RStudio Cloud</a></li>
+</ul></li>
+<li class="chapter" data-level="2.2" data-path="install.html"><a href="install.html#using-r-via-rstudio"><i class="fa fa-check"></i><b>2.2</b> Using R via RStudio</a></li>
+</ul></li>
 <li class="chapter" data-level="3" data-path="rstudio.html"><a href="rstudio.html"><i class="fa fa-check"></i><b>3</b> Finding your way around RStudio</a><ul>
 <li class="chapter" data-level="3.1" data-path="rstudio.html"><a href="rstudio.html#console-pane"><i class="fa fa-check"></i><b>3.1</b> Console pane</a></li>
 <li class="chapter" data-level="3.2" data-path="rstudio.html"><a href="rstudio.html#source-pane"><i class="fa fa-check"></i><b>3.2</b> Source pane</a></li>
@@ -259,7 +264,7 @@ In this sense, planning an experiment involves more than thinking through the ph
 <ul>
 <li>Anticipate how your data will be used</li>
 <li>Be consistent</li>
-<li>Use standard data formats (properly formatted data are easier to use, e.g. .csv)</li>
+<li>Use standard data formats (properly formatted data are easier to use, e.g. .csv)</li>
 <li>Keep raw data raw</li>
 <li>Data should be structured for analysis (see below)</li>
 <li>Link to relevant metadata (well documented data are easier to understand). See section below for more details on metadata</li>
@@ -281,7 +286,7 @@ This will ensure that you spend less time wrangling data from one representation
 <li>Don’t use colors, fonts, or anything purely visual as data</li>
 <li>Use good null values (e.g. NAs)</li>
 <li>Store dates as YYY-MM-DD</li>
-<li>Save data in plain text files (e.g. .csv)</li>
+<li>Save data in plain text files (e.g. .csv)</li>
 <li>Use good names</li>
 <li>Avoid including special characters in your data file</li>
 <li>Don’t put units or comments in cells</li>

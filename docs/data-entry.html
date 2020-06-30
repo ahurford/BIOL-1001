@@ -67,7 +67,7 @@ a.sourceLine { text-indent: -1em; padding-left: 1em; }
 pre.numberSource a.sourceLine
   { position: relative; left: -4em; }
 pre.numberSource a.sourceLine::before
-  { content: attr(title);
+  { content: attr(data-line-number);
     position: relative; left: -1em; text-align: right; vertical-align: baseline;
     border: none; pointer-events: all; display: inline-block;
     -webkit-touch-callout: none; -webkit-user-select: none;
@@ -130,7 +130,12 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
 <li class="divider"></li>
 <li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Introduction</a></li>
-<li class="chapter" data-level="2" data-path="install.html"><a href="install.html"><i class="fa fa-check"></i><b>2</b> How to install R and R Studio</a></li>
+<li class="chapter" data-level="2" data-path="install.html"><a href="install.html"><i class="fa fa-check"></i><b>2</b> R and R Studio</a><ul>
+<li class="chapter" data-level="2.1" data-path="install.html"><a href="install.html#installing"><i class="fa fa-check"></i><b>2.1</b> Installing R and RStudio</a><ul>
+<li class="chapter" data-level="2.1.1" data-path="install.html"><a href="install.html#rstudio-cloud"><i class="fa fa-check"></i><b>2.1.1</b> RStudio Cloud</a></li>
+</ul></li>
+<li class="chapter" data-level="2.2" data-path="install.html"><a href="install.html#using-r-via-rstudio"><i class="fa fa-check"></i><b>2.2</b> Using R via RStudio</a></li>
+</ul></li>
 <li class="chapter" data-level="3" data-path="rstudio.html"><a href="rstudio.html"><i class="fa fa-check"></i><b>3</b> Finding your way around RStudio</a><ul>
 <li class="chapter" data-level="3.1" data-path="rstudio.html"><a href="rstudio.html#console-pane"><i class="fa fa-check"></i><b>3.1</b> Console pane</a></li>
 <li class="chapter" data-level="3.2" data-path="rstudio.html"><a href="rstudio.html#source-pane"><i class="fa fa-check"></i><b>3.2</b> Source pane</a></li>
@@ -263,14 +268,14 @@ and save them using R.</p>
 <p>Let’s start by
 making Table 1 for your report, which we will call
 <code>solution-concentration-effect-on-potato.csv</code>:</p>
-<div class="sourceCode" id="cb51"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb51-1" title="1">table1 &lt;-<span class="st"> </span><span class="kw">data.frame</span>(<span class="dt">weight =</span> <span class="kw">c</span>(<span class="st">&quot;initial&quot;</span>, <span class="st">&quot;final&quot;</span>, </a>
-<a class="sourceLine" id="cb51-2" title="2">                                <span class="st">&quot;difference&quot;</span>, <span class="st">&quot;percent-change&quot;</span>), </a>
-<a class="sourceLine" id="cb51-3" title="3">                     <span class="st">&quot;NaCl-0-percent&quot;</span> =<span class="st"> </span><span class="kw">c</span>(<span class="ot">NA</span>, <span class="ot">NA</span>, <span class="ot">NA</span>, <span class="ot">NA</span>), </a>
-<a class="sourceLine" id="cb51-4" title="4">                     <span class="st">&quot;NaCl-0.9-percent&quot;</span> =<span class="st"> </span><span class="kw">c</span>(<span class="ot">NA</span>, <span class="ot">NA</span>, <span class="ot">NA</span>, <span class="ot">NA</span>), </a>
-<a class="sourceLine" id="cb51-5" title="5">                     <span class="st">&quot;NaCl-2-percent&quot;</span> =<span class="st"> </span><span class="kw">c</span>(<span class="ot">NA</span>, <span class="ot">NA</span>, <span class="ot">NA</span>, <span class="ot">NA</span>), </a>
-<a class="sourceLine" id="cb51-6" title="6">                     <span class="st">&quot;NaCl-5-percent&quot;</span> =<span class="st"> </span><span class="kw">c</span>(<span class="ot">NA</span>, <span class="ot">NA</span>, <span class="ot">NA</span>, <span class="ot">NA</span>))</a>
-<a class="sourceLine" id="cb51-7" title="7"><span class="kw">write.csv</span>(<span class="dt">x =</span> table1, <span class="dt">file =</span> <span class="st">&quot;solution-concentration-effect-on-potato.csv&quot;</span>, </a>
-<a class="sourceLine" id="cb51-8" title="8">          <span class="dt">row.names =</span> <span class="ot">FALSE</span>)</a></code></pre></div>
+<div class="sourceCode" id="cb51"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb51-1" data-line-number="1">table1 &lt;-<span class="st"> </span><span class="kw">data.frame</span>(<span class="dt">weight =</span> <span class="kw">c</span>(<span class="st">&quot;initial&quot;</span>, <span class="st">&quot;final&quot;</span>, </a>
+<a class="sourceLine" id="cb51-2" data-line-number="2">                                <span class="st">&quot;difference&quot;</span>, <span class="st">&quot;percent-change&quot;</span>), </a>
+<a class="sourceLine" id="cb51-3" data-line-number="3">                     <span class="st">&quot;NaCl-0-percent&quot;</span> =<span class="st"> </span><span class="kw">c</span>(<span class="ot">NA</span>, <span class="ot">NA</span>, <span class="ot">NA</span>, <span class="ot">NA</span>), </a>
+<a class="sourceLine" id="cb51-4" data-line-number="4">                     <span class="st">&quot;NaCl-0.9-percent&quot;</span> =<span class="st"> </span><span class="kw">c</span>(<span class="ot">NA</span>, <span class="ot">NA</span>, <span class="ot">NA</span>, <span class="ot">NA</span>), </a>
+<a class="sourceLine" id="cb51-5" data-line-number="5">                     <span class="st">&quot;NaCl-2-percent&quot;</span> =<span class="st"> </span><span class="kw">c</span>(<span class="ot">NA</span>, <span class="ot">NA</span>, <span class="ot">NA</span>, <span class="ot">NA</span>), </a>
+<a class="sourceLine" id="cb51-6" data-line-number="6">                     <span class="st">&quot;NaCl-5-percent&quot;</span> =<span class="st"> </span><span class="kw">c</span>(<span class="ot">NA</span>, <span class="ot">NA</span>, <span class="ot">NA</span>, <span class="ot">NA</span>))</a>
+<a class="sourceLine" id="cb51-7" data-line-number="7"><span class="kw">write.csv</span>(<span class="dt">x =</span> table1, <span class="dt">file =</span> <span class="st">&quot;solution-concentration-effect-on-potato.csv&quot;</span>, </a>
+<a class="sourceLine" id="cb51-8" data-line-number="8">          <span class="dt">row.names =</span> <span class="ot">FALSE</span>)</a></code></pre></div>
 <p>In the above code, make sure to replace the <code>NA</code>’s with the values from your experiment.
 Keep in mind that the values entered into the tables should be
 decimals greater than or equal to zero, and likely less than
@@ -282,16 +287,16 @@ tabular data stored in a text file where a comma separates the columns of the da
 That is why a comma separates each of the values in the rows for the different solutions.</p>
 <p>Now, we will make Table 2, which includes the class averages and we will call
 <code>solution-concentration-effect-on-potato-averages.csv</code>:</p>
-<div class="sourceCode" id="cb52"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb52-1" title="1">table2 &lt;-<span class="st"> </span><span class="kw">data.frame</span>(<span class="dt">weight =</span> <span class="kw">c</span>(<span class="st">&quot;percent-change&quot;</span>, <span class="st">&quot;minimum-value&quot;</span>, </a>
-<a class="sourceLine" id="cb52-2" title="2">                                <span class="st">&quot;maximum-value&quot;</span>, <span class="st">&quot;difference&quot;</span>), </a>
-<a class="sourceLine" id="cb52-3" title="3">                     <span class="st">&quot;NaCl-0-percent&quot;</span> =<span class="st"> </span><span class="kw">c</span>(<span class="ot">NA</span>, <span class="ot">NA</span>, <span class="ot">NA</span>, <span class="ot">NA</span>), </a>
-<a class="sourceLine" id="cb52-4" title="4">                     <span class="st">&quot;NaCl-0.9-percent&quot;</span> =<span class="st"> </span><span class="kw">c</span>(<span class="ot">NA</span>, <span class="ot">NA</span>, <span class="ot">NA</span>, <span class="ot">NA</span>), </a>
-<a class="sourceLine" id="cb52-5" title="5">                     <span class="st">&quot;NaCl-2-percent&quot;</span> =<span class="st"> </span><span class="kw">c</span>(<span class="ot">NA</span>, <span class="ot">NA</span>, <span class="ot">NA</span>, <span class="ot">NA</span>), </a>
-<a class="sourceLine" id="cb52-6" title="6">                     <span class="st">&quot;NaCl-5-percent&quot;</span> =<span class="st"> </span><span class="kw">c</span>(<span class="ot">NA</span>, <span class="ot">NA</span>, <span class="ot">NA</span>, <span class="ot">NA</span>))</a>
-<a class="sourceLine" id="cb52-7" title="7"><span class="kw">write.csv</span>(<span class="dt">x =</span> table1, <span class="dt">file =</span> <span class="st">&quot;solution-concentration-effect-on-potato-averages.csv&quot;</span>, </a>
-<a class="sourceLine" id="cb52-8" title="8">          <span class="dt">row.names =</span> <span class="ot">FALSE</span>)</a></code></pre></div>
+<div class="sourceCode" id="cb52"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb52-1" data-line-number="1">table2 &lt;-<span class="st"> </span><span class="kw">data.frame</span>(<span class="dt">weight =</span> <span class="kw">c</span>(<span class="st">&quot;percent-change&quot;</span>, <span class="st">&quot;minimum-value&quot;</span>, </a>
+<a class="sourceLine" id="cb52-2" data-line-number="2">                                <span class="st">&quot;maximum-value&quot;</span>, <span class="st">&quot;difference&quot;</span>), </a>
+<a class="sourceLine" id="cb52-3" data-line-number="3">                     <span class="st">&quot;NaCl-0-percent&quot;</span> =<span class="st"> </span><span class="kw">c</span>(<span class="ot">NA</span>, <span class="ot">NA</span>, <span class="ot">NA</span>, <span class="ot">NA</span>), </a>
+<a class="sourceLine" id="cb52-4" data-line-number="4">                     <span class="st">&quot;NaCl-0.9-percent&quot;</span> =<span class="st"> </span><span class="kw">c</span>(<span class="ot">NA</span>, <span class="ot">NA</span>, <span class="ot">NA</span>, <span class="ot">NA</span>), </a>
+<a class="sourceLine" id="cb52-5" data-line-number="5">                     <span class="st">&quot;NaCl-2-percent&quot;</span> =<span class="st"> </span><span class="kw">c</span>(<span class="ot">NA</span>, <span class="ot">NA</span>, <span class="ot">NA</span>, <span class="ot">NA</span>), </a>
+<a class="sourceLine" id="cb52-6" data-line-number="6">                     <span class="st">&quot;NaCl-5-percent&quot;</span> =<span class="st"> </span><span class="kw">c</span>(<span class="ot">NA</span>, <span class="ot">NA</span>, <span class="ot">NA</span>, <span class="ot">NA</span>))</a>
+<a class="sourceLine" id="cb52-7" data-line-number="7"><span class="kw">write.csv</span>(<span class="dt">x =</span> table1, <span class="dt">file =</span> <span class="st">&quot;solution-concentration-effect-on-potato-averages.csv&quot;</span>, </a>
+<a class="sourceLine" id="cb52-8" data-line-number="8">          <span class="dt">row.names =</span> <span class="ot">FALSE</span>)</a></code></pre></div>
 <p>You might have just done this in Excel. We did not teach this method because Excel is not recommended for data entry. There are compatability issues between <code>Excel</code> and <code>R</code> that create problems. Spreadsheet software like Excel can be handy for data entry, but you should think carefully about how to organize your rows and columns first (see Chapter <a href="data.html#data">8</a> for details). If you do have data in Excel, you should convert it to a .csv (comma delimited format) first, before you import to <code>R</code>.</p>
-<p>Here are two articles that do a nice job discussing the differences and pros/cons of Excel vs. <code>R</code></p>
+<p>Here are two articles that do a nice job discussing the differences and pros/cons of Excel vs. <code>R</code></p>
 <p><a href="https://www.jessesadler.com/post/excel-vs-r/">Excel v R</a>: read the first section only</p>
 <p><a href="https://www.gapintelligence.com/blog/understanding-r-programming-over-excel-for-data-analysis/">Understanding R programming over Excel</a></p>
 </div>
@@ -303,8 +308,8 @@ a new object in the Environment tab (in the Environment/History pane).</p>
 <div id="programmatic" class="section level3">
 <h3><span class="header-section-number">6.2.1</span> The programmatic way (i.e., command line)</h3>
 <p>We can load our our data files in CSV format into R using the function <code>read.csv</code> in the following way:</p>
-<div class="sourceCode" id="cb53"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb53-1" title="1">data1 &lt;-<span class="st"> </span><span class="kw">read.csv</span>(<span class="dt">file =</span> <span class="st">&quot;solution-concentration-effect-on-potato.csv&quot;</span>)</a>
-<a class="sourceLine" id="cb53-2" title="2">data2 &lt;-<span class="st"> </span><span class="kw">read.csv</span>(<span class="dt">file =</span> <span class="st">&quot;solution-concentration-effect-on-potato-averages.csv&quot;</span>)</a></code></pre></div>
+<div class="sourceCode" id="cb53"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb53-1" data-line-number="1">data1 &lt;-<span class="st"> </span><span class="kw">read.csv</span>(<span class="dt">file =</span> <span class="st">&quot;solution-concentration-effect-on-potato.csv&quot;</span>)</a>
+<a class="sourceLine" id="cb53-2" data-line-number="2">data2 &lt;-<span class="st"> </span><span class="kw">read.csv</span>(<span class="dt">file =</span> <span class="st">&quot;solution-concentration-effect-on-potato-averages.csv&quot;</span>)</a></code></pre></div>
 <p>Here, the argument <code>file =</code> of <code>read.csv</code> is the name of the file we want to read.
 Notice that the filename needs to be a character string, so we put it in quotes.</p>
 </div>
@@ -345,28 +350,18 @@ It will be similar to the command used in Section <a href="data-entry.html#progr
 <div id="inspecting-the-data" class="section level2">
 <h2><span class="header-section-number">6.3</span> Inspecting the data</h2>
 <p>To take a look at our dataset, we can print it by typing the name in the Console and hitting <code>Enter</code> (or <code>Return</code>).</p>
-<div class="sourceCode" id="cb54"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb54-1" title="1">data1</a></code></pre></div>
-<pre><code>##           weight NaCl.0.percent NaCl.0.9.percent NaCl.2.percent
-## 1        initial             NA               NA             NA
-## 2          final             NA               NA             NA
-## 3     difference             NA               NA             NA
-## 4 percent-change             NA               NA             NA
-##   NaCl.5.percent
-## 1             NA
-## 2             NA
-## 3             NA
-## 4             NA</code></pre>
-<div class="sourceCode" id="cb56"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb56-1" title="1">data2</a></code></pre></div>
-<pre><code>##           weight NaCl.0.percent NaCl.0.9.percent NaCl.2.percent
-## 1        initial             NA               NA             NA
-## 2          final             NA               NA             NA
-## 3     difference             NA               NA             NA
-## 4 percent-change             NA               NA             NA
-##   NaCl.5.percent
-## 1             NA
-## 2             NA
-## 3             NA
-## 4             NA</code></pre>
+<div class="sourceCode" id="cb54"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb54-1" data-line-number="1">data1</a></code></pre></div>
+<pre><code>##           weight NaCl.0.percent NaCl.0.9.percent NaCl.2.percent NaCl.5.percent
+## 1        initial             NA               NA             NA             NA
+## 2          final             NA               NA             NA             NA
+## 3     difference             NA               NA             NA             NA
+## 4 percent-change             NA               NA             NA             NA</code></pre>
+<div class="sourceCode" id="cb56"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb56-1" data-line-number="1">data2</a></code></pre></div>
+<pre><code>##           weight NaCl.0.percent NaCl.0.9.percent NaCl.2.percent NaCl.5.percent
+## 1        initial             NA               NA             NA             NA
+## 2          final             NA               NA             NA             NA
+## 3     difference             NA               NA             NA             NA
+## 4 percent-change             NA               NA             NA             NA</code></pre>
 <p>You can also open the dataset by clicking on the object <code>data1</code> in the Environment tab.
 This will open a new tab with the dataset, instead of printing it into the Console,
 which is a good choice if your dataset is larger.
