@@ -1,14 +1,12 @@
 --- 
 title: "Quantitative skills for biology"
-# author: "Yolanda Wiersma, Amy Hurford, Joany Mariño"
-# date: "`r Sys.Date()`"
 site: bookdown::bookdown_site
 output: bookdown::gitbook #bookdown::html_document2
 documentclass: book
 bibliography: [references.bib]
 biblio-style: apalike
-link-citations: false
-github-repo: 
+link-citations: false 
+github-repo: ahurford/quantitative-training-guide
 description: "Quantitative skills for biology"
 ---
 

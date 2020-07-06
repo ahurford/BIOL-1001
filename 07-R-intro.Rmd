@@ -5,7 +5,6 @@ This is a brief introduction to R, focussing on basic programming concepts and b
 For **BIOL 1001**, work through this chapter along with Chapter \@ref(graph) for the *Intro to R* lab. Throughout these two chapters, there are several places where we've indicated **HAND IN**. These are pieces of information you'll copy into a Word document to hand in for your evaluation of this lab (don't forget to include you name and student number in this document!).
 
 
-
 ## Workflow
 
 You can interact directly with the console, but it is considered best practice to write an .R file and run commands in the console from that script. This allows saving the code and running all at once with the `source` function. Remember to click Save often, so that you actually save your script!
