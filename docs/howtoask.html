@@ -4,21 +4,21 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 10 Data and metadata | Quantitative skills for biology</title>
-  <meta name="description" content="Chapter 10 Data and metadata | Quantitative skills for biology" />
+  <title>Chapter 7 How to ask for help | Quantitative skills for biology</title>
+  <meta name="description" content="Chapter 7 How to ask for help | Quantitative skills for biology" />
   <meta name="generator" content="bookdown 0.17 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 10 Data and metadata | Quantitative skills for biology" />
+  <meta property="og:title" content="Chapter 7 How to ask for help | Quantitative skills for biology" />
   <meta property="og:type" content="book" />
   
   
-  <meta property="og:description" content="Chapter 10 Data and metadata | Quantitative skills for biology" />
+  <meta property="og:description" content="Chapter 7 How to ask for help | Quantitative skills for biology" />
   <meta name="github-repo" content="ahurford/quantitative-training-guide" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 10 Data and metadata | Quantitative skills for biology" />
+  <meta name="twitter:title" content="Chapter 7 How to ask for help | Quantitative skills for biology" />
   
-  <meta name="twitter:description" content="Chapter 10 Data and metadata | Quantitative skills for biology" />
+  <meta name="twitter:description" content="Chapter 7 How to ask for help | Quantitative skills for biology" />
   
 
 
@@ -29,8 +29,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="graph.html"/>
-<link rel="next" href="hypothesis.html"/>
+<link rel="prev" href="help.html"/>
+<link rel="next" href="data-entry.html"/>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -258,94 +258,74 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="data" class="section level1">
-<h1><span class="header-section-number">Chapter 10</span> Data and metadata</h1>
-<div id="data-1" class="section level2">
-<h2><span class="header-section-number">10.1</span> Data</h2>
-<p>Data are information collected through research. Manipulation and analysis of these data (which involves testing the hypothesis) will yield the results of your research. A crucial step during this research process is ensuring the reproducibility of your results; this means that your results (either experimental or theoretical) must be repeatable by yourself and others within the scientific community. Therefore, sharing your scientific data becomes fundamental. Proper data sharing has the added benefit of allowing the data to be reused in other projects that you may not have been initially intended (e.g., meta-analyses); hence, other scientists can build directly on this to generate further knowledge
-<span class="citation">(Hampton et al. 2015; White et al. 2013)</span>.
-In this sense, planning an experiment involves more than thinking through the physical manipulations required, but also requires thinking about how to store and share the data and metadata that will enable others to reuse that information effectively
-<span class="citation">(Hampton et al. 2015)</span>.</p>
-<div id="data-guidelines" class="section level3">
-<h3><span class="header-section-number">10.1.1</span> Data guidelines</h3>
-<p>Data organization is the basis of the data-related work for your project. Messy data makes it harder for you and others to work with the data, so you should be mindful of your data organization when entering the data. You’ll want to organize your data in a way that allows computers and people (including you) to understand and use the data easily. For instance, when returning to your own data for further analysis months or years after you originally collected or analyzed it <span class="citation">(White et al. 2013)</span>.</p>
-<p>Keep in mind the following <span class="citation">(Hart et al. 2016; White et al. 2013)</span>:</p>
-<ul>
-<li>Anticipate how your data will be used</li>
-<li>Be consistent</li>
-<li>Use standard data formats (properly formatted data are easier to use, e.g. .csv)</li>
-<li>Keep raw data raw</li>
-<li>Data should be structured for analysis (see below)</li>
-<li>Link to relevant metadata (well documented data are easier to understand). See section below for more details on metadata</li>
-<li>Store and share data (data that are shared in established repositories with open licenses is easier for others to find and use)</li>
-</ul>
-<p>Following these recommendations makes it easier for anyone to reuse your data, including yourself!</p>
-</div>
-<div id="database-structure-guidelines" class="section level3">
-<h3><span class="header-section-number">10.1.2</span> Database structure guidelines</h3>
-<p>It’s essential to set up well-formatted tables from the outset before you even start collecting data to analyze.
-This will ensure that you spend less time wrangling data from one representation to another, allowing you to analyze data in much more effective and faster ways and spend more time on the analytic questions at hand.</p>
-<p>We recommend <span class="citation">(Hart et al. 2016; White et al. 2013)</span>:</p>
-<ul>
-<li>Be consistent</li>
-<li>Order of entries doesn’t matter</li>
-<li>One row for each data point</li>
-<li>One column per type of information</li>
-<li>Every cell contains one value</li>
-<li>Don’t use colors, fonts, or anything purely visual as data</li>
-<li>Use good null values (e.g. NAs)</li>
-<li>Store dates as YYY-MM-DD</li>
-<li>Save data in plain text files (e.g. .csv)</li>
-<li>Use good names</li>
-<li>Avoid including special characters in your data file</li>
-<li>Don’t put units or comments in cells</li>
-<li>Don’t do calculations in the raw data files</li>
-<li>Minimize redundancy using multiple tables</li>
-<li>Don’t use multiple tables in one sheet, or multiple tabs in a file.</li>
-<li>Make backups</li>
-</ul>
-</div>
-</div>
-<div id="metadata" class="section level2">
-<h2><span class="header-section-number">10.2</span> Metadata</h2>
-<p>Another critical point when using data is to understand it. Metadata is information about the data. Metadata can include how the data was collected, what the units of measurement are, or descriptions of how to best use the data. Clear metadata makes it easier to figure out if a dataset is appropriate for a project. It also makes data easier to use by both the original investigators and by other scientists by making it easy to figure out how to work with the data. Without clear metadata, datasets can be overlooked or go unused due to the difficulty of understanding the data. Undocumented data also becomes less useful over time as information about the data is gradually lost <span class="citation">(White et al. 2013)</span>.</p>
-<div id="metadata-guidelines" class="section level3">
-<h3><span class="header-section-number">10.2.1</span> Metadata guidelines</h3>
-<p>Metadata can take several forms, including descripttive file and column names, a written description of the data, images (i.e., maps, photographs), and specially structured information that can be read by computers (either as separate files or part of the data files) <span class="citation">(White et al. 2013)</span>. The aim is to make the link between metadata and data as clear as possible <span class="citation">(Hart et al. 2016)</span>.
-Good metadata should provide the following:
-<span class="citation">(White et al. 2013)</span>:</p>
-<ul>
-<li>Include as many details as you can for future users of the data (i.e. the what, when, where, and how of data collection).</li>
-<li>Explain how to find and access the data.</li>
-<li>Give suggestions on the suitability of the data for answering specific questions.</li>
-<li>Provide warnings about known problems or inconsistencies in the data (e.g., general descriptions of data limitations or a column in a table to indicate the quality of individual data points).</li>
-<li>Give information to check that the data are properly imported (e.g., the number of rows and columns in the dataset and the total sum of numerical columns).</li>
-</ul>
-</div>
-</div>
-<div id="further-reading" class="section level2">
-<h2><span class="header-section-number">10.3</span> Further reading</h2>
-<ul>
-<li><p><a href="http://www.dcc.ac.uk/resources/metadata-standards/list">List of metadata standards</a></p></li>
-<li><p>Browse <a href="http://sciencebase.gov" class="uri">http://sciencebase.gov</a> and <a href="http://data.usgs.gov" class="uri">http://data.usgs.gov</a> for both good and bad examples fo these standards in use (as well as examples from before) <a href="http://Data.gov" class="uri">http://Data.gov</a> will have more examples too.</p></li>
-<li><p>The metadata section of this paper is really great for a quick run down of what metadata is: <a href="https://ojs.library.queensu.ca/index.php/IEE/article/view/4608" class="uri">https://ojs.library.queensu.ca/index.php/IEE/article/view/4608</a></p></li>
-<li><p><a href="http://www.ncbi.nlm.nih.gov/%20genbank/">GenBank</a></p></li>
-<li><p><a href="http://datadryad.org/">Dryad</a></p></li>
-<li><p><a href="https://www.force11.org/datacitationprinciples">Data Citation Principles of Force11</a></p></li>
-<li><p><a href="https://github.com/ropenscilabs/dataspice">Dataspice</a>: an R package to create basic, lightweight and concise metadata files.</p></li>
-<li><p><a href="https://aslopubs.onlinelibrary.wiley.com/hub/journal/23782242/about/author-guidelines#data" class="uri">https://aslopubs.onlinelibrary.wiley.com/hub/journal/23782242/about/author-guidelines#data</a></p></li>
-<li><p><a href="https://www.usgs.gov/products/data-and-tools/data-management/metadata-creation" class="uri">https://www.usgs.gov/products/data-and-tools/data-management/metadata-creation</a></p></li>
-</ul>
+<div id="howtoask" class="section level1">
+<h1><span class="header-section-number">Chapter 7</span> How to ask for help</h1>
+<p>The key to getting a useful answer to your R problem is asking a short but complete question. Frequently, this means to provide a reproducible example, which will allow someone else to reproduce your problem by copying and pasting your code. Four things make an example reproducible: a description of your R environment, required packages, code, and data. In BIOL 1001 and 1002, we provide the data that you will be using in the exercises, so it is unlike that your issue is related to the data. Hence, we emphasize the other components of asking a good question instead. We encourage you to follow the following steps:</p>
+<ol style="list-style-type: decimal">
+<li>Do your homework before asking. This step varies depending on where your problem is:
+<ol style="list-style-type: decimal">
+<li>If you have installation issues, double-check that you followed the instructions on Section <a href="install.html#install">3</a> and have downloaded and installed the correct versions of R and RStudio.</li>
+<li>If you have trouble with coding, first, locate the lines of code where the problem occurs. Copy your code from the beginning up to where the issue occurs. Then, start a new RStudio session, paste and run the code. Starting fresh will help you see if the same issue arises or if it was solved by removing unused elements.</li>
+<li>If the problem is caused by a function/command not running or not giving the expected output, follow Chapter <a href="help.html#help">6</a> and read the help for the relevant functions/commands and how to use them.</li>
+<li>If you receive an error message or a warning, search the web by copying and pasting the output of R. It is likely that your R question has already been answered in websites like <a href="https://stackoverflow.com/">Stack Overflow</a>. You can even search Twitter using ‘#rstats’.</li>
+<li>Finally, read over Section <a href="faq.html#faq">A</a> and other posts in the lab’s Discussion List to see if anyone else had a similar problem and how they solved it.<br />
+<br/></li>
+</ol></li>
+<li><p>Write down your problem, succinctly. Try to simplify your problem as much as possible. You can often answer your question by thinking clearly and going through the simplification process. Remember that you need to report the facts, so please do not write ‘R crashed’ or ‘function xyz doesn’t work’. Write exactly what happened, including any error messages R prompted. If you think that a function/command is not behaving sensibly, it’s more productive and polite to first, read the relevant documentation (see the previous step), and then ask why it acts the way it does.</p></li>
+<li><p>Provide a short, reproducible example. First, try to locate which lines exactly result in the error. By doing this, you will often find out what the problem is by yourself. Please, do not copy and paste a whole function/chunk of code that gives an error. What is most useful is an accurate description of what commands you type until the problem happens. Do your best to remove everything that is not related to the problem. The shorter your code is, the easier it is to understand.</p></li>
+<li><p>Ensure your code is easy for others to read. Make sure you have used spaces and your variable names are concise, but informative. This is also a good moment to check that your problem is not related to a typo in the name of an object. Remember that in R capitalization matters (e.g. <code>X</code> is not the same as <code>x</code>). Use comments often to explain what you did and to indicate where your problem is. When you copy from the R console, take a few seconds to remove any ‘&gt;’ and ‘+’. For example, if your code looks like this:</p></li>
+</ol>
+<div class="sourceCode" id="cb51"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb51-1" data-line-number="1"><span class="op">&gt;</span><span class="st"> </span>x &lt;-<span class="st"> </span><span class="kw">matrix</span>(<span class="dv">1</span><span class="op">:</span><span class="dv">8</span>, <span class="dt">nrow=</span><span class="dv">4</span>, <span class="dt">ncol=</span><span class="dv">2</span>,</a>
+<a class="sourceLine" id="cb51-2" data-line-number="2">       <span class="dt">dimnames=</span><span class="kw">list</span>(<span class="kw">c</span>(<span class="st">&quot;A&quot;</span>,<span class="st">&quot;B&quot;</span>,<span class="st">&quot;C&quot;</span>,<span class="st">&quot;D&quot;</span>), <span class="kw">c</span>(<span class="st">&quot;x&quot;</span>,<span class="st">&quot;y&quot;</span>)))</a>
+<a class="sourceLine" id="cb51-3" data-line-number="3"><span class="op">&gt;</span><span class="st"> </span>x</a>
+<a class="sourceLine" id="cb51-4" data-line-number="4">  x y</a>
+<a class="sourceLine" id="cb51-5" data-line-number="5">A <span class="dv">1</span> <span class="dv">5</span></a>
+<a class="sourceLine" id="cb51-6" data-line-number="6">B <span class="dv">2</span> <span class="dv">6</span></a>
+<a class="sourceLine" id="cb51-7" data-line-number="7">C <span class="dv">3</span> <span class="dv">7</span></a>
+<a class="sourceLine" id="cb51-8" data-line-number="8">D <span class="dv">4</span> <span class="dv">8</span></a></code></pre></div>
+<div class="line-block">        We cannot copy and paste it directly. By removing the “&gt;”, you save us time in responding your<br />
+        question. You should also use <code>#</code> for outputs and comments, like this:</div>
+<div class="sourceCode" id="cb52"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb52-1" data-line-number="1"><span class="co"># First, I define a matrix:</span></a>
+<a class="sourceLine" id="cb52-2" data-line-number="2">x &lt;-<span class="st"> </span><span class="kw">matrix</span>(<span class="dv">1</span><span class="op">:</span><span class="dv">8</span>, <span class="dt">nrow=</span><span class="dv">4</span>, <span class="dt">ncol=</span><span class="dv">2</span>,</a>
+<a class="sourceLine" id="cb52-3" data-line-number="3">       <span class="dt">dimnames=</span><span class="kw">list</span>(<span class="kw">c</span>(<span class="st">&quot;A&quot;</span>,<span class="st">&quot;B&quot;</span>,<span class="st">&quot;C&quot;</span>,<span class="st">&quot;D&quot;</span>), <span class="kw">c</span>(<span class="st">&quot;x&quot;</span>,<span class="st">&quot;y&quot;</span>)))</a>
+<a class="sourceLine" id="cb52-4" data-line-number="4">x</a>
+<a class="sourceLine" id="cb52-5" data-line-number="5"><span class="co"># x y</span></a>
+<a class="sourceLine" id="cb52-6" data-line-number="6"><span class="co">#A 1 5</span></a>
+<a class="sourceLine" id="cb52-7" data-line-number="7"><span class="co">#B 2 6</span></a>
+<a class="sourceLine" id="cb52-8" data-line-number="8"><span class="co">#C 3 7</span></a>
+<a class="sourceLine" id="cb52-9" data-line-number="9"><span class="co">#D 4 8</span></a></code></pre></div>
+<ol start="5" style="list-style-type: decimal">
+<li><p>Check that you have made a reproducible example by starting up a new RStudio session, pasting your code from the step above and running it. In this way, you are sure that you made a piece of code that we can run to see the problem. Anyone should be able to copy and paste your code and data and get the same issue.</p></li>
+<li><p>We need some facts about your machine, operating system, and version of R. To get this information, type the following command in the console: <code>sessionInfo()</code>. Paste the full output in your question. When mentioning version numbers, always use the complete version number, e.g., ‘2.6.1’, instead of ‘2.6’, and mention the platform (Windows, Linux, MacOS X, with their versions). We also need to check which version of RStudio you are using. For this, type in the console <code>rstudioapi::versionInfo()</code> and provide the full output in your question. If you have a package-specific problem, you should give its version by providing the output of <code>packageVersion(&quot;name of the package&quot;)</code>.</p></li>
+<li><p>Before putting all of your code in an email, we encourage you to post it on the lab’s Discussion List. By doing this, we can help multiple people that may have the same problem at the same time. It also helps us to reply faster because we do not have to answer similar questions many times. Reading and commenting online is an essential component of learning programming, and it is one of the assets that makes R useful, more accessible and fun. The Discussion List is our small R community, and when you post on the Discussion List, we learn together.</p></li>
+<li><p>Write a specific, informative subject line. Please do not write: ‘question’, ‘Lab 2’ or ‘R crashed’. Good examples are: ‘R Studio: “Error: …”’, ‘Q3, “Error in plot.xy(xy, type, …) : invalid plot type 1”’, or ‘q10, outliers and percentiles’.</p></li>
+<li><p>Use good manners. Rudeness is not acceptable. Be tolerant. Sometimes <em>read the manual</em> is the appropriate response to your question. An answer that is concise and technically accurate is just that, it is not intended as pedantic or an affront. Please do not complain or say that you want to drop out if you cannot finish the lab; this tends to create negative attitudes that are not useful when answering your questions. Remember that we are trying to help you learn.</p></li>
+<li><p>Example of a good question:</p></li>
+</ol>
+<p>Subject: transform matrix to dataframe of specific dimensions.</p>
+<div class="sourceCode" id="cb53"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb53-1" data-line-number="1"><span class="co"># If I have a matrix x as follows:</span></a>
+<a class="sourceLine" id="cb53-2" data-line-number="2">x &lt;-<span class="st"> </span><span class="kw">matrix</span>(<span class="dv">1</span><span class="op">:</span><span class="dv">8</span>, <span class="dt">nrow=</span><span class="dv">4</span>, <span class="dt">ncol=</span><span class="dv">2</span>,</a>
+<a class="sourceLine" id="cb53-3" data-line-number="3">       <span class="dt">dimnames=</span><span class="kw">list</span>(<span class="kw">c</span>(<span class="st">&quot;A&quot;</span>,<span class="st">&quot;B&quot;</span>,<span class="st">&quot;C&quot;</span>,<span class="st">&quot;D&quot;</span>), <span class="kw">c</span>(<span class="st">&quot;x&quot;</span>,<span class="st">&quot;y&quot;</span>)))</a>
+<a class="sourceLine" id="cb53-4" data-line-number="4">x</a></code></pre></div>
+<p>How can I turn it into a dataframe with eight rows, and three
+columns named ‘row’, ‘col’, and ‘value’, which have the
+dimension names as the values of ‘row’ and ‘col’?</p>
+<div class="sourceCode" id="cb54"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb54-1" data-line-number="1"><span class="co"># example of desired output</span></a>
+<a class="sourceLine" id="cb54-2" data-line-number="2"><span class="co"># x_transformed</span></a>
+<a class="sourceLine" id="cb54-3" data-line-number="3"><span class="co">#     row col value </span></a>
+<a class="sourceLine" id="cb54-4" data-line-number="4"><span class="co">#       A   x     1</span></a>
+<a class="sourceLine" id="cb54-5" data-line-number="5"><span class="co">#       B   x     2</span></a>
+<a class="sourceLine" id="cb54-6" data-line-number="6"><span class="co">#       C   x     3</span></a>
+<a class="sourceLine" id="cb54-7" data-line-number="7"><span class="co">#       ...</span></a></code></pre></div>
 
-</div>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="graph.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="hypothesis.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="help.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="data-entry.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -376,7 +356,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/rstudio/bookdown-demo/edit/master/15-data-and-metadata.Rmd",
+"link": "https://github.com/rstudio/bookdown-demo/edit/master/10-asking-for-help.Rmd",
 "text": "Edit"
 },
 "history": {

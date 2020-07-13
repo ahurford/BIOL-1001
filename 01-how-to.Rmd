@@ -1,4 +1,2 @@
 # How to use this manual {#howto}
 
-## How to ask for help {#howtoask}
-
