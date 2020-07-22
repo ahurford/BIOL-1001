@@ -1,1 +1,33 @@
 # Glossary {#glossary}
+
+Here is a list of terms that are frequently used throught the manual.
+
+* **Argument**:
+  a value or piece of data provided as input to a function or program when it runs. For example, in `sqrt(A)`, the argument given to the square root function is the variable `A`.
+
+* **Assign** or **assignment**:
+  to set (or re-set) the value of a variable, or conversely, to give a value a name. In R, we assign a value to a variable using `<-`. For example, `A <- 8`, or `B <- seq(1, 10)`.
+    
+* **Body** (of a function): 
+  the statements that are executed when a function runs.
+
+* **Comment**:
+  a statement or sentence in a program that is intended to help human understand what is going on, but is ignored by the computer. Comments in R start with a `#` character and run to the end of the line.
+    
+* **CSV** (Comma-Separated Values):
+  a text file used to represents tables by separating the values in each row by commas. You can recognize them by the file extension ".csv".
+
+* **Function**:
+  a piece of organized, reusable code that is used to perform a single, related action. In R, functions are called (or run) by stating the name of the function followed by the arguments it can take between parenthesis. For example `length(A)`.
+    
+* **Installation** (or setup): 
+  to make a computer program, software or hardware ready to be used with the computer. Usually, this requires downloading an executable file that performs the installation when run.    
+    
+* **Library**:
+  the directory(ies) where packages are stored. See **packages**. 
+    
+* **Package**:
+  a collection of R functions, data and compiled code in a well-defined format. Packages are stored in a library and can be loaded using the `library()` function. Packages can be installed using the `install.packages("package-name")` function.
+    
+* **Type**:
+  how R classifies objects (e.g., the contents of a variable). For example, a number (e.g. integer), string, or something else. The command `typeof()` queries the type of a variable. For example, `typeof(A)`.
