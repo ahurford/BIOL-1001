@@ -4,21 +4,21 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>A FAQ | Quantitative skills for biology</title>
-  <meta name="description" content="A FAQ | Quantitative skills for biology" />
+  <title>Chapter 9 Best practices | Quantitative skills for biology</title>
+  <meta name="description" content="Chapter 9 Best practices | Quantitative skills for biology" />
   <meta name="generator" content="bookdown 0.17 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="A FAQ | Quantitative skills for biology" />
+  <meta property="og:title" content="Chapter 9 Best practices | Quantitative skills for biology" />
   <meta property="og:type" content="book" />
   
   
-  <meta property="og:description" content="A FAQ | Quantitative skills for biology" />
+  <meta property="og:description" content="Chapter 9 Best practices | Quantitative skills for biology" />
   <meta name="github-repo" content="ahurford/quantitative-training-guide" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="A FAQ | Quantitative skills for biology" />
+  <meta name="twitter:title" content="Chapter 9 Best practices | Quantitative skills for biology" />
   
-  <meta name="twitter:description" content="A FAQ | Quantitative skills for biology" />
+  <meta name="twitter:description" content="Chapter 9 Best practices | Quantitative skills for biology" />
   
 
 
@@ -29,8 +29,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="contributions.html"/>
-<link rel="next" href="glossary.html"/>
+<link rel="prev" href="howtoask.html"/>
+<link rel="next" href="data-entry.html"/>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -269,47 +269,70 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="faq" class="section level1">
-<h1><span class="header-section-number">A</span> FAQ</h1>
-<p>Below is a list of Frequently Asked Questions (FAQ) compiled from previous iterations of the course.</p>
-<div id="download-and-installation-issues" class="section level2">
-<h2><span class="header-section-number">A.1</span> Download and Installation Issues</h2>
-<ol style="list-style-type: decimal">
-<li>Q. I’m having issues opening the download file/I’m working on an old computer, and R/RStudio does not seem to start. What can I do?<br />
-A. Make sure that you downloaded the versions of R/RStudio that match your operating system. They may be older versions, that is fine. Then, check that you first installed R and then RStudio because RStudio needs to be added on top of R. If you already have the right versions and did the installation in order, but you still cannot start the software, try the following:
-<ol style="list-style-type: decimal">
-<li>Use RStudio on the web through RStudio cloud. See Section <a href="install.html#rcloud">3.1.1</a> for instructions on how to get started.<br />
-</li>
-<li>You can get in touch with us by posting to the online discussion forum. Please make sure that you give us enough details about your issue. See Section <a href="howtoask.html#howtoask">8</a> for a list of useful information that you should provide to help us answer your question.</li>
-</ol></li>
-</ol>
+<div id="style" class="section level1">
+<h1><span class="header-section-number">Chapter 9</span> Best practices</h1>
+<p>We write code to be read by a computer and other humans (including your future self!). For this reason, it’s essential to ensure that your code is understandable to other people in the same way you follow proper grammar and punctuation in your writing. Programming best practices are a set of informal rules and habits that we use to improve the quality of software, and we encourage you to follow them.</p>
+<div id="basics" class="section level2">
+<h2><span class="header-section-number">9.1</span> Basics</h2>
+<p>As you start to learn to program, it is useful to follow best practices and a consistent style to keep code and data organized, easy to read, share, and verify. For brevity, we focus on the most critical aspects.</p>
+<div id="file-organization" class="section level3">
+<h3><span class="header-section-number">9.1.1</span> File organization</h3>
+<p>To organize your data and scripts for each course/project, you can start by creating a new folder in your computer where you can store all the relevant files. We recommend that you create this new folder in the Desktop, so it is easy to find from R/RStudio.</p>
 </div>
-<div id="computer-issues" class="section level2">
-<h2><span class="header-section-number">A.2</span> Computer Issues</h2>
-<ol style="list-style-type: decimal">
-<li><ol start="17" style="list-style-type: upper-alpha">
-<li>I prefer not to install new software on my computer. Do I have any alternative for completing these labs?<br />
-A. Yes! You can use RStudio on any web browser through RStudio cloud. See Section <a href="install.html#rcloud">3.1.1</a> for instructions on how to get started.<br />
-<br/></li>
-</ol></li>
-<li><p>Q. I’m using an Apple computer and it froze/slows down when I tried installing R/RStudio. What can I do?<br />
-A. Here are a few options that you can try. First, to see which software is slowing down the laptop, you can use the Activity Monitor:</p>
-<ol style="list-style-type: decimal">
-<li>Click the “Finder” on your dock to open a Finder window.</li>
-<li>Click “Applications” on the sidebar of the Finder window to see your Mac applications. In this folder, double-click the “Utilities” folder.</li>
-<li>Double-click the “Activity Monitor” icon to access the application.</li>
-<li>Click the “Memory” tab. There you should see which software is consuming most of your RAM.</li>
-<li>If you see RStudio there, you can stop it by selecting it and then clicking on the button with an “x” (located at the top-left corner). But, it is also likely that the software at the top of the list is a web browser (e.g. Safari, Chrome). Since you don’t want to close the browser, you could try to close tabs that are not in use and quit other software also not used at the moment (e.g. Microsoft Office, Adobe Acrobat). Quitting some apps should improve the speed of the laptop.</li>
-</ol>
-<p>If, after quitting/deleting the apps, your computer is still not working as before, you can use Apple Diagnostics to try to find out more about the issues. Here are the instructions to follow: <a href="https://support.apple.com/en-ca/guide/mac-help/mh35727/mac" class="uri">https://support.apple.com/en-ca/guide/mac-help/mh35727/mac</a>. If this utility finds any problems, you can get in touch with us by posting to the online discussion forum or reach out to the IT department at MUN with the information Apple Diagnostics provided. Please see Section <a href="howtoask.html#howtoask">8</a> for a list of useful information that you should give to help us answer your question. If you prefer to delete the R and RStudio apps altogether, then an alternative is to use RStudio Cloud. See Section <a href="install.html#rcloud">3.1.1</a> for instructions on how to get started.</p></li>
-</ol>
+<div id="comments-1" class="section level3">
+<h3><span class="header-section-number">9.1.2</span> Comments</h3>
+<p>These are sections that are ignored by the computer but are helpful for the humans reading the code. You can use comments to explain what a specific line of code does or to visually separate parts of code from each other. Comments in R are written with a <code>#</code> (pound) sign. Whenever R encounters a <code>#</code> sign, it will ignore all the code after the <code>#</code> sign on that line.</p>
+<p>We recommended starting your script with a description of what the code does when it runs. Describing the intended purpose of the code in a comment will save you and others time when trying to understand what a particular script does. It is also a good idea to keep track of who wrote the code.</p>
 </div>
-<div id="rstudio-error-messages" class="section level2">
-<h2><span class="header-section-number">A.3</span> RStudio Error Messages</h2>
+<div id="spacing" class="section level3">
+<h3><span class="header-section-number">9.1.3</span> Spacing</h3>
+<p>Using spaces and line breaks also improve the readability of the code. You should include spaces between operators (e.g. &lt;-, ==), arithmetic operators (e.g. =, + and -) and after commas.</p>
+<p>If you have long lines, split them into multiple lines. For example, use one line each for the function name, arguments, and the closing ). Breaking lines makes the code easier to read and to change later.</p>
+</div>
+<div id="names" class="section level3">
+<h3><span class="header-section-number">9.1.4</span> Names</h3>
+<p>Variable and function names should use lowercase letters and numbers. You can use <code>_</code> (underscores, called snake case) to separate words within a name. Generally, variable names should be nouns and function names should be verbs. Try to have names that are concise and meaningful.</p>
+</div>
+</div>
+<div id="template" class="section level2">
+<h2><span class="header-section-number">9.2</span> Template</h2>
+<p>Here is an example of a short script that follows good programming and style practices. Try to make your scripts look like this!</p>
+<div class="sourceCode" id="cb55"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb55-1" data-line-number="1"><span class="co"># Title: My R script for lab 1</span></a>
+<a class="sourceLine" id="cb55-2" data-line-number="2"><span class="co"># Author: Maria Skłodowska</span></a>
+<a class="sourceLine" id="cb55-3" data-line-number="3"><span class="co"># Date: 26-04-2020</span></a>
+<a class="sourceLine" id="cb55-4" data-line-number="4"></a>
+<a class="sourceLine" id="cb55-5" data-line-number="5"><span class="co"># Load libraries needed ---------------------------</span></a>
+<a class="sourceLine" id="cb55-6" data-line-number="6"><span class="kw">library</span>(vegan)</a>
+<a class="sourceLine" id="cb55-7" data-line-number="7"></a>
+<a class="sourceLine" id="cb55-8" data-line-number="8"><span class="co"># Set working directory ---------------------------</span></a>
+<a class="sourceLine" id="cb55-9" data-line-number="9"><span class="kw">setwd</span>(<span class="st">&quot;/Users/me/Desktop/R-intro/&quot;</span>)</a>
+<a class="sourceLine" id="cb55-10" data-line-number="10"></a>
+<a class="sourceLine" id="cb55-11" data-line-number="11"><span class="co"># Load data ---------------------------</span></a>
+<a class="sourceLine" id="cb55-12" data-line-number="12">dataset &lt;-<span class="st"> </span><span class="kw">read.csv</span>(<span class="st">&quot;example_dataset1.csv&quot;</span>)</a>
+<a class="sourceLine" id="cb55-13" data-line-number="13"></a>
+<a class="sourceLine" id="cb55-14" data-line-number="14"><span class="co"># Analyze data ---------------------------</span></a>
+<a class="sourceLine" id="cb55-15" data-line-number="15">temp &lt;-<span class="st"> </span>dataset<span class="op">$</span>temp</a>
+<a class="sourceLine" id="cb55-16" data-line-number="16">fish_<span class="dv">1</span> &lt;-<span class="st"> </span>dataset<span class="op">$</span>fishA</a>
+<a class="sourceLine" id="cb55-17" data-line-number="17"></a>
+<a class="sourceLine" id="cb55-18" data-line-number="18">fish_mean &lt;-<span class="st"> </span><span class="kw">mean</span>(fish_<span class="dv">1</span>, <span class="dt">na.rm =</span> <span class="ot">TRUE</span>)</a>
+<a class="sourceLine" id="cb55-19" data-line-number="19"></a>
+<a class="sourceLine" id="cb55-20" data-line-number="20"><span class="co"># Plot data ---------------------------</span></a>
+<a class="sourceLine" id="cb55-21" data-line-number="21"><span class="kw">plot</span>(<span class="dt">x =</span> temp, <span class="dt">y =</span> fish_<span class="dv">1</span>, </a>
+<a class="sourceLine" id="cb55-22" data-line-number="22">     <span class="dt">pch =</span> <span class="dv">17</span>, <span class="dt">type =</span> <span class="st">&quot;l&quot;</span>, </a>
+<a class="sourceLine" id="cb55-23" data-line-number="23">     <span class="dt">xlab =</span> <span class="st">&quot;temperature (degrees C)&quot;</span>, </a>
+<a class="sourceLine" id="cb55-24" data-line-number="24">     <span class="dt">ylab =</span> <span class="st">&quot;opercular beats (bpm)&quot;</span></a>
+<a class="sourceLine" id="cb55-25" data-line-number="25">     )</a></code></pre></div>
+</div>
+<div id="checklist" class="section level2">
+<h2><span class="header-section-number">9.3</span> Checklist</h2>
 <ol style="list-style-type: decimal">
-<li>Q. R Studio: “Error: Unable to establish connection with R session”<br />
-A. The antivirus could trigger a connection error. Check the antivirus software for a message related to RStudio. If you don’t see anything in the main window of the antivirus, check the log for anything related to R/RStudio. If there is a warning, you have to deactivate the antivirus or allow permission to execute R/RStudio. If you are still having issues, you can get in touch with us by posting to the online discussion forum. Please make sure that you give us enough details about your issue. See Section <a href="howtoask.html#howtoask">8</a> for a list of useful information that you should provide to help us answer your question.
-In case nothing else seems to work, you can also try RStudio Cloud. See Section <a href="install.html#rcloud">3.1.1</a> for instructions on how to get started.</li>
+<li><p>Keep all of your files for a project/course in the same directory</p></li>
+<li><p>Start each script with a description of what it does.</p></li>
+<li><p>Load all required packages.</p></li>
+<li><p>Consider changing the working directory you are in (especially if you have to load data).</p></li>
+<li><p>Use comments to mark off sections of code.</p></li>
+<li><p>Name and style code consistently.</p></li>
+<li><p>Keep your code in chunks. Start a new script for each lab. If a single script gets too long, consider breaking it into smaller pieces.</p></li>
 </ol>
 
 </div>
@@ -319,8 +342,8 @@ In case nothing else seems to work, you can also try RStudio Cloud. See Section 
           </div>
         </div>
       </div>
-<a href="contributions.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="glossary.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="howtoask.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="data-entry.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -351,7 +374,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/rstudio/bookdown-demo/edit/master/70-appendixA.Rmd",
+"link": "https://github.com/rstudio/bookdown-demo/edit/master/17-best-practices.Rmd",
 "text": "Edit"
 },
 "history": {
