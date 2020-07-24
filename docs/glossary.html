@@ -280,8 +280,12 @@ to make a computer program, software or hardware ready to be used with the compu
 the directory(ies) where packages are stored. See <strong>packages</strong>.</p></li>
 <li><p><strong>Package</strong>:
 a collection of R functions, data and compiled code in a well-defined format. Packages are stored in a library and can be loaded using the <code>library()</code> function. Packages can be installed using the <code>install.packages(&quot;package-name&quot;)</code> function.</p></li>
+<li><p><strong>Prompt</strong>:
+A symbol that indicates that the computer is waiting for input. In RStudio, it is the <code>&gt;</code> symbol in the Console. If you see a <code>+</code> instead, it means that R is wanting you to enter additional information. Press escape (<code>esc</code>) and then return (or enter) to go back to the <code>&gt;</code> prompt.</p></li>
 <li><p><strong>Type</strong>:
 how R classifies objects (e.g., the contents of a variable). For example, a number (e.g. integer), string, or something else. The command <code>typeof()</code> queries the type of a variable. For example, <code>typeof(A)</code>.</p></li>
+<li><p><strong>Working directory</strong>:
+The path to the folder in which R reads and saves files in your computer. Normally this is the user home directory (in R it is typically referenced using <code>~</code>). You can check your current working directory with the function <code>getwd()</code>. To change your working directory, use <code>setwd(&quot;new-file-path&quot;)</code>.</p></li>
 </ul>
 
 

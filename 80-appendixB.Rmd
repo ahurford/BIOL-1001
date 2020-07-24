@@ -29,5 +29,11 @@ Here is a list of terms that are frequently used throught the manual.
 * **Package**:
   a collection of R functions, data and compiled code in a well-defined format. Packages are stored in a library and can be loaded using the `library()` function. Packages can be installed using the `install.packages("package-name")` function.
     
+* **Prompt**:
+  A symbol that indicates that the computer is waiting for input. In RStudio, it is the `>` symbol in the Console. If you see a `+` instead, it means that R is wanting you to enter additional information. Press escape (`esc`) and then return (or enter) to go back to the `>` prompt. 
+
 * **Type**:
   how R classifies objects (e.g., the contents of a variable). For example, a number (e.g. integer), string, or something else. The command `typeof()` queries the type of a variable. For example, `typeof(A)`.
+  
+* **Working directory**:
+The path to the folder in which R reads and saves files in your computer. Normally this is the user home directory (in R it is typically referenced using `~`). You can check your current working directory with the function `getwd()`.  To change your working directory, use `setwd("new-file-path")`.
