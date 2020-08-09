@@ -1,31 +1,27 @@
 # Best practices {#style}
 
-We write code to be read by a computer and other humans (including your future self!). For this reason, it's essential to ensure that your code is understandable to other people in the same way you follow proper grammar and punctuation in your writing. Programming best practices are a set of informal rules and habits that we use to improve the quality of software, and we encourage you to follow them.
+We write code to be read by a computer and other humans (including your future self!).
 
-## Basics
-
-As you start to learn to program, it is useful to follow best practices and a consistent style to keep code and data organized, easy to read, share, and verify. For brevity, we focus on the most critical aspects.
-
-### File organization
+## File organization
 
 To organize your data and scripts for each course/project, you can start by creating a new folder in your computer where you can store all the relevant files. We recommend that you create this new folder in the Desktop, so it is easy to find from R/RStudio.
 
-### Comments
+## Comments
 
 These are sections that are ignored by the computer but are helpful for the humans reading the code. You can use comments to explain what a specific line of code does or to visually separate parts of code from each other. Comments in R are written with a `#` (pound) sign. Whenever R encounters a `#` sign, it will ignore all the code after the `#` sign on that line. 
 
 We recommended starting your script with a description of what the code does when it runs. Describing the intended purpose of the code in a comment will save you and others time when trying to understand what a particular script does. It is also a good idea to keep track of who wrote the code. 
 
 
-### Spacing
+## Spacing
 
 Using spaces and line breaks also improve the readability of the code. You should include spaces between operators (e.g. <-, ==), arithmetic operators (e.g. =, + and -) and after commas. 
 
 If you have long lines, split them into multiple lines. For example, use one line each for the function name, arguments, and the closing ). Breaking lines makes the code easier to read and to change later.
 
-### Names
+## Names
 
-Variable and function names should use lowercase letters and numbers. You can use `_` (underscores, called snake case) to separate words within a name. Generally, variable names should be nouns and function names should be verbs. Try to have names that are concise and meaningful.
+When coding you get to choose the names of the variables and functions you define. Variable and function names should use lowercase letters and numbers. You can use `_` (underscores, called snake case) to separate words within a name. Generally, variable names should be nouns and function names should be verbs. Try to have names that are concise and meaningful.
 
 ## Template
 
