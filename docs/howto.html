@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Chapter 2 How to use this manual | Quantitative skills for biology</title>
   <meta name="description" content="Chapter 2 How to use this manual | Quantitative skills for biology" />
-  <meta name="generator" content="bookdown 0.18 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.17 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Chapter 2 How to use this manual | Quantitative skills for biology" />
   <meta property="og:type" content="book" />
@@ -51,41 +51,66 @@
 
 
 <style type="text/css">
-div.sourceCode { overflow-x: auto; }
-table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
-  margin: 0; padding: 0; vertical-align: baseline; border: none; }
-table.sourceCode { width: 100%; line-height: 100%; }
-td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
-td.sourceCode { padding-left: 5px; }
-code > span.kw { color: #007020; font-weight: bold; } /* Keyword */
-code > span.dt { color: #902000; } /* DataType */
-code > span.dv { color: #40a070; } /* DecVal */
-code > span.bn { color: #40a070; } /* BaseN */
-code > span.fl { color: #40a070; } /* Float */
-code > span.ch { color: #4070a0; } /* Char */
-code > span.st { color: #4070a0; } /* String */
-code > span.co { color: #60a0b0; font-style: italic; } /* Comment */
-code > span.ot { color: #007020; } /* Other */
-code > span.al { color: #ff0000; font-weight: bold; } /* Alert */
-code > span.fu { color: #06287e; } /* Function */
-code > span.er { color: #ff0000; font-weight: bold; } /* Error */
-code > span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
-code > span.cn { color: #880000; } /* Constant */
-code > span.sc { color: #4070a0; } /* SpecialChar */
-code > span.vs { color: #4070a0; } /* VerbatimString */
-code > span.ss { color: #bb6688; } /* SpecialString */
-code > span.im { } /* Import */
-code > span.va { color: #19177c; } /* Variable */
-code > span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
-code > span.op { color: #666666; } /* Operator */
-code > span.bu { } /* BuiltIn */
-code > span.ex { } /* Extension */
-code > span.pp { color: #bc7a00; } /* Preprocessor */
-code > span.at { color: #7d9029; } /* Attribute */
-code > span.do { color: #ba2121; font-style: italic; } /* Documentation */
-code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
-code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
-code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+a.sourceLine { display: inline-block; line-height: 1.25; }
+a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
+a.sourceLine:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+a.sourceLine { text-indent: -1em; padding-left: 1em; }
+}
+pre.numberSource a.sourceLine
+  { position: relative; left: -4em; }
+pre.numberSource a.sourceLine::before
+  { content: attr(title);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; pointer-events: all; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {  }
+@media screen {
+a.sourceLine::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
 </style>
 
 <link rel="stylesheet" href="style.css" type="text/css" />
@@ -188,7 +213,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li class="chapter" data-level="11.7" data-path="graph.html"><a href="graph.html#pch"><i class="fa fa-check"></i><b>11.7</b> pch cheatsheet</a></li>
 </ul></li>
 <li class="chapter" data-level="12" data-path="data.html"><a href="data.html"><i class="fa fa-check"></i><b>12</b> Data and metadata</a><ul>
-<li class="chapter" data-level="12.1" data-path="data.html"><a href="data.html#data"><i class="fa fa-check"></i><b>12.1</b> Data</a><ul>
+<li class="chapter" data-level="12.1" data-path="data.html"><a href="data.html#data-1"><i class="fa fa-check"></i><b>12.1</b> Data</a><ul>
 <li class="chapter" data-level="12.1.1" data-path="data.html"><a href="data.html#data-guidelines"><i class="fa fa-check"></i><b>12.1.1</b> Data guidelines</a></li>
 <li class="chapter" data-level="12.1.2" data-path="data.html"><a href="data.html#database-structure-guidelines"><i class="fa fa-check"></i><b>12.1.2</b> Database structure guidelines</a></li>
 </ul></li>
@@ -249,6 +274,14 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
             <section class="normal" id="section-">
 <div id="howto" class="section level1">
 <h1><span class="header-section-number">Chapter 2</span> How to use this manual</h1>
+<p>This manual has been developed specifically for Biology students. We are increasing the focus on quantitative skills in our Biology curriculum, in response to changing demands and emphasis within the field of biology itself. In first year Biology (BIOL 1001/1002) we are introudcing students to R sofware and basic statistical concepts. This manual acts as the tutorial guide to help students learn the basics of R that will form the foundation for more advanced quantitative work in upper year Biology courses. We anticipate that this guide will also be a useful resource manual that you will refer back to as you use R in applications specific to your future courses. This manual will be updated annaully, so we recommend you bookmark the html page instead of printing out the manual.</p>
+<p>While working through the manual, we recommend that you set up your computer screen so that you can see your browser and the R Studio software at the same time. You can experiment with re-sizing windows and if you have two monitors, that will be really handy. Or, if you have access to a laptop and a tablet, we recommend using RStuio on your laptop and opening the manual in the browser on your tablet so that you can move between the two easily.</p>
+<p>For first year students, we recommend that you start by reading Chapter <a href="index.html#intro">1</a>, this Chapter and Chapter <a href="code-intro.html#code-intro">5</a> to give yourself some background. You may also find it helpful to check the Glossary to familiarize yourself with some computer terminology. For there, you can prodceed to follow the steps in Chapter <a href="install.html#install">3</a> to install R and R studio. If you are having issues with installing the software, check the FAQ (Frequently Asked Questions) section in Appendix A. Once you have the software installed, you can read through Chapter <a href="rstudio.html#rstudio">4</a> (with the software open in a different window/screen!) and start to learn to navigate through the software.</p>
+<p>After you’ve familiarized yourself with the layout of the software, you can start to work with it! Don’t worry - you can’t break it! With the manual and R studio open, work through Chapter <a href="rintro.html#rintro">6</a>. Whenever you see text in the manual in a grey box and in the Courier font, this is an example of code that we want you to try. Note that you should type the code EXACTLY as it is written. As you progress through the manual, we will sometimes give you only part of the code, or we will give code that has a deliberate mistake in it. This is not to frustrate you - rather it is a way for you to start to develop your problem solving skills. Read the text before and after the example code carefully for clues as to what you should do.</p>
+<p>From there, proceed through the chapters as assigned by your lab instructor for each week of the quant labs.</p>
+<p>Excpet to get stuck. This is normal when learning a new skill. Everyone who uses R, including professors who have used it for years, gets error messages and has bugs in their code. If you look for help using the resources provided in Chapter <a href="help.html#help">7</a> or ask for help as specified in Chapter <a href="howtoask.html#howtoask">8</a>, you should be able to get “unstuck”.</p>
+<p>In terms of the assignments - for BIOL 1001/1002, you should complete all the parts of the manual where it says <strong>HAND IN</strong>. How much of the manual to complete in each week will be provided by your lab instructor. You can do the <strong>HAND IN</strong> exercises in RStuio and then cut and paste your answers into a Word document or GoogleDoc file for handing in.</p>
+<p>Once you’ve finished the first year labs, don’t forget that you have this resource! Bookmark the page so that when you find yourself using R again in future courses (and you will!) you can quickly re-familiarize yourself with it. Working with R is like learning a new langugage or playing a musical instrument. If you don’t do it for awhile, your skills get rusty. However, if you have documented what you’ve done, and reveiw the manual, you can quickly catch up to where your skills were and then move on and master new skills. Before you know it, you will be confidently doing quantitative work in R, which will increase your knowledge,enhance your ability to do advanced biology work, and give you a marketable skill in the work world.</p>
 
 </div>
             </section>
@@ -312,7 +345,7 @@ gitbook.start({
   (function () {
     var script = document.createElement("script");
     script.type = "text/javascript";
-    var src = "";
+    var src = "true";
     if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
     if (location.protocol !== "file:")
       if (/^https?:/.test(src))

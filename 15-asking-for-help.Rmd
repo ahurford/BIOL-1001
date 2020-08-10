@@ -1,6 +1,6 @@
 # How to ask for help {#howtoask}
 
-The key to getting a useful answer to your R problem is asking a short but complete question. Frequently, this means to provide a reproducible example, which will allow someone else to reproduce your problem by copying and pasting your code. Four things make an example reproducible: a description of your R environment, required packages, code, and data. In BIOL 1001 and 1002, we provide the data that you will be using in the exercises, so it is unlike that your issue is related to the data. Hence, we emphasize the other components of asking a good question instead. We encourage you to follow the following steps:
+The key to getting a useful answer to your R problem is asking a short but complete question. Frequently, this means to provide a reproducible example, which will allow someone else to reproduce your problem by copying and pasting your code. Four things make an example reproducible: a description of your R environment, required packages, code, and data. In BIOL 1001 and 1002, we provide the data that you will be using in the exercises, so it is unlikly that your issue is related to the data. Hence, we emphasize the other components of asking a good question instead. We encourage you to follow the following steps:
 
 1. Do your homework before asking. This step varies depending on where your problem is: 
     1. If you have installation issues, double-check that you followed the instructions on Section \@ref(install) and have downloaded and installed the correct versions of R and RStudio. 
