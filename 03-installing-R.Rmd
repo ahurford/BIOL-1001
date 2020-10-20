@@ -18,7 +18,7 @@ Since RStudio is an add-on to R, you must first download and install R and then 
     + If you are a Windows user: Click on "Download R for Windows", then click on "base", then click on the link "Download R X.X.X for Windows". 
     + If you are macOS user: Click on "Download R for (Mac) OS X", then look for "Latest release:" and click on the link to the left of the first paragraph "R-X.X.X.pkg", 
     + If you are a Linux user: Click on "Download R for Linux", choose your distribution and then your Linux version to find the installer for your setup.
-    + **The X's in the links above stand for the version number, which may be different for you depending on the date when you download the files.**
+    + **NOTE: The X's in the links above stand for the version number, which may be different for you depending on the date when you download the files.**
 
 2. Download and install RStudio from <https://rstudio.com/products/rstudio/download/#download>.
     + Under "All Installers" find your computer's operating system (OS).

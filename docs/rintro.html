@@ -140,7 +140,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="4" data-path="rstudio.html"><a href="rstudio.html"><i class="fa fa-check"></i><b>4</b> Finding your way around RStudio</a><ul>
 <li class="chapter" data-level="4.1" data-path="rstudio.html"><a href="rstudio.html#console-pane"><i class="fa fa-check"></i><b>4.1</b> Console pane</a></li>
 <li class="chapter" data-level="4.2" data-path="rstudio.html"><a href="rstudio.html#source-pane"><i class="fa fa-check"></i><b>4.2</b> Source pane</a></li>
-<li class="chapter" data-level="4.3" data-path="rstudio.html"><a href="rstudio.html#enviornmenthistory-pane"><i class="fa fa-check"></i><b>4.3</b> Enviornment/History pane</a><ul>
+<li class="chapter" data-level="4.3" data-path="rstudio.html"><a href="rstudio.html#environmenthistory-pane"><i class="fa fa-check"></i><b>4.3</b> Environment/History pane</a><ul>
 <li class="chapter" data-level="" data-path="rstudio.html"><a href="rstudio.html#environment-tab"><i class="fa fa-check"></i>Environment tab</a></li>
 <li class="chapter" data-level="" data-path="rstudio.html"><a href="rstudio.html#history-tab"><i class="fa fa-check"></i>History tab</a></li>
 </ul></li>
@@ -290,12 +290,12 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </div>
 <div id="variables-and-assignment" class="section level2">
 <h2><span class="header-section-number">6.3</span> Variables and assignment</h2>
-<p>The assignment operator is <code>&lt;-</code>. You create this by typing the “less than” sign (the <code>&lt;</code> symbol located above the comma) followed by a hypen. It stores whatever you write on the right to variables on
-the left. Variable names can be made up of letters, numbers, underscores and periods. But, they cannot start with a number nor contain spaces. For instance:</p>
+<p>The assignment operator is <code>&lt;-</code>. You create this by typing the “less than” sign (the <code>&lt;</code> symbol located above the comma) followed by a hyphen. It stores whatever you write on the right to variables on
+the left. Variable names can be made up of letters, numbers, underscores and periods. However, they cannot start with a number nor contain spaces. For instance:</p>
 <div class="sourceCode" id="cb17"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb17-1" title="1">x &lt;-<span class="st"> </span><span class="dv">10</span></a></code></pre></div>
 <p>Notice that assigning a variable does not print its value,
-but if you look at the <code>Environment</code> panel, you will see the new variable there.
-You can also check that it is stored by calling the variable:</p>
+but if you look at the <code>Environment</code> panel, you will see the new variable there. (REMEMBER: if you just type the above in the script without sourcing it, your value for <code>x</code> will not necessarily match. Either source the script or type the above in the console).</p>
+<p>You can also check that it is stored by calling the variable, simply by typing it in the console:</p>
 <div class="sourceCode" id="cb18"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb18-1" title="1">x </a></code></pre></div>
 <pre><code>## [1] 10</code></pre>
 <p><strong>TRY IT!</strong> Define a varible “y” with the value of 3.</p>
@@ -320,7 +320,7 @@ You can also check that it is stored by calling the variable:</p>
 </div>
 <div id="comments" class="section level2">
 <h2><span class="header-section-number">6.5</span> Comments</h2>
-<p>In R, the <code>#</code> sign is a special character that indicates a comment. Anything that is written directly to the right of a <code>#</code> sign will be ignored by R. Comment your scripts often! You can use a whole line o <code>####</code> symbols to create blocks or headings to make your script easier to read.</p>
+<p>In R, the <code>#</code> sign is a special character that indicates a comment. Anything that is written directly to the right of a <code>#</code> sign will be ignored by R. Comment your scripts often! You can use a whole line of <code>####</code> symbols to create blocks as headings to make your script easier to read.</p>
 <p><strong>HAND IN</strong> Write a couple of sentences to explain each of the commands we have used so far. You may also want to annotate your script you’ve been developing with the commands to save for future reference. Remember to use the <code>#</code> feature to comment.</p>
 </div>
 <div id="precedence" class="section level2">
