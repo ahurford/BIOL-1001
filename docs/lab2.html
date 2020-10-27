@@ -303,7 +303,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h2>EXERCISE 1. Data entry and graphing with a continuous independent variable</h2>
 <p>The increase of carbon dioxide in the atmosphere is expected to reduce the concentrations of carbonate ions in the surface of the ocean. This process, in general called ocean acidification, affects the biology and survival of a wide range of marine species because it prevents the formation of shells and plates of calcium carbonate.
 A long term study on coral reefs showed how the net community calcification rate (G, measured in mmol CaCO<sub>3</sub>m<sup>-2</sup>d<sup>-1</sup>) is related to the concentration of carbonate (CO<sub>3</sub><sup>2-</sup>, measured in <span class="math inline">\(\mu\)</span>mol<span class="math inline">\(\cdot\)</span>kg<sup>-1</sup>) <span class="citation">(Langdon et al. 2000)</span>.
-We will use the data from the research paper (which is summarized in pg. 60 of the textbook) to understand this relationship.
+We will use the data from the research paper (which is summarized in pg. 58 (or pg. 60 in the 2nd Canadian Edition) of the Campbell textbook) to understand this relationship.
 The results of this experiment are as follows:</p>
 <pre><code>## Warning: package &#39;knitr&#39; was built under R version 3.6.1</code></pre>
 <table>
@@ -371,22 +371,22 @@ The results of this experiment are as follows:</p>
 <div id="make-a-graph" class="section level3 unnumbered">
 <h3>Make a graph</h3>
 <ol style="list-style-type: decimal">
-<li>Follow the instructions in Chapter <a href="graph.html#graph">11</a> to make a scatterplot for these data and replicate the figure from the Campbell textbook (see Figure 10.1 below). Include both the code you wrote and the final figure in your lab report. NOTE: Don’t worry about figuring out how to write superscripts and subscripts in R for the axis-labels. You can use the “^” symbol to indicate a superscript, and the “-” to indicate a subscript.</li>
+<li>Follow the instructions in Chapter <a href="graph.html#graph">11</a> to make a scatterplot for these data and replicate the figure from the Campbell textbook (see Figure 14.1 below). Include both the code you wrote and the final figure in your lab report. NOTE: Don’t worry about figuring out how to write superscripts and subscripts in R for the axis-labels. You can use the “^” symbol to indicate a superscript, and the “-” to indicate a subscript.</li>
 </ol>
 <p><strong>HINT</strong> Think about what you are specifying as <code>x</code> and <code>y</code> in the <code>plot</code> function. Use the tools you learned about in Chapter <a href="rintro.html#rintro">6</a> to explore the dataframe.</p>
 <p><strong>NEW TIP</strong> instead of entering the data as a vector the way you learned in Chapter <a href="graph.html#graph">11</a>, you can use the code below to create an x vector from a data frame (here I titled my data frame “langdon_data”; your name may be different, and I created a vector of data called “CO3”). The <code>$</code> sign tells R to look in the data frame specified before the <code>$</code> sign (in the example below the data frame is “langdon_data” and then read the column that comes after the <code>$</code> sign (in the example here, it’s CO3. The column header you specify after the $ sign MUST match the way it is shown in the dataframe EXACTLY. Use the commands you learned in Chapter <a href="rintro.html#rintro">6</a> to confirm what the column header is.</p>
 <p>You can use this to create the vector of data that you need to plot on the x-axis, and then write you own code to create the vector of data for the y-axis.</p>
 <div class="figure" style="text-align: center"><span id="fig:langdon"></span>
-<img src="figures/Landgon_scatterplot.jpeg" alt="Scatterplot from Langdon et al. study on calcification rate in seawater as a function of carbonate concentration. This figure is found in your textbook on pg. 60" width="70%" />
+<img src="figures/Landgon_scatterplot.jpeg" alt="Scatterplot from Langdon et al. study on calcification rate in seawater as a function of carbonate concentration. This figure is found in your textbook on pg. 58 (pg. 60 in the Campbell 2nd Canadian Edition)" width="70%" />
 <p class="caption">
-Figure 14.1: Scatterplot from Langdon et al. study on calcification rate in seawater as a function of carbonate concentration. This figure is found in your textbook on pg. 60
+Figure 14.1: Scatterplot from Langdon et al. study on calcification rate in seawater as a function of carbonate concentration. This figure is found in your textbook on pg. 58 (pg. 60 in the Campbell 2nd Canadian Edition)
 </p>
 </div>
 <div class="sourceCode" id="cb89"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb89-1" title="1">langdon_data &lt;-<span class="st"> </span><span class="kw">read.csv</span>(<span class="st">&quot;LangdonDataset.csv&quot;</span>)</a>
 <a class="sourceLine" id="cb89-2" title="2">CO3 &lt;-<span class="st"> </span>langdon_data<span class="op">$</span>CO3</a></code></pre></div>
 <p>Use the examples in Chapter <a href="graph.html#graph">11</a> to create a fully labelled scatter plot. Export this and paste it into your document that you will hand in for this lab. Include both the code you wrote and the final figure in your lab report.</p>
 <p><strong>HINT</strong> if you want to add a line of best fit based on linear regression, use the function <code>abline</code> using a linear regression model (the function <code>lm</code>). Your code will look something like this: <code>abline(lm(y~x))</code> Refer to the help files for assistance. The two terms on each side of the tilde (“~” symbol) tell R what the equation for the regression <code>y~x</code> is. In your case substitute in what YOU defined as <code>x</code> and <code>y</code> in R. <strong>NOTE</strong> for the lab assignment, this step is optional.</p>
-<ol style="list-style-type: decimal">
+<ol start="2" style="list-style-type: decimal">
 <li>Follow the instructions in Chapter <a href="graph.html#graph">11</a> to make a second graph - a line graph for these data. Export your line graph insert it into your lab report. Write a figure caption. Include both the code you wrote and the final figure in your lab report.</li>
 </ol>
 </div>
@@ -403,9 +403,9 @@ these were the control group.
 On the other side, the stressed plant shared its roots with its nearest unstressed neighbour, and all the other plants shared their roots with their nearest neighbour
 (See Figure <a href="lab2.html#fig:setup">14.2</a>).</p>
 <div class="figure" style="text-align: center"><span id="fig:setup"></span>
-<img src="figures/Falik_et-al_2011_setup.jpg" alt="Experimental set up for testing stress cues. Circles represent plants and connector lines represent the plants with connected roots. The numbers of the plants correspond to those of Table 10.2. Osmotic stress was induced in plant 6 (Modified from Falik et al., 2011)." width="70%" />
+<img src="figures/Falik_et-al_2011_setup.jpg" alt="Experimental set up for testing stress cues. Circles represent plants and connector lines represent the plants with connected roots. The numbers of the plants correspond to those of Table 14.2. Osmotic stress was induced in plant 6 (Modified from Falik et al., 2011)." width="70%" />
 <p class="caption">
-Figure 14.2: Experimental set up for testing stress cues. Circles represent plants and connector lines represent the plants with connected roots. The numbers of the plants correspond to those of Table 10.2. Osmotic stress was induced in plant 6 (Modified from Falik et al., 2011).
+Figure 14.2: Experimental set up for testing stress cues. Circles represent plants and connector lines represent the plants with connected roots. The numbers of the plants correspond to those of Table 14.2. Osmotic stress was induced in plant 6 (Modified from Falik et al., 2011).
 </p>
 </div>
 <p>Stress was quantified fifteen minutes after the induction of drought by measuring the width of the stomatal openings on the leaves of the plants. The results of this experiment are as follows:</p>
@@ -545,12 +545,12 @@ Figure 14.2: Experimental set up for testing stress cues. Circles represent plan
 <div id="questions-1" class="section level3 unnumbered">
 <h3>Questions</h3>
 <ol style="list-style-type: decimal">
-<li>Follow the instructions below to replicate the figure from the Campbell textbook (bar plot; see Figure 10.3 below). Export your bar graph insert it into your lab report. Add a caption to your bar plot and hand it in with your lab report. Include the code you wrote to generate the figure.</li>
+<li>Follow the instructions below to replicate the figure from the Campbell textbook (bar plot; see Figure 14.3 below). Export your bar graph insert it into your lab report. Add a caption to your bar plot and hand it in with your lab report. Include the code you wrote to generate the figure.</li>
 </ol>
 <div class="figure" style="text-align: center"><span id="fig:falik"></span>
-<img src="figures/Falik_barplot.jpeg" alt="Barplot from Falik et al. study on plant stress and plant communication. This figure is found in your textbook on pg. 910" width="70%" />
+<img src="figures/Falik_barplot.jpeg" alt="Barplot from Falik et al. study on plant stress and plant communication. This figure is found in your textbook on pg. 918 (pg. 910 in Campbell 2nd Canadian Edition)" width="70%" />
 <p class="caption">
-Figure 14.3: Barplot from Falik et al. study on plant stress and plant communication. This figure is found in your textbook on pg. 910
+Figure 14.3: Barplot from Falik et al. study on plant stress and plant communication. This figure is found in your textbook on pg. 918 (pg. 910 in Campbell 2nd Canadian Edition)
 </p>
 </div>
 <p>To make a barplot, use the code below as a starting point, and then use the resources in this guide to add appropriate x and y axis labels.Don’t worry about figuring out how to write the symbol “mu” in R; you can just write “um” or “micrometres” for now. However, if you want to try writing Greek symbols in R, look at the code below for the boxplot example, and see if you can apply it to your barplot.</p>
