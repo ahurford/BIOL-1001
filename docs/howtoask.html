@@ -30,7 +30,7 @@
   
   
 <link rel="prev" href="lab2.html"/>
-<link rel="next" href="introduction-to-programming.html"/>
+
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -118,12 +118,6 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="3" data-path="howtoask.html"><a href="howtoask.html"><i class="fa fa-check"></i><b>3</b> How to ask for help</a></li>
-<li class="chapter" data-level="" data-path="introduction-to-programming.html"><a href="introduction-to-programming.html"><i class="fa fa-check"></i>Introduction to programming</a><ul>
-<li class="chapter" data-level="3.1" data-path="introduction-to-programming.html"><a href="introduction-to-programming.html#what-is-a-computer"><i class="fa fa-check"></i><b>3.1</b> What is a computer?</a></li>
-<li class="chapter" data-level="3.2" data-path="introduction-to-programming.html"><a href="introduction-to-programming.html#what-is-a-program"><i class="fa fa-check"></i><b>3.2</b> What is a program?</a></li>
-<li class="chapter" data-level="3.3" data-path="introduction-to-programming.html"><a href="introduction-to-programming.html#what-is-a-programming-language"><i class="fa fa-check"></i><b>3.3</b> What is a programming language?</a></li>
-<li class="chapter" data-level="3.4" data-path="introduction-to-programming.html"><a href="introduction-to-programming.html#why-code"><i class="fa fa-check"></i><b>3.4</b> Why code?</a></li>
-</ul></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
 
@@ -146,19 +140,19 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
             <section class="normal" id="section-">
 <div id="howtoask" class="section level1">
 <h1><span class="header-section-number">3</span> How to ask for help</h1>
-<p>The key to getting a useful answer to your R problem is asking a short but complete question. Frequently, this means to provide a reproducible example, which will allow someone else to reproduce your problem by copying and pasting your code. Four things make an example reproducible: a description of your R environment, required packages, code, and data. In BIOL 1001 and 1002, we provide the data that you will be using in the exercises, so it is unlikly that your issue is related to the data. Hence, we emphasize the other components of asking a good question instead. We encourage you to follow the following steps:</p>
+<p>The key to getting a useful answer to your R problem is asking a short but complete question. Frequently, this means to provide a reproducible example, which will allow someone else to reproduce your problem by copying and pasting your code. Four things make an example reproducible: a description of your R environment, required packages, code, and data. In BIOL 1001 and 1002, we provide the data that you will be using in the exercises, so it is unlikly that your issue is related to the data. We encourage you to follow the following steps:</p>
 <ol style="list-style-type: decimal">
 <li>Do your homework before asking. This step varies depending on where your problem is:
 <ol style="list-style-type: decimal">
-<li>If you have installation issues, double-check that you followed the instructions on Section <a href="#install"><strong>??</strong></a> and have downloaded and installed the correct versions of R and RStudio.</li>
+<li>If you have installation issues, double-check that you followed the instructions in <a href="https://ahurford.github.io/quant-guide-all-courses/install.html">R and RStudio</a> and have downloaded and installed the correct versions of R and RStudio.</li>
 <li>If you have trouble with coding, first, locate the lines of code where the problem occurs. Copy your code from the beginning up to where the issue occurs. Then, start a new RStudio session, paste and run the code. Starting fresh will help you see if the same issue arises or if it was solved by removing unused elements.</li>
-<li>If the problem is caused by a function/command not running or not giving the expected output, follow Chapter <a href="#help"><strong>??</strong></a> and read the help for the relevant functions/commands and how to use them.</li>
+<li>If the problem is caused by a function/command not running or not giving the expected output, follow <a href="https://ahurford.github.io/quant-guide-all-courses/help.html">Getting R help</a> and read the help for the relevant functions/commands and how to use them.</li>
 <li>If you receive an error message or a warning, search the web by copying and pasting the output of R. It is likely that your R question has already been answered in websites like <a href="https://stackoverflow.com/">Stack Overflow</a>. You can even search Twitter using '#rstats'.</li>
-<li>Finally, read over Section <a href="#faq"><strong>??</strong></a> and other posts in the lab's Discussion List to see if anyone else had a similar problem and how they solved it.<br />
+<li>Finally, read over <a href="https://ahurford.github.io/quant-guide-all-courses/faq.html">FAQ</a> and other posts in the lab's Discussion List to see if anyone else had a similar problem and how they solved it.<br />
 <br/></li>
 </ol></li>
-<li><p>Write down your problem, succinctly. Try to simplify your problem as much as possible. You can often answer your question by thinking clearly and going through the simplification process. Remember that you need to report the facts, so please do not write 'R crashed' or 'function xyz doesn't work'. Write exactly what happened, including any error messages R prompted. If you think that a function/command is not behaving sensibly, it's more productive and polite to first, read the relevant documentation (see the previous step), and then ask why it acts the way it does.</p></li>
-<li><p>Provide a short, reproducible example. First, try to locate which lines exactly result in the error. By doing this, you will often find out what the problem is by yourself. Please, do not copy and paste a whole function/chunk of code that gives an error. What is most useful is an accurate description of what commands you type until the problem happens. Do your best to remove everything that is not related to the problem. The shorter your code is, the easier it is to understand.</p></li>
+<li><p>Write down your problem, succinctly. Try to simplify your problem as much as possible. Remember that you need to report the facts, so please do not write 'R crashed' or 'function xyz doesn't work'. Write exactly what happened, including any error messages R prompted. If you think that a function/command is not behaving sensibly, it's more productive and polite to first, read the relevant documentation (see the previous step), and then ask why it acts the way it does.</p></li>
+<li><p>Provide a short, reproducible example. First, try to locate which lines exactly result in the error. Please, do not copy and paste a whole function/chunk of code that gives an error. What is most useful is an accurate description of what commands you type until the problem happens. Do your best to remove everything that is not related to the problem. The shorter your code is, the easier it is to understand.</p></li>
 <li><p>Ensure your code is easy for others to read. Make sure you have used spaces and your variable names are concise, but informative. This is also a good moment to check that your problem is not related to a typo in the name of an object. Remember that in R capitalization matters (e.g. <code>X</code> is not the same as <code>x</code>). Use comments often to explain what you did and to indicate where your problem is. When you copy from the R console, take a few seconds to remove any '&gt;' and '+'. For example, if your code looks like this:</p></li>
 </ol>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">&gt;<span class="st"> </span>x &lt;-<span class="st"> </span><span class="kw">matrix</span>(<span class="dv">1</span>:<span class="dv">8</span>, <span class="dt">nrow=</span><span class="dv">4</span>, <span class="dt">ncol=</span><span class="dv">2</span>,
@@ -184,8 +178,7 @@ x
 <li><p>Check that you have made a reproducible example by starting up a new RStudio session, pasting your code from the step above and running it. In this way, you are sure that you made a piece of code that we can run to see the problem. Anyone should be able to copy and paste your code and data and get the same issue.</p></li>
 <li><p>We need some facts about your machine, operating system, and version of R. To get this information, type the following command in the console: <code>sessionInfo()</code>. Paste the full output in your question. When mentioning version numbers, always use the complete version number, e.g., '2.6.1', instead of '2.6', and mention the platform (Windows, Linux, MacOS X, with their versions). We also need to check which version of RStudio you are using. For this, type in the console <code>rstudioapi::versionInfo()</code> and provide the full output in your question. If you have a package-specific problem, you should give its version by providing the output of <code>packageVersion(&quot;name of the package&quot;)</code>.</p></li>
 <li><p>Before putting all of your code in an email, we encourage you to post it on the lab's Discussion List. By doing this, we can help multiple people that may have the same problem at the same time. It also helps us to reply faster because we do not have to answer similar questions many times. Reading and commenting online is an essential component of learning programming, and it is one of the assets that makes R useful, more accessible and fun. The Discussion List is our small R community, and when you post on the Discussion List, we learn together.</p></li>
-<li><p>Write a specific, informative subject line. Please do not write: 'question', 'Lab 2' or 'R crashed'. Good examples are: 'R Studio: &quot;Error: …&quot;', 'Q3, &quot;Error in plot.xy(xy, type, ...) : invalid plot type 1&quot;', or 'q10, outliers and percentiles'.</p></li>
-<li><p>Use good manners. Rudeness is not acceptable. Be tolerant. Sometimes <em>read the manual</em> is the appropriate response to your question. An answer that is concise and technically accurate is just that, it is not intended as pedantic or an affront. Please do not complain or say that you want to drop out if you cannot finish the lab; this tends to create negative attitudes that are not useful when answering your questions. Remember that we are trying to help you learn.</p></li>
+<li><p>An answer that is concise and technically accurate is just that, it is not intended as pedantic or an affront. Sometimes <em>read the manual</em> is the appropriate response to your question. Please be kind. Remember that we are trying to help you learn.</p></li>
 <li><p>Example of a good question:</p></li>
 </ol>
 <p>Subject: transform matrix to dataframe of specific dimensions.</p>
@@ -202,14 +195,22 @@ x</code></pre></div>
 <span class="co">#       C   x     3</span>
 <span class="co">#       ...</span></code></pre></div>
 
+<div id="refs" class="references">
+<div>
+<p>Falik, Omer, Yonat Mordoch, Lydia Quansah, Aaron Fait, and Ariel Novoplansky. 2011. “Rumor Has It…: Relay Communication of Stress Cues in Plants.” <em>PLoS One</em> 6 (11). Public Library of Science.</p>
+</div>
+<div>
+<p>Langdon, Chris, Taro Takahashi, Colm Sweeney, Dave Chipman, John Goddard, Francesca Marubini, Heather Aceves, Heidi Barnett, and Marlin J Atkinson. 2000. “Effect of Calcium Carbonate Saturation State on the Calcification Rate of an Experimental Coral Reef.” <em>Global Biogeochemical Cycles</em> 14 (2). Wiley Online Library: 639–54.</p>
+</div>
+</div>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="lab2.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="introduction-to-programming.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="lab2.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

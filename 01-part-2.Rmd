@@ -20,7 +20,6 @@ Before coming to the laboratory:
 - [Introduction to R](https://ahurford.github.io/quant-guide-all-courses/rintro.html) 
 - [Making graphs in R](https://ahurford.github.io/quant-guide-all-courses/graph.html)
 - [Entering and loading data](https://ahurford.github.io/quant-guide-all-courses/data-entry.html)
-- Section \@ref(hypothesis)
 
 ## EXERCISE 1. Data entry and graphing with a continuous independent variable {-}
 
