@@ -1,6 +1,5 @@
-book_filename: "quant-guide"
+book_filename: "biol-1001"
 language:
   ui:
-    chapter_name: "Chapter "
 delete_merged_file: true
 output_dir: "docs"

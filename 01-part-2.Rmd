@@ -1,8 +1,4 @@
-# BIOL 1001: QUANTITATIVE SKILLS LABORATORY PART 2 {#lab2}
-
-This lab is worth 5% of your final mark. Before completing this lab, you should re-familiarize yourself with Chapters \@ref(intro), \@ref(graph),\@ref(data) and \@ref(hypothesis). If you need to consult the help files, use Chapter \@ref(help) to help guide you through the ```R``` help.
-
-## BIOLOGICAL DATA WITH COMPUTERS {-}
+# Quantitative skills laboratory {#lab2}
 
 ---
 
@@ -15,22 +11,16 @@ PURPOSE
 
 ---
 
-
-
 Before coming to the laboratory:
 
-1. Install `R` and `RStudio`. For instructions see Chapter \@ref(install).
+1. If you have not already, install [`R` and `RStudio`](https://ahurford.github.io/quant-guide-all-courses/install.html).
  
 1. Before coming to the laboratory read:
- 
-In the quant guide: 
 
-- Chapter \@ref(intro) 
-- Chapter \@ref(graph)
-- Chapter \@ref(data)
-- Chapter \@ref(hypothesis)
-
-
+- [Introduction to R](https://ahurford.github.io/quant-guide-all-courses/rintro.html) 
+- [Making graphs in R](https://ahurford.github.io/quant-guide-all-courses/graph.html)
+- [Entering and loading data](https://ahurford.github.io/quant-guide-all-courses/data-entry.html)
+- Section \@ref(hypothesis)
 
 ## EXERCISE 1. Data entry and graphing with a continuous independent variable {-}
 
@@ -46,17 +36,17 @@ kable(dataset[1:11,1:2], caption = "Raw data from Langdon and collaborators (200
 ```
 ### Enter the data {-}
 
-1. We provide this data as a .csv called `LangdonDataset.csv`. Download this file from Brightspace into the folder where your R files are. **NOTE** that in the `read.csv` command that what is inside the quote marks ```"``` MUST match the file name in your folder exactly. You also have to include the quotation marks. Then follow the instructions in Chapter \@ref(data-entry) and import the data. Note that this is just a subset of the data from the full paper. Include a copy of the code you used in your lab report.
+1. We provide this data as a .csv called `LangdonDataset.csv`. Download this file from Brightspace into the folder where your R files are. **NOTE** that in the `read.csv` command that what is inside the quote marks ```"``` MUST match the file name in your folder exactly. You also have to include the quotation marks. Then follow the instructions in [Entering and loading data](https://ahurford.github.io/quant-guide-all-courses/data-entry.html) and import the data. Note that this is just a subset of the data from the full paper. Include a copy of the code you used in your lab report.
 
 
 
 ### Make a graph {-}
 
-2. Follow the instructions in Chapter \@ref(graph) to make a scatterplot for these data and replicate the figure from the Campbell textbook (see Figure 14.1 below). Include both the code you wrote and the final figure in your lab report. NOTE: Don't worry about figuring out how to write superscripts and subscripts in R for the axis-labels. You can use the "^" symbol to indicate a superscript, and the "-" to indicate a subscript. 
+2. Follow the instructions in [Making graphs in R](https://ahurford.github.io/quant-guide-all-courses/graph.html) to make a scatterplot for these data and replicate the figure from the Campbell textbook (see Figure 14.1 below). Include both the code you wrote and the final figure in your lab report. NOTE: Don't worry about figuring out how to write superscripts and subscripts in R for the axis-labels. You can use the "^" symbol to indicate a superscript, and the "-" to indicate a subscript. 
 
-**HINT** Think about what you are specifying as ```x``` and ```y``` in the ```plot``` function. Use the tools you learned about in Chapter \@ref(rintro) to explore the dataframe.
+**HINT** Think about what you are specifying as ```x``` and ```y``` in the ```plot``` function. Use the tools you learned about in [Introduction to R](https://ahurford.github.io/quant-guide-all-courses/rintro.html) to explore the dataframe.
 
-**NEW TIP** instead of entering the data as a vector the way you learned in Chapter \@ref(graph), you can use the code below to create an x vector from a data frame (here I titled my data frame "langdon_data"; your name may be different, and I created a vector of data called "CO3"). The ```$``` sign tells R to look in the data frame specified before the ```$``` sign (in the example below the data frame is "langdon_data" and then read the column that comes after the ```$``` sign (in the example here, it's CO3. The column header you specify after the $ sign MUST match the way it is shown in the dataframe EXACTLY. Use the commands you learned in Chapter \@ref(rintro) to confirm what the column header is. 
+**NEW TIP** instead of entering the data as a vector the way you learned in [Making graphs in R](https://ahurford.github.io/quant-guide-all-courses/graph.html), you can use the code below to create an x vector from a data frame (here I titled my data frame "langdon_data"; your name may be different, and I created a vector of data called "CO3"). The ```$``` sign tells R to look in the data frame specified before the ```$``` sign (in the example below the data frame is "langdon_data" and then read the column that comes after the ```$``` sign (in the example here, it's CO3. The column header you specify after the $ sign MUST match the way it is shown in the dataframe EXACTLY. Use the commands you learned in [Introduction to R](https://ahurford.github.io/quant-guide-all-courses/rintro.html)  to confirm what the column header is. 
 
 You can use this to create the vector of data that you need to plot on the x-axis, and then write you own code to create the vector of data for the y-axis. 
 
@@ -69,13 +59,13 @@ langdon_data <- read.csv("LangdonDataset.csv")
 CO3 <- langdon_data$CO3
 ```
 
-Use the examples in Chapter \@ref(graph) to create a fully labelled scatter plot. Export this and paste it into your document that you will hand in for this lab. Include both the code you wrote and the final figure in your lab report.
+Use the examples in [Making graphs in R](https://ahurford.github.io/quant-guide-all-courses/graph.html) to create a fully labelled scatter plot. Export this and paste it into your document that you will hand in for this lab. Include both the code you wrote and the final figure in your lab report.
 
 **HINT** if you want to add a line of best fit based on linear regression, use the function ```abline``` using a linear regression model (the function ```lm```). Your code will look something like this: ```abline(lm(y~x))```  Refer to the help files for assistance. The two terms on each side of the tilde ("~" symbol) tell R what the equation for the regression ```y~x``` is. In your case substitute in what YOU defined as ```x``` and ```y``` in R.  **NOTE** for the lab assignment, this step is optional. 
 
 
 
-3. Follow the instructions in Chapter \@ref(graph) to make a second graph - a line graph for these data. Export your line graph insert it into your lab report. Write a figure caption. Include both the code you wrote and the final figure in your lab report.
+3. Follow the instructions in [Making graphs in R](https://ahurford.github.io/quant-guide-all-courses/graph.html) to make a second graph - a line graph for these data. Export your line graph insert it into your lab report. Write a figure caption. Include both the code you wrote and the final figure in your lab report.
 
 
  
@@ -105,7 +95,7 @@ kable(falik_data[1:3], caption = "Raw data from Falik and collaborators (2011)."
 ```
 
 ### Questions {-}
-1. Follow the instructions in Chapter \@ref(data-entry) to load the data file FalikDataset.csv using the command line (```read.csv```) option. **Note** that the data in the CSV file are ordered differently than in the list above (to verify this you can open the CSV file in Excel to see the full set).
+1. Follow the instructions in [Entering and loading data](https://ahurford.github.io/quant-guide-all-courses/data-entry.html) to load the data file FalikDataset.csv using the command line (```read.csv```) option. **Note** that the data in the CSV file are ordered differently than in the list above (to verify this you can open the CSV file in Excel to see the full set).
 
 
 1. Looking at the dataset, can you tell how many treatments were applied in the experiment? How many plants were used for each treatment?
