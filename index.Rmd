@@ -17,7 +17,7 @@ The [quantitative training guide](https://ahurford.github.io/quant-guide-all-cou
 
 1.  Read [Introduction](https://ahurford.github.io/quant-guide-all-courses/). As you read through the next sections, if you encounter a word you do not understand you may wish to consult the [Glossary](https://ahurford.github.io/quant-guide-all-courses/glossary.html).
 
-2.  Follow the steps in [R and RStudio](https://ahurford.github.io/quant-guide-all-courses/install.html) to install R and RStudio. If you are having issues with installing the software, check the [Frequently Asked Questions](%5Bhttps://ahurford.github.io/quant-guide-all-courses/faq.html).
+2.  Follow the steps in [R and RStudio](https://ahurford.github.io/quant-guide-all-courses/install.html) to install R and RStudio. If you are having issues with installing the software, check the [Frequently Asked Questions](https://ahurford.github.io/quant-guide-all-courses/faq.html).
 
 3.  Read [Finding your way around RStudio](https://ahurford.github.io/quant-guide-all-courses/rstudio.html). Have your RStudio software open.
 
