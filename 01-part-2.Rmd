@@ -35,7 +35,7 @@ kable(dataset[1:11,1:2], caption = "Raw data from Langdon and collaborators (200
 ```
 ### Enter the data {-}
 
-1. We provide this data as a .csv called `LangdonDataset.csv`. Download this file from Brightspace into the folder where your R files are. **NOTE** that in the `read.csv` command that what is inside the quote marks ```"``` MUST match the file name in your folder exactly. You also have to include the quotation marks. Then follow the instructions in [Entering and loading data](https://ahurford.github.io/quant-guide-all-courses/data-entry.html) and import the data. Note that this is just a subset of the data from the full paper. Include a copy of the code you used in your lab report.
+1. We provide this data as a .csv called `LangdonDataset.csv`. Download this file from Brightspace into the folder where your R files are. You can also view and download the data from a github repo from  [here](https://github.com/jbaafi/quant-guide-data/tree/main/BIOL1001-data). **NOTE** that in the `read.csv` command that what is inside the quote marks ```"``` MUST match the file name in your folder exactly. You also have to include the quotation marks. Then follow the instructions in [Entering and loading data](https://ahurford.github.io/quant-guide-all-courses/data-entry.html) and import the data. Note that this is just a subset of the data from the full paper. Include a copy of the code you used in your lab report.
 
 
 
