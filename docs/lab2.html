@@ -6,11 +6,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>2 Quantitative skills laboratory | BIOL 1001 - Quantitative skills</title>
   <meta name="description" content="2 Quantitative skills laboratory | BIOL 1001 - Quantitative skills" />
-  <meta name="generator" content="bookdown 0.20 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.36 and GitBook 2.6.7" />
 
   <meta property="og:title" content="2 Quantitative skills laboratory | BIOL 1001 - Quantitative skills" />
   <meta property="og:type" content="book" />
-  
   
   
   <meta name="github-repo" content="ahurford/" />
@@ -31,7 +30,8 @@
   
 <link rel="prev" href="index.html"/>
 <link rel="next" href="howtoask.html"/>
-<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -47,45 +47,79 @@
 
 
 
-
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
 
 
 <style type="text/css">
-div.sourceCode { overflow-x: auto; }
-table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
-  margin: 0; padding: 0; vertical-align: baseline; border: none; }
-table.sourceCode { width: 100%; line-height: 100%; }
-td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
-td.sourceCode { padding-left: 5px; }
-code > span.kw { color: #007020; font-weight: bold; } /* Keyword */
-code > span.dt { color: #902000; } /* DataType */
-code > span.dv { color: #40a070; } /* DecVal */
-code > span.bn { color: #40a070; } /* BaseN */
-code > span.fl { color: #40a070; } /* Float */
-code > span.ch { color: #4070a0; } /* Char */
-code > span.st { color: #4070a0; } /* String */
-code > span.co { color: #60a0b0; font-style: italic; } /* Comment */
-code > span.ot { color: #007020; } /* Other */
-code > span.al { color: #ff0000; font-weight: bold; } /* Alert */
-code > span.fu { color: #06287e; } /* Function */
-code > span.er { color: #ff0000; font-weight: bold; } /* Error */
-code > span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
-code > span.cn { color: #880000; } /* Constant */
-code > span.sc { color: #4070a0; } /* SpecialChar */
-code > span.vs { color: #4070a0; } /* VerbatimString */
-code > span.ss { color: #bb6688; } /* SpecialString */
-code > span.im { } /* Import */
-code > span.va { color: #19177c; } /* Variable */
-code > span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
-code > span.op { color: #666666; } /* Operator */
-code > span.bu { } /* BuiltIn */
-code > span.ex { } /* Extension */
-code > span.pp { color: #bc7a00; } /* Preprocessor */
-code > span.at { color: #7d9029; } /* Attribute */
-code > span.do { color: #ba2121; font-style: italic; } /* Documentation */
-code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
-code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
-code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 </style>
 
 <link rel="stylesheet" href="style.css" type="text/css" />
@@ -105,15 +139,19 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 
 <li class="divider"></li>
 <li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Learning to use R and RStudio</a></li>
-<li class="chapter" data-level="2" data-path="lab2.html"><a href="lab2.html"><i class="fa fa-check"></i><b>2</b> Quantitative skills laboratory</a><ul>
-<li class="chapter" data-level="" data-path="lab2.html"><a href="lab2.html#exercise-1.-data-entry-and-graphing-with-a-continuous-independent-variable"><i class="fa fa-check"></i>EXERCISE 1. Data entry and graphing with a continuous independent variable</a><ul>
+<li class="chapter" data-level="2" data-path="lab2.html"><a href="lab2.html"><i class="fa fa-check"></i><b>2</b> Quantitative skills laboratory</a>
+<ul>
+<li class="chapter" data-level="" data-path="lab2.html"><a href="lab2.html#exercise-1.-data-entry-and-graphing-with-a-continuous-independent-variable"><i class="fa fa-check"></i>EXERCISE 1. Data entry and graphing with a continuous independent variable</a>
+<ul>
 <li class="chapter" data-level="" data-path="lab2.html"><a href="lab2.html#enter-the-data"><i class="fa fa-check"></i>Enter the data</a></li>
 <li class="chapter" data-level="" data-path="lab2.html"><a href="lab2.html#make-a-graph"><i class="fa fa-check"></i>Make a graph</a></li>
 </ul></li>
-<li class="chapter" data-level="" data-path="lab2.html"><a href="lab2.html#exercise-2.-bar-plots-and-boxplots-with-discrete-independent-variables"><i class="fa fa-check"></i>EXERCISE 2. Bar plots and boxplots with discrete independent variables</a><ul>
+<li class="chapter" data-level="" data-path="lab2.html"><a href="lab2.html#exercise-2.-bar-plots-and-boxplots-with-discrete-independent-variables"><i class="fa fa-check"></i>EXERCISE 2. Bar plots and boxplots with discrete independent variables</a>
+<ul>
 <li class="chapter" data-level="" data-path="lab2.html"><a href="lab2.html#questions"><i class="fa fa-check"></i>Questions</a></li>
 </ul></li>
-<li class="chapter" data-level="" data-path="lab2.html"><a href="lab2.html#exercise-2b.-making-a-bar-plot"><i class="fa fa-check"></i>EXERCISE 2b. Making a bar plot</a><ul>
+<li class="chapter" data-level="" data-path="lab2.html"><a href="lab2.html#exercise-2b.-making-a-bar-plot"><i class="fa fa-check"></i>EXERCISE 2b. Making a bar plot</a>
+<ul>
 <li class="chapter" data-level="" data-path="lab2.html"><a href="lab2.html#questions-1"><i class="fa fa-check"></i>Questions</a></li>
 </ul></li>
 </ul></li>
@@ -138,8 +176,8 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="lab2" class="section level1">
-<h1><span class="header-section-number">2</span> Quantitative skills laboratory</h1>
+<div id="lab2" class="section level1 hasAnchor" number="2">
+<h1><span class="header-section-number">2</span> Quantitative skills laboratory<a href="lab2.html#lab2" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 <hr />
 <p>PURPOSE</p>
 <ol style="list-style-type: decimal">
@@ -159,9 +197,12 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li><a href="https://ahurford.github.io/quant-guide-all-courses/graph.html">Making graphs in R</a></li>
 <li><a href="https://ahurford.github.io/quant-guide-all-courses/data-entry.html">Entering and loading data</a></li>
 </ul>
-<div id="exercise-1.-data-entry-and-graphing-with-a-continuous-independent-variable" class="section level2 unnumbered">
-<h2>EXERCISE 1. Data entry and graphing with a continuous independent variable</h2>
-<p>The increase of carbon dioxide in the atmosphere is expected to reduce the concentrations of carbonate ions in the surface of the ocean. This process, in general called ocean acidification, affects the biology and survival of a wide range of marine species because it prevents the formation of shells and plates of calcium carbonate. A long term study on coral reefs showed how the net community calcification rate (G, measured in mmol CaCO<sub>3</sub>m<sup>-2</sup>d<sup>-1</sup>) is related to the concentration of carbonate (CO<sub>3</sub><sup>2-</sup>, measured in <span class="math inline">\(\mu\)</span>mol<span class="math inline">\(\cdot\)</span>kg<sup>-1</sup>) <span class="citation">(Langdon et al. 2000)</span>. We will use the data from the research paper (which is summarized in pg. 58 (or pg. 60 in the 2nd Canadian Edition) of the Campbell textbook) to understand this relationship. The results of this experiment are as follows:</p>
+<div id="exercise-1.-data-entry-and-graphing-with-a-continuous-independent-variable" class="section level2 unnumbered hasAnchor">
+<h2>EXERCISE 1. Data entry and graphing with a continuous independent variable<a href="lab2.html#exercise-1.-data-entry-and-graphing-with-a-continuous-independent-variable" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>The increase of carbon dioxide in the atmosphere is expected to reduce the concentrations of carbonate ions in the surface of the ocean. This process, in general called ocean acidification, affects the biology and survival of a wide range of marine species because it prevents the formation of shells and plates of calcium carbonate.
+A long term study on coral reefs showed how the net community calcification rate (G, measured in mmol CaCO<sub>3</sub>m<sup>-2</sup>d<sup>-1</sup>) is related to the concentration of carbonate (CO<sub>3</sub><sup>2-</sup>, measured in <span class="math inline">\(\mu\)</span>mol<span class="math inline">\(\cdot\)</span>kg<sup>-1</sup>) <span class="citation">[@langdon2000effect]</span>.
+We will use the data from the research paper (which is summarized in pg. 58 (or pg. 60 in the 2nd Canadian Edition) of the Campbell textbook) to understand this relationship.
+The results of this experiment are as follows:</p>
 <table>
 <caption><span id="tab:langdon-data">Table 2.1: </span>Raw data from Langdon and collaborators (2000).</caption>
 <thead>
@@ -217,39 +258,47 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 </tr>
 </tbody>
 </table>
-<div id="enter-the-data" class="section level3 unnumbered">
-<h3>Enter the data</h3>
+<div id="enter-the-data" class="section level3 unnumbered hasAnchor">
+<h3>Enter the data<a href="lab2.html#enter-the-data" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <ol style="list-style-type: decimal">
-<li>We provide this data as a .csv called <code>LangdonDataset.csv</code>. Download this file from Brightspace into the folder where your R files are. <strong>NOTE</strong> that in the <code>read.csv</code> command that what is inside the quote marks <code>&quot;</code> MUST match the file name in your folder exactly. You also have to include the quotation marks. Then follow the instructions in <a href="https://ahurford.github.io/quant-guide-all-courses/data-entry.html">Entering and loading data</a> and import the data. Note that this is just a subset of the data from the full paper. Include a copy of the code you used in your lab report.</li>
+<li>We provide this data as a .csv called <code>LangdonDataset.csv</code>. Download this file from Brightspace into the folder where your R files are. You can also view and download the data from a github repo from <a href="https://github.com/jbaafi/quant-guide-data/tree/main/BIOL1001-data">here</a>. <strong>NOTE</strong> that in the <code>read.csv</code> command that what is inside the quote marks <code>"</code> MUST match the file name in your folder exactly. You also have to include the quotation marks. Then follow the instructions in <a href="https://ahurford.github.io/quant-guide-all-courses/data-entry.html">Entering and loading data</a> and import the data. Note that this is just a subset of the data from the full paper. Include a copy of the code you used in your lab report.</li>
 </ol>
 </div>
-<div id="make-a-graph" class="section level3 unnumbered">
-<h3>Make a graph</h3>
+<div id="make-a-graph" class="section level3 unnumbered hasAnchor">
+<h3>Make a graph<a href="lab2.html#make-a-graph" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <ol start="2" style="list-style-type: decimal">
-<li>Follow the instructions in <a href="https://ahurford.github.io/quant-guide-all-courses/graph.html">Making graphs in R</a> to make a scatterplot for these data and replicate the figure from the Campbell textbook (see Figure 14.1 below). Include both the code you wrote and the final figure in your lab report. NOTE: Don't worry about figuring out how to write superscripts and subscripts in R for the axis-labels. You can use the &quot;^&quot; symbol to indicate a superscript, and the &quot;-&quot; to indicate a subscript.</li>
+<li>Follow the instructions in <a href="https://ahurford.github.io/quant-guide-all-courses/graph.html">Making graphs in R</a> to make a scatterplot for these data and replicate the figure from the Campbell textbook (see Figure 14.1 below). Include both the code you wrote and the final figure in your lab report. NOTE: Don’t worry about figuring out how to write superscripts and subscripts in R for the axis-labels. You can use the “^” symbol to indicate a superscript, and the “-” to indicate a subscript.</li>
 </ol>
 <p><strong>HINT</strong> Think about what you are specifying as <code>x</code> and <code>y</code> in the <code>plot</code> function. Use the tools you learned about in <a href="https://ahurford.github.io/quant-guide-all-courses/rintro.html">Introduction to R</a> to explore the dataframe.</p>
-<p><strong>NEW TIP</strong> instead of entering the data as a vector the way you learned in <a href="https://ahurford.github.io/quant-guide-all-courses/graph.html">Making graphs in R</a>, you can use the code below to create an x vector from a data frame (here I titled my data frame &quot;langdon_data&quot;; your name may be different, and I created a vector of data called &quot;CO3&quot;). The <code>$</code> sign tells R to look in the data frame specified before the <code>$</code> sign (in the example below the data frame is &quot;langdon_data&quot; and then read the column that comes after the <code>$</code> sign (in the example here, it's CO3. The column header you specify after the $ sign MUST match the way it is shown in the dataframe EXACTLY. Use the commands you learned in <a href="https://ahurford.github.io/quant-guide-all-courses/rintro.html">Introduction to R</a> to confirm what the column header is.</p>
+<p><strong>NEW TIP</strong> instead of entering the data as a vector the way you learned in <a href="https://ahurford.github.io/quant-guide-all-courses/graph.html">Making graphs in R</a>, you can use the code below to create an x vector from a data frame (here I titled my data frame “langdon_data”; your name may be different, and I created a vector of data called “CO3”). The <code>$</code> sign tells R to look in the data frame specified before the <code>$</code> sign (in the example below the data frame is “langdon_data” and then read the column that comes after the <code>$</code> sign (in the example here, it’s CO3. The column header you specify after the $ sign MUST match the way it is shown in the dataframe EXACTLY. Use the commands you learned in <a href="https://ahurford.github.io/quant-guide-all-courses/rintro.html">Introduction to R</a> to confirm what the column header is.</p>
 <p>You can use this to create the vector of data that you need to plot on the x-axis, and then write you own code to create the vector of data for the y-axis.</p>
-<div class="figure" style="text-align: center"><span id="fig:langdon"></span>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:langdon"></span>
 <img src="figures/Landgon_scatterplot.jpeg" alt="Scatterplot from Langdon et al. study on calcification rate in seawater as a function of carbonate concentration. This figure is found in your textbook on pg. 58 (pg. 60 in the Campbell 2nd Canadian Edition)" width="70%" />
 <p class="caption">
-Figure 2.1: Scatterplot from Langdon et al. study on calcification rate in seawater as a function of carbonate concentration. This figure is found in your textbook on pg. 58 (pg. 60 in the Campbell 2nd Canadian Edition)
+Figure 2.1: Scatterplot from Langdon et al. study on calcification rate in seawater as a function of carbonate concentration. This figure is found in your textbook on pg. 58 (pg. 60 in the Campbell 2nd Canadian Edition)
 </p>
 </div>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">langdon_data &lt;-<span class="st"> </span><span class="kw">read.csv</span>(<span class="st">&quot;LangdonDataset.csv&quot;</span>)
-CO3 &lt;-<span class="st"> </span>langdon_data$CO3</code></pre></div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="lab2.html#cb1-1" aria-hidden="true" tabindex="-1"></a>langdon_data <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">&quot;LangdonDataset.csv&quot;</span>)</span>
+<span id="cb1-2"><a href="lab2.html#cb1-2" aria-hidden="true" tabindex="-1"></a>CO3 <span class="ot">&lt;-</span> langdon_data<span class="sc">$</span>CO3</span></code></pre></div>
 <p>Use the examples in <a href="https://ahurford.github.io/quant-guide-all-courses/graph.html">Making graphs in R</a> to create a fully labelled scatter plot. Export this and paste it into your document that you will hand in for this lab. Include both the code you wrote and the final figure in your lab report.</p>
-<p><strong>HINT</strong> if you want to add a line of best fit based on linear regression, use the function <code>abline</code> using a linear regression model (the function <code>lm</code>). Your code will look something like this: <code>abline(lm(y~x))</code> Refer to the help files for assistance. The two terms on each side of the tilde (&quot;~&quot; symbol) tell R what the equation for the regression <code>y~x</code> is. In your case substitute in what YOU defined as <code>x</code> and <code>y</code> in R. <strong>NOTE</strong> for the lab assignment, this step is optional.</p>
+<p><strong>HINT</strong> if you want to add a line of best fit based on linear regression, use the function <code>abline</code> using a linear regression model (the function <code>lm</code>). Your code will look something like this: <code>abline(lm(y~x))</code> Refer to the help files for assistance. The two terms on each side of the tilde (“~” symbol) tell R what the equation for the regression <code>y~x</code> is. In your case substitute in what YOU defined as <code>x</code> and <code>y</code> in R. <strong>NOTE</strong> for the lab assignment, this step is optional.</p>
 <ol start="3" style="list-style-type: decimal">
 <li>Follow the instructions in <a href="https://ahurford.github.io/quant-guide-all-courses/graph.html">Making graphs in R</a> to make a second graph - a line graph for these data. Export your line graph insert it into your lab report. Write a figure caption. Include both the code you wrote and the final figure in your lab report.</li>
 </ol>
 </div>
 </div>
-<div id="exercise-2.-bar-plots-and-boxplots-with-discrete-independent-variables" class="section level2 unnumbered">
-<h2>EXERCISE 2. Bar plots and boxplots with discrete independent variables</h2>
-<p>We will use data from a research paper that investigated whether plants were able to respond to stress cues emitted from their drought-stressed neighbours <span class="citation">(Falik et al. 2011)</span>. This research project is also discussed in your textbook. The research team used <em>Pisum sativum</em> plants in an experimental setup that allowed them to connect the plants' root systems. One plant in the central position of a row was subjected to osmotic stress, while neighbouring plants remained unstressed on both sides. Plants on one side of the stressed plant shared roots with others in the group but did not share roots with the stressed plant; these were the control group. On the other side, the stressed plant shared its roots with its nearest unstressed neighbour, and all the other plants shared their roots with their nearest neighbour (See Figure <a href="lab2.html#fig:setup">2.2</a>).</p>
-<div class="figure" style="text-align: center"><span id="fig:setup"></span>
+<div id="exercise-2.-bar-plots-and-boxplots-with-discrete-independent-variables" class="section level2 unnumbered hasAnchor">
+<h2>EXERCISE 2. Bar plots and boxplots with discrete independent variables<a href="lab2.html#exercise-2.-bar-plots-and-boxplots-with-discrete-independent-variables" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>We will use data from a research paper that investigated
+whether plants were able to respond to stress cues emitted from their drought-stressed neighbours
+<span class="citation">[@falik2011rumor]</span>. This research project is also discussed in your textbook.
+The research team used <em>Pisum sativum</em> plants in an experimental setup that allowed them to connect the plants’ root systems. One plant in the central position of a row was subjected to osmotic stress, while neighbouring plants remained unstressed on both sides.
+Plants on one side of the stressed plant shared roots with others in the group but
+did not share roots with the stressed plant;
+these were the control group.
+On the other side, the stressed plant shared its roots with its nearest unstressed neighbour, and all the other plants shared their roots with their nearest neighbour
+(See Figure <a href="lab2.html#fig:setup">2.2</a>).</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:setup"></span>
 <img src="figures/Falik_et-al_2011_setup.jpg" alt="Experimental set up for testing stress cues. Circles represent plants and connector lines represent the plants with connected roots. The numbers of the plants correspond to those of Table 14.2. Osmotic stress was induced in plant 6 (Modified from Falik et al., 2011)." width="70%" />
 <p class="caption">
 Figure 2.2: Experimental set up for testing stress cues. Circles represent plants and connector lines represent the plants with connected roots. The numbers of the plants correspond to those of Table 14.2. Osmotic stress was induced in plant 6 (Modified from Falik et al., 2011).
@@ -378,8 +427,8 @@ Figure 2.2: Experimental set up for testing stress cues. Circles represent plant
 </tr>
 </tbody>
 </table>
-<div id="questions" class="section level3 unnumbered">
-<h3>Questions</h3>
+<div id="questions" class="section level3 unnumbered hasAnchor">
+<h3>Questions<a href="lab2.html#questions" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <ol style="list-style-type: decimal">
 <li><p>Follow the instructions in <a href="https://ahurford.github.io/quant-guide-all-courses/data-entry.html">Entering and loading data</a> to load the data file FalikDataset.csv using the command line (<code>read.csv</code>) option. <strong>Note</strong> that the data in the CSV file are ordered differently than in the list above (to verify this you can open the CSV file in Excel to see the full set).</p></li>
 <li><p>Looking at the dataset, can you tell how many treatments were applied in the experiment? How many plants were used for each treatment?</p></li>
@@ -387,38 +436,38 @@ Figure 2.2: Experimental set up for testing stress cues. Circles represent plant
 </ol>
 </div>
 </div>
-<div id="exercise-2b.-making-a-bar-plot" class="section level2 unnumbered">
-<h2>EXERCISE 2b. Making a bar plot</h2>
-<div id="questions-1" class="section level3 unnumbered">
-<h3>Questions</h3>
+<div id="exercise-2b.-making-a-bar-plot" class="section level2 unnumbered hasAnchor">
+<h2>EXERCISE 2b. Making a bar plot<a href="lab2.html#exercise-2b.-making-a-bar-plot" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="questions-1" class="section level3 unnumbered hasAnchor">
+<h3>Questions<a href="lab2.html#questions-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <ol style="list-style-type: decimal">
 <li>Follow the instructions below to replicate the figure from the Campbell textbook (bar plot; see Figure 14.3 below). Export your bar plot and insert it into your lab report. Add a caption to your bar plot and hand it in with your lab report. Include the code you wrote to generate the figure.</li>
 </ol>
-<div class="figure" style="text-align: center"><span id="fig:falik"></span>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:falik"></span>
 <img src="figures/Falik_barplot.jpeg" alt="Bar plot from Falik et al. study on plant stress and plant communication. This figure is found in your textbook on pg. 918 (pg. 910 in Campbell 2nd Canadian Edition)" width="70%" />
 <p class="caption">
-Figure 2.3: Bar plot from Falik et al. study on plant stress and plant communication. This figure is found in your textbook on pg. 918 (pg. 910 in Campbell 2nd Canadian Edition)
+Figure 2.3: Bar plot from Falik et al. study on plant stress and plant communication. This figure is found in your textbook on pg. 918 (pg. 910 in Campbell 2nd Canadian Edition)
 </p>
 </div>
-<p>To make a bar plot, use the code below as a starting point, and then use the resources in this guide to add appropriate x and y axis labels.Don't worry about figuring out how to write the symbol &quot;mu&quot; in R; you can just write &quot;um&quot; or &quot;micrometres&quot; for now. However, if you want to try writing Greek symbols in R, look at the code below for the boxplot example, and see if you can apply it to your bar plot.</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">width &lt;-<span class="st"> </span>falik_data$width <span class="co">#This creates a vector of data of the plant stomatal widths</span>
-plant &lt;-<span class="st"> </span>falik_data$plant <span class="co">#The creates a vector of data of the plant ID numbers</span>
-
-
-<span class="kw">barplot</span>(width, <span class="dt">names =</span> plant, <span class="dt">col =</span> <span class="kw">c</span>(<span class="st">&quot;blue&quot;</span>, <span class="st">&quot;red&quot;</span>))</code></pre></div>
+<p>To make a bar plot, use the code below as a starting point, and then use the resources in this guide to add appropriate x and y axis labels.Don’t worry about figuring out how to write the symbol “mu” in R; you can just write “um” or “micrometres” for now. However, if you want to try writing Greek symbols in R, look at the code below for the boxplot example, and see if you can apply it to your bar plot.</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="lab2.html#cb2-1" aria-hidden="true" tabindex="-1"></a>width <span class="ot">&lt;-</span> falik_data<span class="sc">$</span>width <span class="co">#This creates a vector of data of the plant stomatal widths</span></span>
+<span id="cb2-2"><a href="lab2.html#cb2-2" aria-hidden="true" tabindex="-1"></a>plant <span class="ot">&lt;-</span> falik_data<span class="sc">$</span>plant <span class="co">#The creates a vector of data of the plant ID numbers</span></span>
+<span id="cb2-3"><a href="lab2.html#cb2-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-4"><a href="lab2.html#cb2-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-5"><a href="lab2.html#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="fu">barplot</span>(width, <span class="at">names =</span> plant, <span class="at">col =</span> <span class="fu">c</span>(<span class="st">&quot;blue&quot;</span>, <span class="st">&quot;red&quot;</span>))</span></code></pre></div>
 <p><img src="biol-1001_files/figure-html/unnamed-chunk-2-1.png" width="672" /></p>
 <ol start="2" style="list-style-type: decimal">
-<li><p>In the bar plot, what can you tell about the stomatal openings of the treatment plant vs. the control plants? Is it consistent across all the individual plants?</p></li>
-<li><p>Follow the instructions below to re-plot the data from EXERCISE 2b as a boxplot that compares control versus treatment. Export your boxplot and insert it into your lab report. Add a caption to your boxplot. NOTE: If you describe what the symbols/colours mean in the caption, then you do not need to include a legend. If you want to try adding a legend (adding one is optional) then look up &quot;legend&quot; in the help window.</p></li>
+<li><p>In the bar plot, what can you tell about the stomatal openings of the treatment plant vs. the control plants? Is it consistent across all the individual plants?</p></li>
+<li><p>Follow the instructions below to re-plot the data from EXERCISE 2b as a boxplot that compares control versus treatment. Export your boxplot and insert it into your lab report. Add a caption to your boxplot. NOTE: If you describe what the symbols/colours mean in the caption, then you do not need to include a legend. If you want to try adding a legend (adding one is optional) then look up “legend” in the help window.</p></li>
 </ol>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">control &lt;-<span class="st"> </span><span class="kw">subset</span>(falik_data, type ==<span class="st"> &quot;control&quot;</span>) <span class="co">#This subset command is a handy function to break the data into subsets. Here, we&#39;re creating a data frame with just the values from the control.</span>
-treatment &lt;-<span class="st"> </span><span class="kw">subset</span>(falik_data, type ==<span class="st"> &quot;15min&quot;</span>) <span class="co">#Here we are subsetting the data to contain only the data from the treatment</span>
-
-<span class="kw">boxplot</span>(control$width, treatment$width, <span class="dt">names =</span> <span class="kw">c</span>(<span class="st">&quot;control&quot;</span>, <span class="st">&quot;treatment&quot;</span>), <span class="dt">ylab =</span> <span class="kw">expression</span>(<span class="kw">paste</span>(<span class="st">&quot;stomatal opening ( &quot;</span>, mu, <span class="st">&quot;)&quot;</span>)))</code></pre></div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="lab2.html#cb3-1" aria-hidden="true" tabindex="-1"></a>control <span class="ot">&lt;-</span> <span class="fu">subset</span>(falik_data, type <span class="sc">==</span> <span class="st">&quot;control&quot;</span>) <span class="co">#This subset command is a handy function to break the data into subsets. Here, we&#39;re creating a data frame with just the values from the control.</span></span>
+<span id="cb3-2"><a href="lab2.html#cb3-2" aria-hidden="true" tabindex="-1"></a>treatment <span class="ot">&lt;-</span> <span class="fu">subset</span>(falik_data, type <span class="sc">==</span> <span class="st">&quot;15min&quot;</span>) <span class="co">#Here we are subsetting the data to contain only the data from the treatment</span></span>
+<span id="cb3-3"><a href="lab2.html#cb3-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-4"><a href="lab2.html#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="fu">boxplot</span>(control<span class="sc">$</span>width, treatment<span class="sc">$</span>width, <span class="at">names =</span> <span class="fu">c</span>(<span class="st">&quot;control&quot;</span>, <span class="st">&quot;treatment&quot;</span>), <span class="at">ylab =</span> <span class="fu">expression</span>(<span class="fu">paste</span>(<span class="st">&quot;stomatal opening ( &quot;</span>, mu, <span class="st">&quot;)&quot;</span>)))</span></code></pre></div>
 <p><img src="biol-1001_files/figure-html/unnamed-chunk-3-1.png" width="672" /></p>
 <ol start="4" style="list-style-type: decimal">
 <li><p>Label the following on the boxplot: median, 25% and 75% quantiles, 95% confidence limits. <strong>HINT</strong> you can insert the exported graph into a blank PowerPoint slide and use lines/text boxes to draw the labels. Then save the slide as an image file (e.g., JPEG) and insert it in your lab report.</p></li>
-<li><p>What does the boxplot tell you about the differences between the treatment plants (plants 6-11) vs. the control plants that the bar plot does not?</p></li>
+<li><p>What does the boxplot tell you about the differences between the treatment plants (plants 6-11) vs. the control plants that the bar plot does not?</p></li>
 <li><p>Why do you think a scientist might choose to represent these data one way over another?</p></li>
 </ol>
 
@@ -435,7 +484,6 @@ treatment &lt;-<span class="st"> </span><span class="kw">subset</span>(falik_dat
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
-<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
 <script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
@@ -454,6 +502,7 @@ gitbook.start({
 "weibo": false,
 "instapaper": false,
 "vk": false,
+"whatsapp": false,
 "all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
 },
 "fontsettings": {
@@ -474,6 +523,10 @@ gitbook.start({
 "text": null
 },
 "download": ["biol-1001.epub"],
+"search": {
+"engine": "fuse",
+"options": null
+},
 "toc": {
 "collapse": "subsection"
 }
@@ -486,8 +539,8 @@ gitbook.start({
   (function () {
     var script = document.createElement("script");
     script.type = "text/javascript";
-    var src = "";
-    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
     if (location.protocol !== "file:")
       if (/^https?:/.test(src))
         src = src.replace(/^https?:/, '');
