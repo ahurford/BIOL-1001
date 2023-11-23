@@ -35,7 +35,10 @@ kable(dataset[1:11,1:2], caption = "Raw data from Langdon and collaborators (200
 ```
 ### Enter the data {-}
 
-1. We provide this data as a .csv called `LangdonDataset.csv`. Download this file from Brightspace into the folder where your R files are. You can also view and download the data from a github repo from  [here](https://github.com/jbaafi/quant-guide-data/tree/main/BIOL1001-data). **NOTE** that in the `read.csv` command that what is inside the quote marks ```"``` MUST match the file name in your folder exactly. You also have to include the quotation marks. Then follow the instructions in [Entering and loading data](https://ahurford.github.io/quant-guide-all-courses/data-entry.html) and import the data. Note that this is just a subset of the data from the full paper. Include a copy of the code you used in your lab report.
+1. We provide this data as a .csv called `LangdonDataset.csv`. You can view and download the data from a github repo from  [here](https://github.com/jbaafi/quant-guide-data/tree/main/BIOL1001-data). Alternatively, you can just load the data from the internet link as demonstrated below.
+
+
+**NOTE** that in the `read.csv` command that what is inside the quote marks ```"``` MUST match the file name in your folder exactly. You also have to include the quotation marks. Then follow the instructions in [Entering and loading data](https://ahurford.github.io/quant-guide-all-courses/data-entry.html) and import the data. Note that this is just a subset of the data from the full paper. Include a copy of the code you used in your lab report.
 
 
 
@@ -54,7 +57,7 @@ knitr::include_graphics('./figures/Landgon_scatterplot.jpeg')
 ```
 
 ```{r}
-langdon_data <- read.csv("LangdonDataset.csv")
+langdon_data <- read.csv("https://raw.githubusercontent.com/jbaafi/quant-guide-data/main/BIOL1001-data/LangdonDataset.csv")
 CO3 <- langdon_data$CO3
 ```
 

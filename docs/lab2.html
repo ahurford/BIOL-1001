@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>2 Quantitative skills laboratory | BIOL 1001 - Quantitative skills</title>
   <meta name="description" content="2 Quantitative skills laboratory | BIOL 1001 - Quantitative skills" />
-  <meta name="generator" content="bookdown 0.36 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.34 and GitBook 2.6.7" />
 
   <meta property="og:title" content="2 Quantitative skills laboratory | BIOL 1001 - Quantitative skills" />
   <meta property="og:type" content="book" />
@@ -261,8 +261,9 @@ The results of this experiment are as follows:</p>
 <div id="enter-the-data" class="section level3 unnumbered hasAnchor">
 <h3>Enter the data<a href="lab2.html#enter-the-data" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <ol style="list-style-type: decimal">
-<li>We provide this data as a .csv called <code>LangdonDataset.csv</code>. Download this file from Brightspace into the folder where your R files are. You can also view and download the data from a github repo from <a href="https://github.com/jbaafi/quant-guide-data/tree/main/BIOL1001-data">here</a>. <strong>NOTE</strong> that in the <code>read.csv</code> command that what is inside the quote marks <code>"</code> MUST match the file name in your folder exactly. You also have to include the quotation marks. Then follow the instructions in <a href="https://ahurford.github.io/quant-guide-all-courses/data-entry.html">Entering and loading data</a> and import the data. Note that this is just a subset of the data from the full paper. Include a copy of the code you used in your lab report.</li>
+<li>We provide this data as a .csv called <code>LangdonDataset.csv</code>. You can view and download the data from a github repo from <a href="https://github.com/jbaafi/quant-guide-data/tree/main/BIOL1001-data">here</a>. Alternatively, you can just load the data from the internet link as demonstrated below.</li>
 </ol>
+<p><strong>NOTE</strong> that in the <code>read.csv</code> command that what is inside the quote marks <code>"</code> MUST match the file name in your folder exactly. You also have to include the quotation marks. Then follow the instructions in <a href="https://ahurford.github.io/quant-guide-all-courses/data-entry.html">Entering and loading data</a> and import the data. Note that this is just a subset of the data from the full paper. Include a copy of the code you used in your lab report.</p>
 </div>
 <div id="make-a-graph" class="section level3 unnumbered hasAnchor">
 <h3>Make a graph<a href="lab2.html#make-a-graph" class="anchor-section" aria-label="Anchor link to header"></a></h3>
@@ -278,8 +279,8 @@ The results of this experiment are as follows:</p>
 Figure 2.1: Scatterplot from Langdon et al. study on calcification rate in seawater as a function of carbonate concentration. This figure is found in your textbook on pg. 58 (pg. 60 in the Campbell 2nd Canadian Edition)
 </p>
 </div>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="lab2.html#cb1-1" aria-hidden="true" tabindex="-1"></a>langdon_data <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">&quot;LangdonDataset.csv&quot;</span>)</span>
-<span id="cb1-2"><a href="lab2.html#cb1-2" aria-hidden="true" tabindex="-1"></a>CO3 <span class="ot">&lt;-</span> langdon_data<span class="sc">$</span>CO3</span></code></pre></div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="lab2.html#cb1-1" tabindex="-1"></a>langdon_data <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">&quot;https://raw.githubusercontent.com/jbaafi/quant-guide-data/main/BIOL1001-data/LangdonDataset.csv&quot;</span>)</span>
+<span id="cb1-2"><a href="lab2.html#cb1-2" tabindex="-1"></a>CO3 <span class="ot">&lt;-</span> langdon_data<span class="sc">$</span>CO3</span></code></pre></div>
 <p>Use the examples in <a href="https://ahurford.github.io/quant-guide-all-courses/graph.html">Making graphs in R</a> to create a fully labelled scatter plot. Export this and paste it into your document that you will hand in for this lab. Include both the code you wrote and the final figure in your lab report.</p>
 <p><strong>HINT</strong> if you want to add a line of best fit based on linear regression, use the function <code>abline</code> using a linear regression model (the function <code>lm</code>). Your code will look something like this: <code>abline(lm(y~x))</code> Refer to the help files for assistance. The two terms on each side of the tilde (“~” symbol) tell R what the equation for the regression <code>y~x</code> is. In your case substitute in what YOU defined as <code>x</code> and <code>y</code> in R. <strong>NOTE</strong> for the lab assignment, this step is optional.</p>
 <ol start="3" style="list-style-type: decimal">
@@ -450,20 +451,20 @@ Figure 2.3: Bar plot from Falik et al. study on plant stress and plant communic
 </p>
 </div>
 <p>To make a bar plot, use the code below as a starting point, and then use the resources in this guide to add appropriate x and y axis labels.Don’t worry about figuring out how to write the symbol “mu” in R; you can just write “um” or “micrometres” for now. However, if you want to try writing Greek symbols in R, look at the code below for the boxplot example, and see if you can apply it to your bar plot.</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="lab2.html#cb2-1" aria-hidden="true" tabindex="-1"></a>width <span class="ot">&lt;-</span> falik_data<span class="sc">$</span>width <span class="co">#This creates a vector of data of the plant stomatal widths</span></span>
-<span id="cb2-2"><a href="lab2.html#cb2-2" aria-hidden="true" tabindex="-1"></a>plant <span class="ot">&lt;-</span> falik_data<span class="sc">$</span>plant <span class="co">#The creates a vector of data of the plant ID numbers</span></span>
-<span id="cb2-3"><a href="lab2.html#cb2-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-4"><a href="lab2.html#cb2-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-5"><a href="lab2.html#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="fu">barplot</span>(width, <span class="at">names =</span> plant, <span class="at">col =</span> <span class="fu">c</span>(<span class="st">&quot;blue&quot;</span>, <span class="st">&quot;red&quot;</span>))</span></code></pre></div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="lab2.html#cb2-1" tabindex="-1"></a>width <span class="ot">&lt;-</span> falik_data<span class="sc">$</span>width <span class="co">#This creates a vector of data of the plant stomatal widths</span></span>
+<span id="cb2-2"><a href="lab2.html#cb2-2" tabindex="-1"></a>plant <span class="ot">&lt;-</span> falik_data<span class="sc">$</span>plant <span class="co">#The creates a vector of data of the plant ID numbers</span></span>
+<span id="cb2-3"><a href="lab2.html#cb2-3" tabindex="-1"></a></span>
+<span id="cb2-4"><a href="lab2.html#cb2-4" tabindex="-1"></a></span>
+<span id="cb2-5"><a href="lab2.html#cb2-5" tabindex="-1"></a><span class="fu">barplot</span>(width, <span class="at">names =</span> plant, <span class="at">col =</span> <span class="fu">c</span>(<span class="st">&quot;blue&quot;</span>, <span class="st">&quot;red&quot;</span>))</span></code></pre></div>
 <p><img src="biol-1001_files/figure-html/unnamed-chunk-2-1.png" width="672" /></p>
 <ol start="2" style="list-style-type: decimal">
 <li><p>In the bar plot, what can you tell about the stomatal openings of the treatment plant vs. the control plants? Is it consistent across all the individual plants?</p></li>
 <li><p>Follow the instructions below to re-plot the data from EXERCISE 2b as a boxplot that compares control versus treatment. Export your boxplot and insert it into your lab report. Add a caption to your boxplot. NOTE: If you describe what the symbols/colours mean in the caption, then you do not need to include a legend. If you want to try adding a legend (adding one is optional) then look up “legend” in the help window.</p></li>
 </ol>
-<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="lab2.html#cb3-1" aria-hidden="true" tabindex="-1"></a>control <span class="ot">&lt;-</span> <span class="fu">subset</span>(falik_data, type <span class="sc">==</span> <span class="st">&quot;control&quot;</span>) <span class="co">#This subset command is a handy function to break the data into subsets. Here, we&#39;re creating a data frame with just the values from the control.</span></span>
-<span id="cb3-2"><a href="lab2.html#cb3-2" aria-hidden="true" tabindex="-1"></a>treatment <span class="ot">&lt;-</span> <span class="fu">subset</span>(falik_data, type <span class="sc">==</span> <span class="st">&quot;15min&quot;</span>) <span class="co">#Here we are subsetting the data to contain only the data from the treatment</span></span>
-<span id="cb3-3"><a href="lab2.html#cb3-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-4"><a href="lab2.html#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="fu">boxplot</span>(control<span class="sc">$</span>width, treatment<span class="sc">$</span>width, <span class="at">names =</span> <span class="fu">c</span>(<span class="st">&quot;control&quot;</span>, <span class="st">&quot;treatment&quot;</span>), <span class="at">ylab =</span> <span class="fu">expression</span>(<span class="fu">paste</span>(<span class="st">&quot;stomatal opening ( &quot;</span>, mu, <span class="st">&quot;)&quot;</span>)))</span></code></pre></div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="lab2.html#cb3-1" tabindex="-1"></a>control <span class="ot">&lt;-</span> <span class="fu">subset</span>(falik_data, type <span class="sc">==</span> <span class="st">&quot;control&quot;</span>) <span class="co">#This subset command is a handy function to break the data into subsets. Here, we&#39;re creating a data frame with just the values from the control.</span></span>
+<span id="cb3-2"><a href="lab2.html#cb3-2" tabindex="-1"></a>treatment <span class="ot">&lt;-</span> <span class="fu">subset</span>(falik_data, type <span class="sc">==</span> <span class="st">&quot;15min&quot;</span>) <span class="co">#Here we are subsetting the data to contain only the data from the treatment</span></span>
+<span id="cb3-3"><a href="lab2.html#cb3-3" tabindex="-1"></a></span>
+<span id="cb3-4"><a href="lab2.html#cb3-4" tabindex="-1"></a><span class="fu">boxplot</span>(control<span class="sc">$</span>width, treatment<span class="sc">$</span>width, <span class="at">names =</span> <span class="fu">c</span>(<span class="st">&quot;control&quot;</span>, <span class="st">&quot;treatment&quot;</span>), <span class="at">ylab =</span> <span class="fu">expression</span>(<span class="fu">paste</span>(<span class="st">&quot;stomatal opening ( &quot;</span>, mu, <span class="st">&quot;)&quot;</span>)))</span></code></pre></div>
 <p><img src="biol-1001_files/figure-html/unnamed-chunk-3-1.png" width="672" /></p>
 <ol start="4" style="list-style-type: decimal">
 <li><p>Label the following on the boxplot: median, 25% and 75% quantiles, 95% confidence limits. <strong>HINT</strong> you can insert the exported graph into a blank PowerPoint slide and use lines/text boxes to draw the labels. Then save the slide as an image file (e.g., JPEG) and insert it in your lab report.</p></li>
