@@ -200,7 +200,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="exercise-1.-data-entry-and-graphing-with-a-continuous-independent-variable" class="section level2 unnumbered hasAnchor">
 <h2>EXERCISE 1. Data entry and graphing with a continuous independent variable<a href="lab2.html#exercise-1.-data-entry-and-graphing-with-a-continuous-independent-variable" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>The increase of carbon dioxide in the atmosphere is expected to reduce the concentrations of carbonate ions in the surface of the ocean. This process, in general called ocean acidification, affects the biology and survival of a wide range of marine species because it prevents the formation of shells and plates of calcium carbonate.
-A long term study on coral reefs showed how the net community calcification rate (G, measured in mmol CaCO<sub>3</sub>m<sup>-2</sup>d<sup>-1</sup>) is related to the concentration of carbonate (CO<sub>3</sub><sup>2-</sup>, measured in <span class="math inline">\(\mu\)</span>mol<span class="math inline">\(\cdot\)</span>kg<sup>-1</sup>) <span class="citation">[@langdon2000effect]</span>.
+A long term study on coral reefs showed how the net community calcification rate (G, measured in mmol CaCO<sub>3</sub>m<sup>-2</sup>d<sup>-1</sup>) is related to the concentration of carbonate (CO<sub>3</sub><sup>2-</sup>, measured in <span class="math inline">\(\mu\)</span>mol<span class="math inline">\(\cdot\)</span>kg<sup>-1</sup>).
 We will use the data from the research paper (which is summarized in pg. 58 (or pg. 60 in the 2nd Canadian Edition) of the Campbell textbook) to understand this relationship.
 The results of this experiment are as follows:</p>
 <table>
@@ -263,7 +263,8 @@ The results of this experiment are as follows:</p>
 <ol style="list-style-type: decimal">
 <li>We provide this data as a .csv called <code>LangdonDataset.csv</code>. You can view and download the data from a github repo from <a href="https://github.com/jbaafi/quant-guide-data/tree/main/BIOL1001-data">here</a>. Alternatively, you can just load the data from the internet link as demonstrated below.</li>
 </ol>
-<p><strong>NOTE</strong> that in the <code>read.csv</code> command that what is inside the quote marks <code>"</code> MUST match the file name in your folder exactly. You also have to include the quotation marks. Then follow the instructions in <a href="https://ahurford.github.io/quant-guide-all-courses/data-entry.html">Entering and loading data</a> and import the data. Note that this is just a subset of the data from the full paper. Include a copy of the code you used in your lab report.</p>
+<p><strong>NOTE</strong> Follow the instructions in <a href="https://ahurford.github.io/quant-guide-all-courses/data-entry.html">Entering and loading data</a> and import the data. For the <code>read.csv</code> function, quote marks <code>"</code> are needed, and the path to the data must be specified exactly.</p>
+<p>Note that this is just a subset of the data from the full paper. Include a copy of the code you used in your lab report.</p>
 </div>
 <div id="make-a-graph" class="section level3 unnumbered hasAnchor">
 <h3>Make a graph<a href="lab2.html#make-a-graph" class="anchor-section" aria-label="Anchor link to header"></a></h3>
@@ -279,7 +280,7 @@ The results of this experiment are as follows:</p>
 Figure 2.1: Scatterplot from Langdon et al. study on calcification rate in seawater as a function of carbonate concentration. This figure is found in your textbook on pg. 58 (pg. 60 in the Campbell 2nd Canadian Edition)
 </p>
 </div>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="lab2.html#cb1-1" tabindex="-1"></a>langdon_data <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">&quot;https://raw.githubusercontent.com/jbaafi/quant-guide-data/main/BIOL1001-data/LangdonDataset.csv&quot;</span>)</span>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="lab2.html#cb1-1" tabindex="-1"></a>langdon_data <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">&quot;https://raw.githubusercontent.com/ahurford/quant-guide-data/main/BIOL1001-data/LangdonDataset.csv&quot;</span>)</span>
 <span id="cb1-2"><a href="lab2.html#cb1-2" tabindex="-1"></a>CO3 <span class="ot">&lt;-</span> langdon_data<span class="sc">$</span>CO3</span></code></pre></div>
 <p>Use the examples in <a href="https://ahurford.github.io/quant-guide-all-courses/graph.html">Making graphs in R</a> to create a fully labelled scatter plot. Export this and paste it into your document that you will hand in for this lab. Include both the code you wrote and the final figure in your lab report.</p>
 <p><strong>HINT</strong> if you want to add a line of best fit based on linear regression, use the function <code>abline</code> using a linear regression model (the function <code>lm</code>). Your code will look something like this: <code>abline(lm(y~x))</code> Refer to the help files for assistance. The two terms on each side of the tilde (“~” symbol) tell R what the equation for the regression <code>y~x</code> is. In your case substitute in what YOU defined as <code>x</code> and <code>y</code> in R. <strong>NOTE</strong> for the lab assignment, this step is optional.</p>
