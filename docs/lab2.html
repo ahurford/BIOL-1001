@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>2 Quantitative skills laboratory | BIOL 1001 - Quantitative skills</title>
-  <meta name="description" content="2 Quantitative skills laboratory | BIOL 1001 - Quantitative skills" />
-  <meta name="generator" content="bookdown 0.34 and GitBook 2.6.7" />
+  <title>2 Quantitative skills R Tutorial | BIOL 1001 - Quantitative skills</title>
+  <meta name="description" content="2 Quantitative skills R Tutorial | BIOL 1001 - Quantitative skills" />
+  <meta name="generator" content="bookdown 0.45 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="2 Quantitative skills laboratory | BIOL 1001 - Quantitative skills" />
+  <meta property="og:title" content="2 Quantitative skills R Tutorial | BIOL 1001 - Quantitative skills" />
   <meta property="og:type" content="book" />
   
   
   <meta name="github-repo" content="ahurford/" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="2 Quantitative skills laboratory | BIOL 1001 - Quantitative skills" />
+  <meta name="twitter:title" content="2 Quantitative skills R Tutorial | BIOL 1001 - Quantitative skills" />
   
   
   
@@ -53,6 +53,7 @@
 
 
 <style type="text/css">
+html { -webkit-text-size-adjust: 100%; }
 pre > code.sourceCode { white-space: pre; position: relative; }
 pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
@@ -139,7 +140,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
 <li class="divider"></li>
 <li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Learning to use R and RStudio</a></li>
-<li class="chapter" data-level="2" data-path="lab2.html"><a href="lab2.html"><i class="fa fa-check"></i><b>2</b> Quantitative skills laboratory</a>
+<li class="chapter" data-level="2" data-path="lab2.html"><a href="lab2.html"><i class="fa fa-check"></i><b>2</b> Quantitative skills R Tutorial</a>
 <ul>
 <li class="chapter" data-level="" data-path="lab2.html"><a href="lab2.html#exercise-1.-data-entry-and-graphing-with-a-continuous-independent-variable"><i class="fa fa-check"></i>EXERCISE 1. Data entry and graphing with a continuous independent variable</a>
 <ul>
@@ -177,7 +178,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
             <section class="normal" id="section-">
 <div id="lab2" class="section level1 hasAnchor" number="2">
-<h1><span class="header-section-number">2</span> Quantitative skills laboratory<a href="lab2.html#lab2" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<h1><span class="header-section-number">2</span> Quantitative skills R Tutorial<a href="lab2.html#lab2" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 <hr />
 <p>PURPOSE</p>
 <ol style="list-style-type: decimal">
@@ -187,10 +188,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li>To learn how to make graphs using R Studio</li>
 </ol>
 <hr />
-<p>Before coming to the laboratory:</p>
+<p>Before coming to the tutorial:</p>
 <ol style="list-style-type: decimal">
 <li><p>If you have not already, install <a href="https://ahurford.github.io/quant-guide-all-courses/install.html"><code>R</code> and <code>RStudio</code></a>.</p></li>
-<li><p>Before coming to the laboratory read:</p></li>
+<li><p>Before coming to the tutorial read:</p></li>
 </ol>
 <ul>
 <li><a href="https://ahurford.github.io/quant-guide-all-courses/rintro.html">Introduction to R</a></li>
@@ -201,7 +202,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h2>EXERCISE 1. Data entry and graphing with a continuous independent variable<a href="lab2.html#exercise-1.-data-entry-and-graphing-with-a-continuous-independent-variable" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>The increase of carbon dioxide in the atmosphere is expected to reduce the concentrations of carbonate ions in the surface of the ocean. This process, in general called ocean acidification, affects the biology and survival of a wide range of marine species because it prevents the formation of shells and plates of calcium carbonate.
 A long term study on coral reefs showed how the net community calcification rate (G, measured in mmol CaCO<sub>3</sub>m<sup>-2</sup>d<sup>-1</sup>) is related to the concentration of carbonate (CO<sub>3</sub><sup>2-</sup>, measured in <span class="math inline">\(\mu\)</span>mol<span class="math inline">\(\cdot\)</span>kg<sup>-1</sup>).
-We will use the data from the research paper (which is summarized in pg. 58 (or pg. 60 in the 2nd Canadian Edition) of the Campbell textbook) to understand this relationship.
+We will use the data from the research paper (which is summarized in the “Scientific Skills” box at the end of Chapter 3 of the textbook) to understand this relationship.
 The results of this experiment are as follows:</p>
 <table>
 <caption><span id="tab:langdon-data">Table 2.1: </span>Raw data from Langdon and collaborators (2000).</caption>
@@ -263,29 +264,29 @@ The results of this experiment are as follows:</p>
 <ol style="list-style-type: decimal">
 <li>We provide this data as a .csv called <code>LangdonDataset.csv</code>. You can view and download the data from a github repo from <a href="https://github.com/jbaafi/quant-guide-data/tree/main/BIOL1001-data">here</a>. Alternatively, you can just load the data from the internet link as demonstrated below.</li>
 </ol>
-<p><strong>NOTE</strong> Follow the instructions in <a href="https://ahurford.github.io/quant-guide-all-courses/data-entry.html">Entering and loading data</a> and import the data. For the <code>read.csv</code> function, quote marks <code>"</code> are needed, and the path to the data must be specified exactly.</p>
-<p>Note that this is just a subset of the data from the full paper. Include a copy of the code you used in your lab report.</p>
+<p><strong>NOTE</strong> Follow the instructions in <a href="https://ahurford.github.io/quant-guide-all-courses/data-entry.html">Entering and loading data</a> and import the data. For the <code>read.csv</code> function, quote marks <code>"</code> ARE needed, and the path to the data must be specified exactly to match the path to where the CSV files are on YOUR computer. NOTE: This is often the hardest step! Once you have this achieved the rest of the steps in this exercise should not be difficult.</p>
+<p>Note that this is just a subset of the data from the full paper. Include a copy of the code you used in your report.</p>
 </div>
 <div id="make-a-graph" class="section level3 unnumbered hasAnchor">
 <h3>Make a graph<a href="lab2.html#make-a-graph" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <ol start="2" style="list-style-type: decimal">
-<li>Follow the instructions in <a href="https://ahurford.github.io/quant-guide-all-courses/graph.html">Making graphs in R</a> to make a scatterplot for these data and replicate the figure from the Campbell textbook (see Figure 14.1 below). Include both the code you wrote and the final figure in your lab report. NOTE: Don’t worry about figuring out how to write superscripts and subscripts in R for the axis-labels. You can use the “^” symbol to indicate a superscript, and the “-” to indicate a subscript.</li>
+<li>Follow the instructions in <a href="https://ahurford.github.io/quant-guide-all-courses/graph.html">Making graphs in R</a> to make a scatterplot for these data and replicate the figure from the Campbell textbook (see Figure 2.1 below). Include both the code you wrote and the final figure in your report. NOTE: Don’t worry about figuring out how to write superscripts and subscripts in R for the axis-labels. You can use the “^” symbol to indicate a superscript, and the “-” to indicate a subscript.</li>
 </ol>
 <p><strong>HINT</strong> Think about what you are specifying as <code>x</code> and <code>y</code> in the <code>plot</code> function. Use the tools you learned about in <a href="https://ahurford.github.io/quant-guide-all-courses/rintro.html">Introduction to R</a> to explore the dataframe.</p>
 <p><strong>NEW TIP</strong> instead of entering the data as a vector the way you learned in <a href="https://ahurford.github.io/quant-guide-all-courses/graph.html">Making graphs in R</a>, you can use the code below to create an x vector from a data frame (here I titled my data frame “langdon_data”; your name may be different, and I created a vector of data called “CO3”). The <code>$</code> sign tells R to look in the data frame specified before the <code>$</code> sign (in the example below the data frame is “langdon_data” and then read the column that comes after the <code>$</code> sign (in the example here, it’s CO3. The column header you specify after the $ sign MUST match the way it is shown in the dataframe EXACTLY. Use the commands you learned in <a href="https://ahurford.github.io/quant-guide-all-courses/rintro.html">Introduction to R</a> to confirm what the column header is.</p>
 <p>You can use this to create the vector of data that you need to plot on the x-axis, and then write you own code to create the vector of data for the y-axis.</p>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:langdon"></span>
-<img src="figures/Landgon_scatterplot.jpeg" alt="Scatterplot from Langdon et al. study on calcification rate in seawater as a function of carbonate concentration. This figure is found in your textbook on pg. 58 (pg. 60 in the Campbell 2nd Canadian Edition)" width="70%" />
+<img src="figures/Landgon_scatterplot.jpeg" alt="Scatterplot from Langdon et al. study on calcification rate in seawater as a function of carbonate concentration. This figure is found in your textbook in the 'Scientific Skills' box at the end of Chapter 3" width="70%" />
 <p class="caption">
-Figure 2.1: Scatterplot from Langdon et al. study on calcification rate in seawater as a function of carbonate concentration. This figure is found in your textbook on pg. 58 (pg. 60 in the Campbell 2nd Canadian Edition)
+Figure 2.1: Scatterplot from Langdon et al. study on calcification rate in seawater as a function of carbonate concentration. This figure is found in your textbook in the ‘Scientific Skills’ box at the end of Chapter 3
 </p>
 </div>
 <div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="lab2.html#cb1-1" tabindex="-1"></a>langdon_data <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">&quot;https://raw.githubusercontent.com/ahurford/quant-guide-data/main/BIOL1001-data/LangdonDataset.csv&quot;</span>)</span>
 <span id="cb1-2"><a href="lab2.html#cb1-2" tabindex="-1"></a>CO3 <span class="ot">&lt;-</span> langdon_data<span class="sc">$</span>CO3</span></code></pre></div>
-<p>Use the examples in <a href="https://ahurford.github.io/quant-guide-all-courses/graph.html">Making graphs in R</a> to create a fully labelled scatter plot. Export this and paste it into your document that you will hand in for this lab. Include both the code you wrote and the final figure in your lab report.</p>
-<p><strong>HINT</strong> if you want to add a line of best fit based on linear regression, use the function <code>abline</code> using a linear regression model (the function <code>lm</code>). Your code will look something like this: <code>abline(lm(y~x))</code> Refer to the help files for assistance. The two terms on each side of the tilde (“~” symbol) tell R what the equation for the regression <code>y~x</code> is. In your case substitute in what YOU defined as <code>x</code> and <code>y</code> in R. <strong>NOTE</strong> for the lab assignment, this step is optional.</p>
+<p>Use the examples in <a href="https://ahurford.github.io/quant-guide-all-courses/graph.html">Making graphs in R</a> to create a fully labelled scatter plot. Export this and paste it into your document that you will hand in for this tutorial. Include both the code you wrote and the final figure in your assignment report.</p>
+<p><strong>HINT</strong> if you want to add a line of best fit based on linear regression, use the function <code>abline</code> using a linear regression model (the function <code>lm</code>). Your code will look something like this: <code>abline(lm(y~x))</code> Refer to the help files for assistance. The two terms on each side of the tilde (“~” symbol) tell R what the equation for the regression <code>y~x</code> is. In your case substitute in what YOU defined as <code>x</code> and <code>y</code> in R. <strong>NOTE</strong> for this assignment, this step is optional.</p>
 <ol start="3" style="list-style-type: decimal">
-<li>Follow the instructions in <a href="https://ahurford.github.io/quant-guide-all-courses/graph.html">Making graphs in R</a> to make a second graph - a line graph for these data. Export your line graph insert it into your lab report. Write a figure caption. Include both the code you wrote and the final figure in your lab report.</li>
+<li>Follow the instructions in <a href="https://ahurford.github.io/quant-guide-all-courses/graph.html">Making graphs in R</a> to make a second graph - a line graph for these data. Export your line graph insert it into your tutorial report. Write a figure caption. Include both the code you wrote and the final figure in your submitted assignment.</li>
 </ol>
 </div>
 </div>
@@ -443,15 +444,15 @@ Figure 2.2: Experimental set up for testing stress cues. Circles represent plant
 <div id="questions-1" class="section level3 unnumbered hasAnchor">
 <h3>Questions<a href="lab2.html#questions-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <ol style="list-style-type: decimal">
-<li>Follow the instructions below to replicate the figure from the Campbell textbook (bar plot; see Figure 14.3 below). Export your bar plot and insert it into your lab report. Add a caption to your bar plot and hand it in with your lab report. Include the code you wrote to generate the figure.</li>
+<li>Follow the instructions below to replicate the figure from the Campbell textbook (bar plot; see Figure 2.3 below). Export your bar plot and insert it into your tutorial report. Add a caption to your bar plot and hand it in with your tutorial report. Include the code you wrote to generate the figure.</li>
 </ol>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:falik"></span>
-<img src="figures/Falik_barplot.jpeg" alt="Bar plot from Falik et al. study on plant stress and plant communication. This figure is found in your textbook on pg. 918 (pg. 910 in Campbell 2nd Canadian Edition)" width="70%" />
+<img src="figures/Falik_barplot.jpeg" alt="Bar plot from Falik et al. study on plant stress and plant communication. This figure is found in your textbook in the 'Scientific Skills' box in Chapter 39)" width="70%" />
 <p class="caption">
-Figure 2.3: Bar plot from Falik et al. study on plant stress and plant communication. This figure is found in your textbook on pg. 918 (pg. 910 in Campbell 2nd Canadian Edition)
+Figure 2.3: Bar plot from Falik et al. study on plant stress and plant communication. This figure is found in your textbook in the ‘Scientific Skills’ box in Chapter 39)
 </p>
 </div>
-<p>To make a bar plot, use the code below as a starting point, and then use the resources in this guide to add appropriate x and y axis labels.Don’t worry about figuring out how to write the symbol “mu” in R; you can just write “um” or “micrometres” for now. However, if you want to try writing Greek symbols in R, look at the code below for the boxplot example, and see if you can apply it to your bar plot.</p>
+<p>To make a bar plot, use the code below as a starting point, and then use the resources in this guide to add appropriate x and y axis labels.Don’t worry about figuring out how to write the symbol “mu” in R; you can just write “um” or “micrometres” for now.</p>
 <div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="lab2.html#cb2-1" tabindex="-1"></a>width <span class="ot">&lt;-</span> falik_data<span class="sc">$</span>width <span class="co">#This creates a vector of data of the plant stomatal widths</span></span>
 <span id="cb2-2"><a href="lab2.html#cb2-2" tabindex="-1"></a>plant <span class="ot">&lt;-</span> falik_data<span class="sc">$</span>plant <span class="co">#The creates a vector of data of the plant ID numbers</span></span>
 <span id="cb2-3"><a href="lab2.html#cb2-3" tabindex="-1"></a></span>
@@ -460,7 +461,7 @@ Figure 2.3: Bar plot from Falik et al. study on plant stress and plant communic
 <p><img src="biol-1001_files/figure-html/unnamed-chunk-2-1.png" width="672" /></p>
 <ol start="2" style="list-style-type: decimal">
 <li><p>In the bar plot, what can you tell about the stomatal openings of the treatment plant vs. the control plants? Is it consistent across all the individual plants?</p></li>
-<li><p>Follow the instructions below to re-plot the data from EXERCISE 2b as a boxplot that compares control versus treatment. Export your boxplot and insert it into your lab report. Add a caption to your boxplot. NOTE: If you describe what the symbols/colours mean in the caption, then you do not need to include a legend. If you want to try adding a legend (adding one is optional) then look up “legend” in the help window.</p></li>
+<li><p>Follow the instructions below to re-plot the data from EXERCISE 2b as a boxplot that compares control versus treatment. Export your boxplot and insert it into your tutorial report. Add a caption to your boxplot. NOTE: If you describe what the symbols/colours mean in the caption, then you do not need to include a legend. If you want to try adding a legend (adding one is optional) then look up “legend” in the help window.</p></li>
 </ol>
 <div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="lab2.html#cb3-1" tabindex="-1"></a>control <span class="ot">&lt;-</span> <span class="fu">subset</span>(falik_data, type <span class="sc">==</span> <span class="st">&quot;control&quot;</span>) <span class="co">#This subset command is a handy function to break the data into subsets. Here, we&#39;re creating a data frame with just the values from the control.</span></span>
 <span id="cb3-2"><a href="lab2.html#cb3-2" tabindex="-1"></a>treatment <span class="ot">&lt;-</span> <span class="fu">subset</span>(falik_data, type <span class="sc">==</span> <span class="st">&quot;15min&quot;</span>) <span class="co">#Here we are subsetting the data to contain only the data from the treatment</span></span>
@@ -468,7 +469,7 @@ Figure 2.3: Bar plot from Falik et al. study on plant stress and plant communic
 <span id="cb3-4"><a href="lab2.html#cb3-4" tabindex="-1"></a><span class="fu">boxplot</span>(control<span class="sc">$</span>width, treatment<span class="sc">$</span>width, <span class="at">names =</span> <span class="fu">c</span>(<span class="st">&quot;control&quot;</span>, <span class="st">&quot;treatment&quot;</span>), <span class="at">ylab =</span> <span class="fu">expression</span>(<span class="fu">paste</span>(<span class="st">&quot;stomatal opening ( &quot;</span>, mu, <span class="st">&quot;)&quot;</span>)))</span></code></pre></div>
 <p><img src="biol-1001_files/figure-html/unnamed-chunk-3-1.png" width="672" /></p>
 <ol start="4" style="list-style-type: decimal">
-<li><p>Label the following on the boxplot: median, 25% and 75% quantiles, 95% confidence limits. <strong>HINT</strong> you can insert the exported graph into a blank PowerPoint slide and use lines/text boxes to draw the labels. Then save the slide as an image file (e.g., JPEG) and insert it in your lab report.</p></li>
+<li><p>Label the following on the boxplot: median, 25% and 75% quantiles, 95% confidence limits. <strong>HINT</strong> you can insert the exported graph into a blank PowerPoint slide and use lines/text boxes to draw the labels. Then save the slide as an image file (e.g., JPEG) and insert it in your tutorial report.</p></li>
 <li><p>What does the boxplot tell you about the differences between the treatment plants (plants 6-11) vs. the control plants that the bar plot does not?</p></li>
 <li><p>Why do you think a scientist might choose to represent these data one way over another?</p></li>
 </ol>
@@ -496,42 +497,42 @@ Figure 2.3: Bar plot from Falik et al. study on plant stress and plant communic
 <script>
 gitbook.require(["gitbook"], function(gitbook) {
 gitbook.start({
-"sharing": {
-"github": false,
-"facebook": true,
-"twitter": true,
-"linkedin": false,
-"weibo": false,
-"instapaper": false,
-"vk": false,
-"whatsapp": false,
-"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
-},
-"fontsettings": {
-"theme": "white",
-"family": "sans",
-"size": 2
-},
-"edit": {
-"link": "https://github.com/rstudio/bookdown-demo/edit/master/01-part-2.Rmd",
-"text": "Edit"
-},
-"history": {
-"link": null,
-"text": null
-},
-"view": {
-"link": null,
-"text": null
-},
-"download": ["biol-1001.epub"],
-"search": {
-"engine": "fuse",
-"options": null
-},
-"toc": {
-"collapse": "subsection"
-}
+  "sharing": {
+    "github": false,
+    "facebook": true,
+    "twitter": true,
+    "linkedin": false,
+    "weibo": false,
+    "instapaper": false,
+    "vk": false,
+    "whatsapp": false,
+    "all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+  },
+  "fontsettings": {
+    "theme": "white",
+    "family": "sans",
+    "size": 2
+  },
+  "edit": {
+    "link": "https://github.com/rstudio/bookdown-demo/edit/master/01-part-2.Rmd",
+    "text": "Edit"
+  },
+  "history": {
+    "link": null,
+    "text": null
+  },
+  "view": {
+    "link": null,
+    "text": null
+  },
+  "download": ["biol-1001.epub"],
+  "search": {
+    "engine": "fuse",
+    "options": null
+  },
+  "toc": {
+    "collapse": "subsection"
+  }
 });
 });
 </script>

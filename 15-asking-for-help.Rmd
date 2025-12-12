@@ -6,7 +6,7 @@ The key to getting a useful answer to your R problem is asking a short but compl
     1. If you have installation issues, double-check that you followed the instructions in [R and RStudio](https://ahurford.github.io/quant-guide-all-courses/install.html) and have downloaded and installed the correct versions of R and RStudio. 
     1. If you have trouble with coding, first, locate the lines of code where the problem occurs. Copy your code from the beginning up to where the issue occurs. Then, start a new RStudio session, paste and run the code. Starting fresh will help you see if the same issue arises or if it was solved by removing unused elements. 
     1. If the problem is caused by a function/command not running or not giving the expected output, follow [Getting R help](https://ahurford.github.io/quant-guide-all-courses/help.html) and read the help for the relevant functions/commands and how to use them. 
-    1. If you receive an error message or a warning, search the web by copying and pasting the output of R. It is likely that your R question has already been answered in websites like [Stack Overflow](https://stackoverflow.com/). You can even search Twitter using '#rstats'.
+    1. If you receive an error message or a warning, search the web by copying and pasting the output of R. It is likely that your R question has already been answered in websites like [Stack Overflow](https://stackoverflow.com/). 
     1. Finally, read over [FAQ](https://ahurford.github.io/quant-guide-all-courses/faq.html) and other posts in the Discussion List on Brightspace to see if anyone else had a similar problem and how they solved it.  
   <br/>
   

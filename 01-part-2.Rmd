@@ -25,7 +25,7 @@ Before coming to the tutorial:
 
 The increase of carbon dioxide in the atmosphere is expected to reduce the concentrations of carbonate ions in the surface of the ocean. This process, in general called ocean acidification, affects the biology and survival of a wide range of marine species because it prevents the formation of shells and plates of calcium carbonate.
 A long term study on coral reefs showed how the net community calcification rate (G, measured in mmol CaCO~3~m^-2^d^-1^) is related to the concentration of carbonate (CO~3~^2-^, measured in  $\mu$mol$\cdot$kg^-1^). 
-We will use the data from the research paper (which is summarized in pg. 58 (or pg. 60 in the 2nd Canadian Edition) of the Campbell textbook) to understand this relationship.
+We will use the data from the research paper (which is summarized in the "Scientific Skills" box at the end of Chapter 3 of the textbook) to understand this relationship.
 The results of this experiment are as follows:
 
 ```{r langdon-data, echo = FALSE, results = 'asis'}
@@ -38,7 +38,7 @@ kable(dataset[1:11,1:2], caption = "Raw data from Langdon and collaborators (200
 1. We provide this data as a .csv called `LangdonDataset.csv`. You can view and download the data from a github repo from  [here](https://github.com/jbaafi/quant-guide-data/tree/main/BIOL1001-data). Alternatively, you can just load the data from the internet link as demonstrated below.
 
 
-**NOTE** Follow the instructions in [Entering and loading data](https://ahurford.github.io/quant-guide-all-courses/data-entry.html) and import the data. For the `read.csv` function, quote marks ```"```  are needed, and the path to the data must be specified exactly.
+**NOTE** Follow the instructions in [Entering and loading data](https://ahurford.github.io/quant-guide-all-courses/data-entry.html) and import the data. For the `read.csv` function, quote marks ```"```  ARE needed, and the path to the data must be specified exactly to match the path to where the CSV files are on YOUR computer. NOTE: This is often the hardest step! Once you have this achieved the rest of the steps in this exercise should not be difficult.
 
 Note that this is just a subset of the data from the full paper. Include a copy of the code you used in your report.
 
@@ -46,7 +46,7 @@ Note that this is just a subset of the data from the full paper. Include a copy 
 
 ### Make a graph {-}
 
-2. Follow the instructions in [Making graphs in R](https://ahurford.github.io/quant-guide-all-courses/graph.html) to make a scatterplot for these data and replicate the figure from the Campbell textbook (see Figure 14.1 below). Include both the code you wrote and the final figure in your report. NOTE: Don't worry about figuring out how to write superscripts and subscripts in R for the axis-labels. You can use the "^" symbol to indicate a superscript, and the "-" to indicate a subscript. 
+2. Follow the instructions in [Making graphs in R](https://ahurford.github.io/quant-guide-all-courses/graph.html) to make a scatterplot for these data and replicate the figure from the Campbell textbook (see Figure 2.1 below). Include both the code you wrote and the final figure in your report. NOTE: Don't worry about figuring out how to write superscripts and subscripts in R for the axis-labels. You can use the "^" symbol to indicate a superscript, and the "-" to indicate a subscript. 
 
 **HINT** Think about what you are specifying as ```x``` and ```y``` in the ```plot``` function. Use the tools you learned about in [Introduction to R](https://ahurford.github.io/quant-guide-all-courses/rintro.html) to explore the dataframe.
 
@@ -54,7 +54,7 @@ Note that this is just a subset of the data from the full paper. Include a copy 
 
 You can use this to create the vector of data that you need to plot on the x-axis, and then write you own code to create the vector of data for the y-axis. 
 
-```{r langdon, fig.cap="Scatterplot from Langdon et al. study on calcification rate in seawater as a function of carbonate concentration. This figure is found in your textbook on pg. 58 (pg. 60 in the Campbell 2nd Canadian Edition)", fig.align='center', out.width="70%", fig.show='hold', echo=FALSE}
+```{r langdon, fig.cap="Scatterplot from Langdon et al. study on calcification rate in seawater as a function of carbonate concentration. This figure is found in your textbook in the 'Scientific Skills' box at the end of Chapter 3", fig.align='center', out.width="70%", fig.show='hold', echo=FALSE}
 knitr::include_graphics('./figures/Landgon_scatterplot.jpeg')
 ```
 
@@ -65,11 +65,11 @@ CO3 <- langdon_data$CO3
 
 Use the examples in [Making graphs in R](https://ahurford.github.io/quant-guide-all-courses/graph.html) to create a fully labelled scatter plot. Export this and paste it into your document that you will hand in for this tutorial. Include both the code you wrote and the final figure in your assignment report.
 
-**HINT** if you want to add a line of best fit based on linear regression, use the function ```abline``` using a linear regression model (the function ```lm```). Your code will look something like this: ```abline(lm(y~x))```  Refer to the help files for assistance. The two terms on each side of the tilde ("~" symbol) tell R what the equation for the regression ```y~x``` is. In your case substitute in what YOU defined as ```x``` and ```y``` in R.  **NOTE** for the tutorial assignment, this step is optional. 
+**HINT** if you want to add a line of best fit based on linear regression, use the function ```abline``` using a linear regression model (the function ```lm```). Your code will look something like this: ```abline(lm(y~x))```  Refer to the help files for assistance. The two terms on each side of the tilde ("~" symbol) tell R what the equation for the regression ```y~x``` is. In your case substitute in what YOU defined as ```x``` and ```y``` in R.  **NOTE** for this assignment, this step is optional. 
 
 
 
-3. Follow the instructions in [Making graphs in R](https://ahurford.github.io/quant-guide-all-courses/graph.html) to make a second graph - a line graph for these data. Export your line graph insert it into your tutorial report. Write a figure caption. Include both the code you wrote and the final figure in your tutorial report.
+3. Follow the instructions in [Making graphs in R](https://ahurford.github.io/quant-guide-all-courses/graph.html) to make a second graph - a line graph for these data. Export your line graph insert it into your tutorial report. Write a figure caption. Include both the code you wrote and the final figure in your submitted assignment.
 
 
  
@@ -109,14 +109,14 @@ kable(falik_data[1:3], caption = "Raw data from Falik and collaborators (2011)."
 ## EXERCISE 2b.	Making a bar plot {-}
 ### Questions {-}
 
-1. Follow the instructions below to replicate the figure from the Campbell textbook (bar plot; see Figure 14.3 below). Export your bar plot and insert it into your tutorial report. Add a caption to your bar plot and hand it in with your tutorial report. Include the code you wrote to generate the figure.
+1. Follow the instructions below to replicate the figure from the Campbell textbook (bar plot; see Figure 2.3 below). Export your bar plot and insert it into your tutorial report. Add a caption to your bar plot and hand it in with your tutorial report. Include the code you wrote to generate the figure.
 
-```{r falik, fig.cap="Bar plot from Falik et al. study on plant stress and plant communication. This figure is found in your textbook on pg. 918 (pg. 910 in Campbell 2nd Canadian Edition)", fig.align='center', out.width="70%", fig.show='hold', echo=FALSE}
+```{r falik, fig.cap="Bar plot from Falik et al. study on plant stress and plant communication. This figure is found in your textbook in the 'Scientific Skills' box in Chapter 39)", fig.align='center', out.width="70%", fig.show='hold', echo=FALSE}
 knitr::include_graphics('./figures/Falik_barplot.jpeg')
 ```
 
 
-To make a bar plot, use the code below as a starting point, and then use the resources in this guide to add appropriate x and y axis labels.Don't worry about figuring out how to write the symbol "mu" in R; you can just write "um" or "micrometres" for now. However, if you want to try writing Greek symbols in R, look at the code below for the boxplot example, and see if you can apply it to your bar plot.
+To make a bar plot, use the code below as a starting point, and then use the resources in this guide to add appropriate x and y axis labels.Don't worry about figuring out how to write the symbol "mu" in R; you can just write "um" or "micrometres" for now.  
 
 ```{r}
 width <- falik_data$width #This creates a vector of data of the plant stomatal widths
@@ -130,7 +130,7 @@ barplot(width, names = plant, col = c("blue", "red"))
 
 3. Follow the instructions below to re-plot the data from EXERCISE 2b as a boxplot that compares control versus treatment. Export your boxplot and insert it into your tutorial report. Add a caption to your boxplot. NOTE: If you describe what the symbols/colours mean in the caption, then you do not need to include a legend. If you want to try adding a legend (adding one is optional) then look up "legend" in the help window.
 
-````{r}
+```{r}
 control <- subset(falik_data, type == "control") #This subset command is a handy function to break the data into subsets. Here, we're creating a data frame with just the values from the control.
 treatment <- subset(falik_data, type == "15min") #Here we are subsetting the data to contain only the data from the treatment
 
