@@ -3,9 +3,9 @@ title: "BIOL 1001 - Quantitative skills"
 site: bookdown::bookdown_site
 output: bookdown::gitbook #bookdown::html_document2
 documentclass: book
-#bibliography: [references.bib]
-#biblio-style: apalike
-link-citations: false 
+bibliography: [references.bib]
+biblio-style: apalike
+link-citations: yes 
 github-repo: ahurford/
 ---
 
