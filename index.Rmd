@@ -13,7 +13,7 @@ github-repo: ahurford/
 
 We are increasing the focus on quantitative skills in our Biology curriculum, in response to changing demands and emphasis within the field of biology itself. In first year biology (BIOL 1001/1002) we are introducing students to R software and basic statistical concepts.
 
-The [quantitative training guide](https://ahurford.github.io/quant-guide-all-courses/) has been writing to teach MUN biology students R coding to build a foundation for more advanced quantitative analysis of data in upper year Biology courses. We anticipate that this guide will also be a useful resource manual that you will refer back to as you use R in your future courses.
+The [quantitative training guide](https://ahurford.github.io/quant-guide-all-courses/) has been written to teach MUN biology students R coding to build a foundation for more advanced quantitative analysis of data in upper year Biology courses. We anticipate that this guide will also be a useful resource manual that you will refer back to as you use R in your future courses.
 
 1.  Read [Introduction](https://ahurford.github.io/quant-guide-all-courses/). As you read through the next sections, if you encounter a word you do not understand you may wish to consult the [Glossary](https://ahurford.github.io/quant-guide-all-courses/glossary.html).
 
@@ -31,6 +31,6 @@ The [quantitative training guide](https://ahurford.github.io/quant-guide-all-cou
 
 5.  Proceed through the sections as assigned by your instructor (this will vary semester by semester with different due dates).
 
-Expect to get stuck. This is normal when learning a new skill. Everyone who uses R, including professionals who have used it for years, gets error messages and have bugs in their code. You might look for help in [Getting help](https://ahurford.github.io/quant-guide-all-courses/help.html) or ask for help from an instructor as specified in section \@ref(howtoask).
+Expect to get stuck. This is normal when learning a new skill. Everyone who uses R, including professionals who have used it for years, get error messages and have bugs in their code. You might look for help in [Getting help](https://ahurford.github.io/quant-guide-all-courses/help.html) or ask for help from an instructor as specified in section \@ref(howtoask).
 
 Once you've finished the first-year R Assignment, don't forget that you have this resource. Whenever you practice using R you will get better at it. If you haven't used it for a while, your skills get rusty, but by reviewing the relevant sections of the [quantitative training guide](https://ahurford.github.io/quant-guide-all-courses/) you will quickly be able to catch up. Before you know it, you will be confidently doing quantitative work in R, which will increase your knowledge, enhance your ability to do advanced biology work, and give you a marketable skill in the work world.
