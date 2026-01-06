@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>2 Quantitative skills R Tutorial | BIOL 1001 - Quantitative skills</title>
   <meta name="description" content="2 Quantitative skills R Tutorial | BIOL 1001 - Quantitative skills" />
-  <meta name="generator" content="bookdown 0.45 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.40 and GitBook 2.6.7" />
 
   <meta property="og:title" content="2 Quantitative skills R Tutorial | BIOL 1001 - Quantitative skills" />
   <meta property="og:type" content="book" />
@@ -121,6 +121,29 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <style type="text/css">
   
   div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+<style type="text/css">
+/* Used with Pandoc 2.11+ new --citeproc when CSL is used */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
 </style>
 
 <link rel="stylesheet" href="style.css" type="text/css" />
@@ -286,7 +309,7 @@ Figure 2.1: Scatterplot from Langdon et al. study on calcification rate in seaw
 <p>Use the examples in <a href="https://ahurford.github.io/quant-guide-all-courses/graph.html">Making graphs in R</a> to create a fully labelled scatter plot. Export this and paste it into your document that you will hand in for this tutorial. Include both the code you wrote and the final figure in your assignment report.</p>
 <p><strong>HINT</strong> if you want to add a line of best fit based on linear regression, use the function <code>abline</code> using a linear regression model (the function <code>lm</code>). Your code will look something like this: <code>abline(lm(y~x))</code> Refer to the help files for assistance. The two terms on each side of the tilde (“~” symbol) tell R what the equation for the regression <code>y~x</code> is. In your case substitute in what YOU defined as <code>x</code> and <code>y</code> in R. <strong>NOTE</strong> for this assignment, this step is optional.</p>
 <ol start="3" style="list-style-type: decimal">
-<li>Follow the instructions in <a href="https://ahurford.github.io/quant-guide-all-courses/graph.html">Making graphs in R</a> to make a second graph - a line graph for these data. Export your line graph insert it into your tutorial report. Write a figure caption. Include both the code you wrote and the final figure in your submitted assignment.</li>
+<li>Follow the instructions in <a href="https://ahurford.github.io/quant-guide-all-courses/graph.html">Making graphs in R</a> to make a second graph - a line graph for these data. Export your line graph and insert it into your tutorial report. Write a figure caption. Include both the code you wrote and the final figure in your submitted assignment.</li>
 </ol>
 </div>
 </div>
@@ -294,7 +317,7 @@ Figure 2.1: Scatterplot from Langdon et al. study on calcification rate in seaw
 <h2>EXERCISE 2. Bar plots and boxplots with discrete independent variables<a href="lab2.html#exercise-2.-bar-plots-and-boxplots-with-discrete-independent-variables" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>We will use data from a research paper that investigated
 whether plants were able to respond to stress cues emitted from their drought-stressed neighbours
-<span class="citation">[@falik2011rumor]</span>. This research project is also discussed in your textbook.
+<span class="citation">(<a href="#ref-falik2011rumor">Falik 2011</a>)</span>. This research project is also discussed in your textbook.
 The research team used <em>Pisum sativum</em> plants in an experimental setup that allowed them to connect the plants’ root systems. One plant in the central position of a row was subjected to osmotic stress, while neighbouring plants remained unstressed on both sides.
 Plants on one side of the stressed plant shared roots with others in the group but
 did not share roots with the stressed plant;
@@ -452,9 +475,9 @@ Figure 2.2: Experimental set up for testing stress cues. Circles represent plant
 Figure 2.3: Bar plot from Falik et al. study on plant stress and plant communication. This figure is found in your textbook in the ‘Scientific Skills’ box in Chapter 39)
 </p>
 </div>
-<p>To make a bar plot, use the code below as a starting point, and then use the resources in this guide to add appropriate x and y axis labels.Don’t worry about figuring out how to write the symbol “mu” in R; you can just write “um” or “micrometres” for now.</p>
+<p>To make a bar plot, use the code below as a starting point, and then use the resources in this guide to add appropriate x and y axis labels. Don’t worry about figuring out how to write the symbol “mu” in R; you can just write “um” or “micrometres” for now.</p>
 <div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="lab2.html#cb2-1" tabindex="-1"></a>width <span class="ot">&lt;-</span> falik_data<span class="sc">$</span>width <span class="co">#This creates a vector of data of the plant stomatal widths</span></span>
-<span id="cb2-2"><a href="lab2.html#cb2-2" tabindex="-1"></a>plant <span class="ot">&lt;-</span> falik_data<span class="sc">$</span>plant <span class="co">#The creates a vector of data of the plant ID numbers</span></span>
+<span id="cb2-2"><a href="lab2.html#cb2-2" tabindex="-1"></a>plant <span class="ot">&lt;-</span> falik_data<span class="sc">$</span>plant <span class="co">#This creates a vector of data of the plant ID numbers</span></span>
 <span id="cb2-3"><a href="lab2.html#cb2-3" tabindex="-1"></a></span>
 <span id="cb2-4"><a href="lab2.html#cb2-4" tabindex="-1"></a></span>
 <span id="cb2-5"><a href="lab2.html#cb2-5" tabindex="-1"></a><span class="fu">barplot</span>(width, <span class="at">names =</span> plant, <span class="at">col =</span> <span class="fu">c</span>(<span class="st">&quot;blue&quot;</span>, <span class="st">&quot;red&quot;</span>))</span></code></pre></div>
@@ -475,6 +498,12 @@ Figure 2.3: Bar plot from Falik et al. study on plant stress and plant communic
 </ol>
 
 </div>
+</div>
+</div>
+<h3>References</h3>
+<div id="refs" class="references csl-bib-body hanging-indent" entry-spacing="0">
+<div id="ref-falik2011rumor" class="csl-entry">
+Falik, Yonat AND Quansah, Omer AND Mordoch. 2011. <span>“Rumor Has It…: Relay Communication of Stress Cues in Plants.”</span> <em>PLOS ONE</em> 6 (11): 1–6. <a href="https://doi.org/10.1371/journal.pone.0023625">https://doi.org/10.1371/journal.pone.0023625</a>.
 </div>
 </div>
             </section>
