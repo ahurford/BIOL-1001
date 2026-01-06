@@ -69,7 +69,7 @@ Use the examples in [Making graphs in R](https://ahurford.github.io/quant-guide-
 
 
 
-3. Follow the instructions in [Making graphs in R](https://ahurford.github.io/quant-guide-all-courses/graph.html) to make a second graph - a line graph for these data. Export your line graph insert it into your tutorial report. Write a figure caption. Include both the code you wrote and the final figure in your submitted assignment.
+3. Follow the instructions in [Making graphs in R](https://ahurford.github.io/quant-guide-all-courses/graph.html) to make a second graph - a line graph for these data. Export your line graph and insert it into your tutorial report. Write a figure caption. Include both the code you wrote and the final figure in your submitted assignment.
 
 
  
@@ -116,11 +116,11 @@ knitr::include_graphics('./figures/Falik_barplot.jpeg')
 ```
 
 
-To make a bar plot, use the code below as a starting point, and then use the resources in this guide to add appropriate x and y axis labels.Don't worry about figuring out how to write the symbol "mu" in R; you can just write "um" or "micrometres" for now.  
+To make a bar plot, use the code below as a starting point, and then use the resources in this guide to add appropriate x and y axis labels. Don't worry about figuring out how to write the symbol "mu" in R; you can just write "um" or "micrometres" for now.  
 
 ```{r}
 width <- falik_data$width #This creates a vector of data of the plant stomatal widths
-plant <- falik_data$plant #The creates a vector of data of the plant ID numbers
+plant <- falik_data$plant #This creates a vector of data of the plant ID numbers
 
 
 barplot(width, names = plant, col = c("blue", "red"))
@@ -143,6 +143,7 @@ boxplot(control$width, treatment$width, names = c("control", "treatment"), ylab 
 5.	What does the boxplot tell you about the differences between the treatment plants (plants 6-11) vs. the control plants that the bar plot does not?
 
 6.	Why do you think a scientist might choose to represent these data one way over another?
+
 
 
 
